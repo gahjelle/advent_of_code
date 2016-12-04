@@ -9,42 +9,38 @@ TURNS = {'N': {'R': 'E', 'L': 'W'},
          'E': {'R': 'S', 'L': 'N'},
          'S': {'R': 'W', 'L': 'E'},
          'W': {'R': 'N', 'L': 'S'},
-         }
+        }
 
-MOVES = {'N': lambda p, d: (p[0], p[1] + d),
-         'E': lambda p, d: (p[0] + d, p[1]),
-         'S': lambda p, d: (p[0], p[1] - d),
-         'W': lambda p, d: (p[0] - d, p[1]),
-         }
-
-VISITED = set()
+MOVES = {'N': lambda p: (p[0], p[1] + 1),
+         'E': lambda p: (p[0] + 1, p[1]),
+         'S': lambda p: (p[0], p[1] - 1),
+         'W': lambda p: (p[0] - 1, p[1]),
+        }
 
 
 def find_distance(instructions):
     position = (0, 0)
     direction = 'N'
+    visited = set()
+
     for instruction in instructions:
         turn = instruction[0]
         distance = int(instruction[1:])
         direction = TURNS[direction][turn]
-        position = visit(position, direction, distance)
+        for _ in range(distance):
+            position = MOVES[direction](position)
+            if position in visited:
+                print('Already visited {} which is {} blocks away'
+                      ''.format(position, sum(abs(c) for c in position)))
+            visited.add(position)
 
-#        print(instruction, turn, distance, direction, position)
-    print('Ended at {} which is {} blocks away'.format(position, sum(abs(c) for c in position)))
-
-
-def visit(position, direction, distance):
-    for counter in range(distance):
-        position = MOVES[direction](position, 1)
-        if position in VISITED:
-            print('Already visited {} which is {} blocks away'.format(position, sum(abs(c) for c in position)))
-        VISITED.add(position)
-
-    return position
+    print('Ended at {} which is {} blocks away'
+          ''.format(position, sum(abs(c) for c in position)))
 
 
 def main():
     for filename in sys.argv[1:]:
+        print('\n{}:'.format(filename))
         with open(filename, mode='r') as fid:
             for line in fid:
                 find_distance(i.strip() for i in line.split(','))
