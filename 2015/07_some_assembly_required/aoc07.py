@@ -58,13 +58,29 @@ def _int(string):
 def main():
     filename = sys.argv[1]   # Only read one file since SIGNALS is global
     print('\n{}:'.format(filename))
-    circuit = read_circuit(filename)
 
+    # part 1
+    circuit = read_circuit(filename)
     while circuit:
         read_signals(circuit)
 
+    signal_a = SIGNALS.get('a')
     for wire, signal in sorted(SIGNALS.items()):
-        print('{:>5s}: {}'.format(wire, signal))
+#        print('{:>5s}: {}'.format(wire, signal))
+        del SIGNALS[wire]
+
+    print('The signal at a is {}'.format(signal_a))
+
+    if signal_a is None:
+        return
+
+    # part 2
+    circuit = read_circuit(filename)
+    circuit['b'] = signal_a
+    while circuit:
+        read_signals(circuit)
+
+    print('The modified signal at a is {}'.format(SIGNALS.get('a')))
 
 
 if __name__ == '__main__':
