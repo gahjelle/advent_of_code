@@ -14,7 +14,7 @@ def main():
     for filename in sys.argv[1:]:
         print('\n{}:'.format(filename))
         with open(filename, mode='r') as fid:
-            words = [w.strip() for w in fid.readlines()]
+            words = [w.strip() for w in fid]
 
         print('Error-corrected message:    {}'.format(common_letters(words, True)))
         print('Modified repetition code:   {}'.format(common_letters(words, False)))
