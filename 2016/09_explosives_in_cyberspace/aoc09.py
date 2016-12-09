@@ -8,19 +8,15 @@ import sys
 
 
 def find_length(string, iterate):
-    length = 0
-    s_iter = iter(string.strip())
+    s_iter = iter(string)
     for c in s_iter:
         if c != '(':
-            length += 1
+            yield 1
             continue
 
         counter, repeats = [int(n) for n in ''.join(itertools.takewhile(lambda c: c != ')', s_iter)).split('x')]
-        data = ''.join(itertools.islice(s_iter, counter))
-        length += repeats * (find_length(data, True) if iterate else len(data))
-
-    return length
-
+        data = itertools.islice(s_iter, counter)
+        yield repeats * (sum(find_length(data, True)) if iterate else len(list(data)))
 
 
 def main():
@@ -28,8 +24,9 @@ def main():
         print('\n{}:'.format(filename))
         with open(filename, mode='r') as fid:
             for line in fid:
-                print('{:<40s} - Method one: {}'.format(line.strip()[:40], find_length(line, False)))
-                print('{:<40s} - Method two: {}'.format(line.strip()[:40], find_length(line, True)))
+                string = line.strip()
+                print('{:<40s} - Method one: {}'.format(string[:40], sum(find_length(string, False))))
+                print('{:<40s} - Method two: {}'.format(string[:40], sum(find_length(string, True))))
 
 
 if __name__ == '__main__':
