@@ -3,38 +3,24 @@
 Advent of Code 2016, day 9
 Solution by Geir Arne Hjelle, 2016-12-09
 """
+import itertools
 import sys
 
 
-def find_tokens(string, iterate):
-    tokens = list()
-    uncompressed = list()
+def find_length(string, iterate):
+    length = 0
     s_iter = iter(string.strip())
     for c in s_iter:
         if c != '(':
-            uncompressed.append(c)
+            length += 1
             continue
 
-        marker = list()
-        while c != ')':
-            c = next(s_iter)
-            marker.append(c)
-        num_chars, repeat = [int(n) for n in ''.join(marker[:-1]).split('x')]
+        counter, repeats = [int(n) for n in ''.join(itertools.takewhile(lambda c: c != ')', s_iter)).split('x')]
+        data = ''.join(itertools.islice(s_iter, counter))
+        length += repeats * (find_length(data, True) if iterate else len(data))
 
-        data = ''.join(next(s_iter) for i in range(num_chars))
-        if '(' in data and iterate:
-            tokens.append((repeat, find_tokens(data, True)))
-        else:
-            tokens.append(repeat * len(data))
+    return length
 
-    return tokens + [(1 * len(uncompressed))]
-
-
-def unwrap_tokens(tokens):
-    if not any(isinstance(e, tuple) for e in tokens):
-        return sum(tokens)
-
-    return unwrap_tokens([e[0] * unwrap_tokens(e[1]) if isinstance(e, tuple) else e for e in tokens])
 
 
 def main():
@@ -42,10 +28,8 @@ def main():
         print('\n{}:'.format(filename))
         with open(filename, mode='r') as fid:
             for line in fid:
-                tokens = find_tokens(line.strip(), False)
-                print('{:<40s} - Method one: {}'.format(line.strip()[:40], unwrap_tokens(tokens)))
-                tokens = find_tokens(line.strip(), True)
-                print('{:<40s} - Method two: {}'.format(line.strip()[:40], unwrap_tokens(tokens)))
+                print('{:<40s} - Method one: {}'.format(line.strip()[:40], find_length(line, False)))
+                print('{:<40s} - Method two: {}'.format(line.strip()[:40], find_length(line, True)))
 
 
 if __name__ == '__main__':
