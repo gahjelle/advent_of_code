@@ -1,3 +1,4 @@
+
 # Day 1: Inverse Captcha {-}
 
 You're standing in a room with "digitization quarantine" written in LEDs along

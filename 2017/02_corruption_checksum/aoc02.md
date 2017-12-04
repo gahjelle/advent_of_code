@@ -1,3 +1,4 @@
+
 # Day 2: Corruption Checksum {-}
 
 As you walk through the door, a glowing humanoid shape yells in your
