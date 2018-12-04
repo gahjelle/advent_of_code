@@ -65,7 +65,7 @@ might be able to trick that guard into working tonight so you can have the best
 chance of sneaking in. You have two strategies for choosing the best
 guard/minute combination.
 
-Strategy 1: Find the guard that has the most minutes asleep. What minute does
+**Strategy 1:** Find the guard that has the most minutes asleep. What minute does
 that guard spend asleep the most?
 
 In the example above, Guard #10 spent the most minutes asleep, a total of 50
@@ -77,5 +77,17 @@ While this example listed the entries in chronological order, your entries are
 in the order you found them. You'll need to organize them before they can be
 analyzed.
 
-What is the ID of the guard you chose multiplied by the minute you chose? (In
-the above example, the answer would be 10 * 24 = 240.)
+**What is the ID of the guard you chose multiplied by the minute you chose?**
+(In the above example, the answer would be 10 * 24 = 240.)
+
+## Part Two {-}
+
+**Strategy 2:** Of all guards, which guard is most frequently asleep on the same
+  minute?
+
+In the example above, Guard #99 spent minute 45 asleep more than any other guard
+or minute - three times in total. (In all other cases, any guard spent any
+minute asleep at most twice.)
+
+**What is the ID of the guard you chose multiplied by the minute you chose?**
+(In the above example, the answer would be 99 * 45 = 4455.)
