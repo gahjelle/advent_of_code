@@ -13,11 +13,7 @@ def fuel(mass):
 
 def recursive_fuel(mass):
     """Calculate fuel based on mass, include fuel to cover mass of fuel"""
-    fuel = mass // 3 - 2
-    if fuel <= 0:
-        return 0
-
-    return fuel + recursive_fuel(fuel)
+    return 0 if (fuel := mass // 3 - 2) <= 0 else fuel + recursive_fuel(fuel)
 
 
 def main():
