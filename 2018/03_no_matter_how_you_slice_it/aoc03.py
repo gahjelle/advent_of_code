@@ -18,8 +18,8 @@ def overlaps(claims):
     for claim in claims:
         claim_id, _, claim_spec = claim.partition("@")
         x0, y0, dx, dy = (int(d) for d in re.split(r"[,:x]", claim_spec))
-        counts[x0:x0+dx, y0:y0+dy] += 1
-        claim_dict[claim_id.strip()] = counts[x0:x0+dx, y0:y0+dy]
+        counts[x0 : x0 + dx, y0 : y0 + dy] += 1
+        claim_dict[claim_id.strip()] = counts[x0 : x0 + dx, y0 : y0 + dy]
 
     num_overlaps = np.sum(counts >= 2)
     no_overlaps = [k for k, v in claim_dict.items() if np.all(v == 1)]
