@@ -47,14 +47,15 @@ first floor.
 
 For example, suppose the isolated area has the following arrangement:
 
-    The first floor contains a hydrogen-compatible microchip and a lithium-compatible microchip.
+    The first floor contains a hydrogen-compatible microchip and a
+        lithium-compatible microchip.
     The second floor contains a hydrogen generator.
     The third floor contains a lithium generator.
     The fourth floor contains nothing relevant.
 
-As a diagram (F# for a Floor number, E for Elevator, H for Hydrogen, L for
-Lithium, M for Microchip, and G for Generator), the initial state looks like
-this:
+As a diagram (`F#` for a Floor number, `E` for Elevator, `H` for Hydrogen, `L`
+for Lithium, `M` for Microchip, and `G` for Generator), the initial state looks
+like this:
 
     F4 .  .  .  .  .
     F3 .  .  .  LG .
@@ -160,7 +161,7 @@ nothing is added to or removed from it.)
 In your situation, what is the minimum number of steps required to bring all of
 the objects to the fourth floor?
 
-# Part Two {-}
+## Part Two {-}
 
 You step into the cleanroom separating the lobby from the isolated area and put
 on the hazmat suit.
