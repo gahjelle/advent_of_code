@@ -50,29 +50,29 @@ def main():
             line = next(fid)
             program = [int(c) for c in line.split(",")]
 
-            # Part 1
-            print(f"Program 1202 ended at {run_program(program)}")
+        # Part 1
+        print(f"Program 1202 ended at {run_program(program)}")
 
-            # Part 2: Attempt to calculate noun and verb
-            base = run_program(program, 0, 0)
-            dn = run_program(program, 1, 0) - base
-            dv = run_program(program, 0, 1) - base
+        # Part 2: Attempt to calculate noun and verb
+        base = run_program(program, 0, 0)
+        dn = run_program(program, 1, 0) - base
+        dv = run_program(program, 0, 1) - base
 
-            if dn >= 1 and dv >= 1:
-                noun = (GOAL - base) // dn
-                verb = (GOAL - base) % dn // dv
-                if (result := run_program(program, noun, verb)) == GOAL:
-                    print(f"{noun:02d}{verb:02d} -> {result}")
-                    continue
+        if dn >= 1 and dv >= 1:
+            noun = (GOAL - base) // dn
+            verb = (GOAL - base) % dn // dv
+            if (result := run_program(program, noun, verb)) == GOAL:
+                print(f"{noun:02d}{verb:02d} -> {result}")
+                continue
 
-            # Part 2: Brute force
-            for noun, verb in itertools.product(range(100), range(100)):
-                result = run_program(program, noun, verb)
-                if result == GOAL:
-                    print(f"{noun:02d}{verb:02d} -> {result}")
-                    break
-            else:
-                print(f"Did not find a valid noun and verb")
+        # Part 2: Brute force
+        for noun, verb in itertools.product(range(100), range(100)):
+            result = run_program(program, noun, verb)
+            if result == GOAL:
+                print(f"{noun:02d}{verb:02d} -> {result}")
+                break
+        else:
+            print(f"Did not find a valid noun and verb")
 
 
 if __name__ == "__main__":
