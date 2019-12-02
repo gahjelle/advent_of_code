@@ -74,6 +74,7 @@ def main():
             else:
                 print(f"Did not find a valid noun and verb")
 
+
 if __name__ == "__main__":
     debug = print if "--debug" in sys.argv else lambda *_: None
     main()
