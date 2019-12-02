@@ -22,8 +22,8 @@ The Fuel Counter-Upper needs to know the total fuel requirement. To find it,
 individually calculate the fuel needed for the mass of each module (your puzzle
 input), then add together all the fuel values.
 
-What is the sum of the fuel requirements for all of the modules on your
-spacecraft?
+**What is the sum of the fuel requirements for all of the modules on your
+spacecraft?**
 
 
 ## Part Two {-}
@@ -53,7 +53,8 @@ process, continuing until a fuel requirement is zero or negative. For example:
 - The fuel required by a module of mass 100756 and its fuel is: 33583 + 11192 +
   3728 + 1240 + 411 + 135 + 43 + 12 + 2 = 50346.
 
-What is the sum of the fuel requirements for all of the modules on your
-spacecraft when also taking into account the mass of the added fuel? (Calculate
+**What is the sum of the fuel requirements for all of the modules on your
+spacecraft when also taking into account the mass of the added fuel?** (Calculate
 the fuel requirements for each module separately, then add them all up at the
 end.)
+
