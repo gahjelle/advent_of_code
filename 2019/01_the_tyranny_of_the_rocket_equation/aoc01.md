@@ -1,4 +1,4 @@
-# Day 1: The Tyranny of the Rocket Equation
+# Day 1: The Tyranny of the Rocket Equation {-}
 
 The Elves quickly load you into a spacecraft and prepare to launch.
 
