@@ -7,7 +7,7 @@ import sys
 import itertools
 
 OP = {1: "+", 2: "*"}
-GOAL = 19690720
+MOON = 19690720
 
 
 def run_program(program, noun=12, verb=2):
@@ -59,16 +59,16 @@ def main():
         dv = run_program(program, 0, 1) - base
 
         if dn >= 1 and dv >= 1:
-            noun = (GOAL - base) // dn
-            verb = (GOAL - base) % dn // dv
-            if (result := run_program(program, noun, verb)) == GOAL:
+            noun = (MOON - base) // dn
+            verb = (MOON - base) % dn // dv
+            if (result := run_program(program, noun, verb)) == MOON:
                 print(f"{noun:02d}{verb:02d} -> {result}")
                 continue
 
         # Part 2: Brute force
         for noun, verb in itertools.product(range(100), range(100)):
             result = run_program(program, noun, verb)
-            if result == GOAL:
+            if result == MOON:
                 print(f"{noun:02d}{verb:02d} -> {result}")
                 break
         else:
