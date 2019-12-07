@@ -1,12 +1,12 @@
 """1202 Program Alarm
 
 Advent of Code 2019, day 2
-Solution by Geir Arne Hjelle, 2019-12-02
+Solution by Geir Arne Hjelle, 2019-12-02 / 2019-12-07
 """
 import sys
 import itertools
+from aoc2019.intcode_computer import IntcodeComputer
 
-OP = {1: "+", 2: "*"}
 MOON = 19690720
 
 
@@ -14,30 +14,10 @@ def run_program(program, noun=12, verb=2):
     codes = program.copy()
     codes[1], codes[2] = noun, verb
 
-    pointer = 0
-    while True:
-        if codes[pointer] == 99:
-            return codes[0]
+    computer = IntcodeComputer(program=codes, input=None)
+    computer.run()
 
-        opcode, pos_1, pos_2, pos_res = codes[pointer : pointer + 4]
-        if max((pos_1, pos_2, pos_res)) >= len(codes):
-            debug(f"Index out of range: {pos_1}, {pos_2}, {pos_res} ({len(codes)})")
-            return None
-
-        if opcode == 1:
-            codes[pos_res] = codes[pos_1] + codes[pos_2]
-        elif opcode == 2:
-            codes[pos_res] = codes[pos_1] * codes[pos_2]
-        else:
-            debug(f"Unknown opcode {opcode} at index {pointer}")
-            return None
-
-        debug(
-            f"=> {opcode}: {pos_1} {pos_2} {pos_res} --> "
-            f"{codes[pos_1]} {OP[opcode]} {codes[pos_2]} = {codes[pos_res]}"
-        )
-
-        pointer += 4
+    return computer.program[0]
 
 
 def main():
