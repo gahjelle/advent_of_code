@@ -16,8 +16,8 @@ def recursive_fuel(mass):
     return 0 if (fuel := mass // 3 - 2) <= 0 else fuel + recursive_fuel(fuel)
 
 
-def main():
-    for filename in sys.argv[1:]:
+def main(args):
+    for filename in args:
         if filename.startswith("--"):
             continue
 
@@ -36,4 +36,4 @@ def main():
 
 if __name__ == "__main__":
     debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])

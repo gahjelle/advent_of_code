@@ -10,6 +10,8 @@ import sys
 
 from aoc2019.intcode_computer import IntcodeComputer
 
+debug = print if "--debug" in sys.argv else lambda *_: None
+
 
 class InputStream:
     def __init__(self, initial_stream):
@@ -46,8 +48,8 @@ def run_amplifiers(program, settings):
     return next(input_stream)
 
 
-def main():
-    for file_path in [pathlib.Path(p) for p in sys.argv[1:] if not p.startswith("-")]:
+def main(argv):
+    for file_path in [pathlib.Path(p) for p in argv if not p.startswith("-")]:
         print(f"\n{file_path}:")
         program = [int(c) for c in file_path.read_text().strip().split(",")]
 
@@ -67,5 +69,4 @@ def main():
 
 
 if __name__ == "__main__":
-    debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])

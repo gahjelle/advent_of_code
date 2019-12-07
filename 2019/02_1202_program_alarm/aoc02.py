@@ -20,8 +20,8 @@ def run_program(program, noun=12, verb=2):
     return computer.program[0]
 
 
-def main():
-    for filename in sys.argv[1:]:
+def main(args):
+    for filename in args:
         if filename.startswith("--"):
             continue
 
@@ -57,4 +57,4 @@ def main():
 
 if __name__ == "__main__":
     debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])

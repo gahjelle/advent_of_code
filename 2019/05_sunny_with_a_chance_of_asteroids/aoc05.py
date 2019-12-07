@@ -19,8 +19,8 @@ def run_program(program, input):
         states.append(state)
 
 
-def main():
-    for file_path in [pathlib.Path(p) for p in sys.argv[1:] if not p.startswith("-")]:
+def main(args):
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
         print(f"\n{file_path}:")
         program = [int(c) for c in file_path.read_text().strip().split(",")]
 
@@ -35,4 +35,4 @@ def main():
 
 if __name__ == "__main__":
     debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])

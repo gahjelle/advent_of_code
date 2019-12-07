@@ -49,8 +49,8 @@ def steps(coords):
     return coords[-1]
 
 
-def main():
-    for file_path in [pathlib.Path(p) for p in sys.argv[1:] if not p.startswith("-")]:
+def main(args):
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
         print(f"\n{file_path}:")
         text = file_path.read_text().strip()
         commands = [ln.split(",") for ln in text.split("\n")]
@@ -71,4 +71,4 @@ def main():
 
 if __name__ == "__main__":
     debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])

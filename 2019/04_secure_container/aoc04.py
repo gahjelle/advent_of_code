@@ -10,8 +10,6 @@ import sys
 
 import pyplugs
 
-PLUGINS = pyplugs._plugins._PLUGINS  # TODO: Fix bug
-
 
 def check(password, rules):
     for idx, rule in enumerate(rules, start=1):
@@ -46,9 +44,13 @@ def has_simple_doubles(password):
     return False
 
 
-def main():
-    rules = [p.func for p in PLUGINS[""][__name__].values()]
-    for file_path in [pathlib.Path(p) for p in sys.argv[1:] if not p.startswith("-")]:
+PACKAGE, _, NAME = __name__.rpartition(".")
+PLUGINS = pyplugs._plugins._PLUGINS[PACKAGE][NAME]  # TODO: Fix bug
+
+
+def main(args):
+    rules = [p.func for p in PLUGINS.values()]
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
         print(f"\n{file_path}:")
         text = file_path.read_text()
         num_min, num_max = [int(n) for n in text.split("-")]
@@ -66,4 +68,4 @@ def main():
 
 if __name__ == "__main__":
     debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])
