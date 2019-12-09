@@ -38,18 +38,19 @@ class IntcodeComputer:
         self.program = program.copy()
         self.input = input
         self.pointer = 0
+        self.relative_base = 0
 
     def op_add(self, params, input):
         (val1, _), (val2, _), (_, pos) = params
-        self.program[pos] = val1 + val2
+        self.set_value(pos, val1 + val2)
 
     def op_multiply(self, params, input):
         (val1, _), (val2, _), (_, pos) = params
-        self.program[pos] = val1 * val2
+        self.set_value(pos, val1 * val2)
 
     def op_input(self, params, input):
         (_, pos), = params
-        self.program[pos] = next(self.input)
+        self.set_value(pos, next(self.input))
 
     def op_output(self, params, input):
         (val, _), = params
@@ -67,11 +68,15 @@ class IntcodeComputer:
 
     def op_less_than(self, params, input):
         (val1, _), (val2, _), (_, pos) = params
-        self.program[pos] = 1 if val1 < val2 else 0
+        self.set_value(pos, 1 if val1 < val2 else 0)
 
     def op_equals(self, params, input):
         (val1, _), (val2, _), (_, pos) = params
-        self.program[pos] = 1 if val1 == val2 else 0
+        self.set_value(pos, 1 if val1 == val2 else 0)
+
+    def op_adjust_relative(self, params, input):
+        (val, _), = params
+        self.relative_base += val
 
     OPCODES = {
         99: OpCode(99, "exit", lambda self, pms, ip: Exit, 0),
@@ -83,6 +88,7 @@ class IntcodeComputer:
         6: OpCode(6, "jmp_false", op_jump_false, 2),
         7: OpCode(7, "<", op_less_than, 3),
         8: OpCode(8, "==", op_equals, 3),
+        9: OpCode(9, "adj_rel", op_adjust_relative, 1),
     }
 
     def run(self):
@@ -110,9 +116,30 @@ class IntcodeComputer:
             if output is not None:
                 return output
 
-    @staticmethod
-    def get_params(pointer, program, param_modes):
-        return [
-            (program[pt] if pm == "1" else program[program[pt]], program[pt])
-            for pt, pm in enumerate(param_modes, start=pointer)
-        ]
+    def get_params(self, pointer, program, param_modes):
+        param_list = []
+        for ptr, param_mode in enumerate(param_modes, start=pointer):
+            value = self.get_value(ptr)
+            if param_mode == "0":
+                param = self.get_value(value)
+            elif param_mode == "1":
+                param = value
+            elif param_mode == "2":
+                value += self.relative_base
+                param = self.get_value(value)
+            else:
+                raise ValueError(f"Unknown parameter mode: {param_mode!r}")
+            param_list.append((param, value))
+        return param_list
+
+    def get_value(self, pointer=None):
+        pointer = self.pointer if pointer is None else pointer
+        if pointer >= len(self.program):
+            self.program.extend([0] * (pointer - len(self.program) + 1))
+        return self.program[pointer]
+
+    def set_value(self, pointer, value):
+        if pointer >= len(self.program):
+            self.program.extend([0] * (pointer - len(self.program) + 1))
+
+        self.program[pointer] = value
