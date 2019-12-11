@@ -7,6 +7,8 @@ from collections import Counter
 import itertools
 import sys
 
+debug = print if "--debug" in sys.argv else lambda *_: None
+
 
 def contains_count(count, ids):
     return sum(count in Counter(id).values() for id in ids)
@@ -26,8 +28,8 @@ def string_dist(str1, str2):
     return sum(c1 != c2 for c1, c2 in zip(str1, str2))
 
 
-def main():
-    for filename in sys.argv[1:]:
+def main(args):
+    for filename in args:
         if filename.startswith("--"):
             continue
 
@@ -42,5 +44,4 @@ def main():
 
 
 if __name__ == "__main__":
-    debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])

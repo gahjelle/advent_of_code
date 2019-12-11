@@ -8,6 +8,8 @@ import sys
 
 import numpy as np
 
+debug = print if "--debug" in sys.argv else lambda *_: None
+
 
 def parse_records(records):
     guards = dict()
@@ -48,8 +50,8 @@ def strategy_2(guards):
     return max(result)
 
 
-def main():
-    for filename in sys.argv[1:]:
+def main(args):
+    for filename in args:
         if filename.startswith("--"):
             continue
 
@@ -62,5 +64,4 @@ def main():
 
 
 if __name__ == "__main__":
-    debug = print if "--debug" in sys.argv else lambda *_: None
-    main()
+    main(sys.argv[1:])
