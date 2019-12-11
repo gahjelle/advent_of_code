@@ -15,7 +15,7 @@ def test_puzzle(puzzle, capsys):
     puzzle_func = getattr(puzzle_mod, "main")
 
     # Capture output from running puzzle on input
-    puzzle_func([f"{puzzle}/input.txt"])
+    puzzle_func([str(PUZZLE_DIR / puzzle / "input.txt")])
     stdout, stderr = capsys.readouterr()
 
     # Compare to expected output
