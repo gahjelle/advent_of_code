@@ -105,7 +105,7 @@ class IntcodeComputer:
             debug(f"Running {opcode.description} on {params} -> {output!r}")
 
             if output is Exit:
-                return
+                return None
 
             if isinstance(output, Jump):
                 self.pointer = output.pointer
@@ -115,6 +115,18 @@ class IntcodeComputer:
 
             if output is not None:
                 return output
+
+    def iter(self, n=1):
+        n_output = []
+        while True:
+            output = next(self)
+            if output is None:
+                break
+
+            n_output.append(output)
+            if len(n_output) == n:
+                yield n_output
+                n_output = []
 
     def get_params(self, pointer, program, param_modes):
         param_list = []
