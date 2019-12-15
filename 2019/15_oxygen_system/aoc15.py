@@ -134,7 +134,7 @@ def find_oxygen_system(map):
     start_pos = (0, 0)
 
     def found_goal(map):
-        return not any(b == Block.OXYGEN_SYSTEM for b in map.values())
+        return any(b == Block.VISITED_OXYGEN_SYSTEM for b in map.values())
 
     return map.search(start_pos, found_goal)
 
