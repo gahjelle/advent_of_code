@@ -52,8 +52,8 @@ def find_code(fid, keypad):
     return ''.join(code)
 
 
-def main():
-    for filename in sys.argv[1:]:
+def main(args):
+    for filename in args:
         print('\n{}:'.format(filename))
         with open(filename, mode='r') as fid:
             print('Keypad 1: {}'.format(find_code(fid, KEYPAD_1)))
@@ -63,4 +63,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])

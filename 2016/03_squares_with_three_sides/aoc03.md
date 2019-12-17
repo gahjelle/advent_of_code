@@ -17,7 +17,7 @@ not larger than 25.
 
 In your puzzle input, how many of the listed triangles are possible?
 
-# Part Two {-}
+## Part Two {-}
 
 Now that you've helpfully marked up their design documents, it occurs to you
 that triangles are specified in groups of three vertically. Each set of three
