@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from typing import Callable, NamedTuple
 
 # Simple debug command
-debug = print if "--debug" in sys.argv else lambda *_: None
+debug = print if "--debug_code" in sys.argv else lambda *_: None
 
 
 @dataclass
