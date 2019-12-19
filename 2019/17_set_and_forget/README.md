@@ -199,3 +199,4 @@ value in a single output instruction.
 
 After visiting every part of the scaffold at least once, **how much dust does
 the vacuum robot report it has collected?**
+
