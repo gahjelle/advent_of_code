@@ -9,7 +9,7 @@ import numpy as np
 
 def read_spreadsheet(filename):
     sheet = []
-    with open(filename, mode='r') as fid:
+    with open(filename, mode="r") as fid:
         for line in fid:
             sheet.append([int(n) for n in line.strip().split()])
 
@@ -17,7 +17,7 @@ def read_spreadsheet(filename):
 
 
 def calculate_rowsum(sheet):
-    return sum([(max(row) - min(row)) for row in sheet])
+    return sum(max(row) - min(row) for row in sheet)
 
 
 def calculate_divisible_sum(sheet):
@@ -30,13 +30,13 @@ def calculate_divisible_sum(sheet):
     return total
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
+def main(args):
+    for filename in args:
+        print(f"\n{filename}:")
         sheet = read_spreadsheet(filename)
         print(calculate_rowsum(sheet))
         print(calculate_divisible_sum(sheet))
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    main(sys.argv[1:])
