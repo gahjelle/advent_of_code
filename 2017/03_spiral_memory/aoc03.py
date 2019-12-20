@@ -10,7 +10,7 @@ import numpy as np
 def calculate_steps(square):
     """Fast calculation, jump to correct circle/band of spiral"""
     circle = np.ceil((np.sqrt(square) - 1) / 2)
-    corner = (2 * circle + 1)**2  # Lower-right corner is (2n + 1)^2
+    corner = (2 * circle + 1) ** 2  # Lower-right corner is (2n + 1)^2
     steps = 2 * circle
     while corner > square:
         if corner - square <= circle:
@@ -26,8 +26,7 @@ def spiral_steps(number):
     """Slow calculation, fill in spiral, locate number"""
     size = np.ceil((np.sqrt(number) - 1) / 2)
     spiral, irow, icol = fill_in_spiral(number, size, lambda s: np.max(s) + 1)
-    location = [i[0] - c // 2
-                for i, c in zip(np.where(spiral == number), spiral.shape)]
+    location = [i[0] - c // 2 for i, c in zip(np.where(spiral == number), spiral.shape)]
 
     return np.sum(np.abs(location))
 
@@ -42,11 +41,11 @@ def spiral_sum(number):
 
 def fill_in_spiral(number, size, method):
     # Allocate a spiral that will be big enough
-    spiral = np.zeros((2 + int(2 * size + 1), ) * 2)
+    spiral = np.zeros((2 + int(2 * size + 1),) * 2)
 
     # Initialize
     irow, icol = [s // 2 for s in spiral.shape]  # Start in the middle
-    drow, dcol = 0, 1                            # Pointing right
+    drow, dcol = 0, 1  # Pointing right
     spiral[irow, icol] = 1
 
     # Fill in numbers until we find one bigger than the given number
@@ -55,24 +54,28 @@ def fill_in_spiral(number, size, method):
             return spiral, irow, icol
         irow += drow
         icol += dcol
-        spiral[irow, icol] = method(spiral[irow-1:irow+2, icol-1:icol+2])
+        spiral[irow, icol] = method(spiral[irow - 1 : irow + 2, icol - 1 : icol + 2])
 
         # Should we turn?
         if spiral[irow - dcol, icol + drow] < 1:
             drow, dcol = -dcol, drow
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
+def main(args):
+    for filename in args:
+        print("\n{}:".format(filename))
+        with open(filename, mode="r") as fid:
             for line in fid:
                 square = int(line.strip())
-                print('Square {} is {:.0f} steps away'
-                      ''.format(square, calculate_steps(square)))
-                print('{} is the first value larger than {}\n'
-                      ''.format(spiral_sum(square), square))
+
+                # Part 1
+                steps = calculate_steps(square)
+                print(f"Square {square} is {steps:.0f} steps away")
+
+                # Part 2
+                first = spiral_sum(square)
+                print(f"{first} is the first value larger than {square}\n")
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    main(sys.argv[1:])

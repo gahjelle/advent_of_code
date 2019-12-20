@@ -1,4 +1,3 @@
-
 # Day 3: Spiral Memory {-}
 
 You come across an experimental new kind of memory stored on an infinite
@@ -34,7 +33,7 @@ How many steps are required to carry the data from the square identified in your
 puzzle input all the way to the access port?
 
 
-## Part two {-}
+## Part Two {-}
 
 As a stress test on the system, the programs here clear the grid and then store
 the value 1 in square 1. Then, in the same allocation order as shown above, they
@@ -66,3 +65,4 @@ squares would receive the following values:
     362  747  806--->   ...
 
 What is the **first value written** that is **larger** than your puzzle input?
+
