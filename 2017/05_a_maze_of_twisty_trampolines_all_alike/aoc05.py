@@ -25,23 +25,23 @@ def do_jumps(jumps, threshold=None):
 
 
 def print_jumps(jumps, current):
-    jump_str = ['({})'.format(j) if i == current else ' {} '.format(j)
-                for i, j in enumerate(jumps)]
-    print(' '.join(jump_str))
+    jump_str = [f"({j})" if i == current else f" {j} " for i, j in enumerate(jumps)]
+    print(" ".join(jump_str))
 
 
-def main():
-    for filename in sys.argv[1:]:
-        if filename.startswith('--'):
+def main(args):
+    for filename in args:
+        if filename.startswith("--"):
             continue
 
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
+        print(f"\n{filename}:")
+        with open(filename, mode="r") as fid:
             jumps = [int(n) for n in fid]
-            print('Reached the exit in {} steps'.format(do_jumps(jumps[:])))
-            print('With weird rule, used {} steps'.format(do_jumps(jumps[:], 3)))
+            print(f"Reached the exit in {do_jumps(jumps[:])} steps")
+            print(f"With weird rule, used {do_jumps(jumps[:], 3)} steps")
 
 
-if __name__ == '__main__':
-    debug = print_jumps if '--debug' in sys.argv else lambda *_: None
-    main()
+debug = print_jumps if "--debug" in sys.argv else lambda *_: None
+
+if __name__ == "__main__":
+    main(sys.argv[1:])

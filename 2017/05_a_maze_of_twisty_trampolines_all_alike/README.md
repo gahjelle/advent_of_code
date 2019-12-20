@@ -1,4 +1,3 @@
-
 # Day 5: A Maze of Twisty Trampolines, All Alike {-}
 
 An urgent interrupt arrives from the CPU: it's trapped in a maze of jump
