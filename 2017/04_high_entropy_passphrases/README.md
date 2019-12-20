@@ -1,4 +1,3 @@
-
 # Day 4: High-Entropy Passphrases {-}
 
 A new system policy has been put in place that requires all accounts to use a
@@ -19,7 +18,7 @@ The system's full passphrase list is available as your puzzle input. **How many
 passphrases are valid?**
 
 
-## Part two {-}
+## Part Two {-}
 
 For added security, yet another system policy has been put in place. Now, a
 valid passphrase must contain no two words that are anagrams of each other -
@@ -42,6 +41,4 @@ For example:
   form any other word.
 
 Under this new system policy, **how many passphrases are valid?**
-
-
 
