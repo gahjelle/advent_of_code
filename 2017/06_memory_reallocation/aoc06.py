@@ -6,6 +6,8 @@ Solution by Geir Arne Hjelle, 2017-12-06
 import sys
 import numpy as np
 
+debug = print if "--debug" in sys.argv else lambda *_: None
+
 
 def redistribute(memory):
     seen = dict()
@@ -29,18 +31,18 @@ def redistribute(memory):
     return len(seen), len(seen) - seen[memory.tostring()]
 
 
-def main():
-    for filename in sys.argv[1:]:
-        if filename.startswith('--'):
+def main(args):
+    for filename in args:
+        if filename.startswith("--"):
             continue
 
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
+        print("\n{}:".format(filename))
+        with open(filename, mode="r") as fid:
             for line in fid:
                 memory = np.array([int(n) for n in line.strip().split()])
-                print('Using {} redistribution cycles, {} in loop'.format(*redistribute(memory)))
+                part_1, part_2 = redistribute(memory)
+                print(f"Using {part_1} redistribution cycles, {part_2} in loop")
 
 
-if __name__ == '__main__':
-    debug = print if '--debug' in sys.argv else lambda *_: None
-    main()
+if __name__ == "__main__":
+    main(sys.argv[1:])

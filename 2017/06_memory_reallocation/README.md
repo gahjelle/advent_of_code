@@ -1,4 +1,3 @@
-
 # Day 6: Memory Reallocation {-}
 
 A debugger program here is having an issue: it is trying to repair a memory
@@ -50,7 +49,7 @@ Given the initial block counts in your puzzle input, **how many redistribution
 cycles** must be completed before a configuration is produced that has been seen
 before?
 
-## Part two {-}
+## Part Two {-}
 
 Out of curiosity, the debugger would also like to know the size of the loop:
 starting from a state that has already been seen, how many block redistribution
@@ -61,3 +60,4 @@ answer in that example would be 4.
 
 **How many cycles** are in the infinite loop that arises from the configuration
 in your puzzle input?
+
