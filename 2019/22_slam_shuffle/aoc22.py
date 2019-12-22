@@ -65,20 +65,14 @@ def as_linear(commands):
 
 
 def geom_sum(a, n, m):
-    """Calculate $a^{n-1} + ... + a + 1 mod m$
+    """Calculate $S_n = a^{n-1} + ... + a + 1 mod m$
 
-    https://stackoverflow.com/a/42033401
+    Use $S_n = (a^n - 1) / (a - 1) mod m = (a^n - 1) * (a - 1)^{-1} mod m$.
+    For the inverse, Fermat's little theorem implies that
+    $(a - 1)^{-1} mod m = (a - 1)^{m-2} mod m$, so that
+    $S_n = (a^n - 1) mod m * (a - 1)^{m-2} mod m$
     """
-    total = 0
-    s = 1
-    while n > 0:
-        if n % 2:
-            total = (a * total + s) % m
-        s = (s * (a + 1)) % m
-        n = n // 2
-        a = (a * a) % m
-
-    return total
+    return ((pow(a, n, m) - 1) * pow(a - 1, m - 2, m)) % m
 
 
 def shuffle_deck(coeffs, card, num_cards, repeats, inverse=False):
