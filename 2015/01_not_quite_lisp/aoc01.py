@@ -5,11 +5,10 @@ Solution by Geir Arne Hjelle, 2016-12-03
 """
 import sys
 
-STEPS = {'(': 1, ')': -1}
+STEPS = {"(": 1, ")": -1}
 
 
 def count_floors(parens):
-    # parens.count('(') - parens.count(')')
     return sum(STEPS[s] for s in parens)
 
 
@@ -21,17 +20,24 @@ def find_basement(parens):
             return count
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
+def main(args):
+    for filename in args:
+        print(f"\n{filename}:")
+        with open(filename, mode="r") as fid:
             for line in fid:
                 parens = line.strip()
-                print('{:<8s}{:2s}: Santa ends at floor {}'
-                      ''.format(parens[:8], '..' if len(parens) > 8 else '', count_floors(parens)))
-                print('{:<8s}{:2s}: Santa enters the basement at step {}\n'
-                      ''.format(parens[:8], '..' if len(parens) > 8 else '', find_basement(parens)))
+                parens_str = f"{parens[:8]}.." if len(parens) > 10 else parens
+
+                # Part 1
+                num_floors = count_floors(parens)
+                print(f"{parens_str:<10s}: Santa ends at floor {num_floors}")
+
+                # Part 2
+                basement = find_basement(parens)
+                print(
+                    f"{parens_str:<10s}: Santa enters the basement at step {basement}\n"
+                )
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    main(sys.argv[1:])
