@@ -5,3 +5,4 @@ template.py
 adventofcode*
 .vscode
 __pycache__
+others/
