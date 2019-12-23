@@ -8,22 +8,32 @@ import itertools
 import sys
 
 
-def find_md5_number(key, num_zeros):
-    for counter in itertools.count(start=1, step=1):
-        md5 = hashlib.md5()
-        md5.update(bytes(key + str(counter), encoding='utf-8'))
+def find_md5_number(key, num_zeros, offset=1):
+    prefix = "0" * num_zeros
 
-        if md5.hexdigest().startswith('0' * num_zeros):
+    for counter in itertools.count(start=offset, step=1):
+        md5 = hashlib.md5()
+        md5.update(bytes(key + str(counter), encoding="utf-8"))
+
+        if md5.hexdigest().startswith(prefix):
             return counter
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
+def main(args):
+    for filename in args:
+        print(f"\n{filename}:")
+        with open(filename, mode="r") as fid:
             for line in fid:
-                print('{} - 5 zeros: {}'.format(line.strip(), find_md5_number(line.strip(), 5)))
-                print('{} - 6 zeros: {}'.format(line.strip(), find_md5_number(line.strip(), 6)))
+                key = line.strip()
 
-if __name__ == '__main__':
-    main()
+                # Part 1
+                part_1 = find_md5_number(key, num_zeros=5)
+                print(f"{key} - 5 zeros: {part_1}")
+
+                # Part 2
+                part_2 = find_md5_number(key, num_zeros=6, offset=part_1)
+                print(f"{key} - 6 zeros: {part_2}")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
