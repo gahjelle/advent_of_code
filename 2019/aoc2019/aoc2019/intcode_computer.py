@@ -94,24 +94,29 @@ class IntcodeComputer:
     def run(self):
         next(self)
 
+    def step(self):
+        code_str = str(self.program[self.pointer])
+        opcode = self.OPCODES[int(code_str[-2:])]
+        param_modes = (code_str[:-2][::-1] + "0" * 4)[: opcode.num_params]
+        params = self.get_params(self.pointer + 1, self.program, param_modes)
+        output = opcode.operation(self, params, input)
+        debug(f"Running {opcode.description} on {params} -> {output!r}")
+
+        if isinstance(output, Jump):
+            self.pointer = output.pointer
+            return None
+
+        self.pointer += 1 + opcode.num_params
+        return output
+
     def __next__(self):
         while True:
-            code_str = str(self.program[self.pointer])
-            opcode = self.OPCODES[int(code_str[-2:])]
-            param_modes = (code_str[:-2][::-1] + "0" * 4)[: opcode.num_params]
-            params = self.get_params(self.pointer + 1, self.program, param_modes)
-            output = opcode.operation(self, params, input)
-
-            debug(f"Running {opcode.description} on {params} -> {output!r}")
-
+            output = self.step()
             if output is Exit:
                 return None
 
             if isinstance(output, Jump):
-                self.pointer = output.pointer
                 continue
-
-            self.pointer += 1 + opcode.num_params
 
             if output is not None:
                 return output
