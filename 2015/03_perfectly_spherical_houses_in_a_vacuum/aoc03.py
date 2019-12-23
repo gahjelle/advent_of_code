@@ -6,11 +6,12 @@ Solution by Geir Arne Hjelle, 2016-12-03
 import itertools
 import sys
 
-MOVES = {'^': lambda p: (p[0], p[1] + 1),
-         'v': lambda p: (p[0], p[1] - 1),
-         '>': lambda p: (p[0] + 1, p[1]),
-         '<': lambda p: (p[0] - 1, p[1]),
-         }
+MOVES = {
+    "^": lambda p: (p[0], p[1] + 1),
+    "v": lambda p: (p[0], p[1] - 1),
+    ">": lambda p: (p[0] + 1, p[1]),
+    "<": lambda p: (p[0] - 1, p[1]),
+}
 
 
 def count_houses(directions, num_santas):
@@ -24,17 +25,28 @@ def count_houses(directions, num_santas):
     return len(houses)
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
+def main(args):
+    for filename in args:
+        print(f"\n{filename}:")
+        with open(filename, mode="r") as fid:
             for line in fid:
                 directions = line.strip()
-                print('{:<8s}{:2s}: {} houses receive at least one present from 1 santa'
-                      ''.format(directions[:8], '..' if len(directions) > 8 else '', count_houses(directions, 1)))
-                print('{:<8s}{:2s}: {} houses receive at least one present from 2 santas'
-                      ''.format(directions[:8], '..' if len(directions) > 8 else '', count_houses(directions, 2)))
+                dir_str = f"{directions[:8]}.." if len(directions) > 10 else directions
+
+                # Part 1
+                part_1 = count_houses(directions, num_santas=1)
+                print(
+                    f"{dir_str:<10}: {part_1} houses receive at least one present "
+                    f"from 1 santa"
+                )
+
+                # Part 2
+                part_2 = count_houses(directions, num_santas=2)
+                print(
+                    f"{dir_str:<10}: {part_2} houses receive at least one present "
+                    f"from 2 santas"
+                )
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    main(sys.argv[1:])
