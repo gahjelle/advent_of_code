@@ -155,3 +155,7 @@ class IntcodeComputer:
             self.program.extend([0] * (pointer - len(self.program) + 1))
 
         self.program[pointer] = value
+
+    def __repr__(self):
+        program = f"{','.join(str(c) for c in self.program[:5])}... ({self.pointer})"
+        return f"{self.__class__.__name__}({program!r}, input={self.input!r})"
