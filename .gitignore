@@ -1,8 +1,12 @@
 input.txt
 output.txt
+
 Makefile
-template.py
 adventofcode*
-.vscode
+
 __pycache__
+
 others/
+
+.envrc
+.vscode
