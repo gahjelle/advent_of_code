@@ -32,20 +32,16 @@ class Password:
 
     def is_valid_first(self):
         """Check if password is valid according to the first policy"""
-        return self.num_1 <= self.count_char() <= self.num_2
+        return self.num_1 <= self.word.count(self.char) <= self.num_2
 
     def is_valid_second(self):
         """Check if password is valid according to the second policy
 
         != works as XOR: only one position can contain the given character
         """
-        return self.has_char(self.num_1) != self.has_char(self.num_2)
+        return self._has_char(self.num_1) != self._has_char(self.num_2)
 
-    def count_char(self):
-        """Count how many times char appears in password"""
-        return self.word.count(self.char)
-
-    def has_char(self, idx):
+    def _has_char(self, idx):
         """Check if word has char at given index, counting from 1"""
         return self.word[idx - 1] == self.char
 
