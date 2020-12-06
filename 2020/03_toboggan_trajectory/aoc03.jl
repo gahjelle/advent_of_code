@@ -3,12 +3,10 @@
 # Advent of Code 2020, day 3
 # Solution by Geir Arne Hjelle, 2020-12-03
 
+using Pipe
 
-"""
-    count_trees(slope; right=3, down=1)
 
-Count the number of trees following the given direction through the slope
-"""
+# Count the number of trees following the given direction through the slope
 function count_trees(slope; right=3, down=1)
     max_y, max_x = size(slope)
     idx_y, idx_x = 1, 1
@@ -17,45 +15,40 @@ function count_trees(slope; right=3, down=1)
     while idx_y <= max_y
         num_trees += slope[idx_y, idx_x]
         idx_y += down
-        idx_x += right
-        if idx_x > max_x
-            idx_x -= max_x
-        end
+        idx_x = ((idx_x + right - 1) % max_x) + 1  # +/- 1 since index starts at 1
     end
-    return num_trees
+    num_trees
 end
 
 
-"""
-    main(filename)
-
-Solve the problem for one file
-"""
-function main(filename)
+# Solve the problem for one file
+function solve(filename)
     println("\n$(filename)")
 
     # Read from file
     input = open(filename) do fid
-        transpose(reduce(hcat, [[c == '#' for c in ln] for ln in readlines(fid)]))
+        @pipe (
+            fid
+            |> readlines
+            .|> map(c -> c == '#', collect(_))
+            |> reduce(hcat, _)
+            |> transpose
+        )
     end
 
     # Part 1
-    println(count_trees(input, right=3, down=1))
+    input |> count_trees |> println
 
     # Part 2
-    println(
-        prod(
-            [
-                count_trees(input, right=1, down=1),
-                count_trees(input, right=3, down=1),
-                count_trees(input, right=5, down=1),
-                count_trees(input, right=7, down=1),
-                count_trees(input, right=1, down=2),
-            ]
-        )
-    )
+    [
+        count_trees(input, right=1, down=1),
+        count_trees(input, right=3, down=1),
+        count_trees(input, right=5, down=1),
+        count_trees(input, right=7, down=1),
+        count_trees(input, right=1, down=2),
+    ] |> prod |> println
 end
 
 
-# Run main on each file
-main.(ARGS)
+# Run solve on each file
+ARGS .|> solve

@@ -24,7 +24,7 @@ function count_all(group)
 end
 
 # Solve the problem for one file
-function main(filename)
+function solve(filename)
     println("\n$(filename)")
 
     # Read from file
@@ -33,12 +33,12 @@ function main(filename)
     end
 
     # Part 1
-    count_any.(input) |> sum |> println
+    input .|> count_any |> sum |> println
 
     # Part 2
-    count_all.(input) |> sum |> println
+    input .|> count_all |> sum |> println
 end
 
 
-# Run main on each file
-main.(ARGS)
+# Run solve on each file
+ARGS .|> solve

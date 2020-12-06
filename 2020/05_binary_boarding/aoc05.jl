@@ -3,53 +3,39 @@
 # Advent of Code 2020, day 5
 # Solution by Geir Arne Hjelle, 2020-12-05
 
-PASS2SEATID = Dict('F' => 0, 'B' => 1', 'L' => 0, 'R' => 1)
+using Pipe
 
-"""
-    parse_boarding_pass(boarding_pass)
+PASS2SEATID = Dict('F' => '0', 'B' => '1', 'L' => '0', 'R' => '1')
 
-Parse a boarding pass into a binary seat ID
-"""
+
+# Parse a boarding pass into a binary seat ID
 function parse_boarding_pass(boarding_pass)
-    return parse(
-        Int16,
-        join([PASS2SEATID[c] for c in boarding_pass], ""),
-        base=2
-    )
+    @pipe boarding_pass |> map(c -> PASS2SEATID[c], _) |> parse(Int16, _, base=2)
 end
 
 
-"""
-    find_missing(seat_ids)
-
-Find missing seat IDs in a list of IDs
-"""
+# Find missing seat IDs in a list of IDs
 function find_missing(seat_ids)
-    all_ids = Set(minimum(seat_ids):maximum(seat_ids))
-    return setdiff(all_ids, Set(seat_ids))
+    @pipe Set(minimum(seat_ids):maximum(seat_ids)) |> setdiff(_, Set(seat_ids))
 end
 
 
-"""
-    main(filename)
-
-Solve the problem for one file
-"""
+# Solve the problem for one file
 function main(filename)
     println("\n$(filename)")
 
     # Read from file
     seat_ids = open(filename) do fid
-        parse_boarding_pass.(readlines(fid))
+        @pipe fid |> readlines .|> parse_boarding_pass
     end
 
     # Part 1
-    println(maximum(seat_ids))
+    seat_ids |> maximum |> println
 
     # Part 2
-    println(join(find_missing(seat_ids), ", "))
+    @pipe seat_ids |> find_missing |> join(_, ", ") |> println
 end
 
 
 # Run main on each file
-main.(ARGS)
+ARGS .|> main

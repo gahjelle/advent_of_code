@@ -20,4 +20,4 @@ end
 
 
 # Solve the problem for each file
-solve.(ARGS)
+ARGS .|> solve
