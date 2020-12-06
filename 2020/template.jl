@@ -3,23 +3,21 @@
 # Advent of Code 2020, day
 # Solution by Geir Arne Hjelle, 2020-12-
 
+using Pipe
 
-"""
-    main(filename)
-
-Solve the problem for one file
-"""
-function main(filename)
+# Solve the problem for one file
+function solve(filename)
     println("\n$(filename)")
 
     # Read from file
     input = open(filename) do fid
-        parse.(Int64, readlines(fid))
+        fid |> readlines
     end
 
     # Part 1
+    println.(input)
 end
 
 
-# Run main on each file
-main.(ARGS)
+# Solve the problem for each file
+solve.(ARGS)
