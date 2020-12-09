@@ -15,7 +15,7 @@ function solve(filename)
     end
 
     # Part 1
-    println.(input)
+    input .|> println
 end
 
 
