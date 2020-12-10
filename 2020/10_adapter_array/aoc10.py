@@ -9,6 +9,8 @@ import numpy as np
 
 debug = print if "--debug" in sys.argv else lambda *_: None
 
+FORBIDDEN = {0: {}, 1: {}, 2: {}, 3: {}, 4: {"000"}}
+
 
 def count_jumps(jumps):
     """Count number of 1- and 3-jumps"""
@@ -23,13 +25,20 @@ def find_runs(jumps):
     return np.diff(np.where(np.diff([3] + list(jumps)))[0])[::2]
 
 
-def runs_to_combinations(runs):
-    """Count possible combinations based on run lengths
+def forbidden_combos(run_length):
+    """Find forbidden combinations based on run lengths"""
+    if run_length not in FORBIDDEN:
+        previous = forbidden_combos(run_length - 1)
+        FORBIDDEN[run_length] = set.union(
+            *[{f"0{c}", f"1{c}", f"{c}0", f"{c}1"} for c in previous]
+        )
 
-    Based on the formula 2^(r-1) - 2^(r-4) where 2^n is treated as 0 for all
-    negative n
-    """
-    return (2 ** (runs - 1) - np.floor(2 ** (runs.astype(float) - 4))).astype(int)
+    return FORBIDDEN[run_length]
+
+
+def runs_to_combinations(run_lengths):
+    """Count possible combinations based on run lengths"""
+    return [2 ** (rl - 1) - len(forbidden_combos(rl)) for rl in run_lengths]
 
 
 def main(args):
@@ -50,7 +59,7 @@ def solve(file_path):
 
     # Part 2
     part_2 = np.prod(runs_to_combinations(find_runs(joltage_jumps)))
-    print(f"There are {part_2} distict arrangements")
+    print(f"There are {part_2} distinct arrangements")
 
 
 if __name__ == "__main__":
