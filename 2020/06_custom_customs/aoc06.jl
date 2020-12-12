@@ -3,25 +3,20 @@
 # Advent of Code 2020, day 6
 # Solution by Geir Arne Hjelle, 2020-12-06
 
-using DataStructures
 using Pipe
+
 
 # Count number of questions to which at least one person answered yes
 function count_any(group)
-    @pipe group |> replace(_, "\n" => "") |> Set |> length
+    @pipe group |> split .|> Set |> foldl(union, _) |> length
 end
+
 
 # Count number of questions to which all people answered yes
 function count_all(group)
-    num_people = @pipe group |> split(_, "\n") |> length
-    @pipe (
-        group
-        |> replace(_, "\n" => "")
-        |> counter
-        |> filter(item -> item[2] == num_people, _)
-        |> length
-    )
+    @pipe group |> split .|> Set |> foldl(intersect, _) |> length
 end
+
 
 # Solve the problem for one file
 function solve(filename)

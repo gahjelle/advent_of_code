@@ -1,5 +1,7 @@
 input.txt
 output.txt
+output.py.txt
+output.jl.txt
 
 Makefile
 adventofcode*
