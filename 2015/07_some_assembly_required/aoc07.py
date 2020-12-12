@@ -3,24 +3,26 @@
 Advent of Code 2015, day 7
 Solution by Geir Arne Hjelle, 2016-12-04
 """
+import pathlib
 import sys
 import numpy as np
 
-COMMANDS = dict(NOT=lambda x: ~x,
-                AND=lambda x, y: x & y,
-                OR=lambda x, y: x | y,
-                LSHIFT=lambda x, s: x << s,
-                RSHIFT=lambda x, s: x >> s,
-               )
+COMMANDS = dict(
+    NOT=lambda x: ~x,
+    AND=lambda x, y: x & y,
+    OR=lambda x, y: x | y,
+    LSHIFT=lambda x, s: x << s,
+    RSHIFT=lambda x, s: x >> s,
+)
 
-SIGNALS = dict()
+SIGNALS = {}
 
 
 def read_circuit(filename):
-    circuit = dict()
-    with open(filename, mode='r') as fid:
+    circuit = {}
+    with open(filename, mode="r") as fid:
         for line in fid:
-            connection, output = [w.strip() for w in line.split('->')]
+            connection, output = [w.strip() for w in line.split("->")]
             circuit[output] = connection
 
     return circuit
@@ -47,7 +49,7 @@ def _parse_signal(signal):
 
 def _int(string):
     """Convert to uint16 without ValueErrors, because dict.get() does not handle
-       errors very gracefully...
+    errors very gracefully...
     """
     try:
         return np.uint16(string)
@@ -55,33 +57,38 @@ def _int(string):
         return None
 
 
-def main():
-    filename = sys.argv[1]   # Only read one file since SIGNALS is global
-    print('\n{}:'.format(filename))
+def main(args):
+    """Solve the problem for all file paths"""
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
+        solve(file_path)
 
-    # part 1
-    circuit = read_circuit(filename)
+
+def solve(file_path):
+    """Solve the problem for one file path"""
+    print(f"\n{file_path}:")
+
+    # Part 1
+    circuit = read_circuit(file_path)
     while circuit:
         read_signals(circuit)
 
-    signal_a = SIGNALS.get('a')
+    signal_a = SIGNALS.get("a")
     for wire, signal in sorted(SIGNALS.items()):
-#        print('{:>5s}: {}'.format(wire, signal))
         del SIGNALS[wire]
 
-    print('The signal at a is {}'.format(signal_a))
+    print(f"The signal at a is {signal_a}")
 
     if signal_a is None:
         return
 
-    # part 2
-    circuit = read_circuit(filename)
-    circuit['b'] = signal_a
+    # Part 2
+    circuit = read_circuit(file_path)
+    circuit["b"] = signal_a
     while circuit:
         read_signals(circuit)
 
-    print('The modified signal at a is {}'.format(SIGNALS.get('a')))
+    print(f"The modified signal at a is {SIGNALS.get('a')}")
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    main(sys.argv[1:])
