@@ -6,6 +6,26 @@
 using Pipe
 using StatsBase: countmap
 
+FORBIDDEN = Dict(0 => Set(), 1 => Set(), 2 => Set(), 3 => Set(), 4 => Set(["000"]))
+
+# Count number of combinations for a given run length
+function count_combinations(run_length)
+    2^(run_length - 1) - length(invalid_combinations(run_length))
+end
+
+# Which combinations are invalid because of jumps >= 3
+function invalid_combinations(run_length)
+    if !(run_length in keys(FORBIDDEN))
+        previous = invalid_combinations(run_length - 1)
+        FORBIDDEN[run_length] = @pipe [
+            Set("0$(p)" for p in previous),
+            Set("1$(p)" for p in previous),
+            Set("$(p)0" for p in previous),
+            Set("$(p)1" for p in previous),
+        ] |> foldl(union, _)
+    end
+    FORBIDDEN[run_length]
+end
 
 # Solve the problem for one file
 function solve(filename)
@@ -35,7 +55,7 @@ function solve(filename)
         |> findall(x -> x != 0, _)  # Indices of starts of runs
         |> diff
         |> _[1:2:end]  # Pick out runs of 1s
-        |> map(r -> 2^(r-1) - floor(Int, 2.0^(r-4)), _)  # Run lengths to #combinations
+        |> map(count_combinations, _)
         |> prod  # Total number of combinations
         |> println
     )
