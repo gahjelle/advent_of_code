@@ -1,0 +1,19 @@
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - black
+  - colorama
+  - flit
+  - ipython
+  - isort
+  - numpy
+  - parse
+  - pip
+  - pytest
+  - pytest-cov
+  - shapely
+  - pip:
+      - advent-of-code-data
+      - pyplugs

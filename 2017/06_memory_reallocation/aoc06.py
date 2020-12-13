@@ -13,9 +13,9 @@ def redistribute(memory):
     seen = dict()
     num_banks = len(memory)
 
-    while memory.tostring() not in seen:
+    while memory.tobytes() not in seen:
         debug(memory)
-        seen[memory.tostring()] = len(seen)
+        seen[memory.tobytes()] = len(seen)
 
         idx_max = np.argmax(memory)
         num_blocks = memory[idx_max]
@@ -28,7 +28,7 @@ def redistribute(memory):
             memory[idx_max] += 1
             num_blocks -= 1
 
-    return len(seen), len(seen) - seen[memory.tostring()]
+    return len(seen), len(seen) - seen[memory.tobytes()]
 
 
 def main(args):
