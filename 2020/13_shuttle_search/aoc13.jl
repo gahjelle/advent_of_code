@@ -5,18 +5,20 @@
 
 using Pipe
 
-MAX_ID = 661
+INFINITY = 661  # Highest bus id in my input
 
 function find_first_timestamp(busses)
     other_busses, bus = busses[1:end - 1], busses[end]
     if isempty(other_busses)
-        return bus.id, (n * bus.id - bus.dt for n in 0:MAX_ID)
+        first_timestamp = mod(bus.id - bus.dt, bus.id)
+        return bus.id, (first_timestamp + n * bus.id for n in 0:INFINITY)
     end
 
     step, timestamps = find_first_timestamp(other_busses)
     for timestamp in timestamps
         if (timestamp + bus.dt) % bus.id == 0
-            return step * bus.id, (timestamp + n * step * bus.id for n in 0:MAX_ID)
+            new_step = lcm(step, bus.id)
+            return new_step, (timestamp + n * new_step for n in 0:INFINITY)
         end
     end
 end
@@ -41,7 +43,7 @@ function solve(filename)
 
     # Part 1
     (
-        [(bus.id - (input.current_time % bus.id), bus.id) for bus in input.busses]
+        [(mod(-input.current_time, bus.id), bus.id) for bus in input.busses]
         |> minimum
         |> prod
         |> println

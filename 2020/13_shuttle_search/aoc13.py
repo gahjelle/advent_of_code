@@ -4,6 +4,7 @@ Advent of Code 2020, day 13
 Solution by Geir Arne Hjelle, 2020-12-13
 """
 import itertools
+import math
 import pathlib
 import sys
 from typing import NamedTuple
@@ -18,19 +19,20 @@ class Bus(NamedTuple):
 
 def find_next_departure(busses, current_time):
     """Find next departure"""
-    return min((bus.id - current_time % bus.id, bus.id) for bus in busses)
+    return min((-current_time % bus.id, bus.id) for bus in busses)
 
 
 def find_first_timestamp(busses):
     """Find first timestamp when all busses are leaving according to schedule"""
     *other_busses, bus = busses
     if not other_busses:
-        return bus.id, itertools.count(bus.id + bus.dt, step=bus.id)
+        return bus.id, itertools.count((bus.id - bus.dt) % bus.id, step=bus.id)
 
     step, timestamps = find_first_timestamp(other_busses)
     for timestamp in timestamps:
         if (timestamp + bus.dt) % bus.id == 0:
-            return step * bus.id, itertools.count(timestamp, step=step * bus.id)
+            new_step = math.lcm(step, bus.id)
+            return new_step, itertools.count(timestamp, step=new_step)
 
 
 def main(args):
