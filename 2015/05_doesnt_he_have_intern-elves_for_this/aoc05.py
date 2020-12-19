@@ -22,14 +22,12 @@ def find_nice_strings_2(strings):
 
 
 def check_vowels(string):
-    """Check if string contains at least three vowels
-    """
+    """Check if string contains at least three vowels"""
     return sum(string.count(v) for v in "aeiou") >= 3
 
 
 def check_double(string):
-    """Check if string contains at least one letter that appears twice in a row
-    """
+    """Check if string contains at least one letter that appears twice in a row"""
     for c1, c2 in zip(string[:-1], string[1:]):
         if c1 == c2:
             return True
@@ -37,14 +35,13 @@ def check_double(string):
 
 
 def check_naughty(string):
-    """Check that string does not contain the strings 'ab', 'cd', 'pq', or 'xy'
-    """
+    """Check that string does not contain the strings 'ab', 'cd', 'pq', or 'xy'"""
     return not any(s in string for s in {"ab", "cd", "pq", "xy"})
 
 
 def check_twice(string):
     """Check if string contains a pair of any two letters that appears at least
-       twice without overlapping
+    twice without overlapping
     """
     for i in range(len(string) - 2):
         c, r = string[i : i + 2], string[i + 2 :]
@@ -55,7 +52,7 @@ def check_twice(string):
 
 def check_repeats(string):
     """Check if string contains at least one letter which repeats with exactly
-       one letter between
+    one letter between
     """
     for c1, c2 in zip(string[:-2], string[2:]):
         if c1 == c2:

@@ -50,11 +50,11 @@ class IntcodeComputer:
         self.set_value(pos, val1 * val2)
 
     def op_input(self, params, input):
-        (_, pos), = params
+        ((_, pos),) = params
         self.set_value(pos, next(self.input))
 
     def op_output(self, params, input):
-        (val, _), = params
+        ((val, _),) = params
         return val
 
     def op_jump_true(self, params, input):
@@ -76,7 +76,7 @@ class IntcodeComputer:
         self.set_value(pos, 1 if val1 == val2 else 0)
 
     def op_adjust_relative(self, params, input):
-        (val, _), = params
+        ((val, _),) = params
         self.relative_base += val
 
     OPCODES = {

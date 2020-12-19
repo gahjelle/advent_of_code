@@ -60,15 +60,11 @@ def main(args):
 
         # Part 1
         closest = min(points, key=manhattan)
-        print(
-            f"Closest intersection at {closest[:2]}: Distance = {manhattan(closest)}"
-        )
+        print(f"Closest intersection at {closest[:2]}: Distance = {manhattan(closest)}")
 
         # Part 2
         first = min(points, key=steps)
-        print(
-            f"First intersection at {first[:2]}: Distance = {steps(first)}"
-        )
+        print(f"First intersection at {first[:2]}: Distance = {steps(first)}")
 
 
 if __name__ == "__main__":
