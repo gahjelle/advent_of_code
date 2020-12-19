@@ -5,6 +5,7 @@ Solution by Geir Arne Hjelle, 2016-12-03
 """
 
 # Standard library imports
+import pathlib
 import sys
 
 # Third party imports
@@ -15,13 +16,22 @@ def count_triangles(triangles):
     return sum(np.sum(triangles, axis=1) > 2 * np.max(triangles, axis=1))
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        triangles = np.loadtxt(filename)
-        print('Number of possible triangles in rows:    {}'.format(count_triangles(triangles)))
-        print('Number of possible triangles in columns: {}'.format(count_triangles(triangles.T.reshape(-1, 3))))
+def main(args):
+    """Solve the problem for all file paths"""
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
+        solve(file_path)
 
 
-if __name__ == '__main__':
-    main()
+def solve(file_path):
+    """Solve the problem for one file path"""
+    print(f"\n{file_path}:")
+    triangles = np.loadtxt(file_path)
+    print(f"Number of possible triangles in rows:    {count_triangles(triangles)}")
+    print(
+        f"Number of possible triangles in columns: "
+        f"{count_triangles(triangles.T.reshape(-1, 3))}"
+    )
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
