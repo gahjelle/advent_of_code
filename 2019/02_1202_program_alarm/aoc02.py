@@ -3,8 +3,11 @@
 Advent of Code 2019, day 2
 Solution by Geir Arne Hjelle, 2019-12-02 / 2019-12-07
 """
-import sys
+# Standard library imports
 import itertools
+import sys
+
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 MOON = 19690720

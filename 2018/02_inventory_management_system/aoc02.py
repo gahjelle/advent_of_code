@@ -3,9 +3,10 @@
 Advent of Code 2018, day 2
 Solution by Geir Arne Hjelle, 2018-12-03
 """
-from collections import Counter
+# Standard library imports
 import itertools
 import sys
+from collections import Counter
 
 debug = print if "--debug" in sys.argv else lambda *_: None
 

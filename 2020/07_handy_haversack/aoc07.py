@@ -3,6 +3,7 @@
 Advent of Code 2020, day 7
 Solution by Geir Arne Hjelle, 2020-12-07
 """
+# Standard library imports
 import functools
 import pathlib
 import re

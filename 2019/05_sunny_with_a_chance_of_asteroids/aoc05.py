@@ -3,8 +3,11 @@
 Advent of Code 2019, day 5
 Solution by Geir Arne Hjelle, 2019-12-05 / 2019-12-07
 """
+# Standard library imports
 import pathlib
 import sys
+
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 

@@ -3,9 +3,10 @@
 Advent of Code 2020, day 3
 Solution by Geir Arne Hjelle, 2020-12-03
 """
+# Standard library imports
+import math
 import pathlib
 import sys
-import math
 
 debug = print if "--debug" in sys.argv else lambda *_: None
 

@@ -3,6 +3,7 @@
 Part of Advent of Code 2019
 Programmed by Geir Arne Hjelle
 """
+# Standard library imports
 import sys
 from dataclasses import dataclass
 from typing import Callable, NamedTuple

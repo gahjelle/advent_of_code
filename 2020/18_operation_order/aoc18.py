@@ -3,6 +3,7 @@
 Advent of Code 2020, day 18
 Solution by Geir Arne Hjelle, 2020-12-18
 """
+# Standard library imports
 import pathlib
 import re
 import sys

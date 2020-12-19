@@ -3,6 +3,7 @@
 Advent of Code 2016, day 12
 Solution by Geir Arne Hjelle, 2016-12-12
 """
+# Standard library imports
 import sys
 
 

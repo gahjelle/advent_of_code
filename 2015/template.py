@@ -3,6 +3,7 @@
 Advent of Code 2015, day
 Solution by Geir Arne Hjelle, 2016-12-
 """
+# Standard library imports
 import pathlib
 import sys
 

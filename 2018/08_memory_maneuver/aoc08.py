@@ -3,6 +3,7 @@
 Advent of Code 2018, day 8
 Solution by Geir Arne Hjelle, 2018-12-09
 """
+# Standard library imports
 import sys
 
 debug = print if "--debug" in sys.argv else lambda *_: None

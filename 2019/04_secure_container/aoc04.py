@@ -3,11 +3,13 @@
 Advent of Code 2019, day 4
 Solution by Geir Arne Hjelle, 2019-12-04
 """
-from collections import Counter
+# Standard library imports
 import pathlib
 import re
 import sys
+from collections import Counter
 
+# Third party imports
 import pyplugs
 
 

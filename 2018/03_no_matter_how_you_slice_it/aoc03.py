@@ -3,9 +3,11 @@
 Advent of Code 2018, day 3
 Solution by Geir Arne Hjelle, 2018-12-03
 """
+# Standard library imports
 import re
 import sys
 
+# Third party imports
 import numpy as np
 
 MAX_SIZE = 1000

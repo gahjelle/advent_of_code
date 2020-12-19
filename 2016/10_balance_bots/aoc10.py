@@ -3,8 +3,9 @@
 Advent of Code 2016, day 10
 Solution by Geir Arne Hjelle, 2016-12-10
 """
-from pprint import pprint
+# Standard library imports
 import sys
+from pprint import pprint
 
 MICROCHIPS = dict(bot=dict(), output=dict())
 

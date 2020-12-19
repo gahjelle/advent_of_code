@@ -3,9 +3,11 @@
 Advent of Code 2016, day 5
 Solution by Geir Arne Hjelle, 2016-12-05
 """
+# Standard library imports
 import hashlib
 import itertools
 import sys
+
 
 def find_md5_numbers(key, num_numbers, num_zeros):
     output = list()

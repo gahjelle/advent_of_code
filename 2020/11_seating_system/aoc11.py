@@ -3,11 +3,13 @@
 Advent of Code 2020, day 11
 Solution by Geir Arne Hjelle, 2020-12-11
 """
+# Standard library imports
 import enum
 import pathlib
 import sys
 import time
 
+# Third party imports
 import colorama
 import numpy as np
 from colorama import Cursor

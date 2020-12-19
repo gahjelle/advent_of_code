@@ -3,9 +3,11 @@
 Advent of Code 2015, day 6
 Solution by Geir Arne Hjelle, 2016-12-03 / 2019-12-23
 """
+# Standard library imports
 import sys
-import numpy as np
 
+# Third party imports
+import numpy as np
 import parse
 
 PATTERN = parse.compile("{command} {row_1:d},{col_1:d} through {row_2:d},{col_2:d}")

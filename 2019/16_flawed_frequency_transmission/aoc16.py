@@ -3,11 +3,13 @@
 Advent of Code 2019, day 16
 Solution by Geir Arne Hjelle, 2019-12-16
 """
+# Standard library imports
 import itertools
 import pathlib
 import sys
 from dataclasses import dataclass, field
 
+# Third party imports
 import numpy as np
 
 debug = print if "--debug" in sys.argv else lambda *_: None

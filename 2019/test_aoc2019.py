@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 """Test outputs of Advent of Code puzzle solutions"""
+# Standard library imports
 import importlib
 import pathlib
+
+# Third party imports
 import pytest
 
 PUZZLE_DIR = pathlib.Path(__file__).parent

@@ -3,11 +3,13 @@
 Advent of Code 2019, day 23
 Solution by Geir Arne Hjelle, 2019-12-23
 """
+# Standard library imports
 import collections
 import pathlib
 import sys
 from dataclasses import dataclass, field
 
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 NAT_ADDRESS = 255

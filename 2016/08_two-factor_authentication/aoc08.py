@@ -3,7 +3,10 @@
 Advent of Code 2016, day 8
 Solution by Geir Arne Hjelle, 2016-12-08
 """
+# Standard library imports
 import sys
+
+# Third party imports
 import numpy as np
 
 

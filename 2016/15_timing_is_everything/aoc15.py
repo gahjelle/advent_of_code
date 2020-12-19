@@ -3,8 +3,10 @@
 Advent of Code 2016, day 15
 Solution by Geir Arne Hjelle, 2016-12-15
 """
+# Standard library imports
 import itertools
 import sys
+
 
 def read_disc(line):
     tokens = line.strip().split()

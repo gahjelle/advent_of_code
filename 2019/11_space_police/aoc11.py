@@ -3,12 +3,14 @@
 Advent of Code 2019, day 11
 Solution by Geir Arne Hjelle, 2019-12-11
 """
+# Standard library imports
 import enum
 import itertools
 import pathlib
 import sys
 from dataclasses import dataclass, field
 
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 debug = print if "--debug" in sys.argv else lambda *_: None

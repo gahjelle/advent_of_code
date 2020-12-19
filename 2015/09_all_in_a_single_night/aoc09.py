@@ -3,9 +3,10 @@
 Advent of Code 2015, day 9
 Solution by Geir Arne Hjelle, 2016-12-06
 """
+# Standard library imports
+import itertools
 import pathlib
 import sys
-import itertools
 
 
 def read_distances(file_path):

@@ -3,10 +3,12 @@
 Advent of Code 2020, day 16
 Solution by Geir Arne Hjelle, 2020-12-16
 """
+# Standard library imports
 import math
 import pathlib
 import sys
 
+# Third party imports
 import parse
 
 debug = print if "--debug" in sys.argv else lambda *_: None

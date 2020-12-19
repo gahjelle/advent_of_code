@@ -3,9 +3,11 @@
 Advent of Code 2018, day 4
 Solution by Geir Arne Hjelle, 2018-12-04
 """
-from datetime import datetime
+# Standard library imports
 import sys
+from datetime import datetime
 
+# Third party imports
 import numpy as np
 
 debug = print if "--debug" in sys.argv else lambda *_: None

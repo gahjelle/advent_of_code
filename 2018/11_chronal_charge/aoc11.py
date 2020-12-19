@@ -3,9 +3,11 @@
 Advent of Code 2018, day 11
 Solution by Geir Arne Hjelle, 2018-12-11
 """
+# Standard library imports
 import itertools
 import sys
 
+# Third party imports
 import numpy as np
 
 debug = print if "--debug" in sys.argv else lambda *_: None

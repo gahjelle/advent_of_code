@@ -3,8 +3,10 @@
 Advent of Code 2018, day 18
 Solution by Geir Arne Hjelle, 2018-12-19
 """
+# Standard library imports
 import sys
 
+# Third party imports
 import colorama
 import numpy as np
 

@@ -3,11 +3,13 @@
 Advent of Code 2020, day 19
 Solution by Geir Arne Hjelle, 2020-12-19
 """
+# Standard library imports
 import itertools
 import pathlib
 import sys
 from typing import NamedTuple
 
+# Third party imports
 import parse
 
 debug = print if "--debug" in sys.argv else lambda *_: None

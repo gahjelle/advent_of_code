@@ -3,13 +3,15 @@
 Advent of Code 2019, day 20
 Solution by Geir Arne Hjelle, 2019-12-20
 """
+# Standard library imports
 import collections
-from dataclasses import dataclass
 import enum
 import pathlib
 import sys
 import time
+from dataclasses import dataclass
 
+# Third party imports
 import colorama
 import numpy as np
 

@@ -3,8 +3,11 @@
 Advent of Code 2015, day 7
 Solution by Geir Arne Hjelle, 2016-12-04
 """
+# Standard library imports
 import pathlib
 import sys
+
+# Third party imports
 import numpy as np
 
 COMMANDS = dict(

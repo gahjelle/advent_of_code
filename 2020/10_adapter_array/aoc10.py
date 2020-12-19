@@ -3,8 +3,11 @@
 Advent of Code 2020, day 10
 Solution by Geir Arne Hjelle, 2020-12-10
 """
+# Standard library imports
 import pathlib
 import sys
+
+# Third party imports
 import numpy as np
 
 debug = print if "--debug" in sys.argv else lambda *_: None

@@ -3,8 +3,9 @@
 Advent of Code 2016, day 13
 Solution by Geir Arne Hjelle, 2017-05-28
 """
-import sys
+# Standard library imports
 import itertools
+import sys
 
 DIRECTIONS = ((1, 0), (-1, 0), (0, 1), (0, -1))
 

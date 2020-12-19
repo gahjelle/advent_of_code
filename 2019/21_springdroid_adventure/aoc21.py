@@ -3,10 +3,11 @@
 Advent of Code 2019, day 21
 Solution by Geir Arne Hjelle, 2019-12-21
 """
+# Standard library imports
 import pathlib
 import sys
 
-
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 debug = print if "--debug" in sys.argv else lambda *_, **__: None

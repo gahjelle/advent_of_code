@@ -3,6 +3,7 @@
 Advent of Code 2019, day 17
 Solution by Geir Arne Hjelle, 2019-12-17
 """
+# Standard library imports
 import collections
 import enum
 import pathlib
@@ -10,9 +11,11 @@ import sys
 import time
 from dataclasses import dataclass, field
 
+# Third party imports
 import colorama as col
 import numpy as np
 
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 col.init(autoreset=True)

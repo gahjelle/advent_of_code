@@ -3,9 +3,11 @@
 Advent of Code 2018, day 12
 Solution by Geir Arne Hjelle, 2018-12-19
 """
-from collections import defaultdict
+# Standard library imports
 import sys
+from collections import defaultdict
 
+# Third party imports
 import numpy as np
 
 debug = print if "--debug" in sys.argv else lambda *_: None

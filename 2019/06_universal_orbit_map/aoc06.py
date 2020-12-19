@@ -3,6 +3,7 @@
 Advent of Code 2019, day 6
 Solution by Geir Arne Hjelle, 2019-12-06
 """
+# Standard library imports
 import pathlib
 import sys
 
@@ -14,6 +15,7 @@ def build_orbit_map(children, start="COM"):
     while child_objs:
         available = set(orbits) & set(child_objs)
         if not available:
+            # Third party imports
             import IPython
 
             IPython.embed()

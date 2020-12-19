@@ -3,8 +3,9 @@
 Advent of Code 2016, day 19
 Solution by Geir Arne Hjelle, 2017-05-28
 """
-from collections import deque
+# Standard library imports
 import sys
+from collections import deque
 
 
 def steal_left(num_elves):

@@ -3,13 +3,16 @@
 Advent of Code 2019, day 19
 Solution by Geir Arne Hjelle, 2019-12-19
 """
+# Standard library imports
 import functools
 import itertools
 import pathlib
 import sys
 
+# Third party imports
 import numpy as np
 
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 debug = print if "--debug" in sys.argv else lambda *_: None

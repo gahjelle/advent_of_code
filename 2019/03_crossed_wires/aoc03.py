@@ -3,9 +3,11 @@
 Advent of Code 2019, day 3
 Solution by Geir Arne Hjelle, 2019-12-03
 """
+# Standard library imports
 import pathlib
 import sys
 
+# Third party imports
 from shapely import geometry
 
 

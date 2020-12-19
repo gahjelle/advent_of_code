@@ -3,6 +3,7 @@
 Advent of Code 2018, day
 Solution by Geir Arne Hjelle, 2018-12-
 """
+# Standard library imports
 import sys
 
 

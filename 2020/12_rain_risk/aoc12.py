@@ -3,12 +3,14 @@
 Advent of Code 2020, day 12
 Solution by Geir Arne Hjelle, 2020-12-16
 """
+# Standard library imports
 import enum
 import pathlib
 import sys
 from dataclasses import dataclass, field
 from typing import Callable, ClassVar, NamedTuple
 
+# Third party imports
 import parse
 
 debug = print if "--debug" in sys.argv else lambda *_: None

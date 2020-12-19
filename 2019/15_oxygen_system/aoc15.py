@@ -3,16 +3,19 @@
 Advent of Code 2019, day 15
 Solution by Geir Arne Hjelle, 2019-12-15
 """
-from collections import UserDict
-from dataclasses import dataclass, field
+# Standard library imports
 import enum
 import pathlib
 import sys
 import time
+from collections import UserDict
+from dataclasses import dataclass, field
 from typing import List
 
+# Third party imports
 import colorama
 
+# Advent of Code imports
 from aoc2019.intcode_computer import IntcodeComputer
 
 colorama.init(autoreset=True)

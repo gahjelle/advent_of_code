@@ -3,6 +3,7 @@
 Advent of Code 2016, day 9
 Solution by Geir Arne Hjelle, 2016-12-09
 """
+# Standard library imports
 import itertools
 import sys
 
