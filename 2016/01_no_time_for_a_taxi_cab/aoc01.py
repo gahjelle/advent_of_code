@@ -26,6 +26,7 @@ def find_distance(instructions):
     position = (0, 0)
     direction = "N"
     visited = set()
+    first_visit = False
 
     for instruction in instructions:
         turn = instruction[0]
@@ -33,17 +34,14 @@ def find_distance(instructions):
         direction = TURNS[direction][turn]
         for _ in range(distance):
             position = MOVES[direction](position)
-            if position in visited:
-                print(
-                    "Already visited {} which is {} blocks away"
-                    "".format(position, sum(abs(c) for c in position))
-                )
+            if position in visited and not first_visit:
+                distance = sum(abs(c) for c in position)
+                print(f"Already visited {position} which is {distance} blocks away")
+                first_visit = True
             visited.add(position)
 
-    print(
-        "Ended at {} which is {} blocks away"
-        "".format(position, sum(abs(c) for c in position))
-    )
+    distance = sum(abs(c) for c in position)
+    print(f"Ended at {position} which is {distance} blocks away")
 
 
 def main(args):
