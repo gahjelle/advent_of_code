@@ -3,9 +3,15 @@
 Advent of Code 2016, day 13
 Solution by Geir Arne Hjelle, 2017-05-28
 """
+
 # Standard library imports
 import itertools
+import pathlib
 import sys
+
+import colorama
+
+colorama.init(autoreset=True)
 
 DIRECTIONS = ((1, 0), (-1, 0), (0, 1), (0, -1))
 
@@ -14,8 +20,8 @@ def is_wall(puzzle_id, x, y):
     if x < 0 or y < 0:
         return True
 
-    xy_sum = puzzle_id + x*x + 3*x + 2*x*y + y + y*y
-    return '{:b}'.format(xy_sum).count('1') % 2 == 1
+    xy_sum = puzzle_id + x * x + 3 * x + 2 * x * y + y + y * y
+    return f"{xy_sum:b}".count("1") % 2 == 1
 
 
 def find_path(puzzle_id, start, goal):
@@ -37,7 +43,7 @@ def find_path(puzzle_id, start, goal):
 
         paths = new_paths
         if step == 50:
-            print('Step {:3d}: {:8d} locations'.format(step, len(locations)))
+            print(f"Step {step:3d}: {len(locations):8d} locations")
 
 
 def plot_house(puzzle_id, path):
@@ -47,25 +53,32 @@ def plot_house(puzzle_id, path):
     for y in range(max_y):
         for x in range(max_x):
             if is_wall(puzzle_id, x, y):
-                print('#', end='')
+                print(f"{colorama.Fore.BLUE}{colorama.Style.DIM}#", end="")
             else:
                 if (x, y) in path:
-                    print('O', end='')
+                    print(f"{colorama.Style.BRIGHT}O", end="")
                 else:
-                    print('.', end='')
-        print('\n', end='')
+                    print(f"{colorama.Fore.RED}.", end="")
+        print("\n", end="")
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
-            for line in fid:
-                puzzle_id, goal_x, goal_y = [int(f) for f in line.split()]
-                path = find_path(puzzle_id, (1, 1), (goal_x, goal_y))
+def main(args):
+    """Solve the problem for all file paths"""
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
+        solve(file_path)
+
+
+def solve(file_path):
+    """Solve the problem for one file path"""
+    print(f"\n{file_path}:")
+    with file_path.open(mode="r") as fid:
+        for line in fid:
+            puzzle_id, goal_x, goal_y = [int(f) for f in line.split()]
+            path = find_path(puzzle_id, (1, 1), (goal_x, goal_y))
+            if "--draw" in sys.argv:
                 plot_house(puzzle_id, path)
-                print('{} steps'.format(len(path - {(1, 1)})))
+            print(f"{len(path - {(1, 1)})} steps")
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    main(sys.argv[1:])
