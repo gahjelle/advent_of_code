@@ -4,6 +4,7 @@ Advent of Code 2016, day 16
 Solution by Geir Arne Hjelle, 2016-12-16
 """
 # Standard library imports
+import pathlib
 import sys
 
 
@@ -29,18 +30,24 @@ def calculate_checksum(string):
             else:
                 checksum.append(0)
         string = checksum
-    return ''.join(str(c) for c in string)
+    return "".join(str(c) for c in string)
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
-            for line in fid:
-                length, initial_state = line.strip().split()
-                checksum = update_security_system(int(length), initial_state)
-                print('The checksum of the disk with length {} is {}'.format(length, checksum))
+def main(args):
+    """Solve the problem for all file paths"""
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
+        solve(file_path)
 
 
-if __name__ == '__main__':
-    main()
+def solve(file_path):
+    """Solve the problem for one file path"""
+    print(f"\n{file_path}:")
+    with file_path.open(mode="r") as fid:
+        for line in fid:
+            length, initial_state = line.strip().split()
+            checksum = update_security_system(int(length), initial_state)
+            print(f"The checksum of the disk with length {length} is {checksum}")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
