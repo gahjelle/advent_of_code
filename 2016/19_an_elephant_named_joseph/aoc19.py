@@ -1,9 +1,11 @@
-"""An elephant named Joseph
+"""An Elephant Named Joseph
 
 Advent of Code 2016, day 19
 Solution by Geir Arne Hjelle, 2017-05-28
 """
+
 # Standard library imports
+import pathlib
 import sys
 from collections import deque
 
@@ -34,14 +36,21 @@ def steal_across(num_elves):
     return stealees[0]
 
 
-def main():
-    for filename in sys.argv[1:]:
-        print('\n{}:'.format(filename))
-        with open(filename, mode='r') as fid:
-            for line in fid:
-                print('Elf {} steals all the presents'.format(steal_left(int(line.strip()))))
-                print('Elf {} steals all the presents'.format(steal_across(int(line.strip()))))
+def main(args):
+    """Solve the problem for all file paths"""
+    for file_path in [pathlib.Path(p) for p in args if not p.startswith("-")]:
+        solve(file_path)
 
 
-if __name__ == '__main__':
-    main()
+def solve(file_path):
+    """Solve the problem for one file path"""
+    print(f"\n{file_path}:")
+    with file_path.open(mode="r") as fid:
+        for line in fid:
+            num_elves = int(line.strip())
+            print(f"Elf {steal_left(num_elves)} steals all the presents")
+            print(f"Elf {steal_across(num_elves)} steals all the presents")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
