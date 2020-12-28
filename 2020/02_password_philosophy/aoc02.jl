@@ -3,7 +3,10 @@
 # Advent of Code 2020, day 2
 # Solution by Geir Arne Hjelle, 2020-12-02
 
+module AOC02
+
 using Pipe
+
 
 # Parse each line into parts: "{n1}-{n2} {char}: {word}"
 function parse_line(line)
@@ -35,21 +38,30 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
+function solve(input)
     # Read from file
-    input = open(filename) do fid
-        fid |> readlines .|> parse_line
-    end
+    passwords = input |> i -> split(i, "\n") .|> parse_line
 
     # Part 1
-    input .|> is_valid_1 |> sum |> println
+    part_1 = passwords .|> is_valid_1 |> sum
 
     # Part 2
-    input .|> is_valid_2 |> sum |> println
+    part_2 = passwords .|> is_valid_2 |> sum
+
+    part_1, part_2
 end
 
 
-# Run solve on each file
-ARGS .|> solve
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
+# Solve the problem for each file
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

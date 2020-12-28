@@ -3,7 +3,10 @@
 # Advent of Code 2020, day 4
 # Solution by Geir Arne Hjelle, 2020-12-12
 
+module AOC04
+
 using Pipe
+
 
 struct Height
     value::Union{Int16,Missing}
@@ -103,21 +106,30 @@ function validate(::Val{:pid}, value)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    input = open(filename) do fid
-        @pipe fid |> readlines |> join(_, "\n") |> split(_, "\n\n")
-    end
+function solve(input)
+    # Parse input
+    passport = @pipe input |> split(_, "\n\n")
 
     # Part 1
-    input .|> parse_passport .|> required_fields |> sum |> println
+    part_1 = passport .|> parse_passport .|> required_fields |> sum
 
     # Part 2
-    input .|> parse_passport .|> valid_fields |> sum |> println
+    part_2 = passport .|> parse_passport .|> valid_fields |> sum
+
+    part_1, part_2
 end
 
 
-# Run solve on each file
-ARGS .|> solve
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
+# Solve the problem for each file
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

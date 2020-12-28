@@ -3,7 +3,10 @@
 # Advent of Code 2015, day 16
 # Solution by Geir Arne Hjelle, 2020-12-18
 
+module AOC16
+
 using Pipe
+
 
 struct Sue
     number::Int16
@@ -85,13 +88,9 @@ function retroencabulate(gift::Sue)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    aunts = open(filename) do fid
-        fid |> readlines .|> Sue
-    end
+function solve(input)
+    # Parse input
+    aunts = split(input, "\n") .|> string .|> Sue
 
     gift = Sue(
         2015,
@@ -110,12 +109,25 @@ function solve(filename)
     )
 
     # Part 1
-    @pipe aunts |> filter(aunt -> aunt == gift, _) |> first |> getfield(_, :number) |> println
+    part_1 = @pipe aunts |> filter(aunt -> aunt == gift, _) |> first |> getfield(_, :number)
 
     # Part 2
-    @pipe aunts |> filter(retroencabulate(gift), _) |> first |> getfield(_, :number) |> println
+    part_2 = @pipe aunts |> filter(retroencabulate(gift), _) |> first |> getfield(_, :number)
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

@@ -3,6 +3,8 @@
 # Advent of Code 2020, day 3
 # Solution by Geir Arne Hjelle, 2020-12-03
 
+module AOC03
+
 using Pipe
 
 
@@ -22,33 +24,42 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    input = open(filename) do fid
-        @pipe (
-            fid
-            |> readlines
-            .|> map(c -> c == '#', collect(_))
-            |> reduce(hcat, _)
-            |> transpose
-        )
-    end
+function solve(input)
+    # Parse input
+    slope = @pipe (
+        input
+        |> split
+        .|> map(c -> c == '#', collect(_))
+        |> hcat(_...)
+        |> transpose
+    )
 
     # Part 1
-    input |> count_trees |> println
+    part_1 = slope |> count_trees
 
     # Part 2
-    [
-        count_trees(input, right=1, down=1),
-        count_trees(input, right=3, down=1),
-        count_trees(input, right=5, down=1),
-        count_trees(input, right=7, down=1),
-        count_trees(input, right=1, down=2),
-    ] |> prod |> println
+    part_2 = [
+        count_trees(slope, right=1, down=1),
+        count_trees(slope, right=3, down=1),
+        count_trees(slope, right=5, down=1),
+        count_trees(slope, right=7, down=1),
+        count_trees(slope, right=1, down=2),
+    ] |> prod
+
+    part_1, part_2
 end
 
 
-# Run solve on each file
-ARGS .|> solve
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
+# Solve the problem for each file
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

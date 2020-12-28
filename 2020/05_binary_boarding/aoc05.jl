@@ -3,6 +3,8 @@
 # Advent of Code 2020, day 5
 # Solution by Geir Arne Hjelle, 2020-12-05
 
+module AOC05
+
 using Pipe
 
 PASS2SEATID = Dict('F' => '0', 'B' => '1', 'L' => '0', 'R' => '1')
@@ -21,21 +23,30 @@ end
 
 
 # Solve the problem for one file
-function main(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    seat_ids = open(filename) do fid
-        @pipe fid |> readlines .|> parse_boarding_pass
-    end
+function solve(input)
+    # Parse input
+    seat_ids = @pipe input |> split .|> parse_boarding_pass
 
     # Part 1
-    seat_ids |> maximum |> println
+    part_1 = seat_ids |> maximum
 
     # Part 2
-    @pipe seat_ids |> find_missing |> join(_, ", ") |> println
+    part_2 = @pipe seat_ids |> find_missing |> join(_, ", ")
+
+    part_1, part_2
 end
 
 
-# Run main on each file
-ARGS .|> main
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
+# Solve the problem for each file
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

@@ -3,7 +3,10 @@
 # Advent of Code 2019, day 1
 # Solution by Geir Arne Hjelle, 2020-11-30
 
+module AOC01
+
 using Pipe
+
 
 # Calculate fuel based on mass
 function fuel(mass)
@@ -24,21 +27,30 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    input = open(filename) do fid
-        @pipe fid |> readlines .|> parse(Int64, _)
-    end
+function solve(input)
+    # Parse input
+    masses = @pipe split(input, "\n") .|> parse(Int64, _)
 
     # Part 1
-    input .|> fuel |> sum |> println
+    part_1 = masses .|> fuel |> sum
 
     # Part 2
-    input .|> recursive_fuel |> sum |> println
+    part_2 = masses .|> recursive_fuel |> sum
+
+    part_1, part_2
 end
 
 
-# Run solve on each file
-ARGS .|> solve
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
+# Solve the problem for each file
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

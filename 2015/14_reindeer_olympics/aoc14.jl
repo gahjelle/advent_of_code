@@ -3,7 +3,10 @@
 # Advent of Code 2015, day 14
 # Solution by Geir Arne Hjelle, 2020-12-12
 
+module AOC14
+
 using Pipe
+
 
 struct Reindeer
     name::String
@@ -52,21 +55,30 @@ function calculate_scores(reindeers, time=2503)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    reindeers = open(filename) do fid
-        fid |> readlines .|> Reindeer
-    end
+function solve(input)
+    # Parse input
+    reindeers = split(input, "\n") .|> Reindeer
 
     # Part 1
-    reindeers .|> calculate_distance |> maximum |> println
+    part_1 = reindeers .|> calculate_distance |> maximum
 
     # Part 2
-    reindeers |> calculate_scores |> maximum |> println
+    part_2 = reindeers |> calculate_scores |> maximum
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

@@ -3,6 +3,8 @@
 # Advent of Code 2020, day 21
 # Solution by Geir Arne Hjelle, 2020-12-21
 
+module AOC21
+
 using Pipe
 
 
@@ -71,22 +73,31 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    ingredients, allergens = open(filename) do fid
-        fid |> readlines |> parse_food
-    end
+function solve(input)
+    # Parse input
+    ingredients, allergens = split(input, "\n") |> parse_food
 
     # Part 1
     allergens_by_ingredient = find_candidates(ingredients, allergens) |> prune_candidates
-    list_safe_ingredients(ingredients, allergens_by_ingredient) |> length |> println
+    part_1 = list_safe_ingredients(ingredients, allergens_by_ingredient) |> length
 
     # Part 2
-    @pipe list_dangerous_ingredients(allergens_by_ingredient) |> join(_, ",") |> println
+    part_2 = @pipe list_dangerous_ingredients(allergens_by_ingredient) |> join(_, ",")
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

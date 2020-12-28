@@ -3,10 +3,13 @@
 # Advent of Code 2020, day 20
 # Solution by Geir Arne Hjelle, 2020-12-20
 
+module AOC20
+
 using Pipe
 using StatsBase: countmap
 
 global TILE_SIZE = 8
+
 
 struct Tile
     id::Int16
@@ -288,30 +291,36 @@ function remove_monsters(image)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    tiles = open(filename) do fid
-        fid |> readlines |> parse_tiles
-    end
+function solve(input)
+    # Parse input
+    tiles = split(input, "\n") |> parse_tiles
 
     # Part 1
-    tiles |> find_corners |> prod |> println
+    part_1 = tiles |> find_corners |> prod
 
     # Part 2
-    (
+    part_2 = (
         tiles
         |> construct_image
         |> rotate_image_to_see_monsters
         |> remove_monsters
         |> sum
-        |> println
     )
 
-    tiles
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

@@ -3,6 +3,8 @@
 # Advent of Code 2020, day 8
 # Solution by Geir Arne Hjelle, 2020-12-09
 
+module AOC08
+
 using Pipe
 
 
@@ -75,28 +77,36 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    input = open(filename) do fid
-        fid |> readlines .|> Instruction
-    end
+function solve(input)
+    # Parse input
+    instructions = split(input, "\n") .|> Instruction
 
     # Part 1
-    input |> run |> first |> println
+    part_1 = instructions |> run |> first
 
     # Part 2
-    @pipe (
-        1:length(input)
-        .|> run(input, mutated_line=_)
+    part_2 = @pipe (
+        1:length(instructions)
+        .|> run(instructions, mutated_line=_)
         |> filter(r -> r[2], _)
         |> first
         |> first
-        |> println
     )
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

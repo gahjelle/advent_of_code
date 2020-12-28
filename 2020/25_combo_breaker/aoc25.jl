@@ -3,6 +3,8 @@
 # Advent of Code 2020, day 25
 # Solution by Geir Arne Hjelle, 2020-12-25
 
+module AOC25
+
 using Pipe
 
 
@@ -26,19 +28,28 @@ function encryption_key(public_key, loop_size)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    public_keys = open(filename) do fid
-        fid |> readlines .|> keys -> parse(Int, keys)
-    end
+function solve(input)
+    # Parse input
+    public_keys = split(input, "\n") .|> keys -> parse(Int, keys)
 
     # Part 1
     loop_size, idx = find_first_loopsize(public_keys)
-    encryption_key(public_keys[idx] |> first, loop_size) |> println
+    part_1 = encryption_key(public_keys[idx] |> first, loop_size)
+
+    part_1, nothing
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

@@ -2,8 +2,11 @@
 #
 # Advent of Code 2020, day 18
 # Solution by Geir Arne Hjelle, 2020-12-18
-module AOC
+
+module AOC18
+
 using Pipe
+
 
 function add_to_value(value, op, number)
     if op == '+'
@@ -56,23 +59,30 @@ function parse_parens(calculate)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    input = open(filename) do fid
-        fid |> readlines
-    end
+function solve(input)
+    # Parse input
+    expressions = split(input, "\n")
 
     # Part 1
-    input .|> parse_parens(parse_left_right) |> sum |> println
+    part_1 = expressions .|> parse_parens(parse_left_right) |> sum
 
     # Part 2
-    input .|> parse_parens(parse_plusses_first) |> sum |> println
+    part_2 = expressions .|> parse_parens(parse_plusses_first) |> sum
 
+    part_1, part_2
 end
 
+
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
 
 # Solve the problem for each file
-ARGS .|> solve
-end
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

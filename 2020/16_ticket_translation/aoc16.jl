@@ -3,7 +3,10 @@
 # Advent of Code 2020, day 16
 # Solution by Geir Arne Hjelle, 2020-12-16
 
+module AOC16
+
 using Pipe
+
 
 function parse_inputs(rules, ticket, tickets)
     (rules |> r -> split(r, "\n") .|> parse_rule |> Dict,
@@ -75,26 +78,26 @@ function use_values(ticket)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    rules, ticket, tickets = open(filename) do fid
-        @pipe fid |> readlines |> join(_, "\n") |> split(_, "\n\n") |> parse_inputs(_...)
-    end
+function solve(input)
+    # Parse input
+    rules, ticket, tickets = @pipe (
+        split(input, "\n")
+        |> join(_, "\n")
+        |> split(_, "\n\n")
+        |> parse_inputs(_...)
+    )
 
     # Part 1
     all_rules = rules |> values |> r -> foldl(union, r)
-    (
+    part_1 = (
         tickets
         |> t -> foldl(vcat, t)  # Concatenate all ticket values
         |> values -> filter(n -> n ∉ all_rules, values) # Filter out invalid values
         |> sum
-        |> println
     )
 
     # Part 2
-    (
+    part_2 = (
         tickets
         |> valid(rules)  # Only keep valid tickets
         |> infer_fields(rules)  # Infer field names from ticket values
@@ -102,10 +105,22 @@ function solve(filename)
         |> fields -> filter(f -> startswith(first(f), "departure "), fields)  # Look up departures
         |> values
         |> prod
-        |> println
     )
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

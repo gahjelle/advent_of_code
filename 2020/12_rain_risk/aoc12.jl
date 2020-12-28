@@ -3,6 +3,8 @@
 # Advent of Code 2020, day 12
 # Solution by Geir Arne Hjelle, 2020-12-12
 
+module AOC12
+
 using Pipe
 
 
@@ -125,31 +127,38 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    input = open(filename) do fid
-        fid |> readlines .|> Instruction
-    end
+function solve(input)
+    # Parse input
+    instructions = split(input, "\n") .|> string .|> Instruction
 
     # Part 1
-    @pipe (
-        input
+    part_1 = @pipe (
+        instructions
         |> foldl(move_ship, _, init=Position(0, 0, 90))
         |> manhattan_distance
-        |> println
     )
 
     # Part 2
-    @pipe (
-        input
+    part_2 = @pipe (
+        instructions
         |> foldl(move_waypoint, _, init=Position(0, 0, 90, 1, 10))
         |> manhattan_distance
-        |> println
     )
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

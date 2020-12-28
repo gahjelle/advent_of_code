@@ -3,6 +3,9 @@
 # Advent of Code 2020, day 23
 # Solution by Geir Arne Hjelle, 2020-12-23
 
+module AOC23
+
+
 function pick_up(cups)
     vcat(cups[1], cups[5:end]), cups[2:4]
 end
@@ -73,22 +76,31 @@ function friends_of_1(cups)
 end
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    cups = open(filename) do fid
-        fid |> readlines |> first |> n -> split(n, "") .|> n -> parse(Int, n)
-    end
+function solve(input)
+    # Parse input
+    cups = split(input, "\n") |> first |> n -> split(n, "") .|> n -> parse(Int, n)
 
     # Part 1
-    cups |> slow_move(100) |> label .|> string |> s -> join(s, "") |> println
+    part_1 = cups |> slow_move(100) |> label .|> string |> s -> join(s, "")
 
     # Part 2
     many_cups = vcat(cups, length(cups) + 1:1_000_000)
-    many_cups |> circular |> fast_move(cups[1], 10_000_000) |> friends_of_1 |> prod |> println
+    part_2 = many_cups |> circular |> fast_move(cups[1], 10_000_000) |> friends_of_1 |> prod
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

@@ -3,6 +3,8 @@
 # Advent of Code 2020, day 24
 # Solution by Geir Arne Hjelle, 2020-12-24
 
+module AOC24
+
 using Pipe
 using StatsBase: countmap
 
@@ -15,6 +17,7 @@ DIRECTIONS = Dict(
     "w" => [-1, 1, 0],
     "nw" => [0, 1, -1]
 )
+
 
 function parse_tile(line)
     @pipe line |> findall(r"(e|w|se|sw|ne|nw)", _) |> map(s -> line[s], _) |> map(s -> DIRECTIONS[s], _) |> sum
@@ -39,22 +42,31 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file
-    tiles = open(filename) do fid
-        fid |> readlines .|> parse_tile
-    end
+function solve(input)
+    # Parse input
+    tiles = split(input, "\n") .|> parse_tile
 
     # Part 1
     black = tiles |> countmap |> t -> filter(p -> isodd(p.second), t) |> keys
-    black |> length |> println
+    part_1 = black |> length
 
     # Part 2
-    reduce(step, 1:100, init=black) |> length |> println
+    part_2 = reduce(step, 1:100, init=black) |> length
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

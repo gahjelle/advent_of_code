@@ -3,9 +3,12 @@
 # Advent of Code 2020, day 13
 # Solution by Geir Arne Hjelle, 2020-12-13
 
+module AOC13
+
 using Pipe
 
 INFINITY = 661  # Highest bus id in my input
+
 
 function find_first_timestamp(busses)
     other_busses, bus = busses[1:end - 1], busses[end]
@@ -23,6 +26,7 @@ function find_first_timestamp(busses)
     end
 end
 
+
 function parse_busses(lines)
     (busses = [
             (id = parse(Int, id), dt = t - 1)
@@ -32,27 +36,36 @@ function parse_busses(lines)
         current_time = (@pipe lines[1] |> parse(Int, _)))
 end
 
-# Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
 
-    # Read from file
-    input = open(filename) do fid
-        fid |> readlines |> parse_busses
-    end
+# Solve the problem for one file
+function solve(input)
+    # Parse input
+    schedule = split(input, "\n") |> parse_busses
 
     # Part 1
-    (
-        [(mod(-input.current_time, bus.id), bus.id) for bus in input.busses]
+    part_1 = (
+        [(mod(-schedule.current_time, bus.id), bus.id) for bus in schedule.busses]
         |> minimum
         |> prod
-        |> println
     )
 
     # Part 2
-    @pipe input.busses |> find_first_timestamp |> _[2] |> first |> println
+    part_2 = @pipe schedule.busses |> find_first_timestamp |> _[2] |> first
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module

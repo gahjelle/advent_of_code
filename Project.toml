@@ -1,4 +1,5 @@
 [deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
 DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 Pipe = "b98c9c47-44ae-5843-9183-064241ee97a0"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"

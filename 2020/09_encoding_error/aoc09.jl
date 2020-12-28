@@ -3,7 +3,10 @@
 # Advent of Code 2020, day 9
 # Solution by Geir Arne Hjelle, 2020-12-09
 
+module AOC09
+
 using Pipe
+
 
 # Find two numbers that add up to target. Will return all numbers that are part
 # of such pairs.
@@ -41,24 +44,32 @@ end
 
 
 # Solve the problem for one file
-function solve(filename)
-    println("\n$(filename)")
-
-    # Read from file, length of preamble has been manually added on first line
-    input = open(filename) do fid
-        @pipe fid |> readlines .|> parse(Int64, _)
-    end
+function solve(input)
+    # Parse input, length of preamble has been manually added on first line
+    input = split(input, "\n") .|> ln -> parse(Int64, ln)
     preamble, numbers = input[1], input[2:end]
 
     # Part 1
-    invalid = check_numbers(numbers, preamble)
-    invalid |> println
+    part_1 = check_numbers(numbers, preamble)
 
     # Part 2
-    run = find_contiguous(numbers, invalid)
-    run |> extrema |> sum |> println
+    run = find_contiguous(numbers, part_1)
+    part_2 = run |> extrema |> sum
+
+    part_1, part_2
 end
 
 
+# Solve the problem for one file
+function solve_file(file_path)
+    println("\n$(file_path)")
+    input = open(file_path) do fid
+        read(fid, String) |> strip
+    end
+    input .|> solve
+end
+
 # Solve the problem for each file
-ARGS .|> solve
+[a for a in ARGS if a[1] != '-'] .|> solve_file .|> s -> join(s, "\n") |> println
+
+end  # module
