@@ -6,7 +6,7 @@ Puzzle solutions in [Python](https://www.python.org/) and [Julia](https://julial
 | :--- | :---------------------- | :---------------------------------------------- | ---------: | :---------------------------------------------- | ---------: | ---------: |
 | 1    | Report Repair           | [aoc01.py](01_report_repair/aoc01.py)           | 655.381 μs | [aoc01.jl](01_report_repair/aoc01.jl)           | 241.474 μs | 303.22 KiB |
 | 2    | Password Philosophy     | [aoc02.py](02_password_philosophy/aoc02.py)     |  16.221 ms | [aoc02.jl](02_password_philosophy/aoc02.jl)     |   2.723 ms |   2.93 MiB |
-| 3    | Toboggan Trajectory     | [aoc03.py](03_toboggan_trajectory/aoc03.py)     | 741.274 μs | [aoc03.jl](03_toboggan_trajectory/aoc03.jl)     | 163.873 μs | 160.53 KiB |
+| 3    | Toboggan Trajectory     | [aoc03.py](03_toboggan_trajectory/aoc03.py)     | 741.274 μs | [aoc03.jl](03_toboggan_trajectory/aoc03.jl)     | 173.798 μs | 185.33 KiB |
 | 4    | Passport Processing     | [aoc04.py](04_passport_processing/aoc04.py)     |   2.313 ms | [aoc04.jl](04_passport_processing/aoc04.jl)     | 137.283 ms |   6.76 MiB |
 | 5    | Binary Boarding         | [aoc05.py](05_binary_boarding/aoc05.py)         |   1.081 ms | [aoc05.jl](05_binary_boarding/aoc05.jl)         | 606.193 μs | 263.36 KiB |
 | 6    | Custom Customs          | [aoc06.py](06_custom_customs/aoc06.py)          |   2.724 ms | [aoc06.jl](06_custom_customs/aoc06.jl)          |   2.771 ms |   3.82 MiB |

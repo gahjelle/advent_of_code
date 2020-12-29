@@ -11,15 +11,12 @@ using Pipe
 # Count the number of trees following the given direction through the slope
 function count_trees(slope; right=3, down=1)
     max_y, max_x = size(slope)
-    idx_y, idx_x = 1, 1
-    num_trees = 0
+    idx_ys = range(1, step=down, stop=max_y)
+    idx_xs = @pipe range(1, step=right, length=length(idx_ys)) .|> mod1(_, max_x)
 
-    while idx_y <= max_y
-        num_trees += slope[idx_y, idx_x]
-        idx_y += down
-        idx_x = ((idx_x + right - 1) % max_x) + 1  # +/- 1 since index starts at 1
+    count(zip(idx_ys, idx_xs)) do (idx_y, idx_x)
+        slope[idx_y, idx_x]
     end
-    num_trees
 end
 
 
@@ -29,9 +26,9 @@ function solve(input)
     slope = @pipe (
         input
         |> split
-        .|> map(c -> c == '#', collect(_))
+        .|> map(==('#'), collect(_))
         |> hcat(_...)
-        |> transpose
+        |> permutedims
     )
 
     # Part 1
