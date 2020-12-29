@@ -9,15 +9,10 @@ using Pipe
 
 
 # Count number of questions to which at least one person answered yes
-function count_any(group)
-    @pipe group |> split .|> Set |> foldl(union, _) |> length
-end
-
+count_any(group) = @pipe group |> split .|> Set |> ∪(_...) |> length
 
 # Count number of questions to which all people answered yes
-function count_all(group)
-    @pipe group |> split .|> Set |> foldl(intersect, _) |> length
-end
+count_all(group) = @pipe group |> split .|> Set |> ∩(_...) |> length
 
 
 # Solve the problem for one file
@@ -41,7 +36,7 @@ function solve_file(file_path)
     input = open(file_path) do fid
         read(fid, String) |> strip
     end
-    input .|> solve
+    input |> solve
 end
 
 # Solve the problem for each file

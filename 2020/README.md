@@ -9,7 +9,7 @@ Puzzle solutions in [Python](https://www.python.org/) and [Julia](https://julial
 | 3    | Toboggan Trajectory     | [aoc03.py](03_toboggan_trajectory/aoc03.py)     | 741.274 μs | [aoc03.jl](03_toboggan_trajectory/aoc03.jl)     | 173.798 μs | 185.33 KiB |
 | 4    | Passport Processing     | [aoc04.py](04_passport_processing/aoc04.py)     |   2.313 ms | [aoc04.jl](04_passport_processing/aoc04.jl)     | 137.283 ms |   6.76 MiB |
 | 5    | Binary Boarding         | [aoc05.py](05_binary_boarding/aoc05.py)         |   1.081 ms | [aoc05.jl](05_binary_boarding/aoc05.jl)         | 606.193 μs | 263.36 KiB |
-| 6    | Custom Customs          | [aoc06.py](06_custom_customs/aoc06.py)          |   2.724 ms | [aoc06.jl](06_custom_customs/aoc06.jl)          |   2.771 ms |   3.82 MiB |
+| 6    | Custom Customs          | [aoc06.py](06_custom_customs/aoc06.py)          |   2.724 ms | [aoc06.jl](06_custom_customs/aoc06.jl)          |   2.626 ms |   3.09 MiB |
 | 7    | Handy Haversack         | [aoc07.py](07_handy_haversack/aoc07.py)         |  12.841 ms |                                                 |            |            |
 | 8    | Handheld Halting        | [aoc08.py](08_handheld_halting/aoc08.py)        | 124.931 ms | [aoc08.jl](08_handheld_halting/aoc08.jl)        |  81.954 ms |  22.14 MiB |
 | 9    | Encoding Error          | [aoc09.py](09_encoding_error/aoc09.py)          |   1.265 ms | [aoc09.jl](09_encoding_error/aoc09.jl)          | 833.495 μs |   1.83 MiB |
