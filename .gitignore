@@ -1,6 +1,7 @@
 input.txt
 output.txt
 output.*.txt
+aoc[012][0-9]_*
 
 Makefile
 adventofcode*

@@ -1,6 +1,10 @@
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+Compose = "a81c6b42-2e10-5240-aca2-a61377ecd94b"
 DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+GraphPlot = "a2cc645c-3eea-5389-862e-a155d0052231"
+LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
 Pipe = "b98c9c47-44ae-5843-9183-064241ee97a0"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+SimpleWeightedGraphs = "47aef6b3-ad0c-573a-a1e2-d07658019622"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
