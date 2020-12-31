@@ -14,7 +14,7 @@ Puzzle solutions in [Python](https://www.python.org/) and [Julia](https://julial
 | 8    | Handheld Halting        | [aoc08.py](08_handheld_halting/aoc08.py)        | 124.931 ms | [aoc08.jl](08_handheld_halting/aoc08.jl)        |  81.954 ms |  22.14 MiB |
 | 9    | Encoding Error          | [aoc09.py](09_encoding_error/aoc09.py)          |   1.265 ms | [aoc09.jl](09_encoding_error/aoc09.jl)          | 833.495 μs |   1.83 MiB |
 | 10   | Adapter Array           | [aoc10.py](10_adapter_array/aoc10.py)           | 344.882 μs | [aoc10.jl](10_adapter_array/aoc10.jl)           |  20.992 μs |  24.44 KiB |
-| 11   | Seating System          | [aoc11.py](11_seating_system/aoc11.py)          | 975.516 ms |                                                 |            |            |
+| 11   | Seating System          | [aoc11.py](11_seating_system/aoc11.py)          | 975.516 ms | [aoc11.jl](11_seating_system/aoc11.jl)          | 602.403 ms |   1.07 GiB |
 | 12   | Rain Risk               | [aoc12.py](12_rain_risk/aoc12.py)               |  31.657 ms | [aoc12.jl](12_rain_risk/aoc12.jl)               | 392.903 μs | 443.28 KiB |
 | 13   | Shuttle Search          | [aoc13.py](13_shuttle_search/aoc13.py)          | 269.548 μs | [aoc13.jl](13_shuttle_search/aoc13.jl)          | 203.371 μs | 170.13 KiB |
 | 14   | Docking Data            | [aoc14.py](14_docking_data/aoc14.py)            | 112.489 ms |                                                 |            |            |
