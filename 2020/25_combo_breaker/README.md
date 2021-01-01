@@ -56,3 +56,4 @@ The reindeer carefully explores the contents of your room while you figure out h
 You spend all fifty stars to cover the room deposit!
 
 As you fix the soft serve machine, Santa offers you a ride in his sleigh; maybe the resort has a chimney you can use...
+

@@ -75,7 +75,7 @@ above example, this is 76.
 Run your ASCII program. **What is the sum of the alignment parameters** for the
 scaffold intersections?
 
-# Part Two {-}
+## Part Two {-}
 
 Now for the tricky part: notifying all the other robots about the solar flare.
 The vacuum robot can do this automatically if it gets into range of a robot.
