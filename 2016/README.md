@@ -24,7 +24,7 @@ Puzzle solutions in [Python](https://www.python.org/).
 | 18   | Like a Rogue                           | [aoc18.py](18_like_a_rogue/aoc18.py)                           |    7.445 s |
 | 19   | An Elephant Named Joseph               | [aoc19.py](19_an_elephant_named_joseph/aoc19.py)               |    1.210 s |
 | 20   | Firewall Rules                         | [aoc20.py](20_firewall_rules/aoc20.py)                         |   1.102 ms |
-| 21   | Scrambled Letters and Hash             |                                                                |            |
+| 21   | Scrambled Letters and Hash             | [aoc21.py](21_scrambled_letters_and_hash/aoc21.py)             |   4.585 ms |
 | 22   | Grid Computing                         |                                                                |            |
 | 23   | Safe Cracking                          |                                                                |            |
 | 24   | Air Duct Spelunking                    |                                                                |            |
