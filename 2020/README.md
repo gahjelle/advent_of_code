@@ -20,7 +20,7 @@ Puzzle solutions in [Python](https://www.python.org/) and [Julia](https://julial
 | 14   | Docking Data            | [aoc14.py](14_docking_data/aoc14.py)            | 112.489 ms |                                                 |            |            |
 | 15   | Rambunctious Recitation | [aoc15.py](15_rambunctious_recitation/aoc15.py) |    6.531 s | [aoc15.jl](15_rambunctious_recitation/aoc15.jl) | 426.501 ms | 114.45 MiB |
 | 16   | Ticket Translation      | [aoc16.py](16_ticket_translation/aoc16.py)      |    1.181 s | [aoc16.jl](16_ticket_translation/aoc16.jl)      |   5.827 ms |   8.96 MiB |
-| 17   | Conway Cubes            | [aoc17.py](17_conway_cubes/aoc17.py)            |  11.043 ms |                                                 |            |            |
+| 17   | Conway Cubes            | [aoc17.py](17_conway_cubes/aoc17.py)            |  11.043 ms | [aoc17.jl](17_conway_cubes/aoc17.jl)            | 647.039 ms | 962.37 MiB |
 | 18   | Operation Order         | [aoc18.py](18_operation_order/aoc18.py)         |  30.706 ms | [aoc18.jl](18_operation_order/aoc18.jl)         |   5.489 ms |   8.02 MiB |
 | 19   | Monster Messages        | [aoc19.py](19_monster_messages/aoc19.py)        |  13.379 ms |                                                 |            |            |
 | 20   | Jurassic Jigsaw         |                                                 |            | [aoc20.jl](20_jurassic_jigsaw/aoc20.jl)         | 148.394 ms | 125.52 MiB |
