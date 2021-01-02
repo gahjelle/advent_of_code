@@ -2,11 +2,13 @@ input.txt
 output.txt
 output.*.txt
 aoc[012][0-9]_*
+.aoc.md
 
 Makefile
 adventofcode*
 timings.*.md
 stats.md
+join_aoc_files.py
 
 __pycache__
 

@@ -9,6 +9,7 @@ import itertools
 import pathlib
 import sys
 
+# Third party imports
 import colorama
 
 colorama.init(autoreset=True)
