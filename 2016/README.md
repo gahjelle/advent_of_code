@@ -27,5 +27,5 @@ Puzzle solutions in [Python](https://www.python.org/).
 | 21   | Scrambled Letters and Hash             | [aoc21.py](21_scrambled_letters_and_hash/aoc21.py)             |   4.585 ms |
 | 22   | Grid Computing                         | [aoc22.py](22_grid_computing/aoc22.py)                         | 139.778 ms |
 | 23   | Safe Cracking                          |                                                                |            |
-| 24   | Air Duct Spelunking                    |                                                                |            |
+| 24   | Air Duct Spelunking                    | [aoc24.py](24_air_duct_spelunking/aoc24.py)                    | 340.248 ms |
 | 25   | Clock Signal                           |                                                                |            |
