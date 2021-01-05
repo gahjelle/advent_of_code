@@ -10,22 +10,22 @@ Puzzle solutions in [Python](https://www.python.org/).
 | 4    | High Entropy Passphrases               | [aoc04.py](04_high_entropy_passphrases/aoc04.py)               |   2.718 ms |
 | 5    | A Maze Of Twisty Trampolines All Alike | [aoc05.py](05_a_maze_of_twisty_trampolines_all_alike/aoc05.py) |    6.440 s |
 | 6    | Memory Reallocation                    | [aoc06.py](06_memory_reallocation/aoc06.py)                    | 250.424 ms |
-| 7    |                                        |                                                                |            |
-| 8    |                                        |                                                                |            |
-| 9    |                                        |                                                                |            |
-| 10   |                                        |                                                                |            |
-| 11   |                                        |                                                                |            |
-| 12   |                                        |                                                                |            |
-| 13   |                                        |                                                                |            |
-| 14   |                                        |                                                                |            |
-| 15   |                                        |                                                                |            |
-| 16   |                                        |                                                                |            |
-| 17   |                                        |                                                                |            |
-| 18   |                                        |                                                                |            |
-| 19   |                                        |                                                                |            |
-| 20   |                                        |                                                                |            |
-| 21   |                                        |                                                                |            |
-| 22   |                                        |                                                                |            |
-| 23   |                                        |                                                                |            |
-| 24   |                                        |                                                                |            |
-| 25   |                                        |                                                                |            |
+| 7    | Recursive Circus                       |                                                                |            |
+| 8    | I Heard You Like Registers             |                                                                |            |
+| 9    | Stream Processing                      |                                                                |            |
+| 10   | Knot Hash                              |                                                                |            |
+| 11   | Hex Ed                                 |                                                                |            |
+| 12   | Digital Plumber                        |                                                                |            |
+| 13   | Packet Scanners                        |                                                                |            |
+| 14   | Disk Defragmentation                   |                                                                |            |
+| 15   | Dueling Generators                     |                                                                |            |
+| 16   | Permutation Promenade                  |                                                                |            |
+| 17   | Spinlock                               |                                                                |            |
+| 18   | Duet                                   |                                                                |            |
+| 19   | A Series of Tubes                      |                                                                |            |
+| 20   | Particle Swarm                         |                                                                |            |
+| 21   | Fractal Art                            |                                                                |            |
+| 22   | Sporifica Virus                        |                                                                |            |
+| 23   | Coprocessor Conflagration              |                                                                |            |
+| 24   | Electromagnetic Moat                   |                                                                |            |
+| 25   | The Halting Problem                    |                                                                |            |
