@@ -15,7 +15,7 @@ Puzzle solutions in [Python](https://www.python.org/).
 | 9    | Explosives in Cyberspace               | [aoc09.py](09_explosives_in_cyberspace/aoc09.py)               |   2.498 ms |
 | 10   | Balance Bots                           | [aoc10.py](10_balance_bots/aoc10.py)                           |   1.192 ms |
 | 11   | Radioisotope Thermoelectric Generators | [aoc11.py](11_radioisotope_thermoelectric_generators/aoc11.py) | 2011.687 s |
-| 12   | Leonardos Monorail                     | [aoc12.py](12_leonardos_monorail/aoc12.py)                     |    7.892 s |
+| 12   | Leonardos Monorail                     | [aoc12.py](12_leonardos_monorail/aoc12.py)                     |    7.410 s |
 | 13   | A Maze of Twisty Little Cubicles       | [aoc13.py](13_a_maze_of_twisty_little_cubicles/aoc13.py)       | 142.769 ms |
 | 14   | One Time Pad                           | [aoc14.py](14_one_time_pad/aoc14.py)                           |   30.224 s |
 | 15   | Timing is Everything                   | [aoc15.py](15_timing_is_everything/aoc15.py)                   |    1.553 s |
@@ -26,6 +26,6 @@ Puzzle solutions in [Python](https://www.python.org/).
 | 20   | Firewall Rules                         | [aoc20.py](20_firewall_rules/aoc20.py)                         |   1.102 ms |
 | 21   | Scrambled Letters and Hash             | [aoc21.py](21_scrambled_letters_and_hash/aoc21.py)             |   4.585 ms |
 | 22   | Grid Computing                         | [aoc22.py](22_grid_computing/aoc22.py)                         | 139.778 ms |
-| 23   | Safe Cracking                          |                                                                |            |
+| 23   | Safe Cracking                          | [aoc23.py](23_safe_cracking/aoc23.py)                          |  19.050 ms |
 | 24   | Air Duct Spelunking                    | [aoc24.py](24_air_duct_spelunking/aoc24.py)                    | 340.248 ms |
-| 25   | Clock Signal                           |                                                                |            |
+| 25   | Clock Signal                           | [aoc25.py](25_clock_signal/aoc25.py)                           |  56.775 ms |
