@@ -1,0 +1,15 @@
+[build-system]
+requires           = ["flit_core >=2"]
+build-backend      = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module             = "aoc2016"
+author             = "Geir Arne Hjelle"
+author-email       = "geirarne@gmail.com"
+home-page          = "https://github.com/gahjelle/advent_of_code"
+classifiers        = ["License :: OSI Approved :: MIT License"]
+
+# Requirements
+requires-python    = ">=3.8"
+requires           = [
+]
