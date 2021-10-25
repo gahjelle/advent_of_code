@@ -10,7 +10,7 @@ Puzzle solutions in [Python](https://www.python.org/).
 | 4    | High Entropy Passphrases               | [aoc04.py](04_high_entropy_passphrases/aoc04.py)               |   2.718 ms |
 | 5    | A Maze Of Twisty Trampolines All Alike | [aoc05.py](05_a_maze_of_twisty_trampolines_all_alike/aoc05.py) |    6.440 s |
 | 6    | Memory Reallocation                    | [aoc06.py](06_memory_reallocation/aoc06.py)                    | 250.424 ms |
-| 7    | Recursive Circus                       |                                                                |            |
+| 7    | Recursive Circus                       | [aoc07.py](07_recursive_circus/aoc07.py)                       |  18.252 ms |
 | 8    | I Heard You Like Registers             |                                                                |            |
 | 9    | Stream Processing                      |                                                                |            |
 | 10   | Knot Hash                              |                                                                |            |
