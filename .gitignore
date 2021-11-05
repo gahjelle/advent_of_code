@@ -1,7 +1,7 @@
 input.txt
 output.txt
 output.*.txt
-aoc[012][0-9]_*
+_aoc[012][0-9]_*.*
 .aoc.md
 
 Makefile
