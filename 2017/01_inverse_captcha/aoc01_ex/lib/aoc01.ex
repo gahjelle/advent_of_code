@@ -6,18 +6,6 @@ defmodule AOC2017.Day01 do
   Solution by Geir Arne Hjelle, 2021-11-05
   """
 
-  def main(args) do
-    Enum.map(args, &solve/1)
-  end
-
-  def solve(path) do
-    IO.puts("\nPart 1 (#{path}):")
-    path |> parse() |> Enum.map(&part1/1) |> Enum.join("\n") |> IO.puts()
-
-    IO.puts("\nPart 2: (#{path})")
-    path |> parse() |> Enum.map(&part2/1) |> Enum.join("\n") |> IO.puts()
-  end
-
   def parse(path) do
     with {:ok, file} <- File.read(path) do
       file
@@ -50,4 +38,19 @@ defmodule AOC2017.Day01 do
   defp compare_consecutive(current, {current, total}), do: {current, total + current}
   defp compare_consecutive(current, {_previous, total}), do: {current, total}
   defp half(number), do: number / 2
+
+  def solve(path) do
+    IO.puts("#{path}:")
+    input = path |> parse()
+
+    IO.puts("\nPart 1:")
+    input |> Enum.map(&part1/1) |> Enum.join("\n") |> IO.puts()
+
+    IO.puts("\nPart 2:")
+    input |> Enum.map(&part2/1) |> Enum.join("\n") |> IO.puts()
+  end
+
+  def main(args) do
+    Enum.map(args, &solve/1)
+  end
 end

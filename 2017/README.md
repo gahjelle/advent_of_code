@@ -4,7 +4,7 @@ Puzzle solutions in [Python](https://www.python.org/) and [Elixir](https://elixi
 
 | Day  | Puzzle                                 | Python                                                         |       Time | Elixir                                               |   Part 1 |    Part 2 |
 | :--- | :------------------------------------- | :------------------------------------------------------------- | ---------: | :--------------------------------------------------- | -------: | --------: |
-| 1    | Inverse Captcha                        | [aoc01.py](01_inverse_captcha/aoc01.py)                        | 283.176 μs | [aoc01.ex](01_inverse_captcha/aoc01_ex/lib/aoc01.ex) | 42.72 μs | 454.13 μs |
+| 1    | Inverse Captcha                        | [aoc01.py](01_inverse_captcha/aoc01.py)                        | 283.176 μs | [aoc01.ex](01_inverse_captcha/aoc01_ex/lib/aoc01.ex) | 41.40 μs | 444.35 μs |
 | 2    | Corruption Checksum                    | [aoc02.py](02_corruption_checksum/aoc02.py)                    |   1.865 ms |                                                      |          |           |
 | 3    | Spiral Memory                          | [aoc03.py](03_spiral_memory/aoc03.py)                          | 403.273 μs |                                                      |          |           |
 | 4    | High Entropy Passphrases               | [aoc04.py](04_high_entropy_passphrases/aoc04.py)               |   2.718 ms |                                                      |          |           |
