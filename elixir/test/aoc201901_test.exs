@@ -7,7 +7,7 @@ defmodule AOC2019.Day01Test do
 
   test "parse example" do
     input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert input === [12, 14, 1969, 100756]
+    assert input === [12, 14, 1969, 100_756]
   end
 
   test "part 1 example" do

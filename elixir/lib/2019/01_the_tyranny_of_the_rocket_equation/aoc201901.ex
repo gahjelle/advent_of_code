@@ -7,8 +7,7 @@ defmodule AOC2019.Day01 do
   def parse(puzzle_input) do
     puzzle_input
     |> String.split("\n")
-      |> Enum.map(&String.to_integer/1)
-
+    |> Enum.map(&String.to_integer/1)
   end
 
   def part1(input) do
