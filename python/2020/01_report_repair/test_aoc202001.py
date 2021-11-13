@@ -11,21 +11,21 @@ PUZZLE_DIR = pathlib.Path(__file__).parent
 
 
 @pytest.fixture
-def input1():
-    puzzle_input = (PUZZLE_DIR / "input1.txt").read_text().strip()
+def example1():
+    puzzle_input = (PUZZLE_DIR / "example1.txt").read_text().strip()
     return aoc202001.parse(puzzle_input)
 
 
-def test_parse_input1(input1):
+def test_parse_example1(example1):
     """Test that input is parsed properly"""
-    assert input1 == [1721, 979, 366, 299, 675, 1456]
+    assert example1 == [1721, 979, 366, 299, 675, 1456]
 
 
-def test_part1_input1(input1):
+def test_part1_example1(example1):
     """Test part 1 on example input"""
-    assert aoc202001.part1(input1) == 514579
+    assert aoc202001.part1(example1) == 514579
 
 
-def test_part2_input1(input1):
+def test_part2_example1(example1):
     """Test part 2 on example input"""
-    assert aoc202001.part2(input1) == 241861950
+    assert aoc202001.part2(example1) == 241861950
