@@ -23,9 +23,9 @@ defmodule AOC2019.Day01 do
   end
 
   defp all_fuel(mass) do
-    case fuel(mass) do
-      fuel when fuel <= 0 -> 0
-      fuel -> fuel + all_fuel(fuel)
+    cond do
+      fuel(mass) <= 0 -> 0
+      true -> fuel(mass) + all_fuel(fuel(mass))
     end
   end
 
