@@ -7,7 +7,7 @@ Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www
 | 1    |   ★   |   ★   |       |       |   ★   |   ★   |       |
 | 2    |   ★   |       |       |       |       |       |       |
 | 3    |   ★   |       |       |       |       |       |       |
-| 4    |       |       |       |       |       |       |       |
+| 4    |   ★   |       |       |       |       |       |       |
 | 5    |       |       |       |       |       |   ★   |       |
 | 6    |       |       |       |       |       |       |       |
 | 7    |       |       |       |       |       |       |       |

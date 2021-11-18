@@ -7,3 +7,4 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 1    | Not Quite Lisp                         | [aoc201501.py](01_not_quite_lisp/aoc201501.py)                         |  69.927 μs | 161.932 μs |
 | 2    | I Was Told There Would Be No Math      | [aoc201502.py](02_i_was_told_there_would_be_no_math/aoc201502.py)      | 813.639 μs | 419.292 μs |
 | 3    | Perfectly Spherical Houses In A Vacuum | [aoc201503.py](03_perfectly_spherical_houses_in_a_vacuum/aoc201503.py) |   1.444 ms |   2.063 ms |
+| 4    | The Ideal Stocking Stuffer             | [aoc201504.py](04_the_ideal_stocking_stuffer/aoc201504.py)             |  83.823 ms |    2.765 s |
