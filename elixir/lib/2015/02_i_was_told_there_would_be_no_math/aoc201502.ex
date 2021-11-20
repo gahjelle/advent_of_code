@@ -3,6 +3,7 @@ defmodule AOC2015.Day02 do
   Advent of Code 2015, day 2: I Was Told There Would Be No Math
   """
   require AOC
+  alias AOC2015.Day02.Present
 
   def parse(puzzle_input) do
     puzzle_input
@@ -30,7 +31,7 @@ defmodule AOC2015.Day02 do
   end
 end
 
-defmodule Present do
+defmodule AOC2015.Day02.Present do
   defstruct length: 0, width: 0, height: 0
 
   def from_list([length, width, height]) do
