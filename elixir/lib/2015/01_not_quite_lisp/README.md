@@ -2,4 +2,8 @@
 
 **Advent of Code: Day 1, 2015**
 
-See https://adventofcode.com/2015/day/1
+Puzzle text: https://adventofcode.com/2015/day/1
+
+Solutions in other languages:
+
+- [🐍 Python](../../../../python/2015/01_not_quite_lisp)

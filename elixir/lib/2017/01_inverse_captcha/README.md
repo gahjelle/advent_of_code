@@ -2,4 +2,4 @@
 
 **Advent of Code: Day 1, 2017**
 
-See https://adventofcode.com/2017/day/1
+Puzzle text: https://adventofcode.com/2017/day/1
