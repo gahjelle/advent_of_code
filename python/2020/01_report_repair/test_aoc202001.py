@@ -18,7 +18,7 @@ def example1():
 
 def test_parse_example1(example1):
     """Test that input is parsed properly"""
-    assert example1 == [1721, 979, 366, 299, 675, 1456]
+    assert set(example1) == {1721, 979, 366, 299, 675, 1456}
 
 
 def test_part1_example1(example1):

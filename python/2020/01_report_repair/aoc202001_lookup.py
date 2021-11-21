@@ -7,15 +7,13 @@ import sys
 
 def parse(puzzle_input):
     """Parse input"""
-    return [int(line) for line in puzzle_input.split()]
+    return set([int(line) for line in puzzle_input.split()])
 
 
 def find_summands(numbers, target=2020):
     """Find two summands that add up to target"""
-    lookup = set(numbers)
-
     for first in numbers:
-        if (second := target - first) in lookup and first != second:
+        if (second := target - first) in numbers and first != second:
             return first, second
 
 
@@ -27,8 +25,8 @@ def part1(data):
 
 def part2(data):
     """Solve part 2"""
-    for idx, first in enumerate(data):
-        summands = find_summands(data[idx + 1 :], target=2020 - first)
+    for first in data:
+        summands = find_summands(data, target=2020 - first)
         if summands:
             second, third = summands
             return first * second * third
