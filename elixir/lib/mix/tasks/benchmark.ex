@@ -50,6 +50,22 @@ defmodule Mix.Tasks.Benchmark do
     )
   end
 
+  def run(["2015", "4"]) do
+    # Day 4, 2015
+    input =
+      "lib/2015/04_the_ideal_stocking_stuffer/input.txt"
+      |> AOC.read_text()
+      |> AOC2015.Day04.parse()
+
+    Benchee.run(
+      %{
+        "2015 day 4, part 1" => fn -> AOC2015.Day04.part1(input) end,
+        "2015 day 4, part 2" => fn -> AOC2015.Day04.part2(input) end
+      },
+      @bm_args
+    )
+  end
+
   def run(["2017", "1"]) do
     # Day 1, 2017
     input = "lib/2017/01_inverse_captcha/input.txt" |> AOC.read_text() |> AOC2017.Day01.parse()
