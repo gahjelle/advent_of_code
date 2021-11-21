@@ -63,6 +63,22 @@ defmodule Mix.Tasks.Benchmark do
     )
   end
 
+  def run(["2018", "1"]) do
+    # Day 1, 2018
+    input =
+      "lib/2018/01_chronal_calibration/input.txt"
+      |> AOC.read_text()
+      |> AOC2018.Day01.parse()
+
+    Benchee.run(
+      %{
+        "2018 day 1, part 1" => fn -> AOC2018.Day01.part1(input) end,
+        "2018 day 1, part 2" => fn -> AOC2018.Day01.part2(input) end
+      },
+      @bm_args
+    )
+  end
+
   def run(["2019", "1"]) do
     # Day 1, 2019
     input =
