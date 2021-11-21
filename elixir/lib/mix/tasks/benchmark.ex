@@ -5,155 +5,48 @@ defmodule Mix.Tasks.Benchmark do
   @bm_args [warmup: 0.1, time: 2]
 
   @shortdoc "Benchmark AOC"
-  def run(["2015", "1"]) do
-    # Day 1, 2015
-    input = "lib/2015/01_not_quite_lisp/input.txt" |> AOC.read_text() |> AOC2015.Day01.parse()
+  def run([year, day]) do
+    aoc_module =
+      "Elixir.AOC#{year}.Day#{String.pad_leading(day, 2, "0")}"
+      |> String.to_existing_atom()
 
-    Benchee.run(
-      %{
-        "2015 day 1, part 1" => fn -> AOC2015.Day01.part1(input) end,
-        "2015 day 1, part 2" => fn -> AOC2015.Day01.part2(input) end
-      },
-      @bm_args
-    )
+    puzzle_dir = Path.wildcard("lib/#{year}/#{String.pad_leading(day, 2, "0")}_*/") |> hd
+    input = Path.join(puzzle_dir, "input.txt") |> AOC.read_text() |> aoc_module.parse()
+
+    @bm_args
+    |> Benchee.init()
+    |> Benchee.system()
+    |> Benchee.benchmark("#{year} day #{day}, part 1", fn -> aoc_module.part1(input) end)
+    |> Benchee.benchmark("#{year} day #{day}, part 2", fn -> aoc_module.part2(input) end)
+    |> Benchee.collect()
+    |> Benchee.statistics()
+    |> Benchee.Formatter.output()
+    |> format_as_markdown(puzzle_dir)
   end
 
-  def run(["2015", "2"]) do
-    # Day 2, 2015
-    input =
-      "lib/2015/02_i_was_told_there_would_be_no_math/input.txt"
-      |> AOC.read_text()
-      |> AOC2015.Day02.parse()
+  defp format_as_markdown(%{scenarios: scenarios}, puzzle_path) do
+    [part1, part2] =
+      scenarios
+      |> Enum.map(fn s -> s.run_time_data.statistics.median end)
+      |> Enum.map(&format_as_timestring/1)
 
-    Benchee.run(
-      %{
-        "2015 day 2, part 1" => fn -> AOC2015.Day02.part1(input) end,
-        "2015 day 2, part 2" => fn -> AOC2015.Day02.part2(input) end
-      },
-      @bm_args
-    )
+    [directory, year | _] = puzzle_path |> Path.split() |> Enum.reverse()
+    day = directory |> String.slice(0..1) |> String.to_integer()
+    file = "aoc#{year}#{String.slice(directory, 0..1)}.ex"
+
+    name =
+      directory
+      |> String.slice(3..99)
+      |> String.replace("_", " ")
+      |> String.split(" ")
+      |> Enum.map(&String.capitalize/1)
+      |> Enum.join(" ")
+
+    "\n\n| #{day} | #{name} | [#{file}](#{directory}/#{file}) | #{part1} | #{part2} |"
+    |> IO.puts()
   end
 
-  def run(["2015", "3"]) do
-    # Day 3, 2015
-    input =
-      "lib/2015/03_perfectly_spherical_houses_in_a_vacuum/input.txt"
-      |> AOC.read_text()
-      |> AOC2015.Day03.parse()
-
-    Benchee.run(
-      %{
-        "2015 day 3, part 1" => fn -> AOC2015.Day03.part1(input) end,
-        "2015 day 3, part 2" => fn -> AOC2015.Day03.part2(input) end
-      },
-      @bm_args
-    )
-  end
-
-  def run(["2015", "4"]) do
-    # Day 4, 2015
-    input =
-      "lib/2015/04_the_ideal_stocking_stuffer/input.txt"
-      |> AOC.read_text()
-      |> AOC2015.Day04.parse()
-
-    Benchee.run(
-      %{
-        "2015 day 4, part 1" => fn -> AOC2015.Day04.part1(input) end,
-        "2015 day 4, part 2" => fn -> AOC2015.Day04.part2(input) end
-      },
-      @bm_args
-    )
-  end
-
-  def run(["2016", "1"]) do
-    # Day 1, 2016
-    input =
-      "lib/2016/01_no_time_for_a_taxicab/input.txt" |> AOC.read_text() |> AOC2016.Day01.parse()
-
-    Benchee.run(
-      %{
-        "2016 day 1, part 1" => fn -> AOC2016.Day01.part1(input) end,
-        "2016 day 1, part 2" => fn -> AOC2016.Day01.part2(input) end
-      },
-      @bm_args
-    )
-  end
-
-  def run(["2017", "1"]) do
-    # Day 1, 2017
-    input = "lib/2017/01_inverse_captcha/input.txt" |> AOC.read_text() |> AOC2017.Day01.parse()
-
-    Benchee.run(
-      %{
-        "2017 day 1, part 1" => fn -> AOC2017.Day01.part1(input) end,
-        "2017 day 1, part 2" => fn -> AOC2017.Day01.part2(input) end
-      },
-      @bm_args
-    )
-  end
-
-  def run(["2018", "1"]) do
-    # Day 1, 2018
-    input =
-      "lib/2018/01_chronal_calibration/input.txt"
-      |> AOC.read_text()
-      |> AOC2018.Day01.parse()
-
-    Benchee.run(
-      %{
-        "2018 day 1, part 1" => fn -> AOC2018.Day01.part1(input) end,
-        "2018 day 1, part 2" => fn -> AOC2018.Day01.part2(input) end
-      },
-      @bm_args
-    )
-  end
-
-  def run(["2018", "2"]) do
-    # Day 2, 2018
-    input =
-      "lib/2018/02_inventory_management_system/input.txt"
-      |> AOC.read_text()
-      |> AOC2018.Day02.parse()
-
-    Benchee.run(
-      %{
-        "2018 day 2, part 1" => fn -> AOC2018.Day02.part1(input) end,
-        "2018 day 2, part 2" => fn -> AOC2018.Day02.part2(input) end
-      },
-      @bm_args
-    )
-  end
-
-  def run(["2019", "1"]) do
-    # Day 1, 2019
-    input =
-      "lib/2019/01_the_tyranny_of_the_rocket_equation/input.txt"
-      |> AOC.read_text()
-      |> AOC2019.Day01.parse()
-
-    Benchee.run(
-      %{
-        "2019 day 1, part 1" => fn -> AOC2019.Day01.part1(input) end,
-        "2019 day 1, part 2" => fn -> AOC2019.Day01.part2(input) end
-      },
-      @bm_args
-    )
-  end
-
-  def run(["2020", "1"]) do
-    # Day 1, 2020
-    input =
-      "lib/2020/01_report_repair/input.txt"
-      |> AOC.read_text()
-      |> AOC2020.Day01.parse()
-
-    Benchee.run(
-      %{
-        "2020 day 1, part 1" => fn -> AOC2020.Day01.part1(input) end,
-        "2020 day 1, part 2" => fn -> AOC2020.Day01.part2(input) end
-      },
-      @bm_args
-    )
+  defp format_as_timestring(nanoseconds) do
+    Number.SI.number_to_si(nanoseconds / 1_000_000_000, unit: "s", separator: " ", precision: 3)
   end
 end
