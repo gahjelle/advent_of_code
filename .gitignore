@@ -14,7 +14,7 @@ stats.md
 README.template
 update_readmes.py
 join_aoc_files.py
-python/download_input.py
+download_input.py
 
 __pycache__
 

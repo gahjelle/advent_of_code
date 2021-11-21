@@ -124,4 +124,20 @@ defmodule Mix.Tasks.Benchmark do
       @bm_args
     )
   end
+
+  def run(["2020", "1"]) do
+    # Day 1, 2020
+    input =
+      "lib/2020/01_report_repair/input.txt"
+      |> AOC.read_text()
+      |> AOC2020.Day01.parse()
+
+    Benchee.run(
+      %{
+        "2020 day 1, part 1" => fn -> AOC2020.Day01.part1(input) end,
+        "2020 day 1, part 2" => fn -> AOC2020.Day01.part2(input) end
+      },
+      @bm_args
+    )
+  end
 end
