@@ -109,6 +109,22 @@ defmodule Mix.Tasks.Benchmark do
     )
   end
 
+  def run(["2018", "2"]) do
+    # Day 2, 2018
+    input =
+      "lib/2018/02_inventory_management_system/input.txt"
+      |> AOC.read_text()
+      |> AOC2018.Day02.parse()
+
+    Benchee.run(
+      %{
+        "2018 day 2, part 1" => fn -> AOC2018.Day02.part1(input) end,
+        "2018 day 2, part 2" => fn -> AOC2018.Day02.part2(input) end
+      },
+      @bm_args
+    )
+  end
+
   def run(["2019", "1"]) do
     # Day 1, 2019
     input =

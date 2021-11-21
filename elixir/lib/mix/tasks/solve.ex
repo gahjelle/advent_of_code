@@ -11,6 +11,7 @@ defmodule Mix.Tasks.Solve do
       ["2016", "1" | files] -> AOC2016.Day01.main(files)
       ["2017", "1" | files] -> AOC2017.Day01.main(files)
       ["2018", "1" | files] -> AOC2018.Day01.main(files)
+      ["2018", "2" | files] -> AOC2018.Day02.main(files)
       ["2019", "1" | files] -> AOC2019.Day01.main(files)
       ["2020", "1" | files] -> AOC2020.Day01.main(files)
     end
