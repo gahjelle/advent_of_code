@@ -1,4 +1,4 @@
-defmodule AOX201701.MixProject do
+defmodule AOC.MixProject do
   use Mix.Project
 
   def project do
@@ -21,8 +21,9 @@ defmodule AOX201701.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:benchee, "~> 1.0", only: :dev},
-      {:number, "~> 1.0", only: :dev}
+      {:benchee, "~> 1.0", only: [:dev, :test]},
+      {:number, "~> 1.0", only: [:dev, :test]},
+      {:nimble_parsec, "~> 1.1"}
     ]
   end
 end

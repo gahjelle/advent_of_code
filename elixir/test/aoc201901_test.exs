@@ -1,32 +1,44 @@
-defmodule AOC2019.Day01Test do
-  use ExUnit.Case
+defmodule AOC2019.Day01.Test do
+  use ExUnit.Case, async: true
   require AOC
 
   import AOC2019.Day01, only: [parse: 1, part1: 1, part2: 1]
   @puzzle_dir "lib/2019/01_the_tyranny_of_the_rocket_equation/"
 
-  test "parse example" do
-    input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert input === [12, 14, 1969, 100_756]
+  setup _context do
+    {:ok,
+     [
+       example1: @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse(),
+       input: @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
+     ]}
   end
 
-  test "part 1 example" do
-    input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert part1(input) == 2 + 2 + 654 + 33583
+  @tag :parse
+  test "parse example", context do
+    assert context[:example1] === [12, 14, 1969, 100_756]
   end
 
-  test "part 2 example" do
-    input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == 2 + 2 + 966 + 50346
+  @tag :example
+  test "part 1 example", context do
+    assert part1(context[:example1]) == 2 + 2 + 654 + 33583
   end
 
-  test "part 1 solved" do
-    input = @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
-    assert part1(input) == 3_550_236
+  @tag :example
+  test "part 2 example", context do
+    assert part2(context[:example1]) == 2 + 2 + 966 + 50346
   end
 
-  test "part 2 solved" do
-    input = @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == 5_322_455
+  @tag :solution
+  @tag :year2019
+  @tag :day1
+  test "part 1 solved", context do
+    assert part1(context[:input]) == 3_550_236
+  end
+
+  @tag :solution
+  @tag :year2019
+  @tag :day1
+  test "part 2 solved", context do
+    assert part2(context[:input]) == 5_322_455
   end
 end

@@ -8,12 +8,12 @@ defmodule AOC2015.Day04 do
     puzzle_input |> String.split("\n") |> hd()
   end
 
-  def part1(input) do
-    input |> find_md5_with_prefix("00000")
+  def part1(input, prefix \\ "00000") do
+    input |> find_md5_with_prefix(prefix)
   end
 
-  def part2(input) do
-    input |> find_md5_with_prefix("000000")
+  def part2(input, prefix \\ "000000") do
+    input |> find_md5_with_prefix(prefix)
   end
 
   defp find_md5_with_prefix(secret, prefix) do

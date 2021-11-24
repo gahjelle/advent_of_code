@@ -1,42 +1,56 @@
-defmodule AOC2018.Day01Test do
-  use ExUnit.Case
+defmodule AOC2018.Day01.Test do
+  use ExUnit.Case, async: true
   require AOC
 
   import AOC2018.Day01, only: [parse: 1, part1: 1, part2: 1]
   @puzzle_dir "lib/2018/01_chronal_calibration/"
 
-  test "parse example" do
-    input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert input === [1, -2, 3, 1]
+  setup _context do
+    {:ok,
+     [
+       example1: @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse(),
+       example2: @puzzle_dir |> Path.join("example2.txt") |> AOC.read_text() |> parse(),
+       example3: @puzzle_dir |> Path.join("example3.txt") |> AOC.read_text() |> parse(),
+       input: @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
+     ]}
   end
 
-  test "part 1 example" do
-    input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert part1(input) == 3
+  @tag :parse
+  test "parse example", context do
+    assert context[:example1] === [1, -2, 3, 1]
   end
 
-  test "part 2 example" do
-    input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == 2
+  @tag :example
+  test "part 1 example", context do
+    assert part1(context[:example1]) == 3
   end
 
-  test "part 2 example 2" do
-    input = @puzzle_dir |> Path.join("example2.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == 10
+  @tag :example
+  test "part 2 example", context do
+    assert part2(context[:example1]) == 2
   end
 
-  test "part 2 example 3" do
-    input = @puzzle_dir |> Path.join("example3.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == 0
+  @tag :example
+  test "part 2 example 2", context do
+    assert part2(context[:example2]) == 10
   end
 
-  test "part 1 solved" do
-    input = @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
-    assert part1(input) == 531
+  @tag :example
+  test "part 2 example 3", context do
+    assert part2(context[:example3]) == 0
   end
 
-  test "part 2 solved" do
-    input = @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == 76787
+  @tag :solution
+  @tag :year2018
+  @tag :day1
+  test "part 1 solved", context do
+    assert part1(context[:input]) == 531
+  end
+
+  @tag :solution
+  @tag :year2018
+  @tag :day1
+  test "part 2 solved", context do
+    assert part2(context[:input]) == 76787
   end
 end

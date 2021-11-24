@@ -1,37 +1,52 @@
-defmodule AOC2018.Day02Test do
-  use ExUnit.Case
+defmodule AOC2018.Day02.Test do
+  use ExUnit.Case, async: true
   require AOC
 
   import AOC2018.Day02, only: [parse: 1, part1: 1, part2: 1]
   @puzzle_dir "lib/2018/02_inventory_management_system/"
 
+  setup _context do
+    {:ok,
+     [
+       example1: @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse(),
+       example2: @puzzle_dir |> Path.join("example2.txt") |> AOC.read_text() |> parse(),
+       example3: @puzzle_dir |> Path.join("example3.txt") |> AOC.read_text() |> parse(),
+       input: @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
+     ]}
+  end
+
+  # @tag :unit
   # test "count characters" do
   #   counts = count_characters('abcaba')
   #   assert counts === %{?a => 3, ?b => 2, ?c => 1}
   # end
 
-  test "parse example" do
-    input = @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse()
-    assert input === ['gah', 'lnd', 'kke']
+  @tag :parse
+  test "parse example", context do
+    assert context[:example1] === ['gah', 'lnd', 'kke']
   end
 
-  test "part 1 example 2" do
-    input = @puzzle_dir |> Path.join("example2.txt") |> AOC.read_text() |> parse()
-    assert part1(input) == 12
+  @tag :example
+  test "part 1 example 2", context do
+    assert part1(context[:example2]) == 12
   end
 
-  test "part 2 example 3" do
-    input = @puzzle_dir |> Path.join("example3.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == "fgij"
+  @tag :example
+  test "part 2 example 3", context do
+    assert part2(context[:example3]) == "fgij"
   end
 
-  test "part 1 solved" do
-    input = @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
-    assert part1(input) == 4693
+  @tag :solution
+  @tag :year2018
+  @tag :day2
+  test "part 1 solved", context do
+    assert part1(context[:input]) == 4693
   end
 
-  test "part 2 solved" do
-    input = @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
-    assert part2(input) == "pebjqsalrdnckzfihvtxysomg"
+  @tag :solution
+  @tag :year2018
+  @tag :day2
+  test "part 2 solved", context do
+    assert part2(context[:input]) == "pebjqsalrdnckzfihvtxysomg"
   end
 end
