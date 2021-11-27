@@ -4,4 +4,4 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Elixir](h
 
 | Day  | Puzzle          | Elixir                                          |    Part 1 |     Part 2 |
 | :--- | :-------------- | :---------------------------------------------- | --------: | ---------: |
-| 1    | Inverse Captcha | [aoc201701.ex](01_inverse_captcha/aoc201701.ex) | 39.642 µs | 279.856 µs |
+| 1    | Inverse Captcha | [aoc201701.ex](01_inverse_captcha/aoc201701.ex) | 41.842 µs | 298.808 µs |

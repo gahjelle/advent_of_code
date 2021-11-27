@@ -4,4 +4,4 @@ Solutions to [Advent of Code 2019](https://adventofcode.com/2019/) in [Python](h
 
 | Day  | Puzzle                             | Python                                                             |    Part 1 |     Part 2 |
 | :--- | :--------------------------------- | :----------------------------------------------------------------- | --------: | ---------: |
-| 1    | The Tyranny Of The Rocket Equation | [aoc201901.py](01_the_tyranny_of_the_rocket_equation/aoc201901.py) | 10.108 μs | 120.962 μs |
+| 1    | The Tyranny Of The Rocket Equation | [aoc201901.py](01_the_tyranny_of_the_rocket_equation/aoc201901.py) | 29.370 μs | 333.195 μs |
