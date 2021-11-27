@@ -1,4 +1,7 @@
 defmodule AOC2015.Day03.Test do
+  @moduledoc """
+  Tests for Advent of Code 2015, day 3: Perfectly Spherical Houses in a Vacuum
+  """
   use ExUnit.Case, async: true
   require AOC
 

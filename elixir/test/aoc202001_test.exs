@@ -1,4 +1,7 @@
 defmodule AOC2020.Day01.Test do
+  @moduledoc """
+  Tests for Advent of Code 2020, day 1: Report Repair
+  """
   use ExUnit.Case, async: true
   require AOC
 

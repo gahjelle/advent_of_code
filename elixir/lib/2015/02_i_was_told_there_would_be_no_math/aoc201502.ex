@@ -32,6 +32,9 @@ defmodule AOC2015.Day02 do
 end
 
 defmodule AOC2015.Day02.Present do
+  @moduledoc """
+  Struct representing a present
+  """
   defstruct length: 0, width: 0, height: 0
 
   def from_list([length, width, height]) do

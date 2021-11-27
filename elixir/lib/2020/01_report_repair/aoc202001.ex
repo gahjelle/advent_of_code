@@ -1,6 +1,6 @@
 defmodule AOC2020.Day01 do
   @moduledoc """
-   Advent of Code 2020, day 1: Report Repair
+  Advent of Code 2020, day 1: Report Repair
   """
   require AOC
 

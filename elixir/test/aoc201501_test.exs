@@ -1,4 +1,7 @@
 defmodule AOC2015.Day01.Test do
+  @moduledoc """
+  Tests for Advent of Code 2015, day 1: Not Quite Lisp
+  """
   use ExUnit.Case, async: true
   require AOC
 

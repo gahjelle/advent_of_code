@@ -1,6 +1,6 @@
 defmodule AOC2016.Day01 do
   @moduledoc """
-   Advent of Code 2016, day 1: No Time for a Taxicab
+  Advent of Code 2016, day 1: No Time for a Taxicab
   """
   require AOC
 

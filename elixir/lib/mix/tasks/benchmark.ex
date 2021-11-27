@@ -1,4 +1,8 @@
 defmodule Mix.Tasks.Benchmark do
+  @moduledoc """
+  Benchmark Advent of code solutions
+  """
+
   use Mix.Task
   require AOC
 
@@ -39,8 +43,7 @@ defmodule Mix.Tasks.Benchmark do
       |> String.slice(3..99)
       |> String.replace("_", " ")
       |> String.split(" ")
-      |> Enum.map(&String.capitalize/1)
-      |> Enum.join(" ")
+      |> Enum.map_join(" ", &String.capitalize/1)
 
     "\n\n| #{day} | #{name} | [#{file}](#{directory}/#{file}) | #{part1} | #{part2} |"
     |> IO.puts()

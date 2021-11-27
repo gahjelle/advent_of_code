@@ -1,4 +1,7 @@
 defmodule AOC2018.Day01.Test do
+  @moduledoc """
+  Tests for Advent of Code 2018, day 1: Chronal Calibration
+  """
   use ExUnit.Case, async: true
   require AOC
 
@@ -51,6 +54,6 @@ defmodule AOC2018.Day01.Test do
   @tag :year2018
   @tag :day1
   test "part 2 solved", context do
-    assert part2(context[:input]) == 76787
+    assert part2(context[:input]) == 76_787
   end
 end

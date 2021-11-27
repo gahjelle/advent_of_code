@@ -1,4 +1,7 @@
 defmodule AOC2017.Day01.Test do
+  @moduledoc """
+  Tests for Advent of Code 2017, day 1: Inverse Captcha
+  """
   use ExUnit.Case, async: true
   require AOC
 

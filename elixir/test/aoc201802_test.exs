@@ -1,4 +1,7 @@
 defmodule AOC2018.Day02.Test do
+  @moduledoc """
+  Tests for Advent of Code 2018, day 2: Inventory Management System
+  """
   use ExUnit.Case, async: true
   require AOC
 

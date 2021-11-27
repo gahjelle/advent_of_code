@@ -1,6 +1,6 @@
 defmodule AOC2015.Day05 do
   @moduledoc """
-   Advent of Code 2015, day 5: Doesn't He Have Intern-Elves For This?
+  Advent of Code 2015, day 5: Doesn't He Have Intern-Elves For This?
   """
   require AOC
 
@@ -14,9 +14,7 @@ defmodule AOC2015.Day05 do
 
   def part1(input) do
     input
-    |> Enum.filter(fn s -> count_vowels(s) >= 3 end)
-    |> Enum.filter(&repeated_char?/1)
-    |> Enum.filter(&not_naughty_pairs?/1)
+    |> Enum.filter(fn s -> count_vowels(s) >= 3 && repeated_char?(s) && not_naughty_pairs?(s) end)
     |> Enum.count()
   end
 
@@ -32,8 +30,7 @@ defmodule AOC2015.Day05 do
 
   def part2(input) do
     input
-    |> Enum.filter(&repeated_pair?/1)
-    |> Enum.filter(&split_pair?/1)
+    |> Enum.filter(fn s -> repeated_pair?(s) && split_pair?(s) end)
     |> Enum.count()
   end
 

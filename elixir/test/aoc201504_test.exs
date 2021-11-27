@@ -1,4 +1,7 @@
 defmodule AOC2015.Day04.Test do
+  @moduledoc """
+  Tests for Advent of Code 2015, day 4: The Ideal Stocking Stuffer
+  """
   use ExUnit.Case, async: true
   require AOC
 

@@ -1,6 +1,6 @@
 defmodule AOC2015.Day06 do
   @moduledoc """
-   Advent of Code 2015, day 6: Probably a Fire Hazard
+  Advent of Code 2015, day 6: Probably a Fire Hazard
   """
   require AOC
 

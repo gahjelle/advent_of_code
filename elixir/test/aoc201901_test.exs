@@ -1,4 +1,7 @@
 defmodule AOC2019.Day01.Test do
+  @moduledoc """
+  Tests for Advent of Code 2019, day 1: The Tyranny of the Rocket Equation
+  """
   use ExUnit.Case, async: true
   require AOC
 
@@ -20,12 +23,12 @@ defmodule AOC2019.Day01.Test do
 
   @tag :example
   test "part 1 example", context do
-    assert part1(context[:example1]) == 2 + 2 + 654 + 33583
+    assert part1(context[:example1]) == 2 + 2 + 654 + 33_583
   end
 
   @tag :example
   test "part 2 example", context do
-    assert part2(context[:example1]) == 2 + 2 + 966 + 50346
+    assert part2(context[:example1]) == 2 + 2 + 966 + 50_346
   end
 
   @tag :solution

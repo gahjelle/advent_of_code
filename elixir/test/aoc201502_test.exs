@@ -1,4 +1,7 @@
 defmodule AOC2015.Day02.Test do
+  @moduledoc """
+  Tests for Advent of Code 2015, day 2: I Was Told There Would Be No Math
+  """
   use ExUnit.Case, async: true
   require AOC
 

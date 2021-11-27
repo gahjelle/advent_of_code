@@ -22,8 +22,9 @@ defmodule AOC.MixProject do
   defp deps do
     [
       {:benchee, "~> 1.0", only: [:dev, :test]},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:nimble_parsec, "~> 1.1"},
       {:number, "~> 1.0", only: [:dev, :test]},
-      {:nimble_parsec, "~> 1.1"}
     ]
   end
 end

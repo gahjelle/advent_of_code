@@ -1,4 +1,7 @@
 defmodule AOC2015.Day05.Test do
+  @moduledoc """
+  Tests for Advent of Code 2015, day 5: Doesn't He Have Intern-Elves For This?
+  """
   use ExUnit.Case, async: true
   require AOC
 
