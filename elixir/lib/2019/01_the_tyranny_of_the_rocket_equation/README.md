@@ -6,5 +6,5 @@ Puzzle text: https://adventofcode.com/2019/day/1
 
 Solutions in other languages:
 
-- [🎪 Julia](../../../../julia/2019/01_the_tyranny_of_the_rocket_equation)
 - [🐍 Python](../../../../python/2019/01_the_tyranny_of_the_rocket_equation)
+- [🎪 Julia](../../../../julia/2019/01_the_tyranny_of_the_rocket_equation)

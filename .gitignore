@@ -17,6 +17,7 @@ join_aoc_files.py
 download_input.py
 
 __pycache__
+.python-version
 
 others/
 
