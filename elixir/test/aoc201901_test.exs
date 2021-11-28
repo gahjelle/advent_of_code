@@ -4,10 +4,10 @@ defmodule AOC2019.Day01.Test do
   """
   use ExUnit.Case, async: true
   require AOC
-
   import AOC2019.Day01, only: [parse: 1, part1: 1, part2: 1]
-  @puzzle_dir "lib/2019/01_the_tyranny_of_the_rocket_equation/"
+  doctest(AOC2019.Day01, import: true)
 
+  @puzzle_dir "lib/2019/01_the_tyranny_of_the_rocket_equation/"
   setup_all do
     {:ok,
      [

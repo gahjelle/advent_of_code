@@ -4,6 +4,9 @@ defmodule AOC2015.Day04 do
   """
   require AOC
 
+  @doc """
+  Parse input
+  """
   def parse(puzzle_input) do
     puzzle_input |> String.split("\n") |> hd()
   end
@@ -16,7 +19,18 @@ defmodule AOC2015.Day04 do
     input |> find_md5_with_prefix(prefix)
   end
 
-  defp find_md5_with_prefix(secret, prefix) do
+  @doc """
+  Find the first MD5 hash of the form <secret><number> whose hex representation starts with prefix
+
+  ## Examples:
+
+      iex> find_md5_with_prefix("elixir", "A0C")
+      2947
+
+      iex> :crypto.hash(:md5, "elixir2947") |> Base.encode16() |> String.slice(0..2)
+      "A0C"
+  """
+  def find_md5_with_prefix(secret, prefix) do
     Stream.cycle([1])
     |> Enum.reduce_while(0, fn step, number ->
       case :crypto.hash(:md5, "#{secret}#{number + step}")

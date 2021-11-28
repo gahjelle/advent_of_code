@@ -4,6 +4,9 @@ defmodule AOC2015.Day06 do
   """
   require AOC
 
+  @doc """
+  Parse input
+  """
   def parse(puzzle_input) do
     puzzle_input |> String.split("\n") |> Enum.map(&parse_instruction/1)
   end
@@ -20,10 +23,16 @@ defmodule AOC2015.Day06 do
     end)
   end
 
+  @doc """
+  Solve part 1
+  """
   def part1(input) do
     input |> async_map_lights(&flick_light/2) |> Enum.sum()
   end
 
+  @doc """
+  Solve part 2
+  """
   def part2(input) do
     input |> async_map_lights(&adjust_light/2) |> Enum.sum()
   end

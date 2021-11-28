@@ -4,10 +4,10 @@ defmodule AOC2017.Day01.Test do
   """
   use ExUnit.Case, async: true
   require AOC
-
   import AOC2017.Day01, only: [parse: 1, part1: 1, part2: 1]
-  @puzzle_dir "lib/2017/01_inverse_captcha/"
+  doctest(AOC2017.Day01, import: true)
 
+  @puzzle_dir "lib/2017/01_inverse_captcha/"
   setup_all do
     {:ok,
      [

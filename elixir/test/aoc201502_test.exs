@@ -7,8 +7,10 @@ defmodule AOC2015.Day02.Test do
 
   alias AOC2015.Day02.Present
   import AOC2015.Day02, only: [parse: 1, part1: 1, part2: 1]
-  @puzzle_dir "lib/2015/02_i_was_told_there_would_be_no_math/"
+  doctest(AOC2015.Day02, import: true)
+  doctest(AOC2015.Day02.Present, import: true)
 
+  @puzzle_dir "lib/2015/02_i_was_told_there_would_be_no_math/"
   setup_all do
     {:ok,
      [

@@ -4,16 +4,25 @@ defmodule AOC2018.Day01 do
   """
   require AOC
 
+  @doc """
+  Parse input
+  """
   def parse(puzzle_input) do
     puzzle_input
     |> String.split("\n")
     |> Enum.map(&String.to_integer/1)
   end
 
+  @doc """
+  Solve part 1
+  """
   def part1(input) do
     input |> Enum.sum()
   end
 
+  @doc """
+  Solve part 2
+  """
   def part2(input) do
     input
     |> Stream.cycle()

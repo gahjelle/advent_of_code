@@ -4,10 +4,10 @@ defmodule AOC2018.Day02.Test do
   """
   use ExUnit.Case, async: true
   require AOC
-
   import AOC2018.Day02, only: [parse: 1, part1: 1, part2: 1]
-  @puzzle_dir "lib/2018/02_inventory_management_system/"
+  doctest(AOC2018.Day02, import: true)
 
+  @puzzle_dir "lib/2018/02_inventory_management_system/"
   setup_all do
     {:ok,
      [
@@ -17,12 +17,6 @@ defmodule AOC2018.Day02.Test do
        input: @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
      ]}
   end
-
-  # @tag :unit
-  # test "count characters" do
-  #   counts = count_characters('abcaba')
-  #   assert counts === %{?a => 3, ?b => 2, ?c => 1}
-  # end
 
   @tag :parse
   test "parse example", %{example1: example1} do

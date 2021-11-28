@@ -6,16 +6,25 @@ defmodule AOC2015.Day01 do
 
   @steps %{"(" => 1, ")" => -1}
 
+  @doc """
+  Parse input
+  """
   def parse(puzzle_input) do
     puzzle_input
     |> String.split("", trim: true)
     |> Enum.map(fn c -> @steps[c] end)
   end
 
+  @doc """
+  Solve part 1
+  """
   def part1(input) do
     input |> Enum.sum()
   end
 
+  @doc """
+  Solve part 2
+  """
   def part2(input) do
     1 + (input |> Enum.scan(&(&1 + &2)) |> Enum.find_index(&(&1 < 0)))
   end

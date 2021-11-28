@@ -4,10 +4,10 @@ defmodule AOC2015.Day04.Test do
   """
   use ExUnit.Case, async: true
   require AOC
-
   import AOC2015.Day04, only: [parse: 1, part1: 1, part1: 2, part2: 1, part2: 2]
-  @puzzle_dir "lib/2015/04_the_ideal_stocking_stuffer/"
+  doctest(AOC2015.Day04, import: true)
 
+  @puzzle_dir "lib/2015/04_the_ideal_stocking_stuffer/"
   setup_all do
     {:ok,
      [

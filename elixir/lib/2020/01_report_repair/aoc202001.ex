@@ -4,6 +4,9 @@ defmodule AOC2020.Day01 do
   """
   require AOC
 
+  @doc """
+  Parse input
+  """
   def parse(puzzle_input) do
     puzzle_input
     |> String.split("\n")
@@ -11,10 +14,16 @@ defmodule AOC2020.Day01 do
     |> MapSet.new()
   end
 
+  @doc """
+  Solve part 1
+  """
   def part1(input) do
     input |> find_summands() |> Enum.product()
   end
 
+  @doc """
+  Solve part 2
+  """
   def part2(input) do
     input
     |> Enum.find_value(fn first ->
@@ -26,6 +35,17 @@ defmodule AOC2020.Day01 do
     |> Enum.product()
   end
 
+  @doc """
+  Find the two numbers in the list that sum to target
+
+  ## Examples:
+
+      iex> find_summands([1721, 979, 299])
+      [1721, 299]
+
+      iex> find_summands([1721, 979, 299], 2021)
+      [0, 2021]
+  """
   def find_summands(numbers, target \\ 2020) do
     numbers
     |> Enum.find(0, fn first -> (target - first) in numbers end)
