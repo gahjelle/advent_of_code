@@ -8,7 +8,7 @@ defmodule AOC2015.Day05.Test do
   import AOC2015.Day05, only: [parse: 1, part1: 1, part2: 1]
   @puzzle_dir "lib/2015/05_doesnt_he_have_intern-elves_for_this/"
 
-  setup _context do
+  setup_all do
     {:ok,
      [
        example1: @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse(),
@@ -18,8 +18,8 @@ defmodule AOC2015.Day05.Test do
   end
 
   @tag :parse
-  test "parse example", context do
-    assert context[:example1] === [
+  test "parse example", %{example1: example1} do
+    assert example1 === [
              'ugknbfddgicrmopn',
              'aaa',
              'jchzalrnumimnmhp',
@@ -29,26 +29,26 @@ defmodule AOC2015.Day05.Test do
   end
 
   @tag :example
-  test "part 1 example 1", context do
-    assert part1(context[:example1]) == 2
+  test "part 1 example 1", %{example1: example1} do
+    assert part1(example1) == 2
   end
 
   @tag :example
-  test "part 2 example 2", context do
-    assert part2(context[:example2]) == 2
+  test "part 2 example 2", %{example2: example2} do
+    assert part2(example2) == 2
   end
 
   @tag :solution
   @tag :year2015
   @tag :day5
-  test "part 1 solved", context do
-    assert part1(context[:input]) == 236
+  test "part 1 solved", %{input: input} do
+    assert part1(input) == 236
   end
 
   @tag :solution
   @tag :year2015
   @tag :day5
-  test "part 2 solved", context do
-    assert part2(context[:input]) == 51
+  test "part 2 solved", %{input: input} do
+    assert part2(input) == 51
   end
 end
