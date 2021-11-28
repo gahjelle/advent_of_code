@@ -2,11 +2,6 @@
 
 module AOC201901
 
-# Parse input
-function parse_data(puzzle_input)
-    [parse(Int64, n) for n ∈ split(puzzle_input, "\n")]
-end
-
 # Calculate fuel for one module
 function fuel(mass)
     mass ÷ 3 - 2
@@ -16,6 +11,11 @@ end
 function all_fuel(mass)
     mass_fuel = mass |> fuel
     mass_fuel > 0 ? mass_fuel + all_fuel(mass_fuel) : 0
+end
+
+# Parse input
+function parse_data(puzzle_input)
+    [parse(Int64, n) for n ∈ split(puzzle_input, "\n")]
 end
 
 # Solve part 1

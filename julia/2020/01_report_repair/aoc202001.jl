@@ -2,6 +2,10 @@
 
 module AOC202001
 
+function find_summands(numbers, target = 2020)
+    [n for n in numbers if target - n ∈ numbers]
+end
+
 # Parse input
 function parse_data(puzzle_input)
     [parse(Int32, n) for n ∈ split(puzzle_input, "\n")] |> Set
@@ -24,10 +28,6 @@ function part2(data)
         end
     end
     summands |> prod
-end
-
-function find_summands(numbers, target = 2020)
-    [n for n in numbers if target - n ∈ numbers]
 end
 
 # Solve the puzzle for the given input
