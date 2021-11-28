@@ -1,6 +1,6 @@
 defmodule AOC2019.Day01 do
   @moduledoc """
-   Advent of Code 2019, day 1: The Tyranny of the Rocket Equation
+  Advent of Code 2019, day 1: The Tyranny of the Rocket Equation
   """
   require AOC
 
@@ -23,10 +23,7 @@ defmodule AOC2019.Day01 do
   end
 
   defp all_fuel(mass) do
-    cond do
-      fuel(mass) <= 0 -> 0
-      true -> fuel(mass) + all_fuel(fuel(mass))
-    end
+    if fuel(mass) > 0, do: fuel(mass) + all_fuel(fuel(mass)), else: 0
   end
 
   def main(args) do

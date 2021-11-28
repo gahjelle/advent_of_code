@@ -1,6 +1,6 @@
 defmodule AOC2019.Day01 do
   @moduledoc """
-   Advent of Code 2019, day 1: The Tyranny of the Rocket Equation
+  Advent of Code 2019, day 1: The Tyranny of the Rocket Equation
   """
   require AOC
 
