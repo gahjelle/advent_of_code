@@ -6,4 +6,4 @@ Puzzle text: https://adventofcode.com/2020/day/2
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2020/02_password_philosophy)
+- [💧 Elixir](../../../elixir/lib/2020/02_password_philosophy)
