@@ -1,11 +1,13 @@
 """AoC 8, 2017: I Heard You Like Registers"""
 
 # Standard library imports
+import collections
 import pathlib
 import sys
-import parse
 from typing import NamedTuple
-import collections
+
+# Third party imports
+import parse
 
 CHECKS = {
     "==": lambda n1, n2: n1 == n2,
