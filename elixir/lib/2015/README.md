@@ -10,3 +10,4 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Elixir](h
 | 4    | The Ideal Stocking Stuffer             | [aoc201504.ex](04_the_ideal_stocking_stuffer/aoc201504.ex)             | 233.966 ms |    8.626 s |
 | 5    | Doesn't He Have Intern-elves For This? | [aoc201505.ex](05_doesnt_he_have_intern-elves_for_this/aoc201505.ex)   |   1.684 ms | 786.853 µs |
 | 6    | Probably A Fire Hazard                 | [aoc201506.ex](06_probably_a_fire_hazard/aoc201506.ex)                 | 610.976 ms | 603.833 ms |
+| 7    | Some Assembly Required                 | [aoc201507.ex](07_some_assembly_required/aoc201507.ex)                 |   2.405 ms |   4.832 ms |
