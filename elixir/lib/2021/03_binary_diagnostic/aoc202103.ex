@@ -17,89 +17,84 @@ defmodule AOC2021.Day03 do
   Solve part 1
   """
   def part1(input) do
-    num_columns = input |> Enum.at(0) |> length
-    gamma = input |> gamma_rate() |> Integer.undigits(2)
-    epsilon = Bitwise.bnot(gamma) + Integer.pow(2, num_columns)
-    gamma * epsilon
+    counts = input |> Enum.zip() |> count_bits()
+    gamma_rate = counts |> rate(&>/2) |> Integer.undigits(2)
+    epsilon_rate = counts |> rate(&</2) |> Integer.undigits(2)
+    gamma_rate * epsilon_rate
   end
 
   @doc """
   Solve part 2
   """
   def part2(input) do
-    oxygen_generator = input |> oxygen_generator_rating() |> Integer.undigits(2)
-    co2_scrubber = input |> co2_scrubber_rating() |> Integer.undigits(2)
-    oxygen_generator * co2_scrubber
+    o2_generator = input |> filter_rows(&>=/2) |> Integer.undigits(2)
+    co2_scrubber = input |> filter_rows(&</2) |> Integer.undigits(2)
+    o2_generator * co2_scrubber
   end
 
   @doc """
-  Sum each column
+  Count the number of bits in columns
 
   ## Example:
 
-      iex> sum_columns([[1, 0, 1], [0, 1, 1]])
-      [1, 1, 2]
+      iex> count_bits([{1, 0, 1, 0}, {0, 1, 1, 1}, {0, 1, 0, 0}])
+      {[2, 1, 3], [2, 3, 1]}
+
+      iex> count_bits({1, 0, 1, 1, 0})
+      {2, 3}
   """
-  def sum_columns(report) do
-    num_columns = report |> Enum.at(0) |> length
+  def count_bits(rows) when is_list(rows) do
+    for bit <- 0..1 do
+      rows |> Enum.map(fn bits -> bits |> Tuple.to_list() |> Enum.count(&(&1 == bit)) end)
+    end
+    |> List.to_tuple()
+  end
 
-    report
-    |> Enum.reduce(List.duplicate(0, num_columns), fn row, sum ->
-      Enum.zip(row, sum) |> Enum.map(fn {acc, new} -> acc + new end)
-    end)
+  def count_bits(column) when is_tuple(column) do
+    freqs = column |> Tuple.to_list() |> Enum.frequencies()
+    {Map.get(freqs, 0, 0), Map.get(freqs, 1, 0)}
   end
 
   @doc """
-  Calculate gamma rate, the most common binary digit in each position
+  Calculate gamma and epsilon rates
 
-  ## Example:
+  ## Examples:
 
-      iex> gamma_rate([[1, 0, 1], [0, 1, 1], [0, 1, 0]])
+      iex> rate({[2, 1, 1], [1, 2, 2]}, &>/2)
       [0, 1, 1]
-  """
-  def gamma_rate(report) do
-    num_rows = report |> length
 
-    report
-    |> sum_columns()
-    |> Enum.map(fn sum -> if sum >= num_rows / 2, do: 1, else: 0 end)
+      iex> rate({[2, 1, 1], [1, 2, 2]}, &</2)
+      [1, 0, 0]
+  """
+  def rate({num_zeros, num_ones}, compare) do
+    Enum.zip(num_zeros, num_ones)
+    |> Enum.map(fn {zeros, ones} -> if compare.(ones, zeros), do: 1, else: 0 end)
   end
 
   @doc """
-  Calculate oxygen generator rating, the element with the most common bits
+  Filter out the best matching row based on a comparison function
 
-  ## Example:
+  ## Examples:
 
-      iex> oxygen_generator_rating([[1, 0, 1], [0, 1, 1], [0, 1, 0]])
-      [0, 1, 1]
+    iex> filter_rows([[1, 0, 1], [0, 1, 1], [0, 1, 0]], &>=/2)
+    [0, 1, 1]
+
+    iex> filter_rows([[1, 0, 1], [0, 1, 1], [0, 1, 0]], &<=/2)
+    [1, 0, 1]
   """
-  def oxygen_generator_rating(report) do
-    report |> filter_rows(fn row, col_num -> row |> gamma_rate() |> Enum.at(col_num) end)
-  end
+  def filter_rows(rows, compare), do: filter_rows(rows, compare, [])
+  def filter_rows([row], _compare, acc), do: (acc |> Enum.reverse()) ++ row
 
-  @doc """
-  Calculate CO2 scrubber rating, the element with the most common bits
+  def filter_rows(rows, compare, acc) do
+    column = rows |> Enum.zip() |> hd
+    {zeros, ones} = column |> count_bits()
+    bit_to_keep = if compare.(ones, zeros), do: 1, else: 0
 
-  ## Example:
-
-      iex> co2_scrubber_rating([[1, 0, 1], [0, 1, 1], [0, 1, 0]])
-      [1, 0, 1]
-  """
-  def co2_scrubber_rating(report) do
-    report
-    |> filter_rows(fn row, col_num ->
-      row |> gamma_rate() |> Enum.map(&(1 - &1)) |> Enum.at(col_num)
-    end)
-  end
-
-  defp filter_rows(report, chooser), do: filter_rows(report, 0, chooser)
-  defp filter_rows([row], _, _), do: row
-
-  defp filter_rows(report, column, chooser) do
     filter_rows(
-      report |> Enum.filter(fn row -> row |> Enum.at(column) == chooser.(report, column) end),
-      column + 1,
-      chooser
+      Enum.zip(rows, column |> Tuple.to_list())
+      |> Enum.flat_map(fn {row, bit} -> if bit == bit_to_keep, do: [row |> tl()], else: [] end),
+      compare,
+      [bit_to_keep | acc]
     )
   end
 
