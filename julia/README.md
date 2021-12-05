@@ -29,3 +29,4 @@ Solutions to [Advent of Code](https://adventofcode.com/) in [Julia](https://juli
 |    23 |                                   |                                                    |                                     |
 |    24 |                                   |                                                    |                                     |
 |    25 |                                   |                                                    |                                     |
+
