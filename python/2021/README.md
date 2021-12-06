@@ -9,3 +9,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 3    | Binary Diagnostic    | [aoc202103.py](03_binary_diagnostic/aoc202103.py)    | 520.370 μs |   1.319 ms |
 | 4    | Giant Squid          | [aoc202104.py](04_giant_squid/aoc202104.py)          |  30.791 ms | 474.129 μs |
 | 5    | Hydrothermal Venture | [aoc202105.py](05_hydrothermal_venture/aoc202105.py) |  61.447 ms |  81.416 ms |
+| 6    | Lanternfish          | [aoc202106.py](06_lanternfish/aoc202106.py)          |  52.041 μs | 150.301 μs |

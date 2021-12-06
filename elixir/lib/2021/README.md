@@ -9,3 +9,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Elixir](h
 | 3    | Binary Diagnostic    | [aoc202103.ex](03_binary_diagnostic/aoc202103.ex)    |   1.170 ms |   1.747 ms |
 | 4    | Giant Squid          | [aoc202104.ex](04_giant_squid/aoc202104.ex)          |  14.042 ms |  29.920 ms |
 | 5    | Hydrothermal Venture | [aoc202105.ex](05_hydrothermal_venture/aoc202105.ex) | 100.161 ms | 283.208 ms |
+| 6    | Lanternfish          | [aoc202106.ex](06_lanternfish/aoc202106.ex)          |  44.465 µs | 111.711 µs |
