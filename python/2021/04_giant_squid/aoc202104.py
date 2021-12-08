@@ -5,7 +5,7 @@ import collections
 import math
 import pathlib
 import sys
-from collections import deque, UserList
+from collections import UserList, deque
 from dataclasses import dataclass
 
 

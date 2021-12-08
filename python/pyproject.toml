@@ -1,2 +1,5 @@
 [tool.pytest.ini_options]
 addopts = "--doctest-modules"
+
+[tool.black]
+target_version = ["py310"]
