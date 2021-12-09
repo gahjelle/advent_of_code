@@ -12,3 +12,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 6    | Lanternfish             | [aoc202106.py](06_lanternfish/aoc202106.py)             |  52.041 μs | 150.301 μs |
 | 7    | The Treachery Of Whales | [aoc202107.py](07_the_treachery_of_whales/aoc202107.py) |  20.241 ms | 842.377 μs |
 | 8    | Seven Segment Search    | [aoc202108.py](08_seven_segment_search/aoc202108.py)    | 354.178 μs |  13.912 ms |
+| 9    | Smoke Basin             | [aoc202109.py](09_smoke_basin/aoc202109.py)             | 311.879 μs |  55.102 ms |
