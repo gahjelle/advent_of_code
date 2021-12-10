@@ -12,3 +12,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Elixir](h
 | 6    | Lanternfish             | [aoc202106.ex](06_lanternfish/aoc202106.ex)             |  44.465 µs | 111.711 µs |
 | 7    | The Treachery Of Whales | [aoc202107.ex](07_the_treachery_of_whales/aoc202107.ex) |   8.394 ms |  20.808 ms |
 | 8    | Seven Segment Search    | [aoc202108.ex](08_seven_segment_search/aoc202108.ex)    | 135.443 µs | 868.519 µs |
+| 10   | Syntax Scoring          | [aoc202110.ex](10_syntax_scoring/aoc202110.ex)          | 245.742 µs | 276.301 µs |
