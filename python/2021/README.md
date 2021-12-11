@@ -14,3 +14,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 8    | Seven Segment Search    | [aoc202108.py](08_seven_segment_search/aoc202108.py)    | 354.178 μs |  13.912 ms |
 | 9    | Smoke Basin             | [aoc202109.py](09_smoke_basin/aoc202109.py)             | 311.879 μs |  55.102 ms |
 | 10   | Syntax Scoring          | [aoc202110.py](10_syntax_scoring/aoc202110.py)          |   3.025 ms |   2.958 ms |
+| 11   | Dumbo Octopus           | [aoc202111.py](11_dumbo_octopus/aoc202111.py)           |  25.935 ms |  54.268 ms |
