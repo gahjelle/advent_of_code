@@ -16,3 +16,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 10   | Syntax Scoring          | [aoc202110.py](10_syntax_scoring/aoc202110.py)          |   3.025 ms |   2.958 ms |
 | 11   | Dumbo Octopus           | [aoc202111.py](11_dumbo_octopus/aoc202111.py)           |  25.935 ms |  54.268 ms |
 | 12   | Passage Pathing         | [aoc202112.py](12_passage_pathing/aoc202112.py)         |  18.150 ms | 582.647 ms |
+| 13   | Transparent Origami     | [aoc202113.py](13_transparent_origami/aoc202113.py)     | 212.227 μs |   1.387 ms |
