@@ -15,13 +15,15 @@ defmodule Mix.Tasks.Benchmark do
       |> String.to_existing_atom()
 
     puzzle_dir = Path.wildcard("lib/#{year}/#{String.pad_leading(day, 2, "0")}_*/") |> hd
-    input = Path.join(puzzle_dir, "input.txt") |> AOC.read_text() |> aoc_module.parse()
+    input = Path.join(puzzle_dir, "input.txt") |> AOC.read_text()
+    parsed_input = input |> aoc_module.parse()
 
     @bm_args
     |> Benchee.init()
     |> Benchee.system()
-    |> Benchee.benchmark("#{year} day #{day}, part 1", fn -> aoc_module.part1(input) end)
-    |> Benchee.benchmark("#{year} day #{day}, part 2", fn -> aoc_module.part2(input) end)
+    |> Benchee.benchmark("#{year} day #{day}, parse", fn -> aoc_module.parse(input) end)
+    |> Benchee.benchmark("#{year} day #{day}, part 1", fn -> aoc_module.part1(parsed_input) end)
+    |> Benchee.benchmark("#{year} day #{day}, part 2", fn -> aoc_module.part2(parsed_input) end)
     |> Benchee.collect()
     |> Benchee.statistics()
     |> Benchee.Formatter.output()
@@ -29,7 +31,7 @@ defmodule Mix.Tasks.Benchmark do
   end
 
   defp format_as_markdown(%{scenarios: scenarios}, puzzle_path) do
-    [part1, part2] =
+    [parse, part1, part2] =
       scenarios
       |> Enum.map(fn s -> s.run_time_data.statistics.median end)
       |> Enum.map(&format_as_timestring/1)
@@ -45,7 +47,7 @@ defmodule Mix.Tasks.Benchmark do
       |> String.split(" ")
       |> Enum.map_join(" ", &String.capitalize/1)
 
-    "\n\n| #{day} | #{name} | [#{file}](#{directory}/#{file}) | #{part1} | #{part2} |"
+    "\n\n| #{day} | #{name} | [#{file}](#{directory}/#{file}) | #{parse} | #{part1} | #{part2} |"
     |> IO.puts()
   end
 
