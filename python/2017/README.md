@@ -2,6 +2,6 @@
 
 Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](https://www.python.org/):
 
-| Day  | Puzzle                     | Python                                                     |   Part 1 |   Part 2 |
-| :--- | :------------------------- | :--------------------------------------------------------- | -------: | -------: |
-| 8    | I Heard You Like Registers | [aoc201708.py](08_i_heard_you_like_registers/aoc201708.py) | 1.605 ms | 1.557 ms |
+| Day  | Puzzle                     | Python                                                     |     Parse |   Part 1 |   Part 2 |
+| :--- | :------------------------- | :--------------------------------------------------------- | --------: | -------: | -------: |
+| 8    | I Heard You Like Registers | [aoc201708.py](08_i_heard_you_like_registers/aoc201708.py) | 30.498 ms | 1.674 ms | 1.520 ms |

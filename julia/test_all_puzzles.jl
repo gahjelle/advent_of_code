@@ -50,6 +50,8 @@ function test_puzzle(puzzle)
         if "-r" ∈ ARGS || "--report" ∈ ARGS
             data = AOC.$mod.parse_data(input)
 
+            bench_parse = @benchmark(AOC.$mod.parse_data(input))
+            runtime_parse = BenchmarkTools.prettytime(time(bench_parse))
             bench1 = @benchmark(AOC.$mod.part1(data))
             runtime1 = BenchmarkTools.prettytime(time(bench1))
             bench2 = @benchmark(AOC.$mod.part2(data))
@@ -59,7 +61,7 @@ function test_puzzle(puzzle)
             open(TIMINGS_LOG, "a") do fid
                 write(
                     fid,
-                    "| $(parse(Int, day)) | $(puzzle_name) | $(link) | $(runtime1) | $(runtime2) |\n",
+                    "| $(parse(Int, day)) | $(puzzle_name) | $(link) | $(runtime_parse) | $(runtime1) | $(runtime2) |\n",
                 )
             end
         end
@@ -73,7 +75,7 @@ if "-r" ∈ ARGS || "--report" ∈ ARGS
     open(TIMINGS_LOG, "w") do fid
         write(
             fid,
-            "| Day | Puzzle | Julia | Part 1 | Part 2 |\n|:---|:---|:---|---:|---:|\n",
+            "| Day | Puzzle | Julia | Parse | Part 1 | Part 2 |\n|:---|:---|:---|---:|---:|---:|\n",
         )
     end
 end

@@ -19,10 +19,10 @@ class TimingsLog:
     time_units = (("m", 60), ("s", 1), ("ms", 1e-3), ("μs", 1e-6), ("ns", 1e-9))
     fmt_header = (
         "\n## {year}\n\n"
-        "| Day | Puzzle | Python | Part 1 | Part 2 |\n"
-        "|:---|:---|:---|---:|---:|\n"
+        "| Day | Puzzle | Python | Parse | Part 1 | Part 2 |\n"
+        "|:---|:---|:---|---:|---:|---:|\n"
     )
-    fmt_entry = "| {day} | {puzzle} | {link} | {part1} | {part2} |\n"
+    fmt_entry = "| {day} | {puzzle} | {link} | {parse} | {part1} | {part2} |\n"
 
     def __init__(self, path):
         """Initialize logger"""
@@ -30,7 +30,7 @@ class TimingsLog:
         self.path.write_text("# Advent of Code\n")
         self.current_year = 0
 
-    def write_log(self, year, day, puzzle, link, part1, part2):
+    def write_log(self, year, day, puzzle, link, parse, part1, part2):
         """Write an entry in the log"""
         if year != self.current_year:
             self.current_year = year
@@ -41,6 +41,7 @@ class TimingsLog:
                 day=day,
                 puzzle=puzzle,
                 link=link,
+                parse=self.prettytime(parse),
                 part1=self.prettytime(part1),
                 part2=self.prettytime(part2),
             )
@@ -76,7 +77,8 @@ def test_puzzle(puzzle_path):
     # Parse data
     puzzle_input = (puzzle_path / "input.txt").read_text().strip()
     puzzle_parse = getattr(puzzle_mod, "parse")
-    puzzle_data = puzzle_parse(puzzle_input)
+    with Timer(logger=None) as timer_parse:
+        puzzle_data = puzzle_parse(puzzle_input)
 
     # Solve part 1
     puzzle_part1 = getattr(puzzle_mod, "part1")
@@ -101,6 +103,7 @@ def test_puzzle(puzzle_path):
         day=int(day),
         puzzle=puzzle_name,
         link=link,
+        parse=timer_parse.last,
         part1=timer_part1.last,
         part2=timer_part2.last,
     )
