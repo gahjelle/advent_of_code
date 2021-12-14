@@ -1,5 +1,6 @@
 [tool.pytest.ini_options]
-addopts = "--doctest-modules"
+addopts             = "--doctest-modules --doctest-continue-on-failure"
+doctest_optionflags = "NORMALIZE_WHITESPACE"
 
 [tool.black]
 target_version = ["py310"]

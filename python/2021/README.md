@@ -17,3 +17,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 11   | Dumbo Octopus           | [aoc202111.py](11_dumbo_octopus/aoc202111.py)           |  72.292 μs |  29.550 ms |  75.901 ms |
 | 12   | Passage Pathing         | [aoc202112.py](12_passage_pathing/aoc202112.py)         |  29.013 μs |  17.128 ms | 637.546 ms |
 | 13   | Transparent Origami     | [aoc202113.py](13_transparent_origami/aoc202113.py)     |   1.884 ms | 237.341 μs |   1.052 ms |
+| 14   | Extended Polymerization | [aoc202114.py](14_extended_polymerization/aoc202114.py) | 128.482 μs | 504.698 μs |   2.177 ms |

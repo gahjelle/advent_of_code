@@ -27,7 +27,7 @@ def parse_line(line):
     """Parse one line of input
 
     >>> parse_line("acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab | "
-    ...            "cdfeb fcadb cdfeb cdbaf")  # doctest: +NORMALIZE_WHITESPACE
+    ...            "cdfeb fcadb cdfeb cdbaf")
     {'input': ['abcdefg', 'bcdef', 'acdfg', 'abcdf', 'abd', 'abcdef', 'bcdefg',
                'abef', 'abcdeg', 'ab'],
      'output': ['bcdef', 'abcdf', 'bcdef', 'abcdf']}
