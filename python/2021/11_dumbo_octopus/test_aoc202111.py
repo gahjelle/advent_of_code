@@ -5,8 +5,8 @@ import pathlib
 
 # Third party imports
 import aoc202111
-import pytest
 import numpy as np
+import pytest
 
 PUZZLE_DIR = pathlib.Path(__file__).parent
 

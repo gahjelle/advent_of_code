@@ -4,6 +4,7 @@
 import pathlib
 import sys
 
+# Third party imports
 import advent_of_code_ocr
 import colorama
 import parse

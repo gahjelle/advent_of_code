@@ -7,8 +7,8 @@ import sys
 import time
 
 # Third party imports
-import numpy as np
 import colorama
+import numpy as np
 from colorama import Cursor
 
 colorama.init()

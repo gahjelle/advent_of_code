@@ -4,7 +4,7 @@
 import functools
 import pathlib
 import sys
-from collections import defaultdict, Counter
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 
 
