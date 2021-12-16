@@ -19,3 +19,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 13   | Transparent Origami     | [aoc202113.py](13_transparent_origami/aoc202113.py)     |   1.884 ms | 237.341 μs |   1.052 ms |
 | 14   | Extended Polymerization | [aoc202114.py](14_extended_polymerization/aoc202114.py) | 128.482 μs | 504.698 μs |   2.177 ms |
 | 15   | Chiton                  | [aoc202115.py](15_chiton/aoc202115.py)                  |   3.982 ms |  34.714 ms | 938.043 ms |
+| 16   | Packet Decoder          | [aoc202116.py](16_packet_decoder/aoc202116.py)          |  19.861 μs |   1.340 ms |   1.660 ms |
