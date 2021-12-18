@@ -1,8 +1,7 @@
 advent-of-code-data
+advent-of-code-ocr
 colorama
 numpy
 pandas
 parse
 tabulate
-
--e git+https://github.com/bsoyka/advent-of-code-ocr#egg=advent_of_code_ocr

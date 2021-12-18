@@ -4,9 +4,9 @@
 #
 #    pip-compile requirements-dev.in
 #
--e git+https://github.com/bsoyka/advent-of-code-ocr#egg=advent_of_code_ocr
-    # via -r requirements.txt
 advent-of-code-data==1.1.1
+    # via -r requirements.txt
+advent-of-code-ocr==1.0.0
     # via -r requirements.txt
 attrs==21.2.0
     # via pytest
@@ -47,7 +47,6 @@ mypy-extensions==0.4.3
 numpy==1.21.4
     # via
     #   -r requirements.txt
-    #   advent-of-code-ocr
     #   pandas
 packaging==21.3
     # via pytest
@@ -108,7 +107,7 @@ termcolor==1.1.0
     #   advent-of-code-data
 toml==0.10.2
     # via pytest
-tomli==1.2.2
+tomli==1.2.3
     # via black
 typing-extensions==4.0.1
     # via black
