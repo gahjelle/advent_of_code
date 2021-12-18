@@ -16,7 +16,13 @@ PUZZLE_PATHS = sorted(p.parent for p in PUZZLE_DIR.rglob("**/output.py.txt"))
 class TimingsLog:
     """Logger that can write timings to file"""
 
-    time_units = (("m", 60), ("s", 1), ("ms", 1e-3), ("μs", 1e-6), ("ns", 1e-9))
+    time_units = (
+        ("m ⚫️", 60),
+        ("s 🔴", 1),
+        ("ms 🔵", 1e-3),
+        ("μs ⚪️", 1e-6),
+        ("ns ⚪️", 1e-9),
+    )
     fmt_header = (
         "\n## {year}\n\n"
         "| Day | Puzzle | Python | Parse | Part 1 | Part 2 |\n"
