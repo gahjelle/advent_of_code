@@ -22,3 +22,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 16   | Packet Decoder          | [aoc202116.py](16_packet_decoder/aoc202116.py)          |  19.861 μs ⚪️ |   1.340 ms 🔵 |   1.660 ms 🔵 |
 | 17   | Trick Shot              | [aoc202117.py](17_trick_shot/aoc202117.py)              |   1.700 ms 🔵 |   6.721 μs ⚪️ |   4.096 ms 🔵 |
 | 18   | Snailfish               | [aoc202118.py](18_snailfish/aoc202118.py)               | 784.364 μs ⚪️ |  77.350 ms 🔵 |    1.540 s 🔴 |
+| 19   | Beacon Scanner          | [aoc202119.py](19_beacon_scanner/aoc202119.py)          |   1.677 ms 🔵 | 770.019 ms 🔵 | 128.229 μs ⚪️ |
