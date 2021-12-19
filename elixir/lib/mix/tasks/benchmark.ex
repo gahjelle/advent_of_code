@@ -53,5 +53,9 @@ defmodule Mix.Tasks.Benchmark do
 
   defp format_as_timestring(nanoseconds) do
     Number.SI.number_to_si(nanoseconds / 1_000_000_000, unit: "s", separator: " ", precision: 3)
+    |> String.replace(" ns", " ns ⚪️")
+    |> String.replace(" µs", " µs ⚪️")
+    |> String.replace(" ms", " ms 🔵")
+    |> String.replace(" s", " s 🔴")
   end
 end
