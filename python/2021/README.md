@@ -24,3 +24,4 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 18   | Snailfish               | [aoc202118.py](18_snailfish/aoc202118.py)               | 784.364 μs ⚪️ |  77.350 ms 🔵 |    1.540 s 🔴 |
 | 19   | Beacon Scanner          | [aoc202119.py](19_beacon_scanner/aoc202119.py)          |   1.677 ms 🔵 | 770.019 ms 🔵 | 128.229 μs ⚪️ |
 | 20   | Trench Map              | [aoc202120.py](20_trench_map/aoc202120.py)              |   2.488 ms 🔵 | 127.963 ms 🔵 |    6.592 s 🔴 |
+| 21   | Dirac Dice              | [aoc202121.py](21_dirac_dice/aoc202121.py)              |  11.219 μs ⚪️ | 252.548 μs ⚪️ | 176.003 ms 🔵 |
