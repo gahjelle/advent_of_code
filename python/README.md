@@ -1,10 +1,10 @@
 # Advent of Code in Python
 
-Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www.python.org/) (78⭐):
+Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www.python.org/) (80⭐):
 
 |   Day | [2015](2015)                                           | [2016](2016)                          | [2017](2017)                               | [2018](2018)                        | [2019](2019)                                       | [2020](2020)                        | [2021](2021)                            |
 |------:|:-------------------------------------------------------|:--------------------------------------|:-------------------------------------------|:------------------------------------|:---------------------------------------------------|:------------------------------------|:----------------------------------------|
-|     1 | [⭐⭐](2015/01_not_quite_lisp)                         | [⭐⭐](2016/01_no_time_for_a_taxicab) |                                            | [⭐⭐](2018/01_chronal_calibration) | [⭐⭐](2019/01_the_tyranny_of_the_rocket_equation) | [⭐⭐](2020/01_report_repair)       | [⭐⭐](2021/01_sonar_sweep)             |
+|     1 | [⭐⭐](2015/01_not_quite_lisp)                         | [⭐⭐](2016/01_no_time_for_a_taxicab) | [⭐⭐](2017/01_inverse_captcha)            | [⭐⭐](2018/01_chronal_calibration) | [⭐⭐](2019/01_the_tyranny_of_the_rocket_equation) | [⭐⭐](2020/01_report_repair)       | [⭐⭐](2021/01_sonar_sweep)             |
 |     2 | [⭐⭐](2015/02_i_was_told_there_would_be_no_math)      |                                       |                                            |                                     | [⭐⭐](2019/02_1202_program_alarm)                 | [⭐⭐](2020/02_password_philosophy) | [⭐⭐](2021/02_dive)                    |
 |     3 | [⭐⭐](2015/03_perfectly_spherical_houses_in_a_vacuum) |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/03_binary_diagnostic)       |
 |     4 | [⭐⭐](2015/04_the_ideal_stocking_stuffer)             |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/04_giant_squid)             |

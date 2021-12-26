@@ -6,4 +6,4 @@ Puzzle text: https://adventofcode.com/2017/day/1
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2017/01_inverse_captcha)
+- [💧 Elixir](../../../elixir/lib/2017/01_inverse_captcha)
