@@ -32,6 +32,8 @@ colorama==0.4.4
     # via -r requirements.txt
 flake8==4.0.1
     # via -r requirements-dev.in
+html2text==2020.1.16
+    # via -r requirements-dev.in
 idna==3.3
     # via
     #   -r requirements.txt

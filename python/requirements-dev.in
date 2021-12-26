@@ -3,5 +3,6 @@
 black
 codetiming
 flake8
+html2text
 isort
 pytest
