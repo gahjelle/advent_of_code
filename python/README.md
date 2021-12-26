@@ -1,6 +1,6 @@
 # Advent of Code in Python
 
-Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www.python.org/) (72⭐):
+Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www.python.org/) (78⭐):
 
 |   Day | [2015](2015)                                           | [2016](2016)                          | [2017](2017)                               | [2018](2018)                        | [2019](2019)                                       | [2020](2020)                        | [2021](2021)                            |
 |------:|:-------------------------------------------------------|:--------------------------------------|:-------------------------------------------|:------------------------------------|:---------------------------------------------------|:------------------------------------|:----------------------------------------|
@@ -26,9 +26,9 @@ Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www
 |    20 |                                                        |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/20_trench_map)              |
 |    21 |                                                        |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/21_dirac_dice)              |
 |    22 |                                                        |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/22_reactor_reboot)          |
-|    23 |                                                        |                                       |                                            |                                     |                                                    |                                     |                                         |
-|    24 |                                                        |                                       |                                            |                                     |                                                    |                                     |                                         |
-|    25 |                                                        |                                       |                                            |                                     |                                                    |                                     |                                         |
+|    23 |                                                        |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/23_amphipod)                |
+|    24 |                                                        |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/24_arithmetic_logic_unit)   |
+|    25 |                                                        |                                       |                                            |                                     |                                                    |                                     | [⭐⭐](2021/25_sea_cucumber)            |
 
 ## Running the Solutions
 

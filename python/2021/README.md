@@ -26,3 +26,6 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 20   | Trench Map              | [aoc202120.py](20_trench_map/aoc202120.py)              |   2.488 ms 🔵 | 127.963 ms 🔵 |    6.592 s 🔴 |
 | 21   | Dirac Dice              | [aoc202121.py](21_dirac_dice/aoc202121.py)              |  11.219 μs ⚪️ | 252.548 μs ⚪️ | 176.003 ms 🔵 |
 | 22   | Reactor Reboot          | [aoc202122.py](22_reactor_reboot/aoc202122.py)          |  23.472 ms 🔵 | 178.729 ms 🔵 |    1.078 s 🔴 |
+| 23   | Amphipod                | [aoc202123.py](23_amphipod/aoc202123.py)                |   7.307 μs ⚪️ |    3.771 s 🔴 |    7.167 s 🔴 |
+| 24   | Arithmetic Logic Unit   | [aoc202124.py](24_arithmetic_logic_unit/aoc202124.py)   | 152.306 μs ⚪️ |  15.096 μs ⚪️ |   9.812 μs ⚪️ |
+| 25   | Sea Cucumber            | [aoc202125.py](25_sea_cucumber/aoc202125.py)            |   3.802 ms 🔵 |    1.594 s 🔴 |              |
