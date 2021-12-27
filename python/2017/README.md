@@ -10,4 +10,5 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 4    | High-Entropy Passphrases               | [aoc201704.py](04_high-entropy_passphrases/aoc201704.py)               |   1.572 ms 🔵 | 970.645 μs ⚪️ |   3.393 ms 🔵 |
 | 5    | A Maze Of Twisty Trampolines All Alike | [aoc201705.py](05_a_maze_of_twisty_trampolines_all_alike/aoc201705.py) | 327.975 μs ⚪️ |  87.321 ms 🔵 |    5.705 s 🔴 |
 | 6    | Memory Reallocation                    | [aoc201706.py](06_memory_reallocation/aoc201706.py)                    |  14.140 μs ⚪️ |  91.926 ms 🔵 |   3.451 μs ⚪️ |
+| 7    | Recursive Circus                       | [aoc201707.py](07_recursive_circus/aoc201707.py)                       |  27.801 ms 🔵 | 335.493 μs ⚪️ |   6.954 ms 🔵 |
 | 8    | I Heard You Like Registers             | [aoc201708.py](08_i_heard_you_like_registers/aoc201708.py)             |  30.498 ms 🔵 |   1.674 ms 🔵 |   1.520 ms 🔵 |
