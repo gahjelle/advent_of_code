@@ -14,3 +14,4 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 8    | I Heard You Like Registers             | [aoc201708.py](08_i_heard_you_like_registers/aoc201708.py)             |  30.498 ms 🔵 |   1.674 ms 🔵 |   1.520 ms 🔵 |
 | 9    | Stream Processing                      | [aoc201709.py](09_stream_processing/aoc201709.py)                      |   6.870 ms 🔵 | 555.259 μs ⚪️ |   2.123 μs ⚪️ |
 | 10   | Knot Hash                              | [aoc201710.py](10_knot_hash/aoc201710.py)                              |   2.292 μs ⚪️ | 141.628 μs ⚪️ |  12.553 ms 🔵 |
+| 11   | Hex Ed                                 | [aoc201711.py](11_hex_ed/aoc201711.py)                                 |   7.959 ms 🔵 | 216.060 μs ⚪️ | 274.793 μs ⚪️ |
