@@ -6,5 +6,5 @@ Puzzle text: https://adventofcode.com/2020/day/1
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2020/01_report_repair)
 - [🎪 Julia](../../../../julia/2020/01_report_repair)
+- [🐍 Python](../../../../python/2020/01_report_repair)
