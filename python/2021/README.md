@@ -4,28 +4,28 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 
 | Day  | Puzzle                  | Python                                                  |        Parse |       Part 1 |       Part 2 |
 | :--- | :---------------------- | :------------------------------------------------------ | -----------: | -----------: | -----------: |
-| 1    | Sonar Sweep             | [aoc202101.py](01_sonar_sweep/aoc202101.py)             | 976.130 μs ⚪️ | 237.486 μs ⚪️ | 456.536 μs ⚪️ |
-| 2    | Dive!                   | [aoc202102.py](02_dive/aoc202102.py)                    |   1.731 ms 🔵 | 205.933 μs ⚪️ | 233.480 μs ⚪️ |
-| 3    | Binary Diagnostic       | [aoc202103.py](03_binary_diagnostic/aoc202103.py)       |   3.818 ms 🔵 | 479.960 μs ⚪️ |   1.937 ms 🔵 |
-| 4    | Giant Squid             | [aoc202104.py](04_giant_squid/aoc202104.py)             |   1.983 ms 🔵 |  29.113 ms 🔵 | 423.758 μs ⚪️ |
-| 5    | Hydrothermal Venture    | [aoc202105.py](05_hydrothermal_venture/aoc202105.py)    |   3.458 ms 🔵 |  63.580 ms 🔵 |  88.158 ms 🔵 |
-| 6    | Lanternfish             | [aoc202106.py](06_lanternfish/aoc202106.py)             | 157.615 μs ⚪️ |  67.366 μs ⚪️ | 118.819 μs ⚪️ |
-| 7    | The Treachery Of Whales | [aoc202107.py](07_the_treachery_of_whales/aoc202107.py) | 999.853 μs ⚪️ |  16.570 ms 🔵 | 856.528 μs ⚪️ |
-| 8    | Seven Segment Search    | [aoc202108.py](08_seven_segment_search/aoc202108.py)    |   2.623 ms 🔵 | 264.539 μs ⚪️ |   9.712 ms 🔵 |
-| 9    | Smoke Basin             | [aoc202109.py](09_smoke_basin/aoc202109.py)             |   3.889 ms 🔵 |   1.173 ms 🔵 |  52.398 ms 🔵 |
-| 10   | Syntax Scoring          | [aoc202110.py](10_syntax_scoring/aoc202110.py)          |  38.393 μs ⚪️ |   3.066 ms 🔵 |   2.928 ms 🔵 |
-| 11   | Dumbo Octopus           | [aoc202111.py](11_dumbo_octopus/aoc202111.py)           |  72.292 μs ⚪️ |  29.550 ms 🔵 |  75.901 ms 🔵 |
-| 12   | Passage Pathing         | [aoc202112.py](12_passage_pathing/aoc202112.py)         |  29.013 μs ⚪️ |  17.128 ms 🔵 | 637.546 ms 🔵 |
-| 13   | Transparent Origami     | [aoc202113.py](13_transparent_origami/aoc202113.py)     |   1.884 ms 🔵 | 237.341 μs ⚪️ |   1.052 ms 🔵 |
-| 14   | Extended Polymerization | [aoc202114.py](14_extended_polymerization/aoc202114.py) | 128.482 μs ⚪️ | 504.698 μs ⚪️ |   2.177 ms 🔵 |
-| 15   | Chiton                  | [aoc202115.py](15_chiton/aoc202115.py)                  |   3.982 ms 🔵 |  34.714 ms 🔵 | 938.043 ms 🔵 |
-| 16   | Packet Decoder          | [aoc202116.py](16_packet_decoder/aoc202116.py)          |  19.861 μs ⚪️ |   1.340 ms 🔵 |   1.660 ms 🔵 |
-| 17   | Trick Shot              | [aoc202117.py](17_trick_shot/aoc202117.py)              |   1.700 ms 🔵 |   6.721 μs ⚪️ |   4.096 ms 🔵 |
-| 18   | Snailfish               | [aoc202118.py](18_snailfish/aoc202118.py)               | 784.364 μs ⚪️ |  77.350 ms 🔵 |    1.540 s 🔴 |
-| 19   | Beacon Scanner          | [aoc202119.py](19_beacon_scanner/aoc202119.py)          |   1.677 ms 🔵 | 770.019 ms 🔵 | 128.229 μs ⚪️ |
-| 20   | Trench Map              | [aoc202120.py](20_trench_map/aoc202120.py)              |   2.488 ms 🔵 | 127.963 ms 🔵 |    6.592 s 🔴 |
-| 21   | Dirac Dice              | [aoc202121.py](21_dirac_dice/aoc202121.py)              |  11.219 μs ⚪️ | 252.548 μs ⚪️ | 176.003 ms 🔵 |
-| 22   | Reactor Reboot          | [aoc202122.py](22_reactor_reboot/aoc202122.py)          |  23.472 ms 🔵 | 178.729 ms 🔵 |    1.078 s 🔴 |
-| 23   | Amphipod                | [aoc202123.py](23_amphipod/aoc202123.py)                |   7.307 μs ⚪️ |    3.771 s 🔴 |    7.167 s 🔴 |
-| 24   | Arithmetic Logic Unit   | [aoc202124.py](24_arithmetic_logic_unit/aoc202124.py)   | 152.306 μs ⚪️ |  15.096 μs ⚪️ |   9.812 μs ⚪️ |
-| 25   | Sea Cucumber            | [aoc202125.py](25_sea_cucumber/aoc202125.py)            |   3.802 ms 🔵 |    1.594 s 🔴 |              |
+| 1    | Sonar Sweep             | [aoc202101.py](01_sonar_sweep/aoc202101.py)             | 264.901 μs ⚪️ |  94.998 μs ⚪️ |  92.270 μs ⚪️ |
+| 2    | Dive                    | [aoc202102.py](02_dive/aoc202102.py)                    | 393.615 μs ⚪️ |  70.429 μs ⚪️ |  98.534 μs ⚪️ |
+| 3    | Binary Diagnostic       | [aoc202103.py](03_binary_diagnostic/aoc202103.py)       |   1.558 ms 🔵 | 246.229 μs ⚪️ | 581.383 μs ⚪️ |
+| 4    | Giant Squid             | [aoc202104.py](04_giant_squid/aoc202104.py)             | 943.584 μs ⚪️ |  13.661 ms 🔵 | 292.512 μs ⚪️ |
+| 5    | Hydrothermal Venture    | [aoc202105.py](05_hydrothermal_venture/aoc202105.py)    |   1.068 ms 🔵 |  21.772 ms 🔵 |  40.666 ms 🔵 |
+| 6    | Lanternfish             | [aoc202106.py](06_lanternfish/aoc202106.py)             |  58.935 μs ⚪️ |  34.586 μs ⚪️ |  42.566 μs ⚪️ |
+| 7    | The Treachery Of Whales | [aoc202107.py](07_the_treachery_of_whales/aoc202107.py) | 225.844 μs ⚪️ |   7.219 ms 🔵 | 396.695 μs ⚪️ |
+| 8    | Seven Segment Search    | [aoc202108.py](08_seven_segment_search/aoc202108.py)    |   1.331 ms 🔵 | 117.161 μs ⚪️ |   4.869 ms 🔵 |
+| 9    | Smoke Basin             | [aoc202109.py](09_smoke_basin/aoc202109.py)             |   1.448 ms 🔵 | 185.865 μs ⚪️ |  15.798 ms 🔵 |
+| 10   | Syntax Scoring          | [aoc202110.py](10_syntax_scoring/aoc202110.py)          |   8.694 μs ⚪️ |   1.232 ms 🔵 |   1.583 ms 🔵 |
+| 11   | Dumbo Octopus           | [aoc202111.py](11_dumbo_octopus/aoc202111.py)           |  31.328 μs ⚪️ |  11.888 ms 🔵 |  25.129 ms 🔵 |
+| 12   | Passage Pathing         | [aoc202112.py](12_passage_pathing/aoc202112.py)         |  13.989 μs ⚪️ |   8.216 ms 🔵 | 322.381 ms 🔵 |
+| 13   | Transparent Origami     | [aoc202113.py](13_transparent_origami/aoc202113.py)     |   1.455 ms 🔵 | 236.359 μs ⚪️ | 997.303 μs ⚪️ |
+| 14   | Extended Polymerization | [aoc202114.py](14_extended_polymerization/aoc202114.py) | 123.288 μs ⚪️ | 499.422 μs ⚪️ |   2.067 ms 🔵 |
+| 15   | Chiton                  | [aoc202115.py](15_chiton/aoc202115.py)                  |   2.903 ms 🔵 |  22.312 ms 🔵 | 493.551 ms 🔵 |
+| 16   | Packet Decoder          | [aoc202116.py](16_packet_decoder/aoc202116.py)          |  11.695 μs ⚪️ | 751.811 μs ⚪️ |   1.091 ms 🔵 |
+| 17   | Trick Shot              | [aoc202117.py](17_trick_shot/aoc202117.py)              | 770.140 μs ⚪️ |   3.087 μs ⚪️ |   2.280 ms 🔵 |
+| 18   | Snailfish               | [aoc202118.py](18_snailfish/aoc202118.py)               | 365.486 μs ⚪️ |  40.917 ms 🔵 | 771.584 ms 🔵 |
+| 19   | Beacon Scanner          | [aoc202119.py](19_beacon_scanner/aoc202119.py)          | 741.642 μs ⚪️ | 381.921 ms 🔵 |  66.841 μs ⚪️ |
+| 20   | Trench Map              | [aoc202120.py](20_trench_map/aoc202120.py)              |   1.476 ms 🔵 |  58.685 ms 🔵 |    3.134 s 🔴 |
+| 21   | Dirac Dice              | [aoc202121.py](21_dirac_dice/aoc202121.py)              |   6.112 μs ⚪️ | 110.747 μs ⚪️ |  87.033 ms 🔵 |
+| 22   | Reactor Reboot          | [aoc202122.py](22_reactor_reboot/aoc202122.py)          |  10.996 ms 🔵 |  99.503 ms 🔵 | 533.821 ms 🔵 |
+| 23   | Amphipod                | [aoc202123.py](23_amphipod/aoc202123.py)                |   4.554 μs ⚪️ |    1.905 s 🔴 |    3.786 s 🔴 |
+| 24   | Arithmetic Logic Unit   | [aoc202124.py](24_arithmetic_logic_unit/aoc202124.py)   |  92.696 μs ⚪️ |   8.598 μs ⚪️ |   5.501 μs ⚪️ |
+| 25   | Sea Cucumber            | [aoc202125.py](25_sea_cucumber/aoc202125.py)            |   2.074 ms 🔵 | 833.637 ms 🔵 |              |
