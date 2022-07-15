@@ -30,3 +30,88 @@ Solutions to [Advent of Code](https://adventofcode.com/) in [Elixir](https://eli
 |    24 |                                                          |                                            |                                       |                                               |                                                      |                                       |                                           |
 |    25 |                                                          |                                            |                                       |                                               |                                                      |                                       |                                           |
 
+## Run the Solutions
+
+There are two special Advent of Code mix tasks:
+
+- `mix solve 2015 1` solves the given puzzle, in this case Puzzle 1, 2015.
+- `mix benchmark 2015 1` benchmarks the given puzzle, in this case Puzzle 1, 2015.
+
+You can also run the solutions manually inside a `iex -S mix` session:
+
+```elixir
+iex> import AOC2015.Day01
+iex> AOC.solve("lib/2015/01_not_quite_lisp/input.txt", &parse/1, &part1/1, &part2/1)
+```
+
+Alternatively, you can only read and parse the data, and work with them manually from there:
+
+```elixir
+iex> import AOC2015.Day01
+iex> data = AOC.read_text("lib/2015/01_not_quite_lisp/input.txt") |> parse()
+```
+
+## Bootstrap a Puzzle Solution
+
+Use `copier` to invoke the Elixir template and set up files for a new solution:
+
+```console
+$ copier path/to/template-aoc-elixir/ .
+```
+
+Answer the questions and allow the hook to download your personal input.
+
+
+## Test a Solution
+
+Each puzzle comes with a test file that can be run with `mix test`:
+
+```console
+$ mix test test/aoc201501_test.exs
+```
+
+You can run all tests by not specifying a particular test file:
+
+```console
+$ mix test
+```
+
+This will run all tests except those marked as `slow` or `solution`. The
+`solution` tests run the full solution and compare the result to the correct
+solution. You can run them by including them:
+
+```console
+$ mix test --include solution
+```
+
+There are also a few other tags you can use:
+
+```console
+$ mix test --only solution
+$ mix test --only year2015
+$ mix test --include solution --exclude year2015
+```
+
+
+## Adding a Solution to GitHub
+
+Follow these steps after solving a puzzle:
+
+1. Store the solution to an output file:
+
+    ```console
+    $ mix solve 2015 1 > lib/2015/01_not_quite_lisp/output.ex.txt
+    ```
+
+2. Run benchmarks and add them to the README:
+
+    ```console
+    $ mix benchmark 2015 1
+    ```
+
+3. Update READMEs across all projects:
+
+    ```console
+    $ cd ..
+    $ make
+    ```
