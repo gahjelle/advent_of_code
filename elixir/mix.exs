@@ -25,7 +25,7 @@ defmodule AOC.MixProject do
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:nimble_parsec, "~> 1.1"},
       {:number, "~> 1.0", only: [:dev, :test]},
-      {:statistics, "~> 0.6.2"},
+      {:statistics, "~> 0.6.2"}
     ]
   end
 end
