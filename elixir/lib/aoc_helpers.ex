@@ -9,13 +9,16 @@ defmodule AOC do
     end
   end
 
+  @doc """
+  Read text from the given path.
+  """
   def read_text(path) do
-    with {:ok, file} <- File.read(path) do
-      file
-      |> String.trim()
-    end
+    with {:ok, file} <- File.read(path), do: file |> String.trim()
   end
 
+  @doc """
+  Solve one AOC puzzle given input path and parse(), part1(), and part2() functions.
+  """
   def solve(path, parse_func, part1_func, part2_func) do
     IO.puts("\n#{path}:")
 
