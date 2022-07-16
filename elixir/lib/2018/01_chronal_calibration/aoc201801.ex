@@ -16,17 +16,29 @@ defmodule AOC2018.Day01 do
   @doc """
   Solve part 1
   """
-  def part1(input) do
-    input |> Enum.sum()
-  end
+  def part1(input), do: input |> Enum.sum()
 
   @doc """
   Solve part 2
   """
-  def part2(input) do
-    input
-    |> Stream.cycle()
-    |> Enum.reduce_while({0, MapSet.new()}, fn freq_change, {frequency, seen} ->
+  def part2(input), do: input |> Stream.cycle() |> first_repeat()
+
+  @doc """
+  Find first repeated number in an infinite stream of diffs
+
+  ## Examples:
+
+      iex> first_repeat([1, -1, 1, -1])
+      0
+
+      iex> first_repeat(Stream.cycle([3, 2, 1, -5]))
+      6
+
+      iex> first_repeat(Stream.cycle([7, 7, -2, -7, -4]))
+      14
+  """
+  def first_repeat(diffs) do
+    Enum.reduce_while(diffs, {0, MapSet.new()}, fn freq_change, {frequency, seen} ->
       case frequency in seen do
         true -> {:halt, frequency}
         false -> {:cont, {frequency + freq_change, MapSet.put(seen, frequency)}}

@@ -5,6 +5,7 @@ defmodule AOC2018.Day01.Test do
   use ExUnit.Case, async: true
   require AOC
   import AOC2018.Day01, only: [parse: 1, part1: 1, part2: 1]
+  doctest(AOC2018.Day01, import: true)
 
   @puzzle_dir "lib/2018/01_chronal_calibration/"
   setup_all do
