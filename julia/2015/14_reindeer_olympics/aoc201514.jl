@@ -28,7 +28,7 @@ end
 
 
 # Calculate the distance one reindeer flies
-function calculate_distance(rd, time = 2503)
+function calculate_distance(rd, time=2503)
     periods, leftover = divrem(time, rd.period)
     periods * rd.speed * rd.stamina + rd.speed * min(rd.stamina, leftover)
 end
@@ -42,13 +42,13 @@ function calculate_position(rd, time)
 end
 
 # Calculate the scores of all reindeers
-function calculate_scores(reindeers, time = 2503)
+function calculate_scores(reindeers, time=2503)
     @pipe (
         reindeers
         .|> calculate_position(_, time)
         |> hcat(_...)  # Convert array of arrays to 2D-array
-        |> (_ .== maximum(_, dims = 2))
-        |> sum(_, dims = 1)
+        |> (_ .== maximum(_, dims=2))
+        |> sum(_, dims=1)
     )
 end
 

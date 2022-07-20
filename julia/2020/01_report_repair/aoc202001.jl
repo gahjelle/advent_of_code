@@ -2,7 +2,7 @@
 
 module AOC202001
 
-function find_summands(numbers, target = 2020)
+function find_summands(numbers, target=2020)
     [n for n in numbers if target - n ∈ numbers]
 end
 

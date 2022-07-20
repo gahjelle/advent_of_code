@@ -49,7 +49,7 @@ function Sue(line::String)
     )
     Sue(
         parse(Int, m[:number]),
-        items = Dict(String(k) => parse(Int, v) for (k, v) in items),
+        items=Dict(String(k) => parse(Int, v) for (k, v) in items),
     )
 end
 
@@ -90,7 +90,7 @@ end
 function get_gift()
     Sue(
         2015,
-        items = Dict(
+        items=Dict(
             "children" => 3,
             "cats" => 7,
             "samoyeds" => 2,

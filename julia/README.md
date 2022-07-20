@@ -30,3 +30,71 @@ Solutions to [Advent of Code](https://adventofcode.com/) in [Julia](https://juli
 |    24 |                                 |                                                  |                                   |
 |    25 |                                 |                                                  |                                   |
 
+## Install Dependencies
+
+Start the Julia REPL (make sure the environment is activated) and download and compile dependencies:
+
+```
+julia> ]
+(julia) pkg> instantiate
+(julia) pkg> precompile
+```
+
+## Run the Solutions
+
+Enter the puzzle directory, and run the Julia solution file:
+
+```console
+$ cd 2015/01_not_quite_lisp/
+$ julia aoc201501.jl
+```
+
+## Bootstrap a Puzzle Solution
+
+TODO: Create a Copier task that creates a new Julia puzzle template
+
+## Run Tests
+
+You can test all solutions by running:
+
+```console
+$ julia test_all_puzzles.jl
+```
+
+
+Note that the tests are done by running the puzzle solutions on the `input.txt`
+file in each puzze directory and compared to a `output.jl.txt` in the same
+directory.
+
+You can include a benchmarking report by adding the `-r` option:
+
+```console
+$ julia test_all_puzzles.jl -r
+```
+
+This will create a file named `timings.jl.md` that contains timing information for each puzzle.
+
+## Adding a Solution to GitHub
+
+Follow these steps after solving a puzzle:
+
+1. Store the solution to an output file:
+
+    ```console
+    $ cd 2015/01_not_quite_lisp/
+    $ julia aoc201501.jl > output.jl.txt
+    ```
+
+2. Run benchmarks and add them to the README:
+
+    ```console
+    $ cd ../..
+    $ julia test_all_puzzles.jl -r
+    ```
+
+3. Update READMEs across all projects:
+
+    ```console
+    $ cd ..
+    $ make
+    ```
