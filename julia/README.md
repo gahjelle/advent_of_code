@@ -46,7 +46,7 @@ Enter the puzzle directory, and run the Julia solution file:
 
 ```console
 $ cd 2015/01_not_quite_lisp/
-$ julia aoc201501.jl
+$ julia aoc201501.jl input.txt
 ```
 
 ## Bootstrap a Puzzle Solution
@@ -61,10 +61,7 @@ You can test all solutions by running:
 $ julia test_all_puzzles.jl
 ```
 
-
-Note that the tests are done by running the puzzle solutions on the `input.txt`
-file in each puzze directory and compared to a `output.jl.txt` in the same
-directory.
+Note that the tests are done by running the puzzle solutions on the `input.txt` file in each puzzle directory and comparing the output to a `output.jl.txt` file in the same directory.
 
 You can include a benchmarking report by adding the `-r` option:
 
@@ -82,7 +79,7 @@ Follow these steps after solving a puzzle:
 
     ```console
     $ cd 2015/01_not_quite_lisp/
-    $ julia aoc201501.jl > output.jl.txt
+    $ julia aoc201501.jl input.txt > output.jl.txt
     ```
 
 2. Run benchmarks and add them to the README:
