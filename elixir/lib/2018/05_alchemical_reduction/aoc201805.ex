@@ -15,11 +15,12 @@ defmodule AOC2018.Day05 do
   def part1(input), do: input |> react() |> length()
 
   @doc """
-  Solve part 2
+  Solve part 2, with concurrency
   """
   def part2(input) do
     ?a..?z
-    |> Enum.map(fn type -> input |> remove(type) |> react() |> length() end)
+    |> Task.async_stream(fn type -> input |> remove(type) |> react() |> length() end)
+    |> Stream.map(fn {:ok, result} -> result end)
     |> Enum.min()
   end
 
@@ -38,16 +39,10 @@ defmodule AOC2018.Day05 do
       'bbCC'
   """
   def react(polymer), do: react(polymer, [])
-  def react([first | polymer], []), do: react(polymer, [first])
-
-  def react([], reacted), do: reacted |> Enum.reverse()
-
-  def react([current | rest], [previous | reacted]) do
-    case abs(current - previous) do
-      32 -> react(rest, reacted)
-      _ -> react(rest, [current, previous | reacted])
-    end
-  end
+  def react([head | rest], []), do: react(rest, [head])
+  def react([], acc), do: acc |> Enum.reverse()
+  def react([head | rest], [prev | acc]) when abs(head - prev) == 32, do: react(rest, acc)
+  def react([head | rest], acc), do: react(rest, [head | acc])
 
   @doc """
   Remove all units of the given type from a polymer
@@ -66,9 +61,7 @@ defmodule AOC2018.Day05 do
       iex> remove('aaAa', ?a)
       ''
   """
-  def remove(polymer, type) do
-    Enum.reject(polymer, fn char -> rem(char - type, 32) == 0 end)
-  end
+  def remove(polymer, type), do: Enum.reject(polymer, fn char -> rem(char - type, 32) == 0 end)
 
   def main(args) do
     Enum.map(args, fn path -> AOC.solve(path, &parse/1, &part1/1, &part2/1) end)
