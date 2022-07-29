@@ -10,3 +10,4 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Elixir](h
 | 4    | Repose Record               | [aoc201804.ex](04_repose_record/aoc201804.ex)               | 700.769 µs ⚪️ |  39.954 µs ⚪️ | 530.013 µs ⚪️ |
 | 5    | Alchemical Reduction        | [aoc201805.ex](05_alchemical_reduction/aoc201805.ex)        | 244.999 µs ⚪️ | 448.262 µs ⚪️ |  14.449 ms 🔵 |
 | 6    | Chronal Coordinates         | [aoc201806.ex](06_chronal_coordinates/aoc201806.ex)         |  20.155 µs ⚪️ | 180.228 ms 🔵 |  90.075 ms 🔵 |
+| 7    | The Sum Of Its Parts        | [aoc201807.ex](07_the_sum_of_its_parts/aoc201807.ex)        |  10.176 µs ⚪️ |  28.863 µs ⚪️ | 381.832 µs ⚪️ |
