@@ -15,6 +15,7 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Elixir](h
 | 9    | Smoke Basin             | [aoc202109.ex](09_smoke_basin/aoc202109.ex)             |   4.586 ms 🔵 |   9.146 ms 🔵 |  17.931 ms 🔵 |
 | 10   | Syntax Scoring          | [aoc202110.ex](10_syntax_scoring/aoc202110.ex)          |  30.587 µs ⚪️ | 110.477 µs ⚪️ | 123.227 µs ⚪️ |
 | 11   | Dumbo Octopus           | [aoc202111.ex](11_dumbo_octopus/aoc202111.ex)           |  16.713 µs ⚪️ |   8.524 ms 🔵 |  20.068 ms 🔵 |
+| 12   | Passage Pathing         | [aoc202112.ex](12_passage_pathing/aoc202112.ex)         |  15.674 µs ⚪️ |   5.594 ms 🔵 | 208.766 ms 🔵 |
 | 14   | Extended Polymerization | [aoc202114.ex](14_extended_polymerization/aoc202114.ex) |  57.917 µs ⚪️ | 273.478 µs ⚪️ |   1.347 ms 🔵 |
 | 17   | Trick Shot              | [aoc202117.ex](17_trick_shot/aoc202117.ex)              |   1.525 µs ⚪️ | 877.512 µs ⚪️ |  90.083 ms 🔵 |
 | 18   | Snailfish               | [aoc202118.ex](18_snailfish/aoc202118.ex)               |   5.617 µs ⚪️ | 464.057 ms 🔵 |    1.987 s 🔴 |

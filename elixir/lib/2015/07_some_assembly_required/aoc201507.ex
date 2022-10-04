@@ -3,7 +3,7 @@ defmodule AOC2015.Day07 do
   Advent of Code 2015, day 7: Some Assembly Required
   """
   require AOC
-  use Bitwise
+  import Bitwise
 
   @doc """
   Parse input
