@@ -79,7 +79,7 @@ def find_cheapest(risks):
 
     while True:
         cost, current = heapq.heappop(locations)
-        if "-v" in sys.argv:
+        if "--viz" in sys.argv:
             visualize(risks, seen, current)
 
         if current == target:
@@ -117,11 +117,11 @@ def visualize(risks, seen, current):
     for row, line in enumerate(risks):
         for col, risk in enumerate(line):
             symbol = (
-                Fore.RED + "#"
+                f"{Fore.RED}#"
                 if (row, col) == current
-                else Fore.YELLOW + str(risks[row, col])
+                else Fore.YELLOW + str(risk)
                 if (row, col) in seen
-                else Fore.GREEN + str(risks[row, col])
+                else Fore.GREEN + str(risk)
             )
             print(Cursor.POS(col + 1, row + 1) + symbol)
 
