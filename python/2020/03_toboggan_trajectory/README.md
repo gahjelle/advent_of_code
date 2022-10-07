@@ -6,4 +6,4 @@ Puzzle text: https://adventofcode.com/2020/day/3
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2020/03_toboggan_trajectory)
+- [💧 Elixir](../../../elixir/lib/2020/03_toboggan_trajectory)
