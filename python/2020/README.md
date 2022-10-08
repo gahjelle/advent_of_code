@@ -11,4 +11,5 @@ Solutions to [Advent of Code 2020](https://adventofcode.com/2020/) in [Python](h
 | 5    | Binary Boarding     | [aoc202005.py](05_binary_boarding/aoc202005.py)     | 318.453 μs ⚪️ |   9.393 μs ⚪️ |  59.432 μs ⚪️ |
 | 6    | Custom Customs      | [aoc202006.py](06_custom_customs/aoc202006.py)      |   1.978 ms 🔵 | 403.060 μs ⚪️ | 389.379 μs ⚪️ |
 | 7    | Handy Haversacks    | [aoc202007.py](07_handy_haversacks/aoc202007.py)    |  11.597 ms 🔵 |   9.966 ms 🔵 |   1.079 ms 🔵 |
+| 8    | Handheld Halting    | [aoc202008.py](08_handheld_halting/aoc202008.py)    | 231.697 μs ⚪️ |  51.051 μs ⚪️ |   2.418 ms 🔵 |
 | 18   | Operation Order     | [aoc202018.py](18_operation_order/aoc202018.py)     |  50.911 μs ⚪️ |   7.592 ms 🔵 |   8.696 ms 🔵 |
