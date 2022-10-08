@@ -9,4 +9,5 @@ Solutions to [Advent of Code 2020](https://adventofcode.com/2020/) in [Python](h
 | 3    | Toboggan Trajectory | [aoc202003.py](03_toboggan_trajectory/aoc202003.py) | 285.901 μs ⚪️ |  23.446 μs ⚪️ |  81.455 μs ⚪️ |
 | 4    | Passport Processing | [aoc202004.py](04_passport_processing/aoc202004.py) | 545.045 μs ⚪️ | 135.374 μs ⚪️ | 924.182 μs ⚪️ |
 | 5    | Binary Boarding     | [aoc202005.py](05_binary_boarding/aoc202005.py)     | 318.453 μs ⚪️ |   9.393 μs ⚪️ |  59.432 μs ⚪️ |
+| 6    | Custom Customs      | [aoc202006.py](06_custom_customs/aoc202006.py)      |   1.978 ms 🔵 | 403.060 μs ⚪️ | 389.379 μs ⚪️ |
 | 18   | Operation Order     | [aoc202018.py](18_operation_order/aoc202018.py)     |  50.911 μs ⚪️ |   7.592 ms 🔵 |   8.696 ms 🔵 |
