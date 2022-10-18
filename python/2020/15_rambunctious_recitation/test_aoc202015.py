@@ -36,6 +36,7 @@ def test_part1_example1(example1):
     assert aoc202015.part1(example1) == 436
 
 
+@pytest.mark.skip(reason="slow")
 def test_part2_example1(example1):
     """Test part 2 on example input"""
     assert aoc202015.part2(example1) == 175_594
@@ -47,6 +48,7 @@ def test_part1_extra_input(puzzle_input, part1, _part2):
     assert aoc202015.part1(puzzle_input) == part1
 
 
+@pytest.mark.skip(reason="slow")
 @pytest.mark.parametrize(["puzzle_input", "_part1", "part2"], extra_input)
 def test_part2_extra_input(puzzle_input, _part1, part2):
     """Test part 2 on extra input"""
