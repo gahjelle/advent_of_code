@@ -14,7 +14,7 @@ Solutions to [Advent of Code 2020](https://adventofcode.com/2020/) in [Python](h
 | 8    | Handheld Halting        | [aoc202008.py](08_handheld_halting/aoc202008.py)        | 231.697 μs ⚪️ |  51.051 μs ⚪️ |   2.418 ms 🔵 |
 | 9    | Encoding Error          | [aoc202009.py](09_encoding_error/aoc202009.py)          | 107.284 μs ⚪️ | 644.459 μs ⚪️ | 843.127 μs ⚪️ |
 | 10   | Adapter Array           | [aoc202010.py](10_adapter_array/aoc202010.py)           |  38.564 μs ⚪️ |  38.043 μs ⚪️ |  17.259 μs ⚪️ |
-| 11   |                         |                                                         |              |              |              |
+| 11   | Seating System          | [aoc202011.py](11_seating_system/aoc202011.py)          |   1.142 ms 🔵 | 680.715 ms 🔵 | 472.387 ms 🔵 |
 | 12   | Rain Risk               | [aoc202012.py](12_rain_risk/aoc202012.py)               | 220.215 μs ⚪️ | 754.266 μs ⚪️ | 871.541 μs ⚪️ |
 | 13   | Shuttle Search          | [aoc202013.py](13_shuttle_search/aoc202013.py)          |  14.708 μs ⚪️ |   5.707 μs ⚪️ | 101.027 μs ⚪️ |
 | 14   |                         |                                                         |              |              |              |
