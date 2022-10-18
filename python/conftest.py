@@ -22,7 +22,7 @@ def pytest_collection_modifyitems(config, items):
     for item in items:
         try:
             year = item.callspec.getparam("puzzle_path").parent.name
-        except AttributeError:
+        except (AttributeError, ValueError):
             year = pathlib.Path(item.fspath.dirname).parent.name
 
         item.add_marker(getattr(pytest.mark, f"year{year}"))
