@@ -17,7 +17,7 @@ Solutions to [Advent of Code 2020](https://adventofcode.com/2020/) in [Python](h
 | 11   | Seating System          | [aoc202011.py](11_seating_system/aoc202011.py)          |   1.142 ms 🔵 | 680.715 ms 🔵 | 472.387 ms 🔵 |
 | 12   | Rain Risk               | [aoc202012.py](12_rain_risk/aoc202012.py)               | 220.215 μs ⚪️ | 754.266 μs ⚪️ | 871.541 μs ⚪️ |
 | 13   | Shuttle Search          | [aoc202013.py](13_shuttle_search/aoc202013.py)          |  14.708 μs ⚪️ |   5.707 μs ⚪️ | 101.027 μs ⚪️ |
-| 14   |                         |                                                         |              |              |              |
+| 14   | Docking Data            | [aoc202014.py](14_docking_data/aoc202014.py)            |   5.374 ms 🔵 |   1.640 ms 🔵 |  88.102 ms 🔵 |
 | 15   | Rambunctious Recitation | [aoc202015.py](15_rambunctious_recitation/aoc202015.py) |   5.171 μs ⚪️ | 248.778 μs ⚪️ |    5.266 s 🔴 |
 | 16   |                         |                                                         |              |              |              |
 | 17   |                         |                                                         |              |              |              |
