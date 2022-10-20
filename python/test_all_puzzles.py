@@ -25,10 +25,12 @@ class TimingsLog:
     )
     fmt_header = (
         "\n## {year}\n\n"
-        "| Day | Puzzle | Python | Parse | Part 1 | Part 2 |\n"
-        "|:---|:---|:---|---:|---:|---:|\n"
+        "| Day | Puzzle | Python | Parse | Part 1 | Part 2 | Total |\n"
+        "|:---|:---|:---|---:|---:|---:|---:|\n"
     )
-    fmt_entry = "| {day} | {puzzle} | {link} | {parse} | {part1} | {part2} |\n"
+    fmt_entry = (
+        "| {day} | {puzzle} | {link} | {parse} | {part1} | {part2} | {total} |\n"
+    )
 
     def __init__(self, path):
         """Initialize logger"""
@@ -50,6 +52,7 @@ class TimingsLog:
                 parse=self.prettytime(parse),
                 part1=self.prettytime(part1),
                 part2=self.prettytime(part2),
+                total=self.prettytime(parse + part1 + part2),
             )
         )
 
@@ -63,7 +66,7 @@ class TimingsLog:
         """Pretty-print number of seconds"""
         for unit, threshold in cls.time_units:
             if seconds > threshold:
-                return f"{seconds / threshold:.3f} {unit}"
+                return f"{seconds / threshold:.2f} {unit}"
 
 
 TIMINGS_LOG = TimingsLog(PUZZLE_DIR / "timings.py.md")
