@@ -34,7 +34,7 @@ def part2(data):
     """Solve part 2"""
     for count in itertools.count(1):
         data, _ = step(data)
-        if "-v" in sys.argv:
+        if "--viz" in sys.argv:
             visualize(data)
         if np.all(data == 0):
             return count

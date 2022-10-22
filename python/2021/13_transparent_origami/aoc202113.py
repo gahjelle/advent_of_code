@@ -44,7 +44,7 @@ def part2(data):
     """Solve part 2"""
     text = draw_dots(fold(*data))
 
-    if "-v" in sys.argv:
+    if "--viz" in sys.argv:
         print(text)
 
     return advent_of_code_ocr.convert_6(text)
