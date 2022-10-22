@@ -19,7 +19,7 @@ Solutions to [Advent of Code 2020](https://adventofcode.com/2020/) in [Python](h
 | 13   | Shuttle Search          | [aoc202013.py](13_shuttle_search/aoc202013.py)          |  12.09 μs ⚪️ |   5.51 μs ⚪️ | 107.21 μs ⚪️ | 124.80 μs ⚪️ |
 | 14   | Docking Data            | [aoc202014.py](14_docking_data/aoc202014.py)            |   5.28 ms 🔵 |   1.41 ms 🔵 |  88.79 ms 🔵 |  95.48 ms 🔵 |
 | 15   | Rambunctious Recitation | [aoc202015.py](15_rambunctious_recitation/aoc202015.py) |   4.16 μs ⚪️ | 161.26 μs ⚪️ |    5.84 s 🔴 |    5.84 s 🔴 |
-| 16   |                         |                                                         |             |             |             |             |
+| 16   | Ticket Translation      | [aoc202016.py](16_ticket_translation/aoc202016.py)      |   2.55 ms 🔵 | 617.43 μs ⚪️ |   2.36 ms 🔵 |   5.52 ms 🔵 |
 | 17   |                         |                                                         |             |             |             |             |
 | 18   | Operation Order         | [aoc202018.py](18_operation_order/aoc202018.py)         |  58.23 μs ⚪️ |   7.82 ms 🔵 |   8.76 ms 🔵 |  16.64 ms 🔵 |
 | 19   |                         |                                                         |             |             |             |             |
