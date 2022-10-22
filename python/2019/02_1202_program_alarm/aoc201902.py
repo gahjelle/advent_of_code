@@ -5,6 +5,9 @@ import itertools
 import pathlib
 import sys
 
+# Third party imports
+from aoc import intcode
+
 
 def parse(puzzle_input):
     """Parse input"""
@@ -15,7 +18,7 @@ def part1(data):
     """Solve part 1"""
     program = data.copy()
     program[1:3] = [12, 2]
-    state = run_intcode_program(program)
+    state = intcode.run_program(program)
     return state[0]
 
 
@@ -26,39 +29,10 @@ def part2(data):
     for noun, verb in itertools.product(range(100), range(100)):
         program = data.copy()
         program[1:3] = [noun, verb]
-        state = run_intcode_program(program)
+        state = intcode.run_program(program)
 
         if state[0] == moon_landing:
             return noun * 100 + verb
-
-
-def run_intcode_program(program):
-    """Run an intcode program and return the final state
-
-    >>> run_intcode_program([1, 0, 0, 0, 99])
-    [2, 0, 0, 0, 99]
-
-    >>> run_intcode_program([2, 3, 0, 3, 99])
-    [2, 3, 0, 6, 99]
-    """
-    pointer = 0
-    while True:
-        command = program[pointer]
-
-        if command == 1:
-            first, second, store = program[pointer + 1 : pointer + 4]
-            program[store] = program[first] + program[second]
-            pointer += 4
-
-        if command == 2:
-            first, second, store = program[pointer + 1 : pointer + 4]
-            program[store] = program[first] * program[second]
-            pointer += 4
-
-        if command == 99:
-            break
-
-    return program
 
 
 def solve(puzzle_input):

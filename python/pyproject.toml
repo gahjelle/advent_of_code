@@ -1,3 +1,15 @@
+[build-system]
+requires      = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name         = "aoc"
+version      = "0.0.1"
+dependencies = []
+
+[tool.setuptools]
+packages = ["aoc"]
+
 [tool.pytest.ini_options]
 addopts             = "--doctest-modules --doctest-continue-on-failure"
 doctest_optionflags = "NORMALIZE_WHITESPACE"
