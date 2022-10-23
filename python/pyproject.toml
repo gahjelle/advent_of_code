@@ -16,3 +16,9 @@ doctest_optionflags = "NORMALIZE_WHITESPACE"
 
 [tool.black]
 target_version = ["py310"]
+
+
+[tool.isort]
+profile                   = "black"
+known_first_party         = ["aoc"]
+import_heading_firstparty = "Advent of Code imports"

@@ -25,4 +25,5 @@ def pytest_collection_modifyitems(config, items):
         except (AttributeError, ValueError):
             year = pathlib.Path(item.fspath.dirname).parent.name
 
-        item.add_marker(getattr(pytest.mark, f"year{year}"))
+        if year.startswith("2"):
+            item.add_marker(getattr(pytest.mark, f"year{year}"))

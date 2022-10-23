@@ -5,7 +5,7 @@ import itertools
 import pathlib
 import sys
 
-# Third party imports
+# Advent of Code imports
 from aoc import intcode
 
 
