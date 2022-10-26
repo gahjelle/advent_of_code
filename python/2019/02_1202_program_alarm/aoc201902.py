@@ -16,23 +16,31 @@ def parse(puzzle_input):
 
 def part1(data):
     """Solve part 1"""
-    program = data.copy()
-    program[1:3] = [12, 2]
+    return run_program(data.copy(), 12, 2)
+
+
+def part2(data, moon_landing=19690720):
+    """Solve part 2"""
+    base = run_program(data.copy(), 0, 0)
+    dn = run_program(data.copy(), 1, 0) - base
+    dv = run_program(data.copy(), 0, 1) - base
+
+    noun = (moon_landing - base) // dn
+    verb = (moon_landing - base) % dn // dv
+    return noun * 100 + verb
+
+
+def run_program(program, noun, verb):
+    """Modify program with noun and verb and run it
+
+    ## Example:
+
+    >>> run_program([1, 2, 3, 3, 2, 3, 9, 0, 99, 30, 40, 50], 11, 10)
+    2700
+    """
+    program[1:3] = [noun, verb]
     state = intcode.run_program(program)
     return state[0]
-
-
-def part2(data):
-    """Solve part 2"""
-    moon_landing = 19690720
-
-    for noun, verb in itertools.product(range(100), range(100)):
-        program = data.copy()
-        program[1:3] = [noun, verb]
-        state = intcode.run_program(program)
-
-        if state[0] == moon_landing:
-            return noun * 100 + verb
 
 
 def solve(puzzle_input):
