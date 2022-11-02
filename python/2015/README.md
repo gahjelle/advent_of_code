@@ -9,4 +9,23 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 3    | Perfectly Spherical Houses In A Vacuum | [aoc201503.py](03_perfectly_spherical_houses_in_a_vacuum/aoc201503.py) | 232.62 μs ⚪️ |   1.24 ms 🔵 |   1.42 ms 🔵 |   2.89 ms 🔵 |
 | 4    | The Ideal Stocking Stuffer             | [aoc201504.py](04_the_ideal_stocking_stuffer/aoc201504.py)             |   1.32 μs ⚪️ |  85.43 ms 🔵 |    2.69 s 🔴 |    2.78 s 🔴 |
 | 5    | Doesnt He Have Intern-Elves For This   | [aoc201505.py](05_doesnt_he_have_intern-elves_for_this/aoc201505.py)   |  28.45 μs ⚪️ |   1.70 ms 🔵 |   2.80 ms 🔵 |   4.53 ms 🔵 |
-
+| 6    |                                        |                                                                        |             |             |             |             |
+| 7    |                                        |                                                                        |             |             |             |             |
+| 8    |                                        |                                                                        |             |             |             |             |
+| 9    |                                        |                                                                        |             |             |             |             |
+| 10   |                                        |                                                                        |             |             |             |             |
+| 11   |                                        |                                                                        |             |             |             |             |
+| 12   |                                        |                                                                        |             |             |             |             |
+| 13   |                                        |                                                                        |             |             |             |             |
+| 14   |                                        |                                                                        |             |             |             |             |
+| 15   |                                        |                                                                        |             |             |             |             |
+| 16   |                                        |                                                                        |             |             |             |             |
+| 17   |                                        |                                                                        |             |             |             |             |
+| 18   |                                        |                                                                        |             |             |             |             |
+| 19   |                                        |                                                                        |             |             |             |             |
+| 20   |                                        |                                                                        |             |             |             |             |
+| 21   |                                        |                                                                        |             |             |             |             |
+| 22   |                                        |                                                                        |             |             |             |             |
+| 23   |                                        |                                                                        |             |             |             |             |
+| 24   |                                        |                                                                        |             |             |             |             |
+| 25   |                                        |                                                                        |             |             |             |             |
