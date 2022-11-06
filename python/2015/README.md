@@ -23,7 +23,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 17   |                                        |                                                                        |             |             |             |             |
 | 18   |                                        |                                                                        |             |             |             |             |
 | 19   |                                        |                                                                        |             |             |             |             |
-| 20   |                                        |                                                                        |             |             |             |             |
+| 20   | Infinite Elves And Infinite Houses     | [aoc201520.py](20_infinite_elves_and_infinite_houses/aoc201520.py)     |   1.59 μs ⚪️ |    7.04 s 🔴 |    2.15 s 🔴 |    9.19 s 🔴 |
 | 21   |                                        |                                                                        |             |             |             |             |
 | 22   |                                        |                                                                        |             |             |             |             |
 | 23   |                                        |                                                                        |             |             |             |             |
