@@ -12,16 +12,6 @@ def parse(puzzle_input):
     return puzzle_input
 
 
-def first_md5(secret, prefix):
-    """Find the first adventcoint with the given prefix"""
-    for num in itertools.count(1):
-        md5 = hashlib.md5()
-        md5.update(f"{secret}{num}".encode("utf-8"))
-
-        if md5.hexdigest().startswith(prefix):
-            return num
-
-
 def part1(data):
     """Solve part 1"""
     return first_md5(secret=data, prefix="0" * 5)
@@ -30,6 +20,22 @@ def part1(data):
 def part2(data):
     """Solve part 2"""
     return first_md5(secret=data, prefix="0" * 6)
+
+
+def first_md5(secret, prefix):
+    """Find the first advent coin with the given prefix
+
+    ## Example:
+
+    >>> first_md5("aoc", "000")
+    425
+    """
+    for num in itertools.count(1):
+        md5 = hashlib.md5()
+        md5.update(f"{secret}{num}".encode("utf-8"))
+
+        if md5.hexdigest().startswith(prefix):
+            return num
 
 
 def solve(puzzle_input):

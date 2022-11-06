@@ -12,18 +12,6 @@ def parse(puzzle_input):
     return [DIRECTIONS[arrow] for arrow in puzzle_input]
 
 
-def visit(moves):
-    """Visit houses based on moves"""
-    pos_x, pos_y = 0, 0
-    houses = {(pos_x, pos_y)}
-
-    for dx, dy in moves:
-        pos_x, pos_y = pos_x + dx, pos_y + dy
-        houses.add((pos_x, pos_y))
-
-    return houses
-
-
 def part1(data):
     """Solve part 1"""
     return len(visit(data))
@@ -35,6 +23,27 @@ def part2(data):
     robosanta = visit(data[1::2])
 
     return len(santa | robosanta)
+
+
+def visit(moves):
+    """Visit houses based on moves
+
+    ## Example:
+
+    >>> sorted(visit([(1, 0), (1, 0), (0, 1), (0, -1), (0, -1), (-1, 0), (0, 1)]))
+    [(0, 0), (1, -1), (1, 0), (2, -1), (2, 0), (2, 1)]
+
+    >>> sorted({(0, 0), (1, 0), (2, 0), (2, 1), (2, 0), (2, -1), (1, -1), (1, 0)})
+    [(0, 0), (1, -1), (1, 0), (2, -1), (2, 0), (2, 1)]
+    """
+    pos_x, pos_y = 0, 0
+    houses = {(pos_x, pos_y)}
+
+    for dx, dy in moves:
+        pos_x, pos_y = pos_x + dx, pos_y + dy
+        houses.add((pos_x, pos_y))
+
+    return houses
 
 
 def solve(puzzle_input):

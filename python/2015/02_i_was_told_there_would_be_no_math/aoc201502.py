@@ -19,25 +19,21 @@ class Present(NamedTuple):
     width: int
     height: int
 
+    @classmethod
+    def from_string(cls, present):
+        """Convert present description to Present object
 
-def wrapping_paper(present):
-    """Amount of wrapping paper for one present"""
-    return (
-        2 * present.length * present.width
-        + 2 * present.length * present.height
-        + 2 * present.width * present.height
-        + math.prod(present) // max(present)
-    )
+        ## Example:
 
-
-def ribbon(present):
-    """Amount of ribbon for one present"""
-    return 2 * (sum(present) - max(present)) + math.prod(present)
+        >>> Present.from_string("12x9x32")
+        Present(length=12, width=9, height=32)
+        """
+        return cls(**PARSER.parse(present).named)
 
 
 def parse(puzzle_input):
     """Parse input"""
-    return [Present(**PARSER.parse(ln).named) for ln in puzzle_input.split()]
+    return [Present.from_string(present) for present in puzzle_input.split()]
 
 
 def part1(data):
@@ -48,6 +44,33 @@ def part1(data):
 def part2(data):
     """Solve part 2"""
     return sum(ribbon(present) for present in data)
+
+
+def wrapping_paper(present):
+    """Amount of wrapping paper for one present
+
+    ## Example:
+
+    >>> wrapping_paper(Present(length=12, width=9, height=32))
+    1668
+    """
+    return (
+        2 * present.length * present.width
+        + 2 * present.length * present.height
+        + 2 * present.width * present.height
+        + math.prod(present) // max(present)
+    )
+
+
+def ribbon(present):
+    """Amount of ribbon for one present
+
+    ## Example:
+
+    >>> ribbon(Present(length=12, width=9, height=32))
+    3498
+    """
+    return 2 * (sum(present) - max(present)) + math.prod(present)
 
 
 def solve(puzzle_input):
