@@ -16,7 +16,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 10   |                                        |                                                                        |             |             |             |             |
 | 11   |                                        |                                                                        |             |             |             |             |
 | 12   |                                        |                                                                        |             |             |             |             |
-| 13   |                                        |                                                                        |             |             |             |             |
+| 13   | Knights Of The Dinner Table            | [aoc201513.py](13_knights_of_the_dinner_table/aoc201513.py)            | 740.19 μs ⚪️ |   9.47 ms 🔵 |  53.55 ms 🔵 |  63.76 ms 🔵 |
 | 14   |                                        |                                                                        |             |             |             |             |
 | 15   |                                        |                                                                        |             |             |             |             |
 | 16   |                                        |                                                                        |             |             |             |             |
