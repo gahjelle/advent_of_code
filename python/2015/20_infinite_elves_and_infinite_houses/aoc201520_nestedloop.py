@@ -15,7 +15,7 @@ def parse(puzzle_input):
 def part1(data, per_elf=10):
     """Solve part 1"""
     threshold = data // per_elf
-    presents = deliver_np(threshold)
+    presents = deliver(threshold, max_houses=threshold)
     return next(house for house, p in enumerate(presents) if p >= threshold)
 
 
@@ -40,20 +40,6 @@ def deliver(num_houses, max_houses):
     for elf in range(2, num_houses + 1):
         for present in range(2, min(max_houses, num_houses // elf) + 1):
             houses[elf * present] += elf
-    return houses
-
-
-def deliver_np(num_houses):
-    """Deliver presents to houses
-
-    ## Examples:
-
-    >>> deliver(9)
-    array([ 1,  1,  3,  4,  7,  6, 12,  8, 15, 13])
-    """
-    houses = np.ones(num_houses + 1, dtype=int)
-    for elf in range(2, num_houses + 1):
-        houses[elf::elf] += elf
     return houses
 
 
