@@ -8,7 +8,7 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 2    | Dive                    | [aoc202102.py](02_dive/aoc202102.py)                    | 387.21 μs ⚪️ |  66.77 μs ⚪️ |  87.83 μs ⚪️ | 541.81 μs ⚪️ |
 | 3    | Binary Diagnostic       | [aoc202103.py](03_binary_diagnostic/aoc202103.py)       |   1.54 ms 🔵 | 232.48 μs ⚪️ | 600.66 μs ⚪️ |   2.37 ms 🔵 |
 | 4    | Giant Squid             | [aoc202104.py](04_giant_squid/aoc202104.py)             | 873.92 μs ⚪️ |  15.07 ms 🔵 | 274.79 μs ⚪️ |  16.21 ms 🔵 |
-| 5    | Hydrothermal Venture    | [aoc202105.py](05_hydrothermal_venture/aoc202105.py)    |   1.14 ms 🔵 |  22.43 ms 🔵 |  43.19 ms 🔵 |  66.76 ms 🔵 |
+| 5    | Hydrothermal Venture    | [aoc202105.py](05_hydrothermal_venture/aoc202105.py)    | 859.94 μs ⚪️ |  39.25 ms 🔵 |  50.11 ms 🔵 |  90.21 ms 🔵 |
 | 6    | Lanternfish             | [aoc202106.py](06_lanternfish/aoc202106.py)             |  56.95 μs ⚪️ |  24.65 μs ⚪️ |  40.69 μs ⚪️ | 122.29 μs ⚪️ |
 | 7    | The Treachery Of Whales | [aoc202107.py](07_the_treachery_of_whales/aoc202107.py) | 190.87 μs ⚪️ |   7.64 ms 🔵 | 399.46 μs ⚪️ |   8.23 ms 🔵 |
 | 8    | Seven Segment Search    | [aoc202108.py](08_seven_segment_search/aoc202108.py)    |   1.35 ms 🔵 | 115.54 μs ⚪️ |   4.89 ms 🔵 |   6.36 ms 🔵 |

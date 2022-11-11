@@ -6,7 +6,8 @@ import pathlib
 # Third party imports
 import aoc202105
 import pytest
-from aoc202105 import Line
+
+# from aoc202105 import Line
 
 PUZZLE_DIR = pathlib.Path(__file__).parent
 
@@ -25,12 +26,14 @@ def example2():
 
 def test_parse_example1(example1):
     """Test that input is parsed properly"""
-    assert example1 == [
-        Line("diagonal", x1=0, y1=2, x2=2, y2=0),
-        Line("horisontal", x1=0, y1=2, x2=2, y2=2),
-        Line("vertical", x1=0, y1=0, x2=0, y2=2),
-        Line("diagonal", x1=0, y1=0, x2=2, y2=2),
-    ]
+    assert example1 == [[2, 0, 0, 2], [0, 2, 2, 2], [0, 0, 0, 2], [0, 0, 2, 2]]
+
+    # assert example1 == [
+    #     Line("diagonal", x1=0, y1=2, x2=2, y2=0),
+    #     Line("horisontal", x1=0, y1=2, x2=2, y2=2),
+    #     Line("vertical", x1=0, y1=0, x2=0, y2=2),
+    #     Line("diagonal", x1=0, y1=0, x2=2, y2=2),
+    # ]
 
 
 def test_part1_example1(example1):
