@@ -23,7 +23,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 17   | No Such Thing As Too Much              | [aoc201517.py](17_no_such_thing_as_too_much/aoc201517.py)              |   9.37 μs ⚪️ |  17.96 ms 🔵 |  17.81 ms 🔵 |  35.77 ms 🔵 |
 | 18   |                                        |                                                                        |             |             |             |             |
 | 19   |                                        |                                                                        |             |             |             |             |
-| 20   | Infinite Elves And Infinite Houses     | [aoc201520.py](20_infinite_elves_and_infinite_houses/aoc201520.py)     |   4.05 μs ⚪️ |    4.12 s 🔴 |    2.59 s 🔴 |    6.71 s 🔴 |
+| 20   | Infinite Elves And Infinite Houses     | [aoc201520.py](20_infinite_elves_and_infinite_houses/aoc201520.py)     |   1.41 μs ⚪️ |   3.31 ms 🔵 |    2.55 s 🔴 |    2.55 s 🔴 |
 | 21   |                                        |                                                                        |             |             |             |             |
 | 22   |                                        |                                                                        |             |             |             |             |
 | 23   |                                        |                                                                        |             |             |             |             |
