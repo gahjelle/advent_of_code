@@ -26,6 +26,6 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 20   | Infinite Elves And Infinite Houses     | [aoc201520.py](20_infinite_elves_and_infinite_houses/aoc201520.py)     |   1.41 μs ⚪️ |   3.31 ms 🔵 |    2.55 s 🔴 |    2.55 s 🔴 |
 | 21   | RPG Simulator 20XX                     | [aoc201521.py](21_rpg_simulator_20xx/aoc201521.py)                     |   9.15 μs ⚪️ | 175.57 μs ⚪️ | 335.43 μs ⚪️ | 520.15 μs ⚪️ |
 | 22   | Wizard Simulator 20Xx                  | [aoc201522.py](22_wizard_simulator_20xx/aoc201522.py)                  |  10.53 μs ⚪️ | 802.30 ms 🔵 |    2.21 s 🔴 |    3.01 s 🔴 |
-| 23   |                                        |                                                                        |             |             |             |             |
+| 23   | Opening The Turing Lock                | [aoc201523.py](23_opening_the_turing_lock/aoc201523.py)                |  24.98 μs ⚪️ | 479.37 μs ⚪️ | 616.68 μs ⚪️ |   1.12 ms 🔵 |
 | 24   |                                        |                                                                        |             |             |             |             |
 | 25   |                                        |                                                                        |             |             |             |             |
