@@ -24,7 +24,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 18   | Like A Gif For Your Yard               | [aoc201518.py](18_like_a_gif_for_your_yard/aoc201518.py)               | 550.17 μs ⚪️ |   5.68 ms 🔵 |   6.24 ms 🔵 |  12.47 ms 🔵 |
 | 19   | Medicine For Rudolph                   | [aoc201519.py](19_medicine_for_rudolph/aoc201519.py)                   |  25.97 μs ⚪️ | 786.01 μs ⚪️ |  37.77 ms 🔵 |  38.58 ms 🔵 |
 | 20   | Infinite Elves And Infinite Houses     | [aoc201520.py](20_infinite_elves_and_infinite_houses/aoc201520.py)     |   1.41 μs ⚪️ |   3.31 ms 🔵 |    2.55 s 🔴 |    2.55 s 🔴 |
-| 21   |                                        |                                                                        |             |             |             |             |
+| 21   | RPG Simulator 20XX                     | [aoc201521.py](21_rpg_simulator_20xx/aoc201521.py)                     |   9.15 μs ⚪️ | 175.57 μs ⚪️ | 335.43 μs ⚪️ | 520.15 μs ⚪️ |
 | 22   |                                        |                                                                        |             |             |             |             |
 | 23   |                                        |                                                                        |             |             |             |             |
 | 24   |                                        |                                                                        |             |             |             |             |
