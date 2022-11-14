@@ -8,12 +8,12 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 2    | I Was Told There Would Be No Math      | [aoc201502.py](02_i_was_told_there_would_be_no_math/aoc201502.py)      |  13.46 ms 🔵 | 579.79 μs ⚪️ | 424.58 μs ⚪️ |  14.46 ms 🔵 |
 | 3    | Perfectly Spherical Houses In A Vacuum | [aoc201503.py](03_perfectly_spherical_houses_in_a_vacuum/aoc201503.py) | 232.62 μs ⚪️ |   1.24 ms 🔵 |   1.42 ms 🔵 |   2.89 ms 🔵 |
 | 4    | The Ideal Stocking Stuffer             | [aoc201504.py](04_the_ideal_stocking_stuffer/aoc201504.py)             |   1.32 μs ⚪️ |  85.43 ms 🔵 |    2.69 s 🔴 |    2.78 s 🔴 |
-| 5    | Doesnt He Have Intern-Elves For This   | [aoc201505.py](05_doesnt_he_have_intern-elves_for_this/aoc201505.py)   |  28.05 μs ⚪️ |   1.50 ms 🔵 |   2.59 ms 🔵 |   4.12 ms 🔵 |
+| 5    | Doesn't He Have Intern-Elves For This? | [aoc201505.py](05_doesnt_he_have_intern-elves_for_this/aoc201505.py)   |  28.05 μs ⚪️ |   1.50 ms 🔵 |   2.59 ms 🔵 |   4.12 ms 🔵 |
 | 6    |                                        |                                                                        |             |             |             |             |
 | 7    |                                        |                                                                        |             |             |             |             |
 | 8    |                                        |                                                                        |             |             |             |             |
 | 9    |                                        |                                                                        |             |             |             |             |
-| 10   | Elves Look Elves Say                   | [aoc201510.py](10_elves_look_elves_say/aoc201510.py)                   | 671.02 ns ⚪️ | 151.82 ms 🔵 |    2.25 s 🔴 |    2.40 s 🔴 |
+| 10   | Elves Look, Elves Say                  | [aoc201510.py](10_elves_look_elves_say/aoc201510.py)                   | 671.02 ns ⚪️ | 151.82 ms 🔵 |    2.25 s 🔴 |    2.40 s 🔴 |
 | 11   | Corporate Policy                       | [aoc201511.py](11_corporate_policy/aoc201511.py)                       | 754.02 ns ⚪️ | 231.04 ms 🔵 | 602.25 ms 🔵 | 833.29 ms 🔵 |
 | 12   | JSAbacusFramework.io                   | [aoc201512.py](12_jsabacusframework_io/aoc201512.py)                   | 997.76 μs ⚪️ |   1.85 ms 🔵 |   1.03 ms 🔵 |   3.88 ms 🔵 |
 | 13   | Knights Of The Dinner Table            | [aoc201513.py](13_knights_of_the_dinner_table/aoc201513.py)            | 740.19 μs ⚪️ |   9.47 ms 🔵 |  53.55 ms 🔵 |  63.76 ms 🔵 |
@@ -25,7 +25,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 19   | Medicine For Rudolph                   | [aoc201519.py](19_medicine_for_rudolph/aoc201519.py)                   |  25.97 μs ⚪️ | 786.01 μs ⚪️ |  37.77 ms 🔵 |  38.58 ms 🔵 |
 | 20   | Infinite Elves And Infinite Houses     | [aoc201520.py](20_infinite_elves_and_infinite_houses/aoc201520.py)     |   1.41 μs ⚪️ |   3.31 ms 🔵 |    2.55 s 🔴 |    2.55 s 🔴 |
 | 21   | RPG Simulator 20XX                     | [aoc201521.py](21_rpg_simulator_20xx/aoc201521.py)                     |   9.15 μs ⚪️ | 175.57 μs ⚪️ | 335.43 μs ⚪️ | 520.15 μs ⚪️ |
-| 22   | Wizard Simulator 20Xx                  | [aoc201522.py](22_wizard_simulator_20xx/aoc201522.py)                  |  10.53 μs ⚪️ | 802.30 ms 🔵 |    2.21 s 🔴 |    3.01 s 🔴 |
+| 22   | Wizard Simulator 20XX                  | [aoc201522.py](22_wizard_simulator_20xx/aoc201522.py)                  |  10.53 μs ⚪️ | 802.30 ms 🔵 |    2.21 s 🔴 |    3.01 s 🔴 |
 | 23   | Opening The Turing Lock                | [aoc201523.py](23_opening_the_turing_lock/aoc201523.py)                |  24.98 μs ⚪️ | 479.37 μs ⚪️ | 616.68 μs ⚪️ |   1.12 ms 🔵 |
 | 24   | It Hangs In The Balance                | [aoc201524.py](24_it_hangs_in_the_balance/aoc201524.py)                |   9.41 μs ⚪️ | 173.40 ms 🔵 |   7.47 ms 🔵 | 180.89 ms 🔵 |
-| 25   |                                        |                                                                        |             |             |             |             |
+| 25   | Let It Snow                            | [aoc201525.py](25_let_it_snow/aoc201525.py)                            | 381.47 μs ⚪️ |    1.21 s 🔴 |             |    1.21 s 🔴 |
