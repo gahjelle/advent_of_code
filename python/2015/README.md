@@ -14,7 +14,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 8    |                                        |                                                                        |             |             |             |             |
 | 9    |                                        |                                                                        |             |             |             |             |
 | 10   | Elves Look Elves Say                   | [aoc201510.py](10_elves_look_elves_say/aoc201510.py)                   | 671.02 ns ⚪️ | 151.82 ms 🔵 |    2.25 s 🔴 |    2.40 s 🔴 |
-| 11   |                                        |                                                                        |             |             |             |             |
+| 11   | Corporate Policy                       | [aoc201511.py](11_corporate_policy/aoc201511.py)                       | 754.02 ns ⚪️ | 231.04 ms 🔵 | 602.25 ms 🔵 | 833.29 ms 🔵 |
 | 12   |                                        |                                                                        |             |             |             |             |
 | 13   | Knights Of The Dinner Table            | [aoc201513.py](13_knights_of_the_dinner_table/aoc201513.py)            | 740.19 μs ⚪️ |   9.47 ms 🔵 |  53.55 ms 🔵 |  63.76 ms 🔵 |
 | 14   |                                        |                                                                        |             |             |             |             |
