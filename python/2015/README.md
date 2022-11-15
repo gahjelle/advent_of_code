@@ -12,7 +12,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 6    |                                        |                                                                        |             |             |             |             |
 | 7    |                                        |                                                                        |             |             |             |             |
 | 8    |                                        |                                                                        |             |             |             |             |
-| 9    |                                        |                                                                        |             |             |             |             |
+| 9    | All In A Single Night                  | [aoc201509.py](09_all_in_a_single_night/aoc201509.py)                  | 448.75 μs ⚪️ |  47.92 ms 🔵 |  47.25 ms 🔵 |  95.62 ms 🔵 |
 | 10   | Elves Look, Elves Say                  | [aoc201510.py](10_elves_look_elves_say/aoc201510.py)                   | 671.02 ns ⚪️ | 151.82 ms 🔵 |    2.25 s 🔴 |    2.40 s 🔴 |
 | 11   | Corporate Policy                       | [aoc201511.py](11_corporate_policy/aoc201511.py)                       | 754.02 ns ⚪️ | 231.04 ms 🔵 | 602.25 ms 🔵 | 833.29 ms 🔵 |
 | 12   | JSAbacusFramework.io                   | [aoc201512.py](12_jsabacusframework_io/aoc201512.py)                   | 997.76 μs ⚪️ |   1.85 ms 🔵 |   1.03 ms 🔵 |   3.88 ms 🔵 |
