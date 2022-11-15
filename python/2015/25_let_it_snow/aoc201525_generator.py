@@ -1,7 +1,6 @@
 """AoC 25, 2015: Let It Snow"""
 
 # Standard library imports
-import functools
 import pathlib
 import sys
 
@@ -18,7 +17,10 @@ def parse(puzzle_input):
 
 def part1(data):
     """Solve part 1"""
-    return get_code(get_index(*data))
+    idx_of_code = get_index(*data)
+    for idx, code in enumerate(generate_codes(), start=1):
+        if idx == idx_of_code:
+            return code
 
 
 def part2(data):
@@ -44,21 +46,22 @@ def get_index(row, col):
     return first_idx + (col - 1)
 
 
-@functools.cache
-def get_code(index, seed=20151125):
-    """Get code at a given index.
+def generate_codes(seed=20151125):
+    """Generate an infinite sequence of codes.
 
     ## Examples:
 
-    >>> get_code(1)
+    >>> codes = generate_codes()
+    >>> next(codes)
     31916031
-    >>> get_code(2)
+    >>> next(codes)
     18749137
-    >>> get_code(20)
-    33511524
+    >>> next(codes)
+    16080970
     """
-    x_n = pow(252533, index, mod=33554393)
-    return seed * x_n % 33554393
+    while True:
+        seed = (seed * 252533) % 33554393
+        yield seed
 
 
 def solve(puzzle_input):
