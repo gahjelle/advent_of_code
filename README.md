@@ -34,7 +34,7 @@ My attempts at solving the excellent puzzles at [adventofcode.com](http://advent
 
 I'm currently reorganizing the repository to have one directory per language, because that works better with the project structure of the different languages. Until the reorganization is done, the old solutions will be available as well:
 
-|      | [2015](2015/) | [2016](2016/) | [2017](2017/) | [2018](2018/) | [2019](2019/) | [2020](2020/) |
+|      | [2015](old/2015/) | [2016](old/2016/) | [2017](old/2017/) | [2018](old/2018/) | [2019](old/2019/) | [2020](old/2020/) |
 | ---: | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 |    1 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            | 🐍🍡            |
 |    2 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            |
