@@ -66,11 +66,11 @@ def step(energies, num_flash=0):
 
 def visualize(data):
     """Show flashing energy levels"""
-
+    markers = "# ._o*øO0@"
     for col, line in enumerate(data):
         for row, energy in enumerate(line):
-            print(f"{Cursor.POS(col + 1, row + 5)}{'#' if energy == 0 else '.'}")
-    time.sleep(0.02)
+            print(f"{Cursor.POS(col + 1, row + 5)}{markers[energy]}")
+    time.sleep(0.05)
 
 
 def solve(puzzle_input):
