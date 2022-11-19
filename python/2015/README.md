@@ -11,7 +11,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 5    | Doesn't He Have Intern-Elves For This? | [aoc201505.py](05_doesnt_he_have_intern-elves_for_this/aoc201505.py)   |  28.05 μs ⚪️ |   1.50 ms 🔵 |   2.59 ms 🔵 |   4.12 ms 🔵 |
 | 6    |                                        |                                                                        |             |             |             |             |
 | 7    |                                        |                                                                        |             |             |             |             |
-| 8    |                                        |                                                                        |             |             |             |             |
+| 8    | Matchsticks                            | [aoc201508.py](08_matchsticks/aoc201508.py)                            |  14.56 μs ⚪️ | 355.72 μs ⚪️ | 120.78 μs ⚪️ | 491.06 μs ⚪️ |
 | 9    | All In A Single Night                  | [aoc201509.py](09_all_in_a_single_night/aoc201509.py)                  | 448.75 μs ⚪️ |  47.92 ms 🔵 |  47.25 ms 🔵 |  95.62 ms 🔵 |
 | 10   | Elves Look, Elves Say                  | [aoc201510.py](10_elves_look_elves_say/aoc201510.py)                   | 671.02 ns ⚪️ | 151.82 ms 🔵 |    2.25 s 🔴 |    2.40 s 🔴 |
 | 11   | Corporate Policy                       | [aoc201511.py](11_corporate_policy/aoc201511.py)                       | 754.02 ns ⚪️ | 231.04 ms 🔵 | 602.25 ms 🔵 | 833.29 ms 🔵 |
