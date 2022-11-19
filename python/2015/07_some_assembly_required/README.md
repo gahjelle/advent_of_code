@@ -6,4 +6,4 @@ Puzzle text: https://adventofcode.com/2015/day/7
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2015/07_some_assembly_required)
+- [💧 Elixir](../../../elixir/lib/2015/07_some_assembly_required)

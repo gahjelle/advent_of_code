@@ -10,7 +10,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 4    | The Ideal Stocking Stuffer             | [aoc201504.py](04_the_ideal_stocking_stuffer/aoc201504.py)             |   1.32 μs ⚪️ |  85.43 ms 🔵 |    2.69 s 🔴 |    2.78 s 🔴 |
 | 5    | Doesn't He Have Intern-Elves For This? | [aoc201505.py](05_doesnt_he_have_intern-elves_for_this/aoc201505.py)   |  28.05 μs ⚪️ |   1.50 ms 🔵 |   2.59 ms 🔵 |   4.12 ms 🔵 |
 | 6    |                                        |                                                                        |             |             |             |             |
-| 7    |                                        |                                                                        |             |             |             |             |
+| 7    | Some Assembly Required                 | [aoc201507.py](07_some_assembly_required/aoc201507.py)                 | 195.93 μs ⚪️ |  24.68 ms 🔵 |  45.44 ms 🔵 |  70.32 ms 🔵 |
 | 8    | Matchsticks                            | [aoc201508.py](08_matchsticks/aoc201508.py)                            |  14.56 μs ⚪️ | 355.72 μs ⚪️ | 120.78 μs ⚪️ | 491.06 μs ⚪️ |
 | 9    | All In A Single Night                  | [aoc201509.py](09_all_in_a_single_night/aoc201509.py)                  | 448.75 μs ⚪️ |  47.92 ms 🔵 |  47.25 ms 🔵 |  95.62 ms 🔵 |
 | 10   | Elves Look, Elves Say                  | [aoc201510.py](10_elves_look_elves_say/aoc201510.py)                   | 671.02 ns ⚪️ | 151.82 ms 🔵 |    2.25 s 🔴 |    2.40 s 🔴 |
