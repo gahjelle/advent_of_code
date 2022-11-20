@@ -17,7 +17,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 11   | Corporate Policy                       | [aoc201511.py](11_corporate_policy/aoc201511.py)                       | 754.02 ns ⚪️ | 231.04 ms 🔵 | 602.25 ms 🔵 | 833.29 ms 🔵 |
 | 12   | JSAbacusFramework.io                   | [aoc201512.py](12_jsabacusframework_io/aoc201512.py)                   | 997.76 μs ⚪️ |   1.85 ms 🔵 |   1.03 ms 🔵 |   3.88 ms 🔵 |
 | 13   | Knights Of The Dinner Table            | [aoc201513.py](13_knights_of_the_dinner_table/aoc201513.py)            | 740.19 μs ⚪️ |   9.47 ms 🔵 |  53.55 ms 🔵 |  63.76 ms 🔵 |
-| 14   |                                        |                                                                        |             |             |             |             |
+| 14   | Reindeer Olympics                      | [aoc201514.py](14_reindeer_olympics/aoc201514.py)                      | 663.02 μs ⚪️ |  10.43 μs ⚪️ |   1.70 ms 🔵 |   2.37 ms 🔵 |
 | 15   | Science For Hungry People              | [aoc201515.py](15_science_for_hungry_people/aoc201515.py)              | 783.82 μs ⚪️ | 639.16 ms 🔵 | 193.06 ms 🔵 | 833.00 ms 🔵 |
 | 16   |                                        |                                                                        |             |             |             |             |
 | 17   | No Such Thing As Too Much              | [aoc201517.py](17_no_such_thing_as_too_much/aoc201517.py)              |   9.37 μs ⚪️ |  17.96 ms 🔵 |  17.81 ms 🔵 |  35.77 ms 🔵 |

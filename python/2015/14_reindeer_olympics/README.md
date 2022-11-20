@@ -6,4 +6,4 @@ Puzzle text: https://adventofcode.com/2015/day/14
 
 Solutions in other languages:
 
-- [🐍 Python](../../../python/2015/14_reindeer_olympics)
+- [🍡 Julia](../../../julia/2015/14_reindeer_olympics)
