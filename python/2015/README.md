@@ -19,7 +19,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 13   | Knights Of The Dinner Table            | [aoc201513.py](13_knights_of_the_dinner_table/aoc201513.py)            | 740.19 μs ⚪️ |   9.47 ms 🔵 |  53.55 ms 🔵 |  63.76 ms 🔵 |
 | 14   | Reindeer Olympics                      | [aoc201514.py](14_reindeer_olympics/aoc201514.py)                      | 663.02 μs ⚪️ |  10.43 μs ⚪️ |   1.70 ms 🔵 |   2.37 ms 🔵 |
 | 15   | Science For Hungry People              | [aoc201515.py](15_science_for_hungry_people/aoc201515.py)              | 783.82 μs ⚪️ | 639.16 ms 🔵 | 193.06 ms 🔵 | 833.00 ms 🔵 |
-| 16   |                                        |                                                                        |             |             |             |             |
+| 16   | Aunt Sue                               | [aoc201516.py](16_aunt_sue/aoc201516.py)                               | 956.49 μs ⚪️ | 124.89 μs ⚪️ | 121.64 μs ⚪️ |   1.20 ms 🔵 |
 | 17   | No Such Thing As Too Much              | [aoc201517.py](17_no_such_thing_as_too_much/aoc201517.py)              |   9.37 μs ⚪️ |  17.96 ms 🔵 |  17.81 ms 🔵 |  35.77 ms 🔵 |
 | 18   | Like A Gif For Your Yard               | [aoc201518.py](18_like_a_gif_for_your_yard/aoc201518.py)               | 550.17 μs ⚪️ |   5.68 ms 🔵 |   6.24 ms 🔵 |  12.47 ms 🔵 |
 | 19   | Medicine For Rudolph                   | [aoc201519.py](19_medicine_for_rudolph/aoc201519.py)                   |  25.97 μs ⚪️ | 786.01 μs ⚪️ |  37.77 ms 🔵 |  38.58 ms 🔵 |
