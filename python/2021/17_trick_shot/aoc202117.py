@@ -53,7 +53,7 @@ def part2(data):
 
 def position(v0, t):
     """Calculate position based on initial speed and time step"""
-    return int((v0 + 0.5) * t - 0.5 * t ** 2)
+    return int((v0 + 0.5) * t - 0.5 * t**2)
 
 
 def highest_y0(min_y, max_y):
@@ -113,8 +113,8 @@ def valid_t(x0, min_x, max_x, min_y, max_y):
 
 def valid_y0(t, min_y, max_y):
     """Find valid values for initial y for given t"""
-    y_first = math.ceil((min_y - (t - t ** 2) / 2) / t)
-    y_last = math.floor((max_y - (t - t ** 2) / 2) / t)
+    y_first = math.ceil((min_y - (t - t**2) / 2) / t)
+    y_last = math.floor((max_y - (t - t**2) / 2) / t)
 
     return range(y_first, y_last + 1)
 
@@ -132,10 +132,8 @@ def valid_initials(min_x, max_x, min_y, max_y):
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
     data = parse(puzzle_input)
-    solution1 = part1(data)
-    solution2 = part2(data)
-
-    return solution1, solution2
+    yield part1(data)
+    yield part2(data)
 
 
 if __name__ == "__main__":

@@ -38,10 +38,8 @@ def equal_sum(sequence_1, sequence_2):
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
     data = parse(puzzle_input)
-    solution1 = part1(data)
-    solution2 = part2(data)
-
-    return solution1, solution2
+    yield part1(data)
+    yield part2(data)
 
 
 if __name__ == "__main__":

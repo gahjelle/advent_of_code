@@ -19,7 +19,7 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Python](h
 | 13   | Transparent Origami     | [aoc202113.py](13_transparent_origami/aoc202113.py)     | 850.09 μs ⚪️ | 116.05 μs ⚪️ | 548.48 μs ⚪️ |   1.51 ms 🔵 |
 | 14   | Extended Polymerization | [aoc202114.py](14_extended_polymerization/aoc202114.py) |  92.94 μs ⚪️ | 237.71 μs ⚪️ | 947.77 μs ⚪️ |   1.28 ms 🔵 |
 | 15   | Chiton                  | [aoc202115.py](15_chiton/aoc202115.py)                  |   1.43 ms 🔵 |  16.11 ms 🔵 | 482.75 ms 🔵 | 500.30 ms 🔵 |
-| 16   | Packet Decoder          | [aoc202116.py](16_packet_decoder/aoc202116.py)          |  11.06 μs ⚪️ | 768.04 μs ⚪️ | 926.34 μs ⚪️ |   1.71 ms 🔵 |
+| 16   | Packet Decoder          | [aoc202116.py](16_packet_decoder/aoc202116.py)          |  12.19 μs ⚪️ | 625.58 μs ⚪️ | 584.17 μs ⚪️ |   1.22 ms 🔵 |
 | 17   | Trick Shot              | [aoc202117.py](17_trick_shot/aoc202117.py)              | 795.71 μs ⚪️ |  23.54 μs ⚪️ |   2.40 ms 🔵 |   3.22 ms 🔵 |
 | 18   | Snailfish               | [aoc202118.py](18_snailfish/aoc202118.py)               | 380.14 μs ⚪️ |  42.49 ms 🔵 | 768.06 ms 🔵 | 810.94 ms 🔵 |
 | 19   | Beacon Scanner          | [aoc202119.py](19_beacon_scanner/aoc202119.py)          | 738.31 μs ⚪️ | 375.72 ms 🔵 |  61.06 μs ⚪️ | 376.52 ms 🔵 |
