@@ -1,12 +1,12 @@
 # Advent of Code in Julia
 
-Solutions to [Advent of Code](https://adventofcode.com/) in [Julia](https://julialang.org/) (10⭐):
+Solutions to [Advent of Code](https://adventofcode.com/) in [Julia](https://julialang.org/) (12⭐):
 
 |   Day | [2015](2015)                      | [2019](2019)                                       | [2020](2020)                        |
 |------:|:----------------------------------|:---------------------------------------------------|:------------------------------------|
 |     1 |                                   | [⭐⭐](2019/01_the_tyranny_of_the_rocket_equation) | [⭐⭐](2020/01_report_repair)       |
 |     2 |                                   |                                                    | [⭐⭐](2020/02_password_philosophy) |
-|     3 |                                   |                                                    |                                     |
+|     3 |                                   |                                                    | [⭐⭐](2020/03_toboggan_trajectory) |
 |     4 |                                   |                                                    |                                     |
 |     5 |                                   |                                                    |                                     |
 |     6 |                                   |                                                    |                                     |
