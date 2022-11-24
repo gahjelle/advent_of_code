@@ -5,7 +5,7 @@ Solutions to [Advent of Code 2020](https://adventofcode.com/2020/) in [Python](h
 | Day  | Puzzle                  | Python                                                  |       Parse |      Part 1 |      Part 2 |       Total |
 | :--- | :---------------------- | :------------------------------------------------------ | ----------: | ----------: | ----------: | ----------: |
 | 1    | Report Repair           | [aoc202001.py](01_report_repair/aoc202001.py)           |  33.03 μs ⚪️ |  12.87 μs ⚪️ | 165.83 μs ⚪️ | 211.73 μs ⚪️ |
-| 2    | Password Philosophy     | [aoc202002.py](02_password_philosophy/aoc202002.py)     |  11.98 ms 🔵 | 292.99 μs ⚪️ | 386.96 μs ⚪️ |  12.66 ms 🔵 |
+| 2    | Password Philosophy     | [aoc202002.py](02_password_philosophy/aoc202002.py)     | 612.47 μs ⚪️ | 195.99 μs ⚪️ | 128.91 μs ⚪️ | 937.37 μs ⚪️ |
 | 3    | Toboggan Trajectory     | [aoc202003.py](03_toboggan_trajectory/aoc202003.py)     | 335.78 μs ⚪️ |  26.52 μs ⚪️ | 112.94 μs ⚪️ | 475.24 μs ⚪️ |
 | 4    | Passport Processing     | [aoc202004.py](04_passport_processing/aoc202004.py)     | 517.41 μs ⚪️ | 128.40 μs ⚪️ |   1.07 ms 🔵 |   1.72 ms 🔵 |
 | 5    | Binary Boarding         | [aoc202005.py](05_binary_boarding/aoc202005.py)         | 340.66 μs ⚪️ |   9.23 μs ⚪️ |  63.97 μs ⚪️ | 413.86 μs ⚪️ |

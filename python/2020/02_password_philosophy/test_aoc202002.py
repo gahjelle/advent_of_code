@@ -6,7 +6,6 @@ import pathlib
 # Third party imports
 import aoc202002
 import pytest
-from aoc202002 import PasswordPolicy
 
 PUZZLE_DIR = pathlib.Path(__file__).parent
 
@@ -20,9 +19,9 @@ def example1():
 def test_parse_example1(example1):
     """Test that input is parsed properly"""
     assert example1 == [
-        PasswordPolicy(1, 3, "a", "abcde"),
-        PasswordPolicy(1, 3, "b", "cdefg"),
-        PasswordPolicy(2, 9, "c", "ccccccccc"),
+        (1, 3, "a", "abcde"),
+        (1, 3, "b", "cdefg"),
+        (2, 9, "c", "ccccccccc"),
     ]
 
 
