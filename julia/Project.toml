@@ -1,4 +1,10 @@
+name = "JuliaAdventOfCode"
+uuid = "4d14bcab-80c4-44a0-adfe-e7fd41607444"
+authors = "Geir Arne Hjelle <geirarne@gmail.com>"
+
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+OhMyREPL = "5fb14364-9ced-5910-84b2-373655c76a03"
 Pipe = "b98c9c47-44ae-5843-9183-064241ee97a0"
 Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
