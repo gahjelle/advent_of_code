@@ -6,8 +6,7 @@ from __future__ import annotations
 import heapq
 import pathlib
 import sys
-from dataclasses import dataclass, field
-from typing import ClassVar, NamedTuple
+from typing import NamedTuple
 
 ENERGIES = {"A": 1, "B": 10, "C": 100, "D": 1000}
 

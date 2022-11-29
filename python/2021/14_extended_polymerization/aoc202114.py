@@ -1,7 +1,6 @@
 """AoC 14, 2021: Extended Polymerization"""
 
 # Standard library imports
-import functools
 import pathlib
 import sys
 from collections import Counter, defaultdict

@@ -99,7 +99,7 @@ def explode(snailfish):
         return snailfish, False
     idx1, idx2, *_ = explosive_levels
 
-    (lv1, nmb1), (lv2, nmb2) = snailfish[idx1], snailfish[idx2]
+    (lv1, nmb1), (_, nmb2) = snailfish[idx1], snailfish[idx2]
     if idx1 == 0:
         before, left = [], []
     else:

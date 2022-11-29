@@ -1,7 +1,6 @@
 """AoC 4, 2021: Giant Squid"""
 
 # Standard library imports
-import collections
 import math
 import pathlib
 import sys

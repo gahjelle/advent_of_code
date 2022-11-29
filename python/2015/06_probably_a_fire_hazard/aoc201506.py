@@ -16,7 +16,7 @@ def register(kind):
 
     def _register(func):
         """Store function in dict for later use."""
-        FUNCTIONS[kind][func.__name__] = func
+        FUNCTIONS[kind][func.__name__.partition("_")[-1]] = func
         return func
 
     return _register
@@ -66,37 +66,37 @@ def flick_lights(instructions, functions, dtype):
 
 
 @register("flick")
-def turn_on(lights, rows, cols):
+def flick_turn_on(lights, rows, cols):
     """Turn on lights."""
     lights[rows, cols] = True
 
 
 @register("flick")
-def turn_off(lights, rows, cols):
+def flick_turn_off(lights, rows, cols):
     """Turn off lights."""
     lights[rows, cols] = False
 
 
 @register("flick")
-def toggle(lights, rows, cols):
+def flick_toggle(lights, rows, cols):
     """Toggle lights."""
     lights[rows, cols] = ~lights[rows, cols]
 
 
 @register("adjust")
-def turn_on(lights, rows, cols):
+def adjust_turn_on(lights, rows, cols):
     """Increase brightness by 1."""
     lights[rows, cols] += 1
 
 
 @register("adjust")
-def turn_off(lights, rows, cols):
+def adjust_turn_off(lights, rows, cols):
     """Decrease brightness by 1 down to a minimum of 0."""
     lights[rows, cols] -= np.minimum(1, lights[rows, cols])
 
 
 @register("adjust")
-def toggle(lights, rows, cols):
+def adjust_toggle(lights, rows, cols):
     """Increase brightness by 2."""
     lights[rows, cols] += 2
 

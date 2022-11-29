@@ -1,7 +1,6 @@
 """AoC 2, 2019: 1202 Program Alarm"""
 
 # Standard library imports
-import itertools
 import pathlib
 import sys
 

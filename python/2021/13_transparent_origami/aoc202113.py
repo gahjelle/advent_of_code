@@ -8,7 +8,6 @@ import sys
 import advent_of_code_ocr
 import colorama
 import parse
-from colorama import Cursor
 
 colorama.init()
 

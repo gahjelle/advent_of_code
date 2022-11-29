@@ -4,9 +4,6 @@
 import pathlib
 import sys
 
-# Third party imports
-import numpy as np
-
 
 def parse(puzzle_input):
     """Parse input"""

@@ -1,7 +1,6 @@
 """AoC 13, 2017: Packet Scanners"""
 
 # Standard library imports
-import functools
 import math
 import pathlib
 import sys
