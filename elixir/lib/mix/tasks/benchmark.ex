@@ -34,7 +34,9 @@ defmodule Mix.Tasks.Benchmark do
     [parse, part1, part2] =
       scenarios
       |> Enum.map(fn s -> s.run_time_data.statistics.median end)
-      |> Enum.map(&format_as_timestring/1)
+
+    [parse, part1, part2, total] =
+      [parse, part1, part2, parse + part1 + part2] |> Enum.map(&format_as_timestring/1)
 
     [directory, year | _] = puzzle_path |> Path.split() |> Enum.reverse()
     day = directory |> String.slice(0..1) |> String.to_integer()
@@ -47,12 +49,12 @@ defmodule Mix.Tasks.Benchmark do
       |> String.split(" ")
       |> Enum.map_join(" ", &String.capitalize/1)
 
-    "\n\n| #{day} | #{name} | [#{file}](#{directory}/#{file}) | #{parse} | #{part1} | #{part2} |"
+    "\n\n| #{day} | #{name} | [#{file}](#{directory}/#{file}) | #{parse} | #{part1} | #{part2} | #{total} |"
     |> IO.puts()
   end
 
   defp format_as_timestring(nanoseconds) do
-    Number.SI.number_to_si(nanoseconds / 1_000_000_000, unit: "s", separator: " ", precision: 3)
+    Number.SI.number_to_si(nanoseconds / 1_000_000_000, unit: "s", separator: " ", precision: 2)
     |> String.replace(" ns", " ns ⚪️")
     |> String.replace(" µs", " µs ⚪️")
     |> String.replace(" ms", " ms 🔵")
