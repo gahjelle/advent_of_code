@@ -32,32 +32,4 @@ My attempts at solving the excellent puzzles at [adventofcode.com](http://advent
 
 ## Old Solutions
 
-I'm currently reorganizing the repository to have one directory per language, because that works better with the project structure of the different languages. Until the reorganization is done, the old solutions will be available as well:
-
-|      | [2015](old/2015/) | [2016](old/2016/) | [2017](old/2017/) | [2018](old/2018/) | [2019](old/2019/) | [2020](old/2020/) |
-| ---: | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-|    1 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            | 🐍🍡            |
-|    2 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            |
-|    3 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            |
-|    4 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            |
-|    5 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            |
-|    6 | 🐍             | 🐍             | 🐍             |               | 🐍             | 🐍🍡            |
-|    7 | 🐍             | 🐍             | 🐍             | 🐍             | 🐍             | 🐍🍡            |
-|    8 | 🐍             | 🐍             |               | 🐍             | 🐍             | 🐍🍡            |
-|    9 | 🐍             | 🐍             |               | 🐍             | 🐍             | 🐍🍡            |
-|   10 | 🐍             | 🐍             |               | 🐍             | 🐍             | 🐍🍡            |
-|   11 | 🐍             | 🐍             |               | 🐍             | 🐍             | 🐍🍡            |
-|   12 | 🐍             | 🐍             |               | 🐍             | 🐍             | 🐍🍡            |
-|   13 |               | 🐍             |               |               | 🐍             | 🐍🍡            |
-|   14 | 🍡             | 🐍             |               |               | 🐍             | 🐍             |
-|   15 |               | 🐍             |               |               | 🐍             | 🐍🍡            |
-|   16 | 🍡             | 🐍             |               |               | 🐍             | 🐍🍡            |
-|   17 |               | 🐍             |               |               | 🐍             | 🐍🍡            |
-|   18 |               | 🐍             |               | 🐍             |               | 🐍🍡            |
-|   19 |               | 🐍             |               |               | 🐍             | 🐍             |
-|   20 |               | 🐍             |               |               | 🐍             | 🍡             |
-|   21 |               | 🐍             |               |               | 🐍             | 🍡             |
-|   22 |               | 🐍             |               |               | 🐍             | 🍡             |
-|   23 |               | 🐍             |               |               | 🐍             | 🐍🍡            |
-|   24 |               | 🐍             |               |               |               | 🐍🍡            |
-|   25 |               | 🐍             |               |               |               | 🐍🍡            |
+I'm currently reorganizing the repository to have one directory per language, because that works better with the project structure of the different languages. Until the reorganization is done, the [old solutions](old/) will be available as well.
