@@ -18,5 +18,14 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Elixir](h
 | 12   | Passage Pathing         | [aoc202112.ex](12_passage_pathing/aoc202112.ex)         |  15.674 µs ⚪️ |   5.594 ms 🔵 | 208.766 ms 🔵 |
 | 13   | Transparent Origami     | [aoc202113.ex](13_transparent_origami/aoc202113.ex)     | 356.654 µs ⚪️ | 132.504 µs ⚪️ | 661.495 µs ⚪️ |
 | 14   | Extended Polymerization | [aoc202114.ex](14_extended_polymerization/aoc202114.ex) |  57.917 µs ⚪️ | 273.478 µs ⚪️ |   1.347 ms 🔵 |
+| 15   | Chiton                  | [aoc202115.ex](15_chiton/aoc202115.ex)                  |   2.510 ms 🔵 |  12.798 ms 🔵 | 828.710 ms 🔵 |
+| 16   |                         |                                                         |              |              |              |
 | 17   | Trick Shot              | [aoc202117.ex](17_trick_shot/aoc202117.ex)              |   1.525 µs ⚪️ | 877.512 µs ⚪️ |  90.083 ms 🔵 |
 | 18   | Snailfish               | [aoc202118.ex](18_snailfish/aoc202118.ex)               |   5.617 µs ⚪️ | 464.057 ms 🔵 |    1.987 s 🔴 |
+| 19   |                         |                                                         |              |              |              |
+| 20   |                         |                                                         |              |              |              |
+| 21   |                         |                                                         |              |              |              |
+| 22   |                         |                                                         |              |              |              |
+| 23   |                         |                                                         |              |              |              |
+| 24   |                         |                                                         |              |              |              |
+| 25   |                         |                                                         |              |              |              |
