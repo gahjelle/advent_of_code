@@ -85,7 +85,7 @@ def test_puzzle(puzzle_path):
 
     # Parse data
     puzzle_input = (puzzle_path / "input.txt").read_text().strip()
-    puzzle_parse = getattr(puzzle_mod, "parse")
+    puzzle_parse = getattr(puzzle_mod, "parse_data")
     with Timer(logger=None) as timer_parse:
         puzzle_data = puzzle_parse(puzzle_input)
 

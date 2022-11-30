@@ -15,10 +15,12 @@ addopts             = "--doctest-modules --doctest-continue-on-failure"
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 
 [tool.black]
-target_version = ["py310"]
+target_version = ["py311"]
 
 
 [tool.isort]
 profile                   = "black"
 known_first_party         = ["aoc"]
 import_heading_firstparty = "Advent of Code imports"
+import_heading_stdlib     = "Standard library imports"
+import_heading_thirdparty = "Third party imports"
