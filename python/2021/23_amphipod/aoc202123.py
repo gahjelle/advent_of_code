@@ -11,7 +11,7 @@ from typing import NamedTuple
 ENERGIES = {"A": 1, "B": 10, "C": 100, "D": 1000}
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return (
         puzzle_input.replace("#", "").replace(".", "").replace(" ", "").strip().split()
@@ -254,7 +254,7 @@ def show_burrow(layout, positions):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

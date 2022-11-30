@@ -7,7 +7,7 @@ import sys
 BOARDINGPASS2BINARY = str.maketrans({"F": "0", "B": "1", "L": "0", "R": "1"})
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [
         int(bp.translate(BOARDINGPASS2BINARY), base=2)
@@ -28,7 +28,7 @@ def part2(data):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

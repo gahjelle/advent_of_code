@@ -7,7 +7,7 @@ import sys
 import numpy as np
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return int(puzzle_input)
 
@@ -44,7 +44,7 @@ def deliver(num_houses, max_houses):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

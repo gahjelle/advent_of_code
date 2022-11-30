@@ -31,7 +31,7 @@ AREA_PATTERN = parse.compile(
 )
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     area = AREA_PATTERN.parse(puzzle_input)
     return ((area["x_min"], area["x_max"]), (area["y_min"], area["y_max"]))
@@ -131,7 +131,7 @@ def valid_initials(min_x, max_x, min_y, max_y):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

@@ -8,7 +8,7 @@ import sys
 PAIRS = {"(": ")", "[": "]", "{": "}", "<": ">"}
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return puzzle_input.split("\n")
 
@@ -95,7 +95,7 @@ def score_chunk(chunk, score=0):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

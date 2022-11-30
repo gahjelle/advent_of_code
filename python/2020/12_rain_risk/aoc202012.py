@@ -9,7 +9,7 @@ import sys
 from dataclasses import dataclass
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [(instr[0], int(instr[1:])) for instr in puzzle_input.split("\n")]
 
@@ -174,7 +174,7 @@ def move_with_waypoint(instructions, pos=Vector2D(0, 0), waypoint=Vector2D(10, 1
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

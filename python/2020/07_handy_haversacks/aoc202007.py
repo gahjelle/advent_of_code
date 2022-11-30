@@ -12,7 +12,7 @@ BAGS = parse.compile("{color} bags contain {inner}.")
 BAGS_INNER = parse.compile("{num:d} {color} ba{gs}")
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return tuple(parse_line(line) for line in puzzle_input.split("\n"))
 
@@ -81,7 +81,7 @@ def must_contain(bags, color):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

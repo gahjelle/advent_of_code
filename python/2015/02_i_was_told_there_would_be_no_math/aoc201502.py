@@ -31,7 +31,7 @@ class Present(NamedTuple):
         return cls(**PARSER.parse(present).named)
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [Present.from_string(present) for present in puzzle_input.split()]
 
@@ -75,7 +75,7 @@ def ribbon(present):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given puzzle_input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

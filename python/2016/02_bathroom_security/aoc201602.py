@@ -5,7 +5,7 @@ import pathlib
 import sys
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [[parse_move(move) for move in moves] for moves in puzzle_input.split("\n")]
 
@@ -62,7 +62,7 @@ def moves_to_keys(moves, keys, pos_x=0, pos_y=0):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

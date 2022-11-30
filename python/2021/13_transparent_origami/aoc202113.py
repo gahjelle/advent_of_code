@@ -14,7 +14,7 @@ colorama.init()
 FOLD_PATTERN = parse.compile("fold along {xy}={line:d}")
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     dots, _, folds = puzzle_input.partition("\n\n")
     return (parse_dots(dots), parse_folds(folds))
@@ -83,7 +83,7 @@ def draw_dots(dots):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

@@ -11,7 +11,7 @@ import parse
 CLAIM_PATTERN = parse.compile("#{id:d} @ {col:d},{row:d}: {width:d}x{height:d}")
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return dict(parse_claim(claim) for claim in puzzle_input.split("\n"))
 
@@ -54,7 +54,7 @@ def part2(data):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

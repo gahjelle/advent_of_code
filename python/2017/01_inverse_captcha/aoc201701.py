@@ -5,7 +5,7 @@ import pathlib
 import sys
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [int(digit) for digit in puzzle_input]
 
@@ -37,7 +37,7 @@ def equal_sum(sequence_1, sequence_2):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

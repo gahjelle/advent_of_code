@@ -5,7 +5,7 @@ import pathlib
 import sys
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [int(number) for number in puzzle_input.split(",")]
 
@@ -38,7 +38,7 @@ def recitate(initial, length):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

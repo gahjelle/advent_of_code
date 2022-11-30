@@ -22,7 +22,7 @@ def get_seat_id(row, col):
     return row * 8 + col
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [
         get_seat_id(decode(bp[:7]), decode(bp[7:])) for bp in puzzle_input.split("\n")
@@ -42,7 +42,7 @@ def part2(data):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

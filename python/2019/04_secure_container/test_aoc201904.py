@@ -13,43 +13,43 @@ PUZZLE_DIR = pathlib.Path(__file__).parent
 @pytest.fixture
 def example1():
     puzzle_input = (PUZZLE_DIR / "example1.txt").read_text().strip()
-    return aoc201904.parse(puzzle_input)
+    return aoc201904.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example2():
     puzzle_input = (PUZZLE_DIR / "example2.txt").read_text().strip()
-    return aoc201904.parse(puzzle_input)
+    return aoc201904.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example3():
     puzzle_input = (PUZZLE_DIR / "example3.txt").read_text().strip()
-    return aoc201904.parse(puzzle_input)
+    return aoc201904.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example4():
     puzzle_input = (PUZZLE_DIR / "example4.txt").read_text().strip()
-    return aoc201904.parse(puzzle_input)
+    return aoc201904.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example5():
     puzzle_input = (PUZZLE_DIR / "example5.txt").read_text().strip()
-    return aoc201904.parse(puzzle_input)
+    return aoc201904.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example6():
     puzzle_input = (PUZZLE_DIR / "example6.txt").read_text().strip()
-    return aoc201904.parse(puzzle_input)
+    return aoc201904.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example7():
     puzzle_input = (PUZZLE_DIR / "example7.txt").read_text().strip()
-    return aoc201904.parse(puzzle_input)
+    return aoc201904.parse_data(puzzle_input)
 
 
 def test_parse_example1(example1):

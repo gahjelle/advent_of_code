@@ -10,7 +10,7 @@ import parse
 MANUAL_PATTERN = parse.compile("Enter the code at row {row:d}, column {col:d}.")
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     match = MANUAL_PATTERN.search(puzzle_input)
     return match["row"], match["col"]
@@ -63,7 +63,7 @@ def get_code(index, seed=20151125):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

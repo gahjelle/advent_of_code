@@ -13,7 +13,7 @@ class Bus(NamedTuple):
     dt: int
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     time, bus_ids = puzzle_input.split("\n")
     return {
@@ -77,7 +77,7 @@ def find_first_timestamp(busses):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

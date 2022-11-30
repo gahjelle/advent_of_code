@@ -12,7 +12,7 @@ HAPPINESS_PATTERN = parse.compile(
 )
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     gain_lose = {"gain": 1, "lose": -1}
     family = {}
@@ -80,7 +80,7 @@ def total_happiness(family, seating, circle=True):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

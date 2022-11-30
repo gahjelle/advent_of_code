@@ -61,7 +61,7 @@ class Line:
                 return [(x, y) for x, y in zip(xs, ys)]
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [Line.from_str(line) for line in puzzle_input.split("\n")]
 
@@ -84,7 +84,7 @@ def count_overlaps(lines):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

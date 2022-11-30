@@ -46,7 +46,7 @@ def evaluate_simple_expression(arg1, op, arg2):
         return int(arg1) * int(arg2)
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [f"({ln})" for ln in puzzle_input.split("\n")]
 
@@ -63,7 +63,7 @@ def part2(data):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

@@ -6,7 +6,7 @@ import pathlib
 import sys
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [
         [int(xy) for points in line.split(" -> ") for xy in points.split(",")]
@@ -83,7 +83,7 @@ def coords(start, stop):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

@@ -65,7 +65,7 @@ class CircleList(collections.UserList):
         self[index : index + length] = self[index : index + length][::-1]
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return puzzle_input
 
@@ -147,7 +147,7 @@ def as_hex(hash):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

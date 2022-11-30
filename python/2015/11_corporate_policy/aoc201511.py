@@ -10,7 +10,7 @@ LETTERS = "abcdefghjkmnpqrstuvwxyz"
 INC = dict(zip(LETTERS[:-1], LETTERS[1:])) | {"i": "j", "l": "m", "o": "p", "z": ""}
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return puzzle_input
 
@@ -94,7 +94,7 @@ def is_valid(password):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

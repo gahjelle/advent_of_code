@@ -11,7 +11,7 @@ import parse
 RULE = parse.compile("{rule}: {s1:d}-{e1:d} or {s2:d}-{e2:d}")
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     rules, ticket, tickets = puzzle_input.split("\n\n")
     return {
@@ -118,7 +118,7 @@ def deduce_fields(rules, tickets):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

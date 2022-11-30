@@ -8,7 +8,7 @@ from collections import Counter
 from functools import cache
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     adapters = sorted(int(value) for value in puzzle_input.split("\n"))
     return [second - first for first, second in zip([0] + adapters, adapters)] + [3]
@@ -76,7 +76,7 @@ def combos(run_length):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

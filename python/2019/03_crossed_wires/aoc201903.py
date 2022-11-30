@@ -7,7 +7,7 @@ import sys
 DIRECTIONS = {"R": (1, 0), "L": (-1, 0), "U": (0, 1), "D": (0, -1)}
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     first, second = puzzle_input.split("\n")
     return parse_wire(first), parse_wire(second)
@@ -87,7 +87,7 @@ def enumerate_steps(coordinates):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

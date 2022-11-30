@@ -6,7 +6,7 @@ import pathlib
 import sys
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return sorted((int(number) for number in puzzle_input.split("\n")), reverse=True)
 
@@ -60,7 +60,7 @@ def find_short_groups(weights, target_weight, max_length, already_used=()):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

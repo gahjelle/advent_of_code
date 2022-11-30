@@ -5,7 +5,7 @@ import pathlib
 import sys
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [
         [int(number) for number in line.split()] for line in puzzle_input.split("\n")
@@ -42,7 +42,7 @@ def evenly_divisible_ratio(numbers):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

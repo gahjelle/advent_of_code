@@ -124,7 +124,7 @@ class Operator:
                 return 1 if first.evaluate() == second.evaluate() else 0
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     num_bits = 4 * len(puzzle_input)
     return bin(int(puzzle_input, base=16))[2:].zfill(num_bits)
@@ -167,7 +167,7 @@ def parse_packet(packet):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

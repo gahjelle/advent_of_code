@@ -14,7 +14,7 @@ from colorama import Cursor
 colorama.init()
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return np.array(
         [[int(energy) for energy in line] for line in puzzle_input.split("\n")]
@@ -75,7 +75,7 @@ def visualize(data):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

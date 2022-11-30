@@ -13,19 +13,19 @@ PUZZLE_DIR = pathlib.Path(__file__).parent
 @pytest.fixture
 def example1():
     puzzle_input = (PUZZLE_DIR / "example1.txt").read_text().strip()
-    return aoc201801.parse(puzzle_input)
+    return aoc201801.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example2():
     puzzle_input = (PUZZLE_DIR / "example2.txt").read_text().strip()
-    return aoc201801.parse(puzzle_input)
+    return aoc201801.parse_data(puzzle_input)
 
 
 @pytest.fixture
 def example3():
     puzzle_input = (PUZZLE_DIR / "example3.txt").read_text().strip()
-    return aoc201801.parse(puzzle_input)
+    return aoc201801.parse_data(puzzle_input)
 
 
 def test_parse_example1(example1):

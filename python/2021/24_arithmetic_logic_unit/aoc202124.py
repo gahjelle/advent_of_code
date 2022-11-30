@@ -31,7 +31,7 @@ class Constraint:
             digits[self.second] = 1
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     program = [line.split() for line in puzzle_input.split("\n")]
     return find_constraints([minimize(subprogram) for subprogram in decompose(program)])
@@ -135,7 +135,7 @@ def find_constraints(program):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

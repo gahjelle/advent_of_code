@@ -12,7 +12,7 @@ import parse
 PATTERN = parse.compile("{x1:d},{y1:d} -> {x2:d},{y2:d}")
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return pd.DataFrame(
         [parse_line(line) for line in puzzle_input.split("\n")],
@@ -69,7 +69,7 @@ def count_overlaps(lines):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

@@ -8,7 +8,7 @@ import sys
 import numpy as np
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return np.array([[int(bn) for bn in row] for row in puzzle_input.split("\n")])
 
@@ -60,7 +60,7 @@ def bin2int(binary):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

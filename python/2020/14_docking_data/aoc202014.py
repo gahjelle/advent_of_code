@@ -11,7 +11,7 @@ MASK_PATTERN = parse.compile("mask = {mask}")
 MEMORY_PATTERN = parse.compile("mem[{address:d}] = {value:d}")
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     program = []
     for line in puzzle_input.split("\n"):
@@ -104,7 +104,7 @@ def update_mask_with_address(mask, address):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 

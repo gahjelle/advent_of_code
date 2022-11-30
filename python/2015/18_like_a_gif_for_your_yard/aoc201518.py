@@ -7,7 +7,7 @@ import sys
 import numpy as np
 
 
-def parse(puzzle_input):
+def parse_data(puzzle_input):
     """Parse input"""
     return [[light == "#" for light in row] for row in puzzle_input.split("\n")]
 
@@ -77,7 +77,7 @@ def animate_step(lights):
 
 def solve(puzzle_input):
     """Solve the puzzle for the given input"""
-    data = parse(puzzle_input)
+    data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
 
