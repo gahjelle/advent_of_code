@@ -1,0 +1,5 @@
+abba[mnop]qrst
+abcd[bddb]xyyx
+aaaa[qwer]tyui
+ioxxoj[asdfgh]zxcvbn
+aoc[gah]easter[bunny]noon
