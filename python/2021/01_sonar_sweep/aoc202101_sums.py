@@ -1,4 +1,4 @@
-"""AoC 1, 2021: Sonar Sweep"""
+"""AoC 1, 2021: Sonar Sweep."""
 
 # Standard library imports
 import pathlib
@@ -6,17 +6,17 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [int(depth) for depth in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(current > prev for prev, current in zip(data[:-1], data[1:]))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return part1(
         [
             prev + current + next
@@ -26,7 +26,7 @@ def part2(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

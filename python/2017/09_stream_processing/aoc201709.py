@@ -1,4 +1,4 @@
-"""AoC 9, 2017: Stream Processing"""
+"""AoC 9, 2017: Stream Processing."""
 
 # Standard library imports
 import pathlib
@@ -6,12 +6,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return separate_stream(puzzle_input)
 
 
 def separate_stream(stream):
-    """Separate garbage from stream
+    """Separate garbage from stream.
 
     Garbage is delimited by < and >. ! is used as an escape character.
 
@@ -40,19 +40,19 @@ def separate_stream(stream):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     stream, _ = data
     return sum(count_levels(stream))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     _, garbage = data
     return len(garbage)
 
 
 def count_levels(stream):
-    """Count levels in stream
+    """Count levels in stream.
 
     >>> list(count_levels("{{{},{{}}},{}}"))
     [1, 2, 3, 3, 4, 2]
@@ -67,7 +67,7 @@ def count_levels(stream):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

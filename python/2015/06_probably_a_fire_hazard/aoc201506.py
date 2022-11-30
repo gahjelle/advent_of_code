@@ -1,4 +1,4 @@
-"""AoC 6, 2015: Probably a Fire Hazard"""
+"""AoC 6, 2015: Probably a Fire Hazard."""
 
 # Standard library imports
 import pathlib
@@ -23,7 +23,7 @@ def register(kind):
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_instruction(line) for line in puzzle_input.split("\n")]
 
 
@@ -48,17 +48,17 @@ def parse_instruction(line):
 
 
 def part1(instructions):
-    """Solve part 1"""
+    """Solve part 1."""
     return np.sum(flick_lights(instructions, FUNCTIONS["flick"], dtype=bool))
 
 
 def part2(instructions):
-    """Solve part 2"""
+    """Solve part 2."""
     return np.sum(flick_lights(instructions, FUNCTIONS["adjust"], dtype=int))
 
 
 def flick_lights(instructions, functions, dtype):
-    """Flick the lights according to the given instructions"""
+    """Flick the lights according to the given instructions."""
     lights = np.zeros((1000, 1000), dtype=dtype)
     for command, rows, cols in instructions:
         functions[command](lights, rows, cols)
@@ -102,7 +102,7 @@ def adjust_toggle(lights, rows, cols):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

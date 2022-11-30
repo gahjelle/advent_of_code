@@ -1,4 +1,4 @@
-"""Tests for AoC 11, 2017: Hex Ed"""
+"""Tests for AoC 11, 2017: Hex Ed."""
 
 # Standard library imports
 import pathlib
@@ -24,7 +24,7 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert np.allclose(
         example1,
         np.array(
@@ -40,15 +40,15 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201711.part1(example1) == 3
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201711.part1(example2) == 0
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201711.part2(example2) == 2

@@ -1,4 +1,4 @@
-"""AoC 25, 2015: Let It Snow"""
+"""AoC 25, 2015: Let It Snow."""
 
 # Standard library imports
 import pathlib
@@ -10,13 +10,13 @@ MANUAL_PATTERN = parse.compile("Enter the code at row {row:d}, column {col:d}.")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     match = MANUAL_PATTERN.search(puzzle_input)
     return match["row"], match["col"]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     idx_of_code = get_index(*data)
     for idx, code in enumerate(generate_codes(), start=1):
         if idx == idx_of_code:
@@ -24,7 +24,7 @@ def part1(data):
 
 
 def part2(data):
-    """There is no part two"""
+    """There is no part two."""
 
 
 def get_index(row, col):
@@ -65,7 +65,7 @@ def generate_codes(seed=20151125):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

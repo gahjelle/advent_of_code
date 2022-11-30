@@ -1,4 +1,4 @@
-"""Tests for AoC 7, 2020: Handy Haversacks"""
+"""Tests for AoC 7, 2020: Handy Haversacks."""
 
 # Standard library imports
 import pathlib
@@ -23,7 +23,7 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == (
         ("light red", (("bright white", 1), ("muted yellow", 2))),
         ("dark orange", (("bright white", 3), ("muted yellow", 4))),
@@ -38,15 +38,15 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202007.part1(example1) == 4
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202007.part2(example1) == 32
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202007.part2(example2) == 126

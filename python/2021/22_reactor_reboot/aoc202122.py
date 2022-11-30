@@ -1,4 +1,4 @@
-"""AoC 22, 2021: Reactor Reboot"""
+"""AoC 22, 2021: Reactor Reboot."""
 
 # Standard library imports
 import collections
@@ -20,7 +20,7 @@ GRID_SIZE = _MAX_DIM // GRID_STEP
 
 @dataclass(frozen=True)
 class Cube:
-    """Representation of 3D cube"""
+    """Representation of 3D cube."""
 
     min_x: int
     max_x: int
@@ -42,7 +42,7 @@ class Cube:
         )
 
     def split_to_grid(self):
-        """Split a cube into subcubes based on the grid"""
+        """Split a cube into subcubes based on the grid."""
         xs = [
             (
                 max(n * GRID_STEP, self.min_x),
@@ -72,7 +72,7 @@ class Cube:
             yield cls(min_x, max_x, min_y, max_y, min_z, max_z)
 
     def overlaps(self, other):
-        """Check if other cube overlaps this cube"""
+        """Check if other cube overlaps this cube."""
         return (
             self.min_x <= other.max_x
             and self.max_x >= other.min_x
@@ -83,7 +83,7 @@ class Cube:
         )
 
     def union(self, other):
-        """Calculate the cube that is the union of this and the other cube"""
+        """Calculate the cube that is the union of this and the other cube."""
         cls = self.__class__
         return cls(
             min_x=min(self.min_x, other.min_x),
@@ -95,7 +95,7 @@ class Cube:
         )
 
     def split(self, cubes):
-        """Split cube based on edges of smaller cubes"""
+        """Split cube based on edges of smaller cubes."""
         xs = sorted({cube.min_x for cube in cubes} | {cube.max_x + 1 for cube in cubes})
         ys = sorted({cube.min_y for cube in cubes} | {cube.max_y + 1 for cube in cubes})
         zs = sorted({cube.min_z for cube in cubes} | {cube.max_z + 1 for cube in cubes})
@@ -108,7 +108,7 @@ class Cube:
         ]
 
     def __len__(self):
-        """Calculate the size of the cube"""
+        """Calculate the size of the cube."""
         return (
             (self.max_x - self.min_x + 1)
             * (self.max_y - self.min_y + 1)
@@ -117,12 +117,12 @@ class Cube:
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_step(line) for line in puzzle_input.split("\n")]
 
 
 def parse_step(line):
-    """Parse one line of input into a step in the reboot procedure
+    """Parse one line of input into a step in the reboot procedure.
 
     Include an indicator on whether the step is part of initialization
 
@@ -151,17 +151,17 @@ def parse_step(line):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return reboot([step for init, *step in data if init])
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return reboot([step for _, *step in data])
 
 
 def reboot(steps):
-    """Reboot the reactor"""
+    """Reboot the reactor."""
     # Split steps into cubes in a grid
     grid = collections.defaultdict(list)
     for onoff, original_cube in steps:
@@ -193,7 +193,7 @@ def reboot(steps):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

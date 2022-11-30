@@ -1,4 +1,4 @@
-"""AoC 3, 2021: Binary Diagnostic"""
+"""AoC 3, 2021: Binary Diagnostic."""
 
 # Standard library imports
 import pathlib
@@ -6,12 +6,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [[int(bn) for bn in row] for row in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     columns = transpose(data)
 
     gamma, epsilon = [], []
@@ -24,7 +24,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     oxygen = filter_rows(data, lambda n_ones, n_cols: 1 if 2 * n_ones >= n_cols else 0)
     co2 = filter_rows(data, lambda n_ones, n_cols: 0 if 2 * n_ones >= n_cols else 1)
 
@@ -32,7 +32,7 @@ def part2(data):
 
 
 def transpose(report):
-    """Transpose nested lists of lists
+    """Transpose nested lists of lists.
 
     >>> transpose([[1, 2, 3], [4, 5, 6]])
     [[1, 4], [2, 5], [3, 6]]
@@ -41,7 +41,7 @@ def transpose(report):
 
 
 def filter_rows(rows, chooser):
-    """Filter rows column by column based on the chooser
+    """Filter rows column by column based on the chooser.
 
     >>> rows = [[1, 0, 1], [0, 1, 1], [1, 1, 0]]
     >>> filter_rows(rows, lambda n_ones, n_cols: 1 if 2 * n_ones >= n_cols else 0)
@@ -60,7 +60,7 @@ def filter_rows(rows, chooser):
 
 
 def bin2int(binary):
-    """Convert a sequence of binary digits into a base 10 integer
+    """Convert a sequence of binary digits into a base 10 integer.
 
     >>> bin2int([1, 0, 1, 1, 0, 0])
     44
@@ -69,7 +69,7 @@ def bin2int(binary):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 16, 2021: Packet Decoder"""
+"""AoC 16, 2021: Packet Decoder."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ class Literal:
 
     @classmethod
     def from_str(cls, version, packet_data):
-        """Parse a literal from a binary string"""
+        """Parse a literal from a binary string."""
         bits = []
         while True:
             more_groups, next_group = packet_data[0], packet_data[1:5]
@@ -29,11 +29,11 @@ class Literal:
         return cls(version=version, value=int("".join(bits), base=2)), packet_data
 
     def get_version(self):
-        """Get version of literal"""
+        """Get version of literal."""
         return self.version
 
     def evaluate(self):
-        """Get value of literal"""
+        """Get value of literal."""
         return self.value
 
 
@@ -45,7 +45,7 @@ class Operator:
 
     @classmethod
     def from_str(cls, version, operator, packet_data):
-        """Parse an operator from a binary string"""
+        """Parse an operator from a binary string."""
         length_type = packet_data[0]
         if length_type == "0":
             num = int(packet_data[1:16], base=2)
@@ -66,7 +66,7 @@ class Operator:
         return cls(version, operator, sub_packets), left_over or packet_data
 
     def get_version(self):
-        """Get version of operator
+        """Get version of operator.
 
         The version of an operator is its internal version plus the sum of the versions
         of all its subpackets.
@@ -81,7 +81,7 @@ class Operator:
         return self.version + sum(packet.get_version() for packet in self.sub_packets)
 
     def evaluate(self):
-        """Evaluate the operator based on operator type
+        """Evaluate the operator based on operator type.
 
         Packets with type ID 0 are sum packets - their value is the sum of the values of
         their sub-packets. If they only have a single sub-packet, their value is the
@@ -125,25 +125,25 @@ class Operator:
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     num_bits = 4 * len(puzzle_input)
     return bin(int(puzzle_input, base=16))[2:].zfill(num_bits)
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     packet, _ = parse_packet(data)
     return packet.get_version()
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     packet, _ = parse_packet(data)
     return packet.evaluate()
 
 
 def parse_packet(packet):
-    """Parse a packet, return packet and left over packet string
+    """Parse a packet, return packet and left over packet string.
 
     >>> parse_packet("110100101111111000101000")
     (Literal(version=6, value=2021), '000')
@@ -166,7 +166,7 @@ def parse_packet(packet):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

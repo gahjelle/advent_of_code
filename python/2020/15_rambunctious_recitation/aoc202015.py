@@ -1,4 +1,4 @@
-"""AoC 15, 2020: Rambunctious Recitation"""
+"""AoC 15, 2020: Rambunctious Recitation."""
 
 # Standard library imports
 import pathlib
@@ -6,22 +6,22 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [int(number) for number in puzzle_input.split(",")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return recitate(data, 2020)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return recitate(data, 30_000_000)
 
 
 def recitate(initial, length):
-    """Recitate numbers for the given length
+    """Recitate numbers for the given length.
 
     ## Example:
 
@@ -37,7 +37,7 @@ def recitate(initial, length):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

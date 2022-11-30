@@ -1,4 +1,4 @@
-"""AoC 10, 2020: Adapter Array"""
+"""AoC 10, 2020: Adapter Array."""
 
 # Standard library imports
 import math
@@ -9,24 +9,24 @@ from functools import cache
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     adapters = sorted(int(value) for value in puzzle_input.split("\n"))
     return [second - first for first, second in zip([0] + adapters, adapters)] + [3]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     jolts = Counter(data)
     return jolts[1] * jolts[3]
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return math.prod(combos(run) for run in run_lengths(data))
 
 
 def run_lengths(jolts):
-    """Find lengths of runs of 1 jolts
+    """Find lengths of runs of 1 jolts.
 
     ## Example
 
@@ -44,7 +44,7 @@ def run_lengths(jolts):
 
 @cache
 def combos(run_length):
-    """Calculate number of combinations based on run length
+    """Calculate number of combinations based on run length.
 
     - For run length 1 there is only one valid combination, as there are
       3-jumps before and after the run.
@@ -75,7 +75,7 @@ def combos(run_length):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

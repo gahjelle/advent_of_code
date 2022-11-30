@@ -1,4 +1,4 @@
-"""AoC 9, 2021: Smoke Basin"""
+"""AoC 9, 2021: Smoke Basin."""
 
 # Standard library imports
 import pathlib
@@ -9,19 +9,19 @@ import numpy as np
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return np.array(
         [[int(height) for height in row] for row in puzzle_input.split("\n")]
     )
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return np.sum(data[low_points(data)] + 1)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return np.prod(sorted(basin_sizes(data, low_points(data)), reverse=True)[:3])
 
 
@@ -49,7 +49,7 @@ def low_points(heights):
 
 
 def basin_sizes(heights, basin_idx):
-    """Find the size of each basin
+    """Find the size of each basin.
 
        7 6 9        1 1 .
        9 9 6   ->   . . 2   ->   [2, 4]
@@ -63,7 +63,7 @@ def basin_sizes(heights, basin_idx):
 
 
 def basin_size(heights, row, col):
-    """Depth first search to find size of basin
+    """Depth first search to find size of basin.
 
        7 6 9        . . .
        9 9 6   ->   . . #   ->   4
@@ -79,7 +79,7 @@ def basin_size(heights, row, col):
 
 
 def explore(visited, heights, row, col):
-    """Recursively explore the height map"""
+    """Recursively explore the height map."""
     num_rows, num_cols = heights.shape
     if (
         row < 0
@@ -100,7 +100,7 @@ def explore(visited, heights, row, col):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 13, 2015: Knights of the Dinner Table"""
+"""AoC 13, 2015: Knights of the Dinner Table."""
 
 # Standard library imports
 import itertools
@@ -13,7 +13,7 @@ HAPPINESS_PATTERN = parse.compile(
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     gain_lose = {"gain": 1, "lose": -1}
     family = {}
     for happiness in puzzle_input.split("\n"):
@@ -24,12 +24,12 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return most_happiness(data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return most_happiness(data, circle=False)
 
 
@@ -79,7 +79,7 @@ def total_happiness(family, seating, circle=True):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

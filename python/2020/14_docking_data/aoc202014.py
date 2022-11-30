@@ -1,4 +1,4 @@
-"""AoC 14, 2020: Docking Data"""
+"""AoC 14, 2020: Docking Data."""
 
 # Standard library imports
 import pathlib
@@ -12,7 +12,7 @@ MEMORY_PATTERN = parse.compile("mem[{address:d}] = {value:d}")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     program = []
     for line in puzzle_input.split("\n"):
         if match := MASK_PATTERN.parse(line):
@@ -23,7 +23,7 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     memory = {
         address: apply_mask_to_value(mask, value) for mask, address, value in data
     }
@@ -31,7 +31,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     memory = {
         address: value
         for mask, address_seed, value in data
@@ -64,7 +64,7 @@ def apply_mask_to_value(mask, value):
 
 
 def construct_masks(mask):
-    """Find all possible masks by resolving floating bits
+    """Find all possible masks by resolving floating bits.
 
     If the bitmask bit is X, the corresponding memory address bit is floating.
 
@@ -87,7 +87,7 @@ def construct_masks(mask):
 
 
 def update_mask_with_address(mask, address):
-    """Apply mask to address
+    """Apply mask to address.
 
     ## Example:
 
@@ -103,7 +103,7 @@ def update_mask_with_address(mask, address):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

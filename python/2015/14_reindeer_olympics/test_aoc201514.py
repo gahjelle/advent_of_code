@@ -1,4 +1,4 @@
-"""Tests for AoC 14, 2015: Reindeer Olympics"""
+"""Tests for AoC 14, 2015: Reindeer Olympics."""
 
 # Standard library imports
 import pathlib
@@ -17,15 +17,15 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == {"Comet": (14, 10, 127, 137), "Dancer": (16, 11, 162, 173)}
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201514.part1(example1, time=1000) == 1120
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201514.part2(example1, time=1000) == 689

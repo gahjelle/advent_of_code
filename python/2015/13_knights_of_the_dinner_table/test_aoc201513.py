@@ -1,4 +1,4 @@
-"""Tests for AoC 13, 2015: Knights of the Dinner Table"""
+"""Tests for AoC 13, 2015: Knights of the Dinner Table."""
 
 # Standard library imports
 import pathlib
@@ -17,7 +17,7 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == {
         "Alice": {"Bob": 54, "Carol": -79, "David": -2},
         "Bob": {"Alice": 83, "Carol": -7, "David": -63},
@@ -27,10 +27,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201513.part1(example1) == 330
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201513.part2(example1) == 286

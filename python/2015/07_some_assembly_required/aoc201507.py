@@ -1,4 +1,4 @@
-"""AoC 7, 2015: Some Assembly Required"""
+"""AoC 7, 2015: Some Assembly Required."""
 
 # Standard library imports
 import pathlib
@@ -15,7 +15,7 @@ COMMANDS = {
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return dict(parse_signal(line) for line in puzzle_input.split("\n"))
 
 
@@ -63,7 +63,7 @@ def maybe_int(text):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     signals, gates = {}, data
     while "a" not in signals:
         signals, gates = resolve(signals, gates)
@@ -71,7 +71,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     signals, gates = {}, data | {"b": ("SET", part1(data))}
     while "a" not in signals:
         signals, gates = resolve(signals, gates)
@@ -98,7 +98,7 @@ def resolve(signals, gates):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

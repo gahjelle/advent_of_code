@@ -1,4 +1,4 @@
-"""AoC 9, 2015: All in a Single Night"""
+"""AoC 9, 2015: All in a Single Night."""
 
 # Standard library imports
 import itertools
@@ -11,7 +11,7 @@ DISTANCE_PATTERN = parse.compile("{first} to {second} = {distance:d}")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     distances = {}
     for line in puzzle_input.split("\n"):
         match = DISTANCE_PATTERN.parse(line)
@@ -22,12 +22,12 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return min(calculate_trips(data).values())
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return max(calculate_trips(data).values())
 
 
@@ -49,7 +49,7 @@ def calculate_trips(distances):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

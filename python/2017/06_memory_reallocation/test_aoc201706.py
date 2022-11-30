@@ -1,4 +1,4 @@
-"""Tests for AoC 6, 2017: Memory Reallocation"""
+"""Tests for AoC 6, 2017: Memory Reallocation."""
 
 # Standard library imports
 import pathlib
@@ -17,15 +17,15 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == (0, 2, 7, 0)
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201706.part1(example1) == 5
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201706.part2(example1) == 4

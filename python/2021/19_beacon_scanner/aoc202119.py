@@ -1,4 +1,4 @@
-"""AoC 19, 2021: Beacon Scanner"""
+"""AoC 19, 2021: Beacon Scanner."""
 
 # Standard library imports
 import itertools
@@ -13,7 +13,7 @@ CACHE = {}
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     reports = {}
     for report in puzzle_input.split("\n\n"):
         reports |= parse_report(report)
@@ -22,7 +22,7 @@ def parse_data(puzzle_input):
 
 
 def parse_report(report):
-    """Parse the report from one scanner
+    """Parse the report from one scanner.
 
     >>> parse_report("--- scanner 0 ---\\n0,2,0\\n4,1,0\\n3,3,0")
     {0: array([[0, 2, 0], [4, 1, 0], [3, 3, 0]])}
@@ -37,7 +37,7 @@ def parse_report(report):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     # Build map and store results to cache for use in part 2
     CACHE["scanners"], beacons = build_map(data)
 
@@ -45,13 +45,13 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     positions = np.array(list(CACHE["scanners"].values()))
     return np.max(manhattan_distance(positions))
 
 
 def build_map(reports, min_match=12):
-    """Build a map of beacons based on the reports
+    """Build a map of beacons based on the reports.
 
     >>> build_map(
     ...     {0: np.array([[0, 2, 0], [4, 1, 0], [3, 3, 0], [1, 2, 3]]),
@@ -85,7 +85,7 @@ def build_map(reports, min_match=12):
 
 
 def fingerprint(beacons):
-    """Create a fingerprint matrix for the given beacons
+    """Create a fingerprint matrix for the given beacons.
 
     Use distance between beacons to get fingerprint values that are independent
     of scanner locations.
@@ -98,7 +98,7 @@ def fingerprint(beacons):
 
 
 def manhattan_distance(positions):
-    """Calculate the Manhattan distance between the given positions
+    """Calculate the Manhattan distance between the given positions.
 
     >>> manhattan_distance(np.array([[0, 2, 0], [4, 1, 0], [3, 3, 0], [-1, 2, -3]]))
     array([[0, 5, 4, 4], [5, 0, 3, 9], [4, 3, 0, 8], [4, 9, 8, 0]])
@@ -107,7 +107,7 @@ def manhattan_distance(positions):
 
 
 def match_beacons(known_beacons, new_beacons, min_match=12):
-    """Match new beacons to list of known beacons
+    """Match new beacons to list of known beacons.
 
     >>> match_beacons(
     ...     np.array([[0, 2, 0], [4, 1, 0], [3, 3, 0], [1, 2, 3]]),
@@ -149,7 +149,7 @@ def match_beacons(known_beacons, new_beacons, min_match=12):
 
 
 def rotate(coords, orientation):
-    """Rotate coordinates with the given orientation
+    """Rotate coordinates with the given orientation.
 
     >>> rotate(np.array([[1, 2, 3], [-3, -2, -1]]), np.array([[0, 1, 0], [-1, 0, 0], [0, 0, 1]]))
     array([[ 2, -1, 3], [-2,  3, -1]])
@@ -158,7 +158,7 @@ def rotate(coords, orientation):
 
 
 def orientations():
-    """Iterate through rotation matrices for all possible orientations"""
+    """Iterate through rotation matrices for all possible orientations."""
     for idx in itertools.permutations((0, 1, 2)):
         yield np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])[tuple([idx])]
         yield np.array([[-1, 0, 0], [0, 1, 0], [0, 0, 1]])[tuple([idx])]
@@ -171,7 +171,7 @@ def orientations():
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

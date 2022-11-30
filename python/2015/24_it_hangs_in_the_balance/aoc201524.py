@@ -1,4 +1,4 @@
-"""AoC 24, 2015: It Hangs in the Balance"""
+"""AoC 24, 2015: It Hangs in the Balance."""
 
 # Standard library imports
 import math
@@ -7,17 +7,17 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return sorted((int(number) for number in puzzle_input.split("\n")), reverse=True)
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return find_best_entanglement(data, num_groups=3, max_length=6)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return find_best_entanglement(data, num_groups=4, max_length=4)
 
 
@@ -59,7 +59,7 @@ def find_short_groups(weights, target_weight, max_length, already_used=()):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

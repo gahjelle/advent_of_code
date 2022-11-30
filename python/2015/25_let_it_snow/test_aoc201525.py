@@ -1,4 +1,4 @@
-"""Tests for AoC 25, 2015: Let It Snow"""
+"""Tests for AoC 25, 2015: Let It Snow."""
 
 # Standard library imports
 import pathlib
@@ -17,10 +17,10 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == (5, 6)
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201525.part1(example1) == 31663883

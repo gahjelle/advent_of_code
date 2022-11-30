@@ -1,4 +1,4 @@
-"""Tests for AoC 15, 2020: Rambunctious Recitation"""
+"""Tests for AoC 15, 2020: Rambunctious Recitation."""
 
 # Standard library imports
 import pathlib
@@ -27,29 +27,29 @@ extra_input = [
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [0, 3, 6]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202015.part1(example1) == 436
 
 
 @pytest.mark.skip(reason="slow")
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202015.part2(example1) == 175_594
 
 
 @pytest.mark.parametrize(["puzzle_input", "part1", "_part2"], extra_input)
 def test_part1_extra_input(puzzle_input, part1, _part2):
-    """Test part 1 on extra input"""
+    """Test part 1 on extra input."""
     assert aoc202015.part1(puzzle_input) == part1
 
 
 @pytest.mark.skip(reason="slow")
 @pytest.mark.parametrize(["puzzle_input", "_part1", "part2"], extra_input)
 def test_part2_extra_input(puzzle_input, _part1, part2):
-    """Test part 2 on extra input"""
+    """Test part 2 on extra input."""
     assert aoc202015.part2(puzzle_input) == part2

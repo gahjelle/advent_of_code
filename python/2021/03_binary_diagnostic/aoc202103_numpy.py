@@ -1,4 +1,4 @@
-"""AoC 3, 2021: Binary Diagnostic"""
+"""AoC 3, 2021: Binary Diagnostic."""
 
 # Standard library imports
 import pathlib
@@ -9,12 +9,12 @@ import numpy as np
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return np.array([[int(bn) for bn in row] for row in puzzle_input.split("\n")])
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     most_common = data.mean(axis=0) >= 0.5
     gamma = bin2int("1" if γ else "0" for γ in most_common)
     epsilon = bin2int("0" if ε else "1" for ε in most_common)
@@ -23,7 +23,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     oxygen = bin2int(filter_rows(data, lambda col: 1 if col.mean() >= 0.5 else 0))
     co2 = bin2int(filter_rows(data, lambda col: 0 if col.mean() >= 0.5 else 1))
 
@@ -31,7 +31,7 @@ def part2(data):
 
 
 def filter_rows(report, chooser):
-    """Filter rows column by column based on the chooser
+    """Filter rows column by column based on the chooser.
 
     >>> report = np.array([[1, 0, 1], [0, 1, 1], [1, 1, 0]])
     >>> filter_rows(report, lambda col: 1 if col.mean() >= 0.5 else 0)
@@ -50,7 +50,7 @@ def filter_rows(report, chooser):
 
 
 def bin2int(binary):
-    """Convert a sequence of binary digits into a base 10 integer
+    """Convert a sequence of binary digits into a base 10 integer.
 
     >>> bin2int([1, 0, 1, 1, 0, 0])
     44
@@ -59,7 +59,7 @@ def bin2int(binary):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

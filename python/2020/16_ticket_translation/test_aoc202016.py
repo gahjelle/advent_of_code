@@ -1,4 +1,4 @@
-"""Tests for AoC 16, 2020: Ticket Translation"""
+"""Tests for AoC 16, 2020: Ticket Translation."""
 
 # Standard library imports
 import pathlib
@@ -23,7 +23,7 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == {
         "rules": {
             "class": set(range(1, 3 + 1)) | set(range(5, 7 + 1)),
@@ -36,10 +36,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202016.part1(example1) == 71
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202016.part2(example2) == 11 * 13

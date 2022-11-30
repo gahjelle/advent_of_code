@@ -1,4 +1,4 @@
-"""AoC 7, 2020: Handy Haversacks"""
+"""AoC 7, 2020: Handy Haversacks."""
 
 # Standard library imports
 import pathlib
@@ -13,12 +13,12 @@ BAGS_INNER = parse.compile("{num:d} {color} ba{gs}")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return tuple(parse_line(line) for line in puzzle_input.split("\n"))
 
 
 def parse_line(line):
-    """Parse one line of input
+    """Parse one line of input.
 
     ## Examples:
 
@@ -36,19 +36,19 @@ def parse_line(line):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     bags = tuple((outer, tuple(bag for bag, _ in inner)) for outer, inner in data)
     return len(can_contain(bags, "shiny gold"))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return must_contain(data, "shiny gold") - 1
 
 
 @cache
 def can_contain(bags, color):
-    """List all bags that can contain the given color
+    """List all bags that can contain the given color.
 
     ## Example:
 
@@ -65,7 +65,7 @@ def can_contain(bags, color):
 
 @cache
 def must_contain(bags, color):
-    """Count the number of bags that a given color must contain
+    """Count the number of bags that a given color must contain.
 
     The bag itself is included in the count.
 
@@ -80,7 +80,7 @@ def must_contain(bags, color):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

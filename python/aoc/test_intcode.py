@@ -67,7 +67,7 @@ INPUT_OUTPUT = [
     ids=[p[0] for p in END_STATES],
 )
 def test_end_states(program, end_state):
-    """Test that the end state of a full program is as expected"""
+    """Test that the end state of a full program is as expected."""
     computer = intcode.IntcodeComputer(program)
     computer.run()
     assert computer.program == end_state
@@ -79,6 +79,6 @@ def test_end_states(program, end_state):
     ids=[p[0] for p in INPUT_OUTPUT],
 )
 def test_input_output(program, input, output):
-    """Test that a given input gives the expected output"""
+    """Test that a given input gives the expected output."""
     computer = intcode.IntcodeComputer(program, input=input)
     assert computer.run() == output

@@ -1,4 +1,4 @@
-"""AoC 5, 2021: Hydrothermal Venture"""
+"""AoC 5, 2021: Hydrothermal Venture."""
 
 # Standard library imports
 import collections
@@ -17,7 +17,7 @@ class Line:
 
     @classmethod
     def from_str(cls, string):
-        """Create a Line from a string
+        """Create a Line from a string.
 
         >>> Line.from_str("0,0 -> 0,2")
         Line(kind='vertical', x1=0, y1=0, x2=0, y2=2)
@@ -39,7 +39,7 @@ class Line:
                 return cls("diagonal", x1=x2, y1=y2, x2=x1, y2=y1)
 
     def points(self):
-        """List points in line
+        """List points in line.
 
         >>> Line.from_str("0,0 -> 0,2").points()
         [(0, 0), (0, 1), (0, 2)]
@@ -62,28 +62,28 @@ class Line:
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [Line.from_str(line) for line in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return count_overlaps(line for line in data if line.kind != "diagonal")
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return count_overlaps(data)
 
 
 def count_overlaps(lines):
-    """Count overlaps created by lines"""
+    """Count overlaps created by lines."""
     points = collections.Counter(pt for line in lines for pt in line.points())
     return sum(overlap >= 2 for overlap in points.values())
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

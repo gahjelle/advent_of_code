@@ -1,4 +1,4 @@
-"""Tests for AoC 7, 2017: Recursive Circus"""
+"""Tests for AoC 7, 2017: Recursive Circus."""
 
 # Standard library imports
 import pathlib
@@ -17,7 +17,7 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     tree, weights = example1
     assert len(tree) == len(weights) == 13
     assert tree["pbga"] == set()
@@ -27,10 +27,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201707.part1(example1) == "tknk"
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201707.part2(example1) == 60

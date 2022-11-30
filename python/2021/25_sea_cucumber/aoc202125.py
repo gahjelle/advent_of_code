@@ -1,4 +1,4 @@
-"""AoC 25, 2021: Sea Cucumber"""
+"""AoC 25, 2021: Sea Cucumber."""
 
 # Standard library imports
 import itertools
@@ -7,7 +7,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     easts, souths = set(), set()
     for row, line in enumerate(puzzle_input.split("\n")):
         for col, cucumber in enumerate(line):
@@ -20,7 +20,7 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     num_rows, num_cols, easts, souths = data
     for step in itertools.count(start=1):
         easts, souths, did_move = do_step(num_rows, num_cols, easts, souths)
@@ -29,11 +29,11 @@ def part1(data):
 
 
 def part2(data):
-    """There is no part two"""
+    """There is no part two."""
 
 
 def do_step(num_rows, num_cols, easts, souths):
-    """Perform one sea cucumber step
+    """Perform one sea cucumber step.
 
     >>> easts, souths, did_move = do_step(1, 8, {(0, 3), (0, 4), (0, 5)}, set())
     >>> sorted(easts), sorted(souths), did_move
@@ -68,7 +68,7 @@ def do_step(num_rows, num_cols, easts, souths):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

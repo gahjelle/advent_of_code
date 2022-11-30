@@ -1,4 +1,4 @@
-"""AoC 1, 2020: Report Repair"""
+"""AoC 1, 2020: Report Repair."""
 
 # Standard library imports
 import pathlib
@@ -6,25 +6,25 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return set([int(line) for line in puzzle_input.split()])
 
 
 def find_summands(numbers, target=2020):
-    """Find two summands that add up to target"""
+    """Find two summands that add up to target."""
     for first in numbers:
         if (second := target - first) in numbers and first != second:
             return first, second
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     first, second = find_summands(data)
     return first * second
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     for first in data:
         summands = find_summands(data, target=2020 - first)
         if summands:
@@ -33,7 +33,7 @@ def part2(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

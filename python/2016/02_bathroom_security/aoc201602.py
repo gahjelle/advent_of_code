@@ -1,4 +1,4 @@
-"""AoC 2, 2016: Bathroom Security"""
+"""AoC 2, 2016: Bathroom Security."""
 
 # Standard library imports
 import pathlib
@@ -6,12 +6,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [[parse_move(move) for move in moves] for moves in puzzle_input.split("\n")]
 
 
 def parse_move(move):
-    """Parse one move into coordinate deltas
+    """Parse one move into coordinate deltas.
 
     ## Example:
 
@@ -22,7 +22,7 @@ def parse_move(move):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     keys = (
         {(-1, 1): "1", (0, 1): "2", (1, 1): "3"}
         | {(-1, 0): "4", (0, 0): "5", (1, 0): "6"}
@@ -32,7 +32,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     keys = (
         {(2, 2): "1"}
         | {(1, 1): "2", (2, 1): "3", (3, 1): "4"}
@@ -44,7 +44,7 @@ def part2(data):
 
 
 def moves_to_keys(moves, keys, pos_x=0, pos_y=0):
-    """Convert a list of move sequences to key codes
+    """Convert a list of move sequences to key codes.
 
     ## Example:
 
@@ -61,7 +61,7 @@ def moves_to_keys(moves, keys, pos_x=0, pos_y=0):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

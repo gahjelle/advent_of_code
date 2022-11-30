@@ -1,4 +1,4 @@
-"""AoC 2, 2018: Inventory Management System"""
+"""AoC 2, 2018: Inventory Management System."""
 
 # Standard library imports
 import collections
@@ -8,18 +8,18 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input.split("\n")
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     twos, threes = zip(*[has_counts(box_id, 2, 3) for box_id in data])
     return sum(twos) * sum(threes)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return next(
         match
         for first, second in itertools.product(data, repeat=2)
@@ -28,7 +28,7 @@ def part2(data):
 
 
 def has_counts(box_id, *counts):
-    """Check if box ID has the given counts of letters
+    """Check if box ID has the given counts of letters.
 
     ## Examples:
 
@@ -70,7 +70,7 @@ def almost_equal(first, second):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

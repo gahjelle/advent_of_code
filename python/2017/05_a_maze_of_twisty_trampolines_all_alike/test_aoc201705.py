@@ -1,4 +1,4 @@
-"""Tests for AoC 5, 2017: A Maze of Twisty Trampolines, All Alike"""
+"""Tests for AoC 5, 2017: A Maze of Twisty Trampolines, All Alike."""
 
 # Standard library imports
 import pathlib
@@ -23,15 +23,15 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [0, 3, 0, 1, -3]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201705.part1(example1) == 5
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201705.part2(example1) == 10

@@ -1,4 +1,4 @@
-"""Tests for AoC 1, 2020: Report Repair"""
+"""Tests for AoC 1, 2020: Report Repair."""
 
 # Standard library imports
 import pathlib
@@ -17,15 +17,15 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert set(example1) == {1721, 979, 366, 299, 675, 1456}
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202001.part1(example1) == 514579
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202001.part2(example1) == 241861950

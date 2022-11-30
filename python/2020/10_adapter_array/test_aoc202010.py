@@ -1,4 +1,4 @@
-"""Tests for AoC 10, 2020: Adapter Array"""
+"""Tests for AoC 10, 2020: Adapter Array."""
 
 # Standard library imports
 import pathlib
@@ -29,35 +29,35 @@ def example3():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [1, 3, 1, 1, 1, 3, 1, 1, 3, 1, 3, 3]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202010.part1(example1) == 35
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202010.part1(example2) == 220
 
 
 def test_part1_example3(example3):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202010.part1(example3) == 42
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202010.part2(example1) == 8
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202010.part2(example2) == 19_208
 
 
 def test_part2_example3(example3):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202010.part2(example3) == 1_053

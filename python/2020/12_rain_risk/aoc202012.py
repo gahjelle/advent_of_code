@@ -1,4 +1,4 @@
-"""AoC 12, 2020: Rain Risk"""
+"""AoC 12, 2020: Rain Risk."""
 
 # Standard library imports
 import enum
@@ -10,17 +10,17 @@ from dataclasses import dataclass
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [(instr[0], int(instr[1:])) for instr in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return move(data).manhattan()
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return move_with_waypoint(data).manhattan()
 
 
@@ -30,7 +30,7 @@ class Vector2D:
     y: int = 0
 
     def manhattan(self):
-        """Calculate L1-norm of vector
+        """Calculate L1-norm of vector.
 
         ## Examples:
 
@@ -42,7 +42,7 @@ class Vector2D:
         return abs(self.x) + abs(self.y)
 
     def rotate(self, angle):
-        """Rotate a vector around the origin
+        """Rotate a vector around the origin.
 
         ## Examples:
 
@@ -63,7 +63,7 @@ class Vector2D:
         )
 
     def __add__(self, other):
-        """Add two vectors together
+        """Add two vectors together.
 
         ## Example:
 
@@ -74,7 +74,7 @@ class Vector2D:
         return cls(self.x + other.x, self.y + other.y)
 
     def __mul__(self, value):
-        """Multiply a vector by a scalar
+        """Multiply a vector by a scalar.
 
         ## Example:
 
@@ -93,7 +93,7 @@ class Direction(enum.IntEnum):
 
     @functools.cached_property
     def unit(self):
-        """Unit vector in the given direction
+        """Unit vector in the given direction.
 
         ## Examples
 
@@ -111,7 +111,7 @@ class Direction(enum.IntEnum):
 
     @functools.cache
     def rotate(self, angle):
-        """Rotate from the given direction
+        """Rotate from the given direction.
 
         ## Examples:
 
@@ -131,7 +131,7 @@ class Direction(enum.IntEnum):
 
 
 def move(instructions, pos=Vector2D(0, 0), face=Direction.E):
-    """Move boat according to instructions
+    """Move boat according to instructions.
 
     ## Example:
 
@@ -152,7 +152,7 @@ def move(instructions, pos=Vector2D(0, 0), face=Direction.E):
 
 
 def move_with_waypoint(instructions, pos=Vector2D(0, 0), waypoint=Vector2D(10, 1)):
-    """Move waypoint and boat according to instructions
+    """Move waypoint and boat according to instructions.
 
     ## Example:
 
@@ -173,7 +173,7 @@ def move_with_waypoint(instructions, pos=Vector2D(0, 0), waypoint=Vector2D(10, 1
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 5, 2021: Hydrothermal Venture"""
+"""AoC 5, 2021: Hydrothermal Venture."""
 
 # Standard library imports
 import collections
@@ -8,7 +8,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [
         [int(xy) for points in line.split(" -> ") for xy in points.split(",")]
         for line in puzzle_input.split("\n")
@@ -16,19 +16,19 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return count_overlaps(
         (x1, y1, x2, y2) for x1, y1, x2, y2 in data if x1 == x2 or y1 == y2
     )
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return count_overlaps(data)
 
 
 def count_overlaps(lines):
-    """Count overlaps between a list of lines
+    """Count overlaps between a list of lines.
 
     ## Example:
 
@@ -40,7 +40,7 @@ def count_overlaps(lines):
 
 
 def points(line):
-    """List all points making up a line
+    """List all points making up a line.
 
     ## Examples:
 
@@ -78,7 +78,7 @@ def coords(start, stop):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

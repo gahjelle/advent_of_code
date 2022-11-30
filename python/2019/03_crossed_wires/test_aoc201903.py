@@ -1,4 +1,4 @@
-"""Tests for AoC 3, 2019: Crossed Wires"""
+"""Tests for AoC 3, 2019: Crossed Wires."""
 
 # Standard library imports
 import pathlib
@@ -29,7 +29,7 @@ def example3():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == (
         (
             [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0)]
@@ -45,30 +45,30 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201903.part1(example1) == 6
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201903.part1(example2) == 159
 
 
 def test_part1_example3(example3):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201903.part1(example3) == 135
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201903.part2(example1) == 30
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201903.part2(example2) == 610
 
 
 def test_part2_example3(example3):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201903.part2(example3) == 410

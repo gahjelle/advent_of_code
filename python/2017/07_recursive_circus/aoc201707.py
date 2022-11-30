@@ -1,4 +1,4 @@
-"""AoC 7, 2017: Recursive Circus"""
+"""AoC 7, 2017: Recursive Circus."""
 
 # Standard library imports
 import collections
@@ -14,7 +14,7 @@ PATTERN_SUPPORT = parse.compile("{name} ({weight:d}) -> {supported}")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     tree, weights = {}, {}
     for line in puzzle_input.split("\n"):
         if match := PATTERN_TOP.parse(line):
@@ -27,19 +27,19 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     tree, _ = data
     return find_root(tree)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     tree, weights = data
     return balance_nodes(tree, weights)
 
 
 def find_root(tree):
-    """Find the root of the tree as the only node that is not a child
+    """Find the root of the tree as the only node that is not a child.
 
     >>> find_root({"a": {"b", "c"}, "b": set(), "c": set()})
     'a'
@@ -48,7 +48,7 @@ def find_root(tree):
 
 
 def node_weight(node, tree, weights):
-    """Calculate the total weight of a node, including its children
+    """Calculate the total weight of a node, including its children.
 
     >>> node_weight("a", {"a": {"b", "c"}, "b": set(), "c": set()}, {"a": 1, "b": 2, "c": 4})
     7
@@ -62,7 +62,7 @@ def node_weight(node, tree, weights):
 
 
 def balance_nodes(tree, weights):
-    """Balance the nodes so that all siblings have the same total weight
+    """Balance the nodes so that all siblings have the same total weight.
 
     Assumes one node has the wrong weigth and returns the corrected weight.
 
@@ -91,7 +91,7 @@ def balance_nodes(tree, weights):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

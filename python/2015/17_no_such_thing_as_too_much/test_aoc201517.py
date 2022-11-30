@@ -1,4 +1,4 @@
-"""Tests for AoC 17, 2015: No Such Thing as Too Much"""
+"""Tests for AoC 17, 2015: No Such Thing as Too Much."""
 
 # Standard library imports
 import pathlib
@@ -17,15 +17,15 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [20, 15, 10, 5, 5]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201517.part1(example1, eggnog_volume=25) == 4
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201517.part2(example1, eggnog_volume=25) == 3

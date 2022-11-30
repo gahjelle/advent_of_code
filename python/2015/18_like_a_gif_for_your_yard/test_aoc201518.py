@@ -1,4 +1,4 @@
-"""Tests for AoC 18, 2015: Like a GIF For Your Yard"""
+"""Tests for AoC 18, 2015: Like a GIF For Your Yard."""
 
 # Standard library imports
 import pathlib
@@ -17,7 +17,7 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [
         [False, True, False, True, False, True],
         [False, False, False, True, True, False],
@@ -29,10 +29,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201518.part1(example1, num_steps=4) == 4
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201518.part2(example1, num_steps=5) == 17

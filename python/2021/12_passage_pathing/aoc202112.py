@@ -1,4 +1,4 @@
-"""AoC 12, 2021: Passage Pathing"""
+"""AoC 12, 2021: Passage Pathing."""
 
 # Standard library imports
 import collections
@@ -7,7 +7,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     caves = collections.defaultdict(list)
     for segment in puzzle_input.split("\n"):
         cave1, _, cave2 = segment.partition("-")
@@ -18,12 +18,12 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(find_paths(data, start="start", end="end"))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     paths = set()
     for extra in data:
         if extra.isupper() or extra == "start" or extra == "end":
@@ -33,7 +33,7 @@ def part2(data):
 
 
 def find_paths(caves, start, end, extra=""):
-    """Find all paths from start to end"""
+    """Find all paths from start to end."""
     paths = set()
     visit(start, caves, [], end, extra, paths)
     return paths
@@ -47,7 +47,7 @@ def visit(
     extra: str,
     paths: list[str],
 ):
-    """Visit next cave"""
+    """Visit next cave."""
     if current == end:
         paths.add(",".join(path + [current]))
         return
@@ -63,7 +63,7 @@ def visit(
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

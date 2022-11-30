@@ -1,4 +1,4 @@
-"""AoC 11, 2017: Hex Ed"""
+"""AoC 11, 2017: Hex Ed."""
 
 # Standard library imports
 import pathlib
@@ -19,22 +19,22 @@ DIRECTIONS = {
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return np.array([DIRECTIONS[step] for step in puzzle_input.split(",")])
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return np.max(np.abs(data.sum(axis=0)))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return np.max(np.abs(data.cumsum(axis=0)))
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

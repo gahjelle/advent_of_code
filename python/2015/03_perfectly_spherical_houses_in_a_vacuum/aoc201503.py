@@ -1,4 +1,4 @@
-"""AoC 3, 2015: Perfectly Spherical Houses in a Vacuum"""
+"""AoC 3, 2015: Perfectly Spherical Houses in a Vacuum."""
 
 # Standard library imports
 import pathlib
@@ -8,17 +8,17 @@ DIRECTIONS = {">": (1, 0), "<": (-1, 0), "^": (0, 1), "v": (0, -1)}
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [DIRECTIONS[arrow] for arrow in puzzle_input]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(visit(data))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     santa = visit(data[::2])
     robosanta = visit(data[1::2])
 
@@ -26,7 +26,7 @@ def part2(data):
 
 
 def visit(moves):
-    """Visit houses based on moves
+    """Visit houses based on moves.
 
     ## Example:
 
@@ -47,7 +47,7 @@ def visit(moves):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

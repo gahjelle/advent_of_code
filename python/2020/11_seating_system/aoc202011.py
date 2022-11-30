@@ -1,4 +1,4 @@
-"""AoC 11, 2020: Seating System"""
+"""AoC 11, 2020: Seating System."""
 
 # Standard library imports
 import pathlib
@@ -6,7 +6,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return {
         (row, col)
         for row, line in enumerate(puzzle_input.split("\n"))
@@ -16,17 +16,17 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(musical_chairs(closest_neighbors(data), tolerance=4))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return len(musical_chairs(visible_neighbors(data), tolerance=5))
 
 
 def closest_neighbors(seat_map):
-    """Calculate closest neighbors for each seat
+    """Calculate closest neighbors for each seat.
 
     ## Example:
 
@@ -56,7 +56,7 @@ def closest_neighbors(seat_map):
 
 
 def visible_neighbors(seat_map):
-    """Calculate visible neighbors for each seat
+    """Calculate visible neighbors for each seat.
 
     ## Example:
 
@@ -90,7 +90,7 @@ def visible_neighbors(seat_map):
 
 
 def visible_seat(seat_map, seat, direction, dimensions):
-    """Calculate first visible neighbor for one seat in one direction
+    """Calculate first visible neighbor for one seat in one direction.
 
     ## Example:
 
@@ -111,7 +111,7 @@ def visible_seat(seat_map, seat, direction, dimensions):
 
 
 def musical_chairs(neighbors, tolerance):
-    """Simulate the seating dance until it reaches equlibrium
+    """Simulate the seating dance until it reaches equlibrium.
 
     ## Example:
 
@@ -132,7 +132,7 @@ def musical_chairs(neighbors, tolerance):
 
 
 def move_seats(seats, neighbors, tolerance):
-    """Move all seats once over
+    """Move all seats once over.
 
     ## Example:
 
@@ -161,7 +161,7 @@ def move_seats(seats, neighbors, tolerance):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

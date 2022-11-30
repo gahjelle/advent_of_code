@@ -1,4 +1,4 @@
-"""AoC 4, 2015: The Ideal Stocking Stuffer"""
+"""AoC 4, 2015: The Ideal Stocking Stuffer."""
 
 # Standard library imports
 import hashlib
@@ -8,22 +8,22 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return first_md5(secret=data, prefix="0" * 5)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return first_md5(secret=data, prefix="0" * 6)
 
 
 def first_md5(secret, prefix):
-    """Find the first advent coin with the given prefix
+    """Find the first advent coin with the given prefix.
 
     ## Example:
 
@@ -39,7 +39,7 @@ def first_md5(secret, prefix):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

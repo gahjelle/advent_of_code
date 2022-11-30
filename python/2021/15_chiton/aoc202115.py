@@ -1,4 +1,4 @@
-"""AoC 15, 2021: Chiton"""
+"""AoC 15, 2021: Chiton."""
 
 # Standard library imports
 import heapq
@@ -15,24 +15,24 @@ colorama.init()
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return np.array(
         [[int(energy) for energy in line] for line in puzzle_input.split("\n")]
     )
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return find_cheapest(data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return find_cheapest(expand(data, 5, 5))
 
 
 def expand(risks, num_tile_rows, num_tile_cols):
-    """Expand risk map by tiling risks
+    """Expand risk map by tiling risks.
 
     >>> expand(np.array([[1, 4], [8, 9]]), 2, 2)
     array([[1, 4, 2, 5],
@@ -52,7 +52,7 @@ def expand(risks, num_tile_rows, num_tile_cols):
 
 
 def find_cheapest(risks):
-    """Find the cost of the cheapest path through the risk levels
+    """Find the cost of the cheapest path through the risk levels.
 
     Use a heap to keep track of the cheapest next step.
 
@@ -92,7 +92,7 @@ def find_cheapest(risks):
 
 
 def neighbors(current, num_rows, num_cols):
-    """Find neighbors to the current position
+    """Find neighbors to the current position.
 
     >>> list(neighbors((2, 2), 5, 5))
     [(1, 2), (2, 1), (2, 3), (3, 2)]
@@ -113,7 +113,7 @@ def neighbors(current, num_rows, num_cols):
 
 
 def visualize(risks, seen, current):
-    """Draw risks to terminal"""
+    """Draw risks to terminal."""
     for row, line in enumerate(risks):
         for col, risk in enumerate(line):
             symbol = (
@@ -127,7 +127,7 @@ def visualize(risks, seen, current):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

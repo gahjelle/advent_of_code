@@ -1,4 +1,4 @@
-"""Tests for AoC 22, 2015: Wizard Simulator 20XX"""
+"""Tests for AoC 22, 2015: Wizard Simulator 20XX."""
 
 # Standard library imports
 import pathlib
@@ -23,33 +23,33 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == aoc201522.Boss(hit_points=13, damage=8)
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     cost, attacks = aoc201522.part1(example1, hit_points=10, mana=250)
     assert cost == 226
     assert attacks == ["poison", "missile"]
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     cost, attacks = aoc201522.part1(example2, hit_points=10, mana=250)
     assert cost == 641
     assert attacks == ["recharge", "shield", "drain", "poison", "missile"]
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     cost, attacks = aoc201522.part2(example1, hit_points=10, mana=350)
     assert cost == 339
     assert attacks == ["shield", "poison", "missile"]
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     cost, attacks = aoc201522.part2(example2, hit_points=10, mana=350)
     assert cost == 754
     assert attacks == ["shield", "recharge", "drain", "shield", "poison", "missile"]

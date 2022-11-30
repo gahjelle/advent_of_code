@@ -1,4 +1,4 @@
-"""Tests for AoC 12, 2015: JSAbacusFramework.io"""
+"""Tests for AoC 12, 2015: JSAbacusFramework.io."""
 
 # Standard library imports
 import pathlib
@@ -23,25 +23,25 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [1, {"c": "red", "b": 2}, 3]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201512.part1(example1) == 6
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201512.part1(example2) == 21
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201512.part2(example1) == 4
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201512.part2(example2) == 6

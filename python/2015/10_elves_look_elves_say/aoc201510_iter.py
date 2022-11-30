@@ -1,4 +1,4 @@
-"""AoC 10, 2015: Elves Look, Elves Say"""
+"""AoC 10, 2015: Elves Look, Elves Say."""
 
 # Standard library imports
 import itertools
@@ -8,20 +8,20 @@ from dataclasses import dataclass
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return LookSayNumber(puzzle_input)
     return iter(LookSayNumber(puzzle_input))
 
 
 def part1(data, num_steps=40):
-    """Solve part 1"""
+    """Solve part 1."""
     for _ in range(num_steps):
         next(data)
     return data.num_digits
 
 
 def part2(data, num_additional_steps=10):
-    """Solve part 2"""
+    """Solve part 2."""
     for _ in range(num_additional_steps):
         next(data)
     return data.num_digits
@@ -62,7 +62,7 @@ class LookSayNumber:
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

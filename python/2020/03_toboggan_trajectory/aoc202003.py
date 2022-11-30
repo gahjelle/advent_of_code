@@ -1,4 +1,4 @@
-"""AoC 3, 2020: Toboggan Trajectory"""
+"""AoC 3, 2020: Toboggan Trajectory."""
 
 # Standard library imports
 import math
@@ -7,17 +7,17 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [[c == "#" for c in line] for line in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(trees(data))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return math.prod(
         [
             sum(trees(data, right=1, down=1)),
@@ -30,7 +30,7 @@ def part2(data):
 
 
 def trees(slope, right=3, down=1):
-    """Yield trees along the slope in the given direction
+    """Yield trees along the slope in the given direction.
 
     ## Examples:
 
@@ -53,7 +53,7 @@ def trees(slope, right=3, down=1):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

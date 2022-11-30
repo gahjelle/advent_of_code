@@ -1,4 +1,4 @@
-"""AoC 23, 2021: Amphipod"""
+"""AoC 23, 2021: Amphipod."""
 
 from __future__ import annotations
 
@@ -12,19 +12,19 @@ ENERGIES = {"A": 1, "B": 10, "C": 100, "D": 1000}
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return (
         puzzle_input.replace("#", "").replace(".", "").replace(" ", "").strip().split()
     )
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return move_to_target(*generate_burrow(data))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     lines = [data[0], "DCBA", "DBAC", data[1]]
     return move_to_target(*generate_burrow(lines))
 
@@ -116,7 +116,7 @@ def generate_burrow(amphipods):
 
 
 def get_hallway(row, col):
-    """Set up hallway neighbors"""
+    """Set up hallway neighbors."""
     blocking_rooms = [7 + 4 * pos + col for pos in range(row)]
     match col:
         case 0:
@@ -162,7 +162,7 @@ def get_hallway(row, col):
 
 
 def get_rooms(num_rows, hallway):
-    """Set up room neighbors"""
+    """Set up room neighbors."""
     neighbors = []
     for col, (distance, blocked_by) in enumerate(hallway):
         room_blockers = []
@@ -177,7 +177,7 @@ def get_rooms(num_rows, hallway):
 
 
 def all_at_target(layout, positions):
-    """Check if all amphipods are at their target locations"""
+    """Check if all amphipods are at their target locations."""
     return all(
         layout[position].target == amphipod
         for position, amphipod in enumerate(positions)
@@ -185,7 +185,7 @@ def all_at_target(layout, positions):
 
 
 def move_to_target(layout, positions):
-    """Move amphipods to their target spaces"""
+    """Move amphipods to their target spaces."""
     moves = []
     current_cost = 0
     handled = set()
@@ -201,7 +201,7 @@ def move_to_target(layout, positions):
 
 
 def possible_moves(layout, positions, energies=ENERGIES):
-    """List possible next moves from a given game state"""
+    """List possible next moves from a given game state."""
     for position, amphipod in enumerate(positions):
         target, neighbors, related = layout[position]
         if amphipod == ".":
@@ -243,7 +243,7 @@ def possible_moves(layout, positions, energies=ENERGIES):
 
 
 def show_burrow(layout, positions):
-    """Print out the current burrow"""
+    """Print out the current burrow."""
     p = {k: "." if not (a := positions.get(k)) else a for k in layout.keys()}
     print(f"{p[0]}{p[1]}.{p[2]}.{p[3]}.{p[4]}.{p[5]}{p[6]}")
     for idx in range(7, 23, 4):
@@ -253,7 +253,7 @@ def show_burrow(layout, positions):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

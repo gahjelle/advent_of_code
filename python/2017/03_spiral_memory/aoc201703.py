@@ -1,4 +1,4 @@
-"""AoC 3, 2017: Spiral Memory"""
+"""AoC 3, 2017: Spiral Memory."""
 
 # Standard library imports
 import math
@@ -7,24 +7,24 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return int(puzzle_input)
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(abs(xy) for xy in spiral_to_xy(data))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     for number in spiral_sequence():
         if number > data:
             return number
 
 
 def spiral_to_xy(index):
-    """Convert spiral index to xy-coordinates
+    """Convert spiral index to xy-coordinates.
 
     >>> spiral_to_xy(1)
     (0, 0)
@@ -60,7 +60,7 @@ def spiral_to_xy(index):
 
 
 def spiral_sequence():
-    """Generate spiral sequence
+    """Generate spiral sequence.
 
     >>> spiral = spiral_sequence()
     >>> next(spiral)
@@ -91,7 +91,7 @@ def spiral_sequence():
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

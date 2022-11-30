@@ -1,4 +1,4 @@
-"""Tests for AoC 12, 2021: Passage Pathing"""
+"""Tests for AoC 12, 2021: Passage Pathing."""
 
 # Standard library imports
 import pathlib
@@ -29,7 +29,7 @@ def example3():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == {
         "start": ["A", "b"],
         "A": ["start", "c", "b", "end"],
@@ -41,30 +41,30 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202112.part1(example1) == 10
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202112.part1(example2) == 19
 
 
 def test_part1_example3(example3):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202112.part1(example3) == 226
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202112.part2(example1) == 36
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202112.part2(example2) == 103
 
 
 def test_part2_example3(example3):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202112.part2(example3) == 3509

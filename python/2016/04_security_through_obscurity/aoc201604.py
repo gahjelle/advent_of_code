@@ -1,4 +1,4 @@
-"""AoC 4, 2016: Security Through Obscurity"""
+"""AoC 4, 2016: Security Through Obscurity."""
 
 # Standard library imports
 import collections

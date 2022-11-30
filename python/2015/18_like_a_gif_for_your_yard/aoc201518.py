@@ -1,4 +1,4 @@
-"""AoC 18, 2015: Like a GIF For Your Yard"""
+"""AoC 18, 2015: Like a GIF For Your Yard."""
 
 # Standard library imports
 import pathlib
@@ -8,12 +8,12 @@ import numpy as np
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [[light == "#" for light in row] for row in puzzle_input.split("\n")]
 
 
 def part1(data, num_steps=100):
-    """Solve part 1"""
+    """Solve part 1."""
     lights = np.array(data, dtype=np.uint8)
     for _ in range(num_steps):
         lights = animate_step(lights)
@@ -21,7 +21,7 @@ def part1(data, num_steps=100):
 
 
 def part2(data, num_steps=100):
-    """Solve part 2"""
+    """Solve part 2."""
     lights = keep_corners_on(np.array(data, dtype=np.uint8))
     for _ in range(num_steps):
         lights = keep_corners_on(animate_step(lights))
@@ -76,7 +76,7 @@ def animate_step(lights):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

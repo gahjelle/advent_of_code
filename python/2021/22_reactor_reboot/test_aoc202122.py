@@ -1,4 +1,4 @@
-"""Tests for AoC 22, 2021: Reactor Reboot"""
+"""Tests for AoC 22, 2021: Reactor Reboot."""
 
 # Standard library imports
 import pathlib
@@ -30,7 +30,7 @@ def example3():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [
         (True, "on", Cube(10, 12, 10, 12, 10, 12)),
         (True, "on", Cube(11, 13, 11, 13, 11, 13)),
@@ -41,25 +41,25 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202122.part1(example1) == 39
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202122.part1(example2) == 590_784
 
 
 def test_part1_example3(example3):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202122.part1(example3) == 474_140
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202122.part2(example1) == 39 + 140 * 236 * 212
 
 
 def test_part2_example3(example3):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202122.part2(example3) == 2_758_514_936_282_235

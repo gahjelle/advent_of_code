@@ -1,4 +1,4 @@
-"""AoC 11, 2015: Corporate Policy"""
+"""AoC 11, 2015: Corporate Policy."""
 
 
 # Standard library imports
@@ -11,17 +11,17 @@ INC = dict(zip(LETTERS[:-1], LETTERS[1:])) | {"i": "j", "l": "m", "o": "p", "z":
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return next_password(data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return next_password(increase_password(next_password(data)))
 
 
@@ -93,7 +93,7 @@ def is_valid(password):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

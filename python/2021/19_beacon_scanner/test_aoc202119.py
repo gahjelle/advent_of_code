@@ -1,4 +1,4 @@
-"""Tests for AoC 19, 2021: Beacon Scanner"""
+"""Tests for AoC 19, 2021: Beacon Scanner."""
 
 # Standard library imports
 import pathlib
@@ -24,7 +24,7 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert len(example1) == 2
     assert np.allclose(
         example1[0],
@@ -49,10 +49,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202119.part1(example2) == 79
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202119.part2(example2) == 3621

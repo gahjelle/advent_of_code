@@ -1,4 +1,4 @@
-"""AoC 2, 2020: Password Philosophy"""
+"""AoC 2, 2020: Password Philosophy."""
 
 # Standard library imports
 import pathlib
@@ -20,7 +20,7 @@ class PasswordPolicy:
 
     @classmethod
     def from_str(cls, line):
-        """Parse one line into a PasswordPolicy
+        """Parse one line into a PasswordPolicy.
 
         >>> PasswordPolicy.from_str("4-6 e: adventofcode")
         PasswordPolicy(first=4, second=6, char='e', password='adventofcode')
@@ -28,7 +28,7 @@ class PasswordPolicy:
         return cls(**PASSWORD_PATTERN.parse(line).named)
 
     def is_valid_count(self):
-        """Check if the password follows the count requirements
+        """Check if the password follows the count requirements.
 
         ## Examples:
 
@@ -41,7 +41,7 @@ class PasswordPolicy:
         return self.first <= self.password.count(self.char) <= self.second
 
     def is_valid_position(self):
-        """Check if the password follows the position requirements
+        """Check if the password follows the position requirements.
 
         ## Examples:
 
@@ -54,27 +54,27 @@ class PasswordPolicy:
         return self._has_char(self.first) != self._has_char(self.second)
 
     def _has_char(self, pos):
-        """Check if password has the character in the given position"""
+        """Check if password has the character in the given position."""
         return self.password[pos - 1] == self.char
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [PasswordPolicy.from_str(line) for line in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(policy.is_valid_count() for policy in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(policy.is_valid_position() for policy in data)
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""Tests for AoC 6, 2020: Custom Customs"""
+"""Tests for AoC 6, 2020: Custom Customs."""
 
 # Standard library imports
 import pathlib
@@ -23,22 +23,22 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [
         [{"a", "b", "c", "x"}, {"a", "b", "c", "y"}, {"a", "b", "c", "z"}]
     ]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202006.part1(example1) == 6
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202006.part1(example2) == 11
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202006.part2(example2) == 6

@@ -1,4 +1,4 @@
-"""AoC 6, 2017: Memory Reallocation"""
+"""AoC 6, 2017: Memory Reallocation."""
 
 # Standard library imports
 import functools
@@ -8,25 +8,26 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return tuple(int(number) for number in puzzle_input.split())
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     _, repeat = redistribute(data)
     return repeat
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     first, repeat = redistribute(data)
     return repeat - first
 
 
 @functools.cache
 def redistribute(memory_banks):
-    """Redistribute blocks among memory banks, report the first repeated configuration
+    """Redistribute blocks among memory banks, report the first repeated
+    configuration.
 
         7 0 1 2 -->  1 2 3 4  -->  2 3 4 1  -->  3 4 1 2  -->  4 1 2 3  -->  1 2 3 4
 
@@ -59,7 +60,7 @@ def redistribute(memory_banks):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 10, 2017: Knot Hash"""
+"""AoC 10, 2017: Knot Hash."""
 
 # Standard library imports
 import collections
@@ -8,10 +8,10 @@ import sys
 
 
 class CircleList(collections.UserList):
-    """A list which wraps around"""
+    """A list which wraps around."""
 
     def __getitem__(self, key):
-        """Handle keys that wrap around
+        """Handle keys that wrap around.
 
         >>> circle = CircleList(range(4))
         >>> circle[5]
@@ -31,7 +31,7 @@ class CircleList(collections.UserList):
                 return self.data[start:stop:step] + self.data[: key.stop % size : step]
 
     def __setitem__(self, key, value):
-        """Handle keys that wrap around
+        """Handle keys that wrap around.
 
         >>> circle = CircleList(range(4))
         >>> circle[6] = 66
@@ -55,7 +55,7 @@ class CircleList(collections.UserList):
                 self.data[: key.stop % size : step] = value[first:]
 
     def reverse(self, index, length):
-        """Reverse length number of elements starting at the given index
+        """Reverse length number of elements starting at the given index.
 
         >>> circle = CircleList(range(4))
         >>> circle.reverse(2, 3)
@@ -66,12 +66,12 @@ class CircleList(collections.UserList):
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input
 
 
 def part1(data, circle_length=256):
-    """Solve part 1"""
+    """Solve part 1."""
     lengths = [int(number) for number in data.split(",")]
     circle = CircleList(range(circle_length))
     first, second, *_ = tie_knots(circle, lengths)
@@ -79,7 +79,7 @@ def part1(data, circle_length=256):
 
 
 def part2(data, circle_length=256):
-    """Solve part 2"""
+    """Solve part 2."""
     lengths = input_to_lengths(data)
     circle = CircleList(range(circle_length))
     sparse_hash = tie_knots(circle, lengths, num_rounds=64)
@@ -88,7 +88,7 @@ def part2(data, circle_length=256):
 
 
 def input_to_lengths(input):
-    """Convert input to their ASCII codes, add fixed suffix
+    """Convert input to their ASCII codes, add fixed suffix.
 
     >>> input_to_lengths("1,2,3")
     [49, 44, 50, 44, 51, 17, 31, 73, 47, 23]
@@ -97,7 +97,7 @@ def input_to_lengths(input):
 
 
 def tie_knots(circle, lengths, num_rounds=1):
-    """Tie knots on a circular list
+    """Tie knots on a circular list.
 
     0: [0]  1   2   3   --> ([0]) 1   2   3   -->  [0]  1   2   3
     1:  0  [1]  2   3   -->   0 ([1]  2   3)  -->   0  [3]  2   1
@@ -125,7 +125,7 @@ def tie_knots(circle, lengths, num_rounds=1):
 
 
 def sparse_to_dense_hash(sparse_hash):
-    """Calculate dense from sparse hash
+    """Calculate dense from sparse hash.
 
     >>> sparse_to_dense_hash([n % 15 for n in range(256)])
     [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 15]
@@ -137,7 +137,7 @@ def sparse_to_dense_hash(sparse_hash):
 
 
 def as_hex(hash):
-    """Represent hash as a hexadecimal number
+    """Represent hash as a hexadecimal number.
 
     >>> as_hex([64, 7, 255])
     '4007ff'
@@ -146,7 +146,7 @@ def as_hex(hash):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

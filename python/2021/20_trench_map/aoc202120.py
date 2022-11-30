@@ -1,4 +1,4 @@
-"""AoC 20, 2021: Trench Map"""
+"""AoC 20, 2021: Trench Map."""
 
 # Standard library imports
 import pathlib
@@ -13,7 +13,7 @@ class Image:
     infinity_light: bool = False
 
     def __post_init__(self):
-        """Calculate dimensions of the image
+        """Calculate dimensions of the image.
 
         >>> Image.from_str("#\\n\\n#..\\n##.\\n.#.").bbox
         (0, 0, 2, 1)
@@ -29,7 +29,7 @@ class Image:
 
     @classmethod
     def from_str(cls, text):
-        """Create an image from a string"""
+        """Create an image from a string."""
         enhancer, grid, *_ = text.split("\n\n")
         return cls(
             enhancer,
@@ -43,7 +43,7 @@ class Image:
 
     @property
     def rows(self):
-        """The rows of the image, including one buffer row on each side
+        """The rows of the image, including one buffer row on each side.
 
         >>> Image.from_str("#\\n\\n#..\\n##.\\n.#.").rows
         range(-1, 4)
@@ -53,7 +53,7 @@ class Image:
 
     @property
     def cols(self):
-        """The columns of the image, including one buffer column on each side
+        """The columns of the image, including one buffer column on each side.
 
         >>> list(Image.from_str("#\\n\\n#..\\n##.\\n.#.").cols)
         [-1, 0, 1, 2]
@@ -62,12 +62,12 @@ class Image:
         return range(min_x - 1, max_x + 2)
 
     def is_enhanced(self, row, col):
-        """Find the enhanced pixel at the given row and column"""
+        """Find the enhanced pixel at the given row and column."""
         bin = "".join("1" if nb else "0" for nb in self.neighbors(row, col))
         return self.enhancer[int(bin, base=2)] == "#"
 
     def neighbors(self, row, col):
-        """The neighbors of a pixel, in enhancement order
+        """The neighbors of a pixel, in enhancement order.
 
         Handle infinite grid by simulating a light for neighbors
         outside the grid if infinity is lit up.
@@ -92,7 +92,7 @@ class Image:
                 yield True
 
     def enhance(self):
-        """Run one step of the enhancement algorithm"""
+        """Run one step of the enhancement algorithm."""
         new_grid = {
             (row, col)
             for row in self.rows
@@ -110,7 +110,7 @@ class Image:
         return cls(enhancer=self.enhancer, grid=new_grid, infinity_light=infinity_light)
 
     def __len__(self):
-        """Number of lit pixels in the image
+        """Number of lit pixels in the image.
 
         >>> len(Image.from_str("#\\n\\n#..\\n##.\\n.#."))
         4
@@ -119,24 +119,24 @@ class Image:
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return Image.from_str(puzzle_input)
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(data.enhance().enhance())
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     for _ in range(50):
         data = data.enhance()
     return len(data)
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

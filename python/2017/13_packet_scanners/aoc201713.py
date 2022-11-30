@@ -1,4 +1,4 @@
-"""AoC 13, 2017: Packet Scanners"""
+"""AoC 13, 2017: Packet Scanners."""
 
 # Standard library imports
 import math
@@ -7,7 +7,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return dict(
         [int(number) for number in line.split(": ")]
         for line in puzzle_input.split("\n")
@@ -15,13 +15,13 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     caught = [depth for depth, range in data.items() if scanner(range, depth) == 0]
     return sum(depth * data[depth] for depth in caught)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     all_periods = {2 * (rng - 1) for rng in data.values()}
     full_cycle = math.lcm(*all_periods)
     all_delays = set(range(2, full_cycle, 4))
@@ -38,7 +38,7 @@ def part2(data):
 
 
 def scanner(range, timestamp):
-    """Calculate location of scanner at a given timestamp
+    """Calculate location of scanner at a given timestamp.
 
     >>> scanner(4, 0)
     0
@@ -64,7 +64,7 @@ def scanner(range, timestamp):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

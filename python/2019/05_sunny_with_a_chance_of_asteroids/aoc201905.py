@@ -1,4 +1,4 @@
-"""AoC 5, 2019: Sunny with a Chance of Asteroids"""
+"""AoC 5, 2019: Sunny with a Chance of Asteroids."""
 
 # Standard library imports
 import pathlib
@@ -9,28 +9,28 @@ from aoc import intcode
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [int(number) for number in puzzle_input.split(",")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     computer = intcode.IntcodeComputer(data, input=[1])
     for output in computer:
-        """Ignore all but the last output"""
+        """Ignore all but the last output."""
     return output
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     computer = intcode.IntcodeComputer(data, input=[5])
     for output in computer:
-        """Ignore all but the last output"""
+        """Ignore all but the last output."""
     return output
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

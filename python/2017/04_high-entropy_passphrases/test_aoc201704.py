@@ -1,4 +1,4 @@
-"""Tests for AoC 4, 2017: High-Entropy Passphrases"""
+"""Tests for AoC 4, 2017: High-Entropy Passphrases."""
 
 # Standard library imports
 import pathlib
@@ -23,7 +23,7 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [
         ["aa", "bb", "cc", "dd", "ee"],
         ["aa", "bb", "cc", "dd", "aa"],
@@ -32,10 +32,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201704.part1(example1) == 2
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201704.part2(example2) == 3

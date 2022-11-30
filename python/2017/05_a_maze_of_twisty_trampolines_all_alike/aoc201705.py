@@ -1,4 +1,4 @@
-"""AoC 5, 2017: A Maze of Twisty Trampolines, All Alike"""
+"""AoC 5, 2017: A Maze of Twisty Trampolines, All Alike."""
 
 # Standard library imports
 import itertools
@@ -7,22 +7,22 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [int(line) for line in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return jump_outside(data.copy())
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return conditional_jump_outside(data.copy(), threshold=3)
 
 
 def jump_outside(offsets):
-    """Count steps to jump outside of offsets
+    """Count steps to jump outside of offsets.
 
         (0)  1
         (1)  1
@@ -43,7 +43,8 @@ def jump_outside(offsets):
 
 
 def conditional_jump_outside(offsets, threshold):
-    """Count steps to jump outside of offsets, decrease offsets if they are above threshold
+    """Count steps to jump outside of offsets, decrease offsets if they are
+    above threshold.
 
         (0)  3   0   0   -1
         (1)  3   0   0   -1
@@ -69,7 +70,7 @@ def conditional_jump_outside(offsets, threshold):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

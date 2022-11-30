@@ -1,4 +1,4 @@
-"""AoC 17, 2020: Conway Cubes"""
+"""AoC 17, 2020: Conway Cubes."""
 
 # Standard library imports
 import collections
@@ -8,7 +8,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return {
         (row, col, 0, 0)
         for row, line in enumerate(puzzle_input.split("\n"))
@@ -18,19 +18,19 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     neighbors = list_neighbors((-1, 0, 1), (-1, 0, 1), (-1, 0, 1), (0,))
     return len(evolve_several(data, neighbors, num_generations=6))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     neighbors = list_neighbors((-1, 0, 1), (-1, 0, 1), (-1, 0, 1), (-1, 0, 1))
     return len(evolve_several(data, neighbors, num_generations=6))
 
 
 def list_neighbors(*diffs):
-    """Enumerate all neighbors
+    """Enumerate all neighbors.
 
     ## Example:
 
@@ -41,7 +41,7 @@ def list_neighbors(*diffs):
 
 
 def evolve(cubes, neighbors):
-    """Evolve the cubes one generation
+    """Evolve the cubes one generation.
 
     ## Example:
 
@@ -69,7 +69,7 @@ def evolve(cubes, neighbors):
 
 
 def evolve_several(cubes, neighbors, num_generations):
-    """Evolve the cubes several generations
+    """Evolve the cubes several generations.
 
     ## Example
 
@@ -94,7 +94,7 @@ def evolve_several(cubes, neighbors, num_generations):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

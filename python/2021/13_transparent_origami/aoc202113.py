@@ -1,4 +1,4 @@
-"""AoC 13, 2021: Transparent Origami"""
+"""AoC 13, 2021: Transparent Origami."""
 
 # Standard library imports
 import pathlib
@@ -15,18 +15,18 @@ FOLD_PATTERN = parse.compile("fold along {xy}={line:d}")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     dots, _, folds = puzzle_input.partition("\n\n")
     return (parse_dots(dots), parse_folds(folds))
 
 
 def parse_dots(dots):
-    """Parse list of dots"""
+    """Parse list of dots."""
     return {(int(x), int(y)) for x, y in [dot.split(",") for dot in dots.split("\n")]}
 
 
 def parse_folds(folds):
-    """Parse list of folds"""
+    """Parse list of folds."""
     return [
         (match["xy"], match["line"])
         for match in [FOLD_PATTERN.parse(line) for line in folds.split("\n")]
@@ -34,13 +34,13 @@ def parse_folds(folds):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     dots, folds = data
     return len(fold(dots, folds[:1]))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     text = draw_dots(fold(*data))
 
     if "--viz" in sys.argv:
@@ -50,7 +50,7 @@ def part2(data):
 
 
 def fold(dots, folds):
-    """Perform folds on dots
+    """Perform folds on dots.
 
     >>> dots = fold({(0, 0), (1, 1), (3, 0), (4, 0)}, [("x", 2)])
     >>> sorted(dots)
@@ -66,7 +66,7 @@ def fold(dots, folds):
 
 
 def draw_dots(dots):
-    """Create a text string visualizing the dots
+    """Create a text string visualizing the dots.
 
     >>> print(draw_dots({(0, 0), (0, 2), (1,0), (1, 1), (1, 2), (2, 0), (2, 2)}))
     ###
@@ -82,7 +82,7 @@ def draw_dots(dots):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

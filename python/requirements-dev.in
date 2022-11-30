@@ -2,6 +2,7 @@
 
 black
 codetiming
+docformatter
 flake8
 html2text
 ipython

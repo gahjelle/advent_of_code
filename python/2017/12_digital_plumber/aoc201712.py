@@ -1,4 +1,4 @@
-"""AoC 12, 2017: Digital Plumber"""
+"""AoC 12, 2017: Digital Plumber."""
 
 # Standard library imports
 import pathlib
@@ -6,12 +6,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return dict(parse_pipe(line) for line in puzzle_input.split("\n"))
 
 
 def parse_pipe(pipe):
-    """Parse a line describing pipes from one program to others
+    """Parse a line describing pipes from one program to others.
 
     >>> parse_pipe("1 <-> 1")
     (1, [1])
@@ -24,17 +24,17 @@ def parse_pipe(pipe):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(find_cluster(data, root_id=0))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return len(find_clusters(data))
 
 
 def find_cluster(pipes, root_id):
-    """Find cluster containing root
+    """Find cluster containing root.
 
     >>> cluster = find_cluster({0: [1, 2], 1: [0, 2], 2: [0, 1], 3: [3]}, 0)
     >>> sorted(cluster)
@@ -54,7 +54,7 @@ def find_cluster(pipes, root_id):
 
 
 def find_clusters(pipes):
-    """Find all clusters
+    """Find all clusters.
 
     >>> clusters = find_clusters({0: [1, 2], 1: [0, 2], 2: [0, 1], 3: [3]})
     >>> [sorted(cluster) for cluster in clusters]
@@ -72,7 +72,7 @@ def find_clusters(pipes):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

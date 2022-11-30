@@ -1,4 +1,4 @@
-"""AoC 17, 2015: No Such Thing as Too Much"""
+"""AoC 17, 2015: No Such Thing as Too Much."""
 
 # Standard library imports
 import collections
@@ -7,7 +7,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input
+    """Parse input.
 
     Order numbers so that breadth-first search breaks out as early as possible.
     """
@@ -17,12 +17,12 @@ def parse_data(puzzle_input):
 
 
 def part1(data, eggnog_volume=150):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(list(breadth_first(data, eggnog_volume)))
 
 
 def part2(data, eggnog_volume=150):
-    """Solve part 2"""
+    """Solve part 2."""
     num_containers = collections.Counter(
         len(containers) for containers in breadth_first(data, eggnog_volume)
     )
@@ -46,7 +46,7 @@ def breadth_first(numbers, target, current=()):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

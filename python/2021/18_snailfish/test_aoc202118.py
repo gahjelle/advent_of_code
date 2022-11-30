@@ -1,4 +1,4 @@
-"""Tests for AoC 18, 2021: Snailfish"""
+"""Tests for AoC 18, 2021: Snailfish."""
 
 # Standard library imports
 import pathlib
@@ -23,7 +23,7 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [
         [(1, 1), (1, 1)],
         [(1, 2), (1, 2)],
@@ -34,20 +34,20 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202118.part1(example1) == 1027
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202118.part1(example2) == 4140
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202118.part2(example1) == 469
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202118.part2(example2) == 3993

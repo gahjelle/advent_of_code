@@ -6,12 +6,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_command(command) for command in puzzle_input.split("\n")]
 
 
 def parse_command(command):
-    """Parse one command
+    """Parse one command.
 
     >>> parse_command("forward 12")
     (12, 0)
@@ -32,12 +32,12 @@ def parse_command(command):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(dhpos for dhpos, _ in data) * sum(ddepth for _, ddepth in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     horizontal_pos, depth, aim = 0, 0, 0
     for command in data:
         match command:
@@ -51,7 +51,7 @@ def part2(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

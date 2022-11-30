@@ -1,4 +1,4 @@
-"""Tests for AoC 20, 2015: Infinite Elves and Infinite Houses"""
+"""Tests for AoC 20, 2015: Infinite Elves and Infinite Houses."""
 
 # Standard library imports
 import pathlib
@@ -23,15 +23,15 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == 260
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201520.part1(example1) == 12
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201520.part2(example1, max_houses=3) == 16

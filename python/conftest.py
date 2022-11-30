@@ -1,4 +1,4 @@
-"""Custom configuration of pytest"""
+"""Custom configuration of pytest."""
 
 # Standard library imports
 import pathlib
@@ -8,7 +8,7 @@ import pytest
 
 
 def pytest_configure(config):
-    """Add custom markers from the configuration"""
+    """Add custom markers from the configuration."""
     years = [p.name for p in pathlib.Path(__file__).parent.glob("2*")]
 
     for year in years:
@@ -16,7 +16,7 @@ def pytest_configure(config):
 
 
 def pytest_collection_modifyitems(config, items):
-    """Add marks based the year of the puzzle"""
+    """Add marks based the year of the puzzle."""
     cfgs = {}
 
     for item in items:

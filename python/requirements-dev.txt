@@ -36,6 +36,8 @@ colorama==0.4.6
     # via -r requirements.txt
 decorator==5.1.1
     # via ipython
+docformatter==1.5.0
+    # via -r requirements-dev.in
 executing==1.2.0
     # via stack-data
 flake8==6.0.0
@@ -135,6 +137,8 @@ termcolor==2.1.1
     # via
     #   -r requirements.txt
     #   advent-of-code-data
+tomli==2.0.1
+    # via docformatter
 traitlets==5.5.0
     # via
     #   ipython
@@ -147,6 +151,8 @@ tzlocal==4.2
     # via
     #   -r requirements.txt
     #   advent-of-code-data
+untokenize==0.1.1
+    # via docformatter
 urllib3==1.26.13
     # via
     #   -r requirements.txt

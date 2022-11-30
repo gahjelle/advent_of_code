@@ -1,4 +1,4 @@
-"""Tests for AoC 3, 2018: No Matter How You Slice It"""
+"""Tests for AoC 3, 2018: No Matter How You Slice It."""
 
 # Standard library imports
 import pathlib
@@ -23,25 +23,25 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == {1: [(4, 2), (4, 3)], 2: [(3, 3)], 3: [(3, 2), (4, 2)]}
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201803.part1(example1) == 1
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201803.part1(example2) == 4
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201803.part2(example1) == 2
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201803.part2(example2) == 3

@@ -1,4 +1,4 @@
-"""AoC 3, 2016: Squares With Three Sides"""
+"""AoC 3, 2016: Squares With Three Sides."""
 
 # Standard library imports
 import itertools
@@ -7,7 +7,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [
         [int(side) for side in triangle.split()]
         for triangle in puzzle_input.split("\n")
@@ -15,17 +15,17 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(is_triangle(side_lengths) for side_lengths in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(is_triangle(side_lengths) for side_lengths in transpose(data))
 
 
 def is_triangle(side_lengths):
-    """Check that the given side lengths represent a valid triangle
+    """Check that the given side lengths represent a valid triangle.
 
     ## Examples:
 
@@ -42,7 +42,7 @@ def is_triangle(side_lengths):
 
 
 def transpose(triangles):
-    """Transpose list of triangles
+    """Transpose list of triangles.
 
     ## Example:
 
@@ -54,7 +54,7 @@ def transpose(triangles):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

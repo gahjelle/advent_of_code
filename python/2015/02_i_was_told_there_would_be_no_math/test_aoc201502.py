@@ -1,4 +1,4 @@
-"""Tests for AoC 2, 2015: I Was Told There Would Be No Math"""
+"""Tests for AoC 2, 2015: I Was Told There Would Be No Math."""
 
 # Standard library imports
 import pathlib
@@ -17,15 +17,15 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [aoc201502.Present(2, 3, 4), aoc201502.Present(1, 1, 10)]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201502.part1(example1) == 58 + 43
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201502.part2(example1) == 34 + 14

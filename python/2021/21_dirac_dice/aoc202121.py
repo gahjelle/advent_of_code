@@ -1,4 +1,4 @@
-"""AoC 21, 2021: Dirac Dice"""
+"""AoC 21, 2021: Dirac Dice."""
 
 # Standard library imports
 import collections
@@ -8,18 +8,18 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return tuple(int(player.split()[-1]) for player in puzzle_input.split("\n"))
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     num_rolls, scores = play_dice(data, dice=itertools.cycle(range(1, 101)))
     return num_rolls * min(scores)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return max(
         play_dirac_dice(
             data,
@@ -29,7 +29,7 @@ def part2(data):
 
 
 def play_dice(positions, dice, target=1000):
-    """Play a game of dice
+    """Play a game of dice.
 
     Example with dice cycling 1 -> 2 -> 3 -> 4 -> 5 -> 1 ..., target score 30 and
     both players starting at position 1:
@@ -69,7 +69,7 @@ def play_dice(positions, dice, target=1000):
 
 
 def play_dirac_dice(positions, dice, target=21):
-    """Play a game of universe splitting dirac dice
+    """Play a game of universe splitting dirac dice.
 
     Small example with outcomes 1 and 2 and target score 7, starting at 1, 2:
 
@@ -129,7 +129,7 @@ def play_dirac_dice(positions, dice, target=21):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

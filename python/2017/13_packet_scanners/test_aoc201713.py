@@ -1,4 +1,4 @@
-"""Tests for AoC 13, 2017: Packet Scanners"""
+"""Tests for AoC 13, 2017: Packet Scanners."""
 
 # Standard library imports
 import pathlib
@@ -23,15 +23,15 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == {0: 3, 1: 2, 4: 4, 6: 4}
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201713.part1(example1) == 24
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201713.part2(example1) == 10

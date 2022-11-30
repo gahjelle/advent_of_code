@@ -1,4 +1,4 @@
-"""AoC 8, 2021: Seven Segment Search"""
+"""AoC 8, 2021: Seven Segment Search."""
 
 # Standard library imports
 import pathlib
@@ -19,12 +19,12 @@ DIGITS = {
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_line(line) for line in puzzle_input.split("\n")]
 
 
 def parse_line(line):
-    """Parse one line of input
+    """Parse one line of input.
 
     >>> parse_line("acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab | "
     ...            "cdfeb fcadb cdfeb cdbaf")
@@ -40,12 +40,12 @@ def parse_line(line):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(count_unique(line["output"]) for line in data)
 
 
 def count_unique(words):
-    """Count words with unique digit lengths
+    """Count words with unique digit lengths.
 
     >>> count_unique(["abcdefg", "bcdef", "abd", "abef"])
     3
@@ -54,7 +54,7 @@ def count_unique(words):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(
         convert_digits(line["output"], deduce_digits(line["input"] + line["output"]))
         for line in data
@@ -62,7 +62,7 @@ def part2(data):
 
 
 def convert_digits(digits, mapping):
-    """Use mapping to convert digits into a number
+    """Use mapping to convert digits into a number.
 
     >>> convert_digits(["bcdef", "abcdf", "bcdef", "abcdf"], "deafgbc")
     5353
@@ -73,7 +73,7 @@ def convert_digits(digits, mapping):
 
 
 def deduce_digits(digits):
-    """Deduce the mapping that works for the given digits
+    """Deduce the mapping that works for the given digits.
 
     >>> deduce_digits(
     ...     ["abcdefg", "bcdef", "acdfg", "abcdf", "abd", "abcdef", "bcdefg",
@@ -99,7 +99,7 @@ def deduce_digits(digits):
 
 
 def build_alternatives(digits):
-    """Set up alternatives for each mapping, based on the given digits
+    """Set up alternatives for each mapping, based on the given digits.
 
     >>> alternatives = build_alternatives(
     ...     ["abcdefg", "bcdef", "acdfg", "abcdf", "abd", "abcdef", "bcdefg",
@@ -135,7 +135,7 @@ def build_alternatives(digits):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

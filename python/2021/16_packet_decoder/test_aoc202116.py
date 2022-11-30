@@ -1,4 +1,4 @@
-"""Tests for AoC 16, 2021: Packet Decoder"""
+"""Tests for AoC 16, 2021: Packet Decoder."""
 
 # Standard library imports
 import pathlib
@@ -35,30 +35,30 @@ def example4():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == "110100101111111000101000"
 
 
 def test_parse_example2(example2):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example2 == "00100100000000000110111101000101001010010001001000000000"
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202116.part1(example1) == 6
 
 
 def test_part1_example3(example3):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202116.part1(example3) == 16
 
 
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202116.part2(example2) == 10 * 20
 
 
 def test_part2_example4(example4):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202116.part2(example4) == 1

@@ -1,4 +1,4 @@
-"""AoC 23, 2015: Opening the Turing Lock"""
+"""AoC 23, 2015: Opening the Turing Lock."""
 
 # Standard library imports
 import pathlib
@@ -14,23 +14,23 @@ def register_instruction(func):
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_instruction(line) for line in puzzle_input.split("\n")]
 
 
 def parse_instruction(line):
-    """Parse one line of instruction"""
+    """Parse one line of instruction."""
     instruction, _, arguments = line.partition(" ")
     return instruction, arguments.replace(",", " ").split()
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return run_program(data)["b"]
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return run_program(data, a=1)["b"]
 
 
@@ -85,7 +85,7 @@ def jio(registers, register, offset):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

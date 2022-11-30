@@ -1,4 +1,4 @@
-"""Tests for AoC 20, 2021: Trench Map"""
+"""Tests for AoC 20, 2021: Trench Map."""
 
 # Standard library imports
 import pathlib
@@ -17,7 +17,7 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert len(example1.enhancer) == 512
     assert example1.grid == {
         (0, 0),
@@ -34,10 +34,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202120.part1(example1) == 35
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202120.part2(example1) == 3351

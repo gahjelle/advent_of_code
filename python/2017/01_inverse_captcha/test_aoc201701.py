@@ -1,4 +1,4 @@
-"""Tests for AoC 1, 2017: Inverse Captcha"""
+"""Tests for AoC 1, 2017: Inverse Captcha."""
 
 # Standard library imports
 import pathlib
@@ -29,15 +29,15 @@ def example9():
 
 
 def test_parse_example7(example7):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example7 == [1, 2, 3, 4, 2, 5]
 
 
 def test_part1_example4(example4):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201701.part1(example4) == 9
 
 
 def test_part2_example9(example9):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201701.part2(example9) == 4

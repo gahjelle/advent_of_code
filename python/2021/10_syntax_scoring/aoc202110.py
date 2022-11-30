@@ -1,4 +1,4 @@
-"""AoC 10, 2021: Syntax Scoring"""
+"""AoC 10, 2021: Syntax Scoring."""
 
 # Standard library imports
 import pathlib
@@ -9,17 +9,17 @@ PAIRS = {"(": ")", "[": "]", "{": "}", "<": ">"}
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input.split("\n")
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(score_char(illegal_char(chunk)) for chunk in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     chunks = [
         left_over
         for chunk in data
@@ -29,8 +29,8 @@ def part2(data):
 
 
 def illegal_char(chunk):
-    """Find the first illegal character, or close up chunk if there are
-       no illegal characters
+    """Find the first illegal character, or close up chunk if there are no
+    illegal characters.
 
     >>> illegal_char("({}<)>")
     ')'
@@ -53,7 +53,7 @@ def illegal_char(chunk):
 
 
 def score_char(char):
-    """Score illegal character
+    """Score illegal character.
 
     >>> score_char("}")
     1197
@@ -75,7 +75,7 @@ def score_char(char):
 
 
 def score_chunk(chunk, score=0):
-    """Score left over chunk
+    """Score left over chunk.
 
     >>> score_chunk(["]", ")", "}", ">"])
     294
@@ -94,7 +94,7 @@ def score_chunk(chunk, score=0):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

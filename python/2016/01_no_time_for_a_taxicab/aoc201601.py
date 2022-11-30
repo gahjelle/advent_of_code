@@ -1,4 +1,4 @@
-"""AoC 1, 2016: No Time for a Taxicab"""
+"""AoC 1, 2016: No Time for a Taxicab."""
 
 # Standard library imports
 import pathlib
@@ -6,12 +6,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [(step[0], int(step[1:])) for step in puzzle_input.split(", ")]
 
 
 class AlreadyVisited(Exception):
-    """Note that a position has already been visited"""
+    """Note that a position has already been visited."""
 
 
 class EasterBunnyPath:
@@ -24,21 +24,21 @@ class EasterBunnyPath:
     units = {"N": (0, 1), "E": (1, 0), "S": (0, -1), "W": (-1, 0)}
 
     def __init__(self, position=(0, 0), direction="N", raise_at_first_crossing=False):
-        """Initialize"""
+        """Initialize."""
         self.position = position
         self.direction = direction
         self.raise_at_first_crossing = raise_at_first_crossing
         self.seen = {self.position}
 
     def walk(self, steps):
-        """Walk the given steps"""
+        """Walk the given steps."""
         for turn, num_steps in steps:
             self.direction = self.turns[self.direction][turn]
             for _ in range(num_steps):
                 self.step()
 
     def step(self):
-        """Take a step"""
+        """Take a step."""
         px, py = self.position
         dx, dy = self.units[self.direction]
         self.position = (px + dx, py + dy)
@@ -50,13 +50,13 @@ class EasterBunnyPath:
 
     @property
     def distance(self):
-        """Calculate the taxicab distance"""
+        """Calculate the taxicab distance."""
         px, py = self.position
         return abs(px) + abs(py)
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     path = EasterBunnyPath()
     path.walk(data)
 
@@ -64,7 +64,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     path = EasterBunnyPath(raise_at_first_crossing=True)
     try:
         path.walk(data)
@@ -73,7 +73,7 @@ def part2(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 17, 2021: Trick Shot
+"""AoC 17, 2021: Trick Shot.
 
 Model the trajectory using the formulas:
 
@@ -32,13 +32,13 @@ AREA_PATTERN = parse.compile(
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     area = AREA_PATTERN.parse(puzzle_input)
     return ((area["x_min"], area["x_max"]), (area["y_min"], area["y_max"]))
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     _, (min_y, max_y) = data
     y0 = highest_y0(min_y, max_y)
 
@@ -46,18 +46,18 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     x_range, y_range = data
     return len(valid_initials(*x_range, *y_range))
 
 
 def position(v0, t):
-    """Calculate position based on initial speed and time step"""
+    """Calculate position based on initial speed and time step."""
     return int((v0 + 0.5) * t - 0.5 * t**2)
 
 
 def highest_y0(min_y, max_y):
-    """Find the highest initial y that crosses the target area
+    """Find the highest initial y that crosses the target area.
 
     If the target area is below ground, the highest shot will touch the bottom
     of the target area at the first step below zero, y(2y0 + 2) = -y0 - 1:
@@ -82,7 +82,7 @@ def highest_y0(min_y, max_y):
 
 
 def all_valid_x0(min_x, max_x):
-    """Calculate valid values for initial x speed
+    """Calculate valid values for initial x speed.
 
     The x position stops increasing at t = x0. The maximum x position is
     therefore given by x(x0) = (x0 + 0.5)x0 - 0.5 x0² = 0.5(x0² + x0).
@@ -101,7 +101,7 @@ def all_valid_x0(min_x, max_x):
 
 
 def valid_t(x0, min_x, max_x, min_y, max_y):
-    """Calculate time steps when x is within range, given initial x"""
+    """Calculate time steps when x is within range, given initial x."""
     t_first = math.ceil((2 * x0 + 1 - math.sqrt((2 * x0 + 1) ** 2 - 8 * min_x)) / 2)
     if x0 < (-1 + math.sqrt(1 + 8 * max_x)) / 2:
         t_last = 2 * max(-min_y, max_y)
@@ -112,7 +112,7 @@ def valid_t(x0, min_x, max_x, min_y, max_y):
 
 
 def valid_y0(t, min_y, max_y):
-    """Find valid values for initial y for given t"""
+    """Find valid values for initial y for given t."""
     y_first = math.ceil((min_y - (t - t**2) / 2) / t)
     y_last = math.floor((max_y - (t - t**2) / 2) / t)
 
@@ -120,7 +120,7 @@ def valid_y0(t, min_y, max_y):
 
 
 def valid_initials(min_x, max_x, min_y, max_y):
-    """Calculate valid values for initial y for each given initial x"""
+    """Calculate valid values for initial y for each given initial x."""
     initials = []
     for x0 in all_valid_x0(min_x, max_x):
         for t in valid_t(x0, min_x, max_x, min_y, max_y):
@@ -130,7 +130,7 @@ def valid_initials(min_x, max_x, min_y, max_y):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

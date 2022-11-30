@@ -1,4 +1,4 @@
-"""Tests for AoC 11, 2015: Corporate Policy"""
+"""Tests for AoC 11, 2015: Corporate Policy."""
 
 # Standard library imports
 import pathlib
@@ -23,27 +23,27 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == "abcdefgh"
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201511.part1(example1) == "abcdffaa"
 
 
 @pytest.mark.skip(reason="slow")
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201511.part1(example2) == "henxxyzz"
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201511.part2(example1) == "abcdffbb"
 
 
 @pytest.mark.skip(reason="slow")
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201511.part2(example2) == "hepaabcc"

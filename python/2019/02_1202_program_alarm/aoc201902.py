@@ -1,4 +1,4 @@
-"""AoC 2, 2019: 1202 Program Alarm"""
+"""AoC 2, 2019: 1202 Program Alarm."""
 
 # Standard library imports
 import pathlib
@@ -9,17 +9,17 @@ from aoc import intcode
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [int(number) for number in puzzle_input.split(",")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return run_program(data.copy(), 12, 2)
 
 
 def part2(data, moon_landing=19690720):
-    """Solve part 2"""
+    """Solve part 2."""
     base = run_program(data.copy(), 0, 0)
     dn = run_program(data.copy(), 1, 0) - base
     dv = run_program(data.copy(), 0, 1) - base
@@ -30,7 +30,7 @@ def part2(data, moon_landing=19690720):
 
 
 def run_program(program, noun, verb):
-    """Modify program with noun and verb and run it
+    """Modify program with noun and verb and run it.
 
     ## Example:
 
@@ -43,7 +43,7 @@ def run_program(program, noun, verb):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

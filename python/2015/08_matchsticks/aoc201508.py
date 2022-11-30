@@ -1,4 +1,4 @@
-"""AoC 8, 2015: Matchsticks"""
+"""AoC 8, 2015: Matchsticks."""
 
 # Standard library imports
 import pathlib
@@ -7,17 +7,17 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input.split("\n")
 
 
 def part1(words):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(len(word) - len(memory(word)) for word in words)
 
 
 def part2(words):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(len(encode(word)) - len(word) for word in words)
 
 
@@ -54,7 +54,7 @@ def encode(word):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

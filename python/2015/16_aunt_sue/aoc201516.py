@@ -1,4 +1,4 @@
-"""AoC 16, 2015: Aunt Sue"""
+"""AoC 16, 2015: Aunt Sue."""
 
 # Standard library imports
 import pathlib
@@ -19,7 +19,7 @@ GIFT = {
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return dict(parse_sue(line) for line in puzzle_input.split("\n"))
 
 
@@ -51,7 +51,7 @@ def parse_compound(compound):
 
 
 def part1(aunt_sues):
-    """Solve part 1"""
+    """Solve part 1."""
     return next(
         sue
         for sue, compounds in aunt_sues.items()
@@ -60,7 +60,7 @@ def part1(aunt_sues):
 
 
 def part2(aunt_sues):
-    """Solve part 2"""
+    """Solve part 2."""
     return next(
         sue for sue, compounds in aunt_sues.items() if retroencabulate(compounds, GIFT)
     )
@@ -93,7 +93,7 @@ def retroencabulate(aunt_sue, gift):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 20, 2015: Infinite Elves and Infinite Houses"""
+"""AoC 20, 2015: Infinite Elves and Infinite Houses."""
 
 # Standard library imports
 import pathlib
@@ -6,26 +6,26 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return int(puzzle_input)
 
 
 def part1(data, per_elf=10):
-    """Solve part 1"""
+    """Solve part 1."""
     threshold = data // per_elf
     presents = deliver(threshold, max_houses=threshold)
     return next(house for house, p in enumerate(presents) if p >= threshold)
 
 
 def part2(data, per_elf=11, max_houses=50):
-    """Solve part 2"""
+    """Solve part 2."""
     threshold = data // per_elf
     presents = deliver(threshold, max_houses=max_houses)
     return next(house for house, p in enumerate(presents) if p >= threshold)
 
 
 def deliver(num_houses, max_houses):
-    """Deliver presents to houses
+    """Deliver presents to houses.
 
     ## Examples:
 
@@ -42,7 +42,7 @@ def deliver(num_houses, max_houses):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

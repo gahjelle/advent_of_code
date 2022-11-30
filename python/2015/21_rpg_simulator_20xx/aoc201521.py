@@ -1,4 +1,4 @@
-"""AoC 21, 2015: RPG Simulator 20XX"""
+"""AoC 21, 2015: RPG Simulator 20XX."""
 
 # Standard library imports
 import itertools
@@ -59,7 +59,7 @@ FIGHTERS = {
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return Fighter(
         **{
             key.replace(" ", "_").lower(): int(value)
@@ -69,14 +69,14 @@ def parse_data(puzzle_input):
 
 
 def part1(data, hit_points=100):
-    """Solve part 1"""
+    """Solve part 1."""
     for cost, damage, armor in sorted(FIGHTERS):
         if player_win_fight(Fighter(hit_points, damage, armor), data):
             return cost
 
 
 def part2(data, hit_points=100):
-    """Solve part 2"""
+    """Solve part 2."""
     for cost, damage, armor in sorted(FIGHTERS, reverse=True):
         if not player_win_fight(Fighter(hit_points, damage, armor), data):
             return cost
@@ -111,7 +111,7 @@ def player_win_fight(player, boss):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

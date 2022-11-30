@@ -1,4 +1,4 @@
-"""AoC 2019: IntCode Computer"""
+"""AoC 2019: IntCode Computer."""
 
 # Standard library imports
 from dataclasses import dataclass, field
@@ -8,7 +8,7 @@ OPCODES = {}
 
 
 def register_command(code, description, num_params):
-    """Decorator for registering an IntCode command"""
+    """Decorator for registering an IntCode command."""
 
     def _register(func):
         OPCODES[code] = OpCode(code, description, func, num_params)
@@ -18,7 +18,7 @@ def register_command(code, description, num_params):
 
 @dataclass
 class OpCode:
-    """General opcode information"""
+    """General opcode information."""
 
     code: int
     description: str
@@ -28,14 +28,14 @@ class OpCode:
 
 @dataclass
 class Jump:
-    """Marker for jumping to a new location in the program"""
+    """Marker for jumping to a new location in the program."""
 
     pointer: int
 
 
 @dataclass
 class Store:
-    """Marker for storing a value in the program"""
+    """Marker for storing a value in the program."""
 
     position: int
     value: int
@@ -43,7 +43,7 @@ class Store:
 
 @dataclass
 class ExitType:
-    """Marker for when to exit the program"""
+    """Marker for when to exit the program."""
 
 
 Exit = ExitType()
@@ -57,12 +57,12 @@ class IntcodeComputer:
     debug: bool = False
 
     def __post_init__(self):
-        """Copy program to avoid any mutation"""
+        """Copy program to avoid any mutation."""
         self.program = self.program.copy()
         self._input = iter(self.input)
 
     def run(self):
-        """Run program to end"""
+        """Run program to end."""
         outputs = []
         while True:
             try:
@@ -75,7 +75,7 @@ class IntcodeComputer:
         return outputs
 
     def __next__(self):
-        """Run program to next output"""
+        """Run program to next output."""
         while True:
             output = self.step()
             if output is Exit:
@@ -84,11 +84,11 @@ class IntcodeComputer:
                 return output
 
     def __iter__(self):
-        """Iterate over computer to iterate over outputs"""
+        """Iterate over computer to iterate over outputs."""
         return self
 
     def step(self):
-        """Take one step in a program"""
+        """Take one step in a program."""
         opcode, params = self.get_operation(self.pointer)
         output = opcode.operation(self, params)
         if self.debug:
@@ -107,7 +107,7 @@ class IntcodeComputer:
                 return output
 
     def get_operation(self, pointer):
-        """Get opcode and parameters"""
+        """Get opcode and parameters."""
         param_modes, code = divmod(self.program[pointer], 100)
         opcode = OPCODES[code]
 
@@ -126,62 +126,62 @@ class IntcodeComputer:
 
     @register_command(1, "+", 3)
     def op_add(self, params):
-        """Add two numbers"""
+        """Add two numbers."""
         (first, _), (second, _), (_, store) = params
         return Store(store, first + second)
 
     @register_command(2, "x", 3)
     def op_add(self, params):
-        """Multiply two numbers"""
+        """Multiply two numbers."""
         (first, _), (second, _), (_, store) = params
         return Store(store, first * second)
 
     @register_command(3, "in", 1)
     def op_input(self, params):
-        """Input one value"""
+        """Input one value."""
         ((_, store),) = params
         return Store(store, next(self._input))
 
     @register_command(4, "out", 1)
     def op_output(self, params):
-        """Output one value"""
+        """Output one value."""
         ((value, _),) = params
         return value
 
     @register_command(5, "jmp_T", 2)
     def op_jmp_true(self, params):
-        """Jump if value is non-zero"""
+        """Jump if value is non-zero."""
         ((value, _), (pos, _)) = params
         if value:
             return Jump(pos)
 
     @register_command(6, "jmp_F", 2)
     def op_jmp_false(self, params):
-        """Jump if value is zero"""
+        """Jump if value is zero."""
         ((value, _), (pos, _)) = params
         if not value:
             return Jump(pos)
 
     @register_command(7, "<", 3)
     def op_less_than(self, params):
-        """Store 1 if first number is less than second, 0 otherwise"""
+        """Store 1 if first number is less than second, 0 otherwise."""
         (first, _), (second, _), (_, store) = params
         return Store(store, int(first < second))
 
     @register_command(8, "==", 3)
     def op_equals(self, params):
-        """Store 1 if first number is equal to second, 0 otherwise"""
+        """Store 1 if first number is equal to second, 0 otherwise."""
         (first, _), (second, _), (_, store) = params
         return Store(store, int(first == second))
 
     @register_command(99, "exit", 0)
     def op_exit(self, _params):
-        """Exit the program"""
+        """Exit the program."""
         return Exit
 
 
 def run_program(program, input=None, debug=False):
-    """Run an intcode program and return the final state
+    """Run an intcode program and return the final state.
 
     >>> run_program([1, 0, 0, 0, 99])
     [2, 0, 0, 0, 99]

@@ -1,4 +1,4 @@
-"""AoC 11, 2021: Dumbo Octopus"""
+"""AoC 11, 2021: Dumbo Octopus."""
 
 # Standard library imports
 import itertools
@@ -15,14 +15,14 @@ colorama.init()
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return np.array(
         [[int(energy) for energy in line] for line in puzzle_input.split("\n")]
     )
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     energy, num_flashes = data, 0
     for _ in range(100):
         energy, num_flashes = step(energy, num_flashes)
@@ -31,7 +31,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     for count in itertools.count(1):
         data, _ = step(data)
         if "--viz" in sys.argv:
@@ -41,7 +41,7 @@ def part2(data):
 
 
 def step(energies, num_flash=0):
-    """Do one step on energy levels"""
+    """Do one step on energy levels."""
     new_energies = energies + 1
     has_not_flashed = np.ones_like(energies, dtype=bool)
 
@@ -65,7 +65,7 @@ def step(energies, num_flash=0):
 
 
 def visualize(data):
-    """Show flashing energy levels"""
+    """Show flashing energy levels."""
     markers = "# ._o*øO0@"
     for col, line in enumerate(data):
         for row, energy in enumerate(line):
@@ -74,7 +74,7 @@ def visualize(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

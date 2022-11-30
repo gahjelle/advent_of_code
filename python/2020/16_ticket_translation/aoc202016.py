@@ -1,4 +1,4 @@
-"""AoC 16, 2020: Ticket Translation"""
+"""AoC 16, 2020: Ticket Translation."""
 
 # Standard library imports
 import math
@@ -12,7 +12,7 @@ RULE = parse.compile("{rule}: {s1:d}-{e1:d} or {s2:d}-{e2:d}")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     rules, ticket, tickets = puzzle_input.split("\n\n")
     return {
         "rules": _parse_rules(rules),
@@ -22,7 +22,7 @@ def parse_data(puzzle_input):
 
 
 def _parse_rules(rules):
-    """Parse ticket rules
+    """Parse ticket rules.
 
     ## Example:
 
@@ -37,7 +37,7 @@ def _parse_rules(rules):
 
 
 def _parse_tickets(tickets):
-    """Parse several tickets
+    """Parse several tickets.
 
     ## Example:
     >>> _parse_tickets("ignored\\n1,2,3,4\\n10,15,20,99")
@@ -50,7 +50,7 @@ def _parse_tickets(tickets):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     valid_values = set.union(*data["rules"].values())
     return sum(
         invalid
@@ -60,7 +60,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     valid_values = set.union(*data["rules"].values())
     valid_tickets = [
         ticket
@@ -77,7 +77,7 @@ def part2(data):
 
 
 def invalid_field(valid_values, ticket):
-    """Identify invalid fields on a ticket
+    """Identify invalid fields on a ticket.
 
     ## Examples:
 
@@ -89,7 +89,7 @@ def invalid_field(valid_values, ticket):
 
 
 def deduce_fields(rules, tickets):
-    """Deduce the order of the fields on the tickets
+    """Deduce the order of the fields on the tickets.
 
     ## Example:
 
@@ -117,7 +117,7 @@ def deduce_fields(rules, tickets):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 4, 2017: High-Entropy Passphrases"""
+"""AoC 4, 2017: High-Entropy Passphrases."""
 
 # Standard library imports
 import pathlib
@@ -6,22 +6,22 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [line.split() for line in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(unique_words(words) for words in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(unique_anagrams(words) for words in data)
 
 
 def unique_words(words):
-    """Check if words are unique
+    """Check if words are unique.
 
     >>> unique_words(["abc", "cab", "bcd"])
     True
@@ -33,7 +33,7 @@ def unique_words(words):
 
 
 def unique_anagrams(words):
-    """Check if anagrams of words are unique
+    """Check if anagrams of words are unique.
 
     >>> unique_anagrams(["abc", "def", "ghi"])
     True
@@ -46,7 +46,7 @@ def unique_anagrams(words):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

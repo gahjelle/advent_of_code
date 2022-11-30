@@ -1,4 +1,4 @@
-"""AoC 15, 2015: Science for Hungry People"""
+"""AoC 15, 2015: Science for Hungry People."""
 
 # Standard library imports
 import itertools
@@ -15,7 +15,7 @@ INGREDIENT_PATTERN = parse.compile(
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [
         match.named
         for ingredient in puzzle_input.split("\n")
@@ -24,7 +24,7 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return best_score(
         data,
         [
@@ -36,7 +36,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return best_score(
         data,
         [
@@ -49,7 +49,7 @@ def part2(data):
 
 
 def best_score(ingredients, variants):
-    """Find the best score among all cookie variants
+    """Find the best score among all cookie variants.
 
     ## Example:
 
@@ -66,7 +66,7 @@ def best_score(ingredients, variants):
 
 
 def score_cookie(ingredients, spoons):
-    """Score the composition of one cookie
+    """Score the composition of one cookie.
 
     ## Example:
 
@@ -90,7 +90,7 @@ def score_cookie(ingredients, spoons):
 
 
 def calories(ingredients, spoons):
-    """Find the number of calories in a cookie
+    """Find the number of calories in a cookie.
 
     ## Example:
 
@@ -105,7 +105,7 @@ def calories(ingredients, spoons):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

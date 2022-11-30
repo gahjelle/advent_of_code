@@ -1,4 +1,4 @@
-"""Tests for AoC 8, 2016: Two-Factor Authentication"""
+"""Tests for AoC 8, 2016: Two-Factor Authentication."""
 
 # Standard library imports
 import pathlib

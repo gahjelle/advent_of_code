@@ -1,4 +1,4 @@
-"""AoC 14, 2015: Reindeer Olympics"""
+"""AoC 14, 2015: Reindeer Olympics."""
 
 # Standard library imports
 import itertools
@@ -14,7 +14,7 @@ PARSER = parse.compile(
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return {
         (rd := PARSER.parse(line))["name"]: (
             rd["speed"],
@@ -27,12 +27,12 @@ def parse_data(puzzle_input):
 
 
 def part1(reindeers, time=2503):
-    """Solve part 1"""
+    """Solve part 1."""
     return max(distance(reindeer, time) for reindeer in reindeers.values())
 
 
 def part2(reindeers, time=2503):
-    """Solve part 2"""
+    """Solve part 2."""
     positions = [position(rd, time) for rd in reindeers.values()]
     leader = [max(pos) for pos in zip(*positions)]
     scores = [sum(pos == best for pos, best in zip(rd, leader)) for rd in positions]
@@ -75,7 +75,7 @@ def position(reindeer, time):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

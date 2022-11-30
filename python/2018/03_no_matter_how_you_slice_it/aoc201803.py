@@ -1,4 +1,4 @@
-"""AoC 3, 2018: No Matter How You Slice It"""
+"""AoC 3, 2018: No Matter How You Slice It."""
 
 # Standard library imports
 import collections
@@ -12,12 +12,12 @@ CLAIM_PATTERN = parse.compile("#{id:d} @ {col:d},{row:d}: {width:d}x{height:d}")
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return dict(parse_claim(claim) for claim in puzzle_input.split("\n"))
 
 
 def parse_claim(claim_text):
-    """Parse one claim
+    """Parse one claim.
 
     ## Example:
 
@@ -36,13 +36,13 @@ def parse_claim(claim_text):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     overlaps = collections.Counter(itertools.chain(*data.values()))
     return sum(count > 1 for count in overlaps.values())
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     overlaps = collections.Counter(itertools.chain(*data.values()))
     no_overlaps = {rect for rect, count in overlaps.items() if count == 1}
     return next(
@@ -53,7 +53,7 @@ def part2(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

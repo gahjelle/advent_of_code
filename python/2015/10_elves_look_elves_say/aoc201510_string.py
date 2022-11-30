@@ -1,4 +1,4 @@
-"""AoC 10, 2015: Elves Look, Elves Say"""
+"""AoC 10, 2015: Elves Look, Elves Say."""
 
 # Standard library imports
 import pathlib
@@ -6,19 +6,19 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input
 
 
 def part1(data, num_steps=40):
-    """Solve part 1"""
+    """Solve part 1."""
     for _ in range(num_steps):
         data = look_and_say(data)
     return len(data)
 
 
 def part2(data, num_steps=50):
-    """Solve part 2"""
+    """Solve part 2."""
     for _ in range(num_steps):
         data = look_and_say(data)
     return len(data)
@@ -52,7 +52,7 @@ def look_and_say(digits):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

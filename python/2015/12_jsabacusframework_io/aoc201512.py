@@ -1,4 +1,4 @@
-"""AoC 12, 2015: JSAbacusFramework.io"""
+"""AoC 12, 2015: JSAbacusFramework.io."""
 
 # Standard library imports
 import json
@@ -7,17 +7,17 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return json.loads(puzzle_input)
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum_numbers(data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum_numbers(data, ignore_red=True)
 
 
@@ -53,7 +53,7 @@ def sum_numbers(document, ignore_red=False):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

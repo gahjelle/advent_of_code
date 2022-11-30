@@ -1,4 +1,4 @@
-"""AoC 4, 2020: Passport Processing"""
+"""AoC 4, 2020: Passport Processing."""
 
 # Standard library imports
 import pathlib
@@ -9,13 +9,13 @@ VALIDATORS = {}
 
 
 def register_validator(func):
-    """Decorator to register field validators"""
+    """Decorator to register field validators."""
     VALIDATORS[func.__name__] = func
     return func
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [
         dict(field.split(":") for field in passport.split())
         for passport in puzzle_input.split("\n\n")
@@ -23,12 +23,12 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(not (set(VALIDATORS) - set(passport)) for passport in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(
         all(
             validate(passport[field]) if field in passport else False
@@ -150,7 +150,7 @@ def pid(value):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

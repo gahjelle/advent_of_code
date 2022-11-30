@@ -1,4 +1,4 @@
-"""Tests for AoC 25, 2021: Sea Cucumber"""
+"""Tests for AoC 25, 2021: Sea Cucumber."""
 
 # Standard library imports
 import pathlib
@@ -17,7 +17,7 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     num_rows, num_cols, easts, souths = example1
     assert num_rows == 9
     assert num_cols == 10
@@ -30,5 +30,5 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202125.part1(example1) == 58

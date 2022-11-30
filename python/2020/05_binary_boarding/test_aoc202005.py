@@ -1,4 +1,4 @@
-"""Tests for AoC 5, 2020: Binary Boarding"""
+"""Tests for AoC 5, 2020: Binary Boarding."""
 
 # Standard library imports
 import pathlib
@@ -17,16 +17,16 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [357, 567, 119, 820]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202005.part1(example1) == 820
 
 
 def test_part2():
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     data = [3, 9, 4, 8, 5, 10, 7, 11]
     assert aoc202005.part2(data) == 6

@@ -1,4 +1,4 @@
-"""AoC 8, 2020: Handheld Halting"""
+"""AoC 8, 2020: Handheld Halting."""
 
 # Standard library imports
 import pathlib
@@ -13,12 +13,12 @@ def register_operation(func):
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_line(line) for line in puzzle_input.split("\n")]
 
 
 def parse_line(line):
-    """Parse one line of input
+    """Parse one line of input.
 
     ## Examples:
 
@@ -34,13 +34,13 @@ def parse_line(line):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     accumulator, _ = run_code(data)
     return accumulator
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     for code in mutate_code(data):
         accumulator, finished = run_code(code)
         if finished:
@@ -48,7 +48,7 @@ def part2(data):
 
 
 def run_code(code):
-    """Run the given code until its done or it repeats a line
+    """Run the given code until its done or it repeats a line.
 
     Return the accumulator and whether or not the code finished.
 
@@ -74,7 +74,7 @@ def run_code(code):
 
 
 def mutate_code(code):
-    """Mutate the given code by flipping nop and jmp operations
+    """Mutate the given code by flipping nop and jmp operations.
 
     ## Example
 
@@ -90,7 +90,7 @@ def mutate_code(code):
 
 @register_operation
 def acc(argument):
-    """Change accumulator
+    """Change accumulator.
 
     acc increases or decreases a single global value called the accumulator by
     the value given in the argument. For example, acc +7 would increase the
@@ -107,7 +107,7 @@ def acc(argument):
 
 @register_operation
 def jmp(argument):
-    """Jump to a new instruction
+    """Jump to a new instruction.
 
     jmp jumps to a new instruction relative to itself. The next instruction
     to execute is found using the argument as an offset from the jmp
@@ -125,7 +125,7 @@ def jmp(argument):
 
 @register_operation
 def nop(argument):
-    """Do nothing
+    """Do nothing.
 
     nop stands for No OPeration - it does nothing. The instruction
     immediately below it is executed next.
@@ -139,7 +139,7 @@ def nop(argument):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

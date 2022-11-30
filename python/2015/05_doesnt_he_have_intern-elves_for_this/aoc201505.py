@@ -6,24 +6,24 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return puzzle_input.split("\n")
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(
         [s for s in data if enough_vowels(s) and repeated(s) and not naughty_chars(s)]
     )
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return len([s for s in data if has_pair(s) and split_repeated(s)])
 
 
 def enough_vowels(string, min_vowels=3):
-    """Check that a string contains enough vowels
+    """Check that a string contains enough vowels.
 
     ## Examples:
 
@@ -40,7 +40,7 @@ def enough_vowels(string, min_vowels=3):
 
 
 def repeated(string):
-    """Check that a string contains repeated characters
+    """Check that a string contains repeated characters.
 
     ## Examples:
 
@@ -55,7 +55,7 @@ def repeated(string):
 
 
 def naughty_chars(string):
-    """Check if a string contains naughty character combinations
+    """Check if a string contains naughty character combinations.
 
     ## Examples:
 
@@ -70,7 +70,7 @@ def naughty_chars(string):
 
 
 def has_pair(string):
-    """Check if string has a repeated, non-overlapping pair of characters
+    """Check if string has a repeated, non-overlapping pair of characters.
 
     ## Examples:
 
@@ -88,7 +88,8 @@ def has_pair(string):
 
 
 def split_repeated(string):
-    """Check if string contains repeated letters with exactly one letter between them
+    """Check if string contains repeated letters with exactly one letter
+    between them.
 
     ## Examples:
 
@@ -103,7 +104,7 @@ def split_repeated(string):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

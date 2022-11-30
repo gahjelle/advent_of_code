@@ -1,4 +1,4 @@
-"""AoC 1, 2015: Not Quite Lisp"""
+"""AoC 1, 2015: Not Quite Lisp."""
 
 # Standard library imports
 import itertools
@@ -9,23 +9,23 @@ STEPS = {"(": 1, ")": -1}
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [STEPS[paren] for paren in puzzle_input]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     steps = enumerate(itertools.accumulate(data), start=1)
     return next(itertools.dropwhile(lambda d: d[1] >= 0, steps))[0]
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

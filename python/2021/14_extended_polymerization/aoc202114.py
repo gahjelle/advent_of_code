@@ -1,4 +1,4 @@
-"""AoC 14, 2021: Extended Polymerization"""
+"""AoC 14, 2021: Extended Polymerization."""
 
 # Standard library imports
 import pathlib
@@ -15,7 +15,7 @@ class Polymer:
 
     @classmethod
     def from_str(cls, text):
-        """Create a polymer from a string
+        """Create a polymer from a string.
 
         >>> Polymer.from_str(
         ...     "GAH\\n\\nAG -> H\\nAH -> G\\nGA -> H\\nGH -> A\\nHA -> G\\nHG -> A"
@@ -38,7 +38,7 @@ class Polymer:
 
     @staticmethod
     def parse_rule(rule):
-        """Parse one rule
+        """Parse one rule.
 
         >>> Polymer.parse_rule("CH -> B")
         ('CH', ['CB', 'BH'])
@@ -47,7 +47,7 @@ class Polymer:
         return (pair, [pair[0] + insert, insert + pair[1]])
 
     def step(self):
-        """Do one step of polymer insertion
+        """Do one step of polymer insertion.
 
         >>> Polymer.from_str(
         ...     "GAH\\n\\nAG -> H\\nAH -> G\\nGA -> H\\nGH -> A\\nHA -> G\\nHG -> A"
@@ -67,7 +67,7 @@ class Polymer:
         return cls(self.first, dict(pairs), self.rules)
 
     def score(self):
-        """Score current polymer based on least and most common elements
+        """Score current polymer based on least and most common elements.
 
         >>> Polymer.from_str(
         ...     "GAH\\n\\nAG -> H\\nAH -> G\\nGA -> H\\nGH -> A\\nHA -> G\\nHG -> A"
@@ -83,12 +83,12 @@ class Polymer:
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return Polymer.from_str(puzzle_input)
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     for _ in range(10):
         data = data.step()
 
@@ -96,7 +96,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     for _ in range(40):
         data = data.step()
 
@@ -104,7 +104,7 @@ def part2(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

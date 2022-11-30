@@ -1,4 +1,4 @@
-"""AoC 18, 2020: Operation Order"""
+"""AoC 18, 2020: Operation Order."""
 
 # Standard library imports
 import pathlib
@@ -11,7 +11,7 @@ PLUS_EXPRESSION = re.compile(r"(?P<arg1>\d+) \+ (?P<arg2>\d+)")
 
 
 def evaluate_line(line, calculator):
-    """Simplify parentheses using calculator to evaluate values"""
+    """Simplify parentheses using calculator to evaluate values."""
     while parens := PARENS.search(line):
         expression = parens.group()
         value = calculator(expression[1:-1])
@@ -21,7 +21,7 @@ def evaluate_line(line, calculator):
 
 
 def evaluate_left_to_right(expression):
-    """Evaluate left to right"""
+    """Evaluate left to right."""
     while subexpression := SIMPLE_EXPRESSION.search(expression):
         value = evaluate_simple_expression(**subexpression.groupdict())
         expression = expression.replace(subexpression.group(), str(value), 1)
@@ -30,7 +30,7 @@ def evaluate_left_to_right(expression):
 
 
 def evaluate_plus_first(expression):
-    """Evaluate plusses first"""
+    """Evaluate plusses first."""
     while subexpression := PLUS_EXPRESSION.search(expression):
         value = evaluate_simple_expression(op="+", **subexpression.groupdict())
         expression = expression.replace(subexpression.group(), str(value), 1)
@@ -39,7 +39,7 @@ def evaluate_plus_first(expression):
 
 
 def evaluate_simple_expression(arg1, op, arg2):
-    """Evaluate a simple expression with only two arguments and an operator"""
+    """Evaluate a simple expression with only two arguments and an operator."""
     if op == "+":
         return int(arg1) + int(arg2)
     elif op == "*":
@@ -47,22 +47,22 @@ def evaluate_simple_expression(arg1, op, arg2):
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [f"({ln})" for ln in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(evaluate_line(line, evaluate_left_to_right) for line in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(evaluate_line(line, evaluate_plus_first) for line in data)
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

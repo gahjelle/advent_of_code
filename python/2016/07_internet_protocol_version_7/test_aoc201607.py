@@ -1,4 +1,4 @@
-"""Tests for AoC 7, 2016: Internet Protocol Version 7"""
+"""Tests for AoC 7, 2016: Internet Protocol Version 7."""
 
 # Standard library imports
 import pathlib

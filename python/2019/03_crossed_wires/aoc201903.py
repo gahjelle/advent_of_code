@@ -1,4 +1,4 @@
-"""AoC 3, 2019: Crossed Wires"""
+"""AoC 3, 2019: Crossed Wires."""
 
 # Standard library imports
 import pathlib
@@ -8,13 +8,13 @@ DIRECTIONS = {"R": (1, 0), "L": (-1, 0), "U": (0, 1), "D": (0, -1)}
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     first, second = puzzle_input.split("\n")
     return parse_wire(first), parse_wire(second)
 
 
 def parse_wire(wire):
-    """Parse the description of one wire
+    """Parse the description of one wire.
 
     ## Example:
 
@@ -25,7 +25,7 @@ def parse_wire(wire):
 
 
 def coordinates(wire):
-    """Convert wire steps to coordinates
+    """Convert wire steps to coordinates.
 
     ## Example:
 
@@ -44,21 +44,21 @@ def coordinates(wire):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     first, second = data
     crossings = set(first) & set(second)
     return min(manhattan(crossing) for crossing in crossings)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     first, second = [enumerate_steps(coordinates) for coordinates in data]
     crossings = set(first) & set(second)
     return min(first[crossing] + second[crossing] for crossing in crossings)
 
 
 def manhattan(pos):
-    """Manhattan distance from origin to position
+    """Manhattan distance from origin to position.
 
     ## Examples:
 
@@ -72,7 +72,7 @@ def manhattan(pos):
 
 
 def enumerate_steps(coordinates):
-    """Enumerate the steps for each coordinate
+    """Enumerate the steps for each coordinate.
 
     ## Example:
 
@@ -86,7 +86,7 @@ def enumerate_steps(coordinates):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

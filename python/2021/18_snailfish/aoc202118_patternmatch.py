@@ -1,4 +1,4 @@
-"""AoC 18, 2021: Snailfish"""
+"""AoC 18, 2021: Snailfish."""
 
 # Standard library imports
 import functools
@@ -8,12 +8,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_snailfish(line) for line in puzzle_input.split("\n")]
 
 
 def parse_snailfish(line):
-    """Parse one line of input
+    """Parse one line of input.
 
     >>> parse_snailfish("[1,2]")
     [(1, 1), (1, 2)]
@@ -37,12 +37,12 @@ def parse_snailfish(line):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return magnitude(functools.reduce(add_and_reduce, data))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return max(
         magnitude(add_and_reduce(first, second))
         for first, second in itertools.permutations(data, r=2)
@@ -50,7 +50,7 @@ def part2(data):
 
 
 def add_and_reduce(first, second):
-    """Add two elements and reduce the result
+    """Add two elements and reduce the result.
 
     >>> add_and_reduce([(1, 1), (1, 2)], [(2, 3), (2, 4), (1, 5)])
     [(2, 1), (2, 2), (3, 3), (3, 4), (2, 5)]
@@ -59,7 +59,7 @@ def add_and_reduce(first, second):
 
 
 def reduce(snailfish):
-    """Reduce a snailfish through explosions and splits
+    """Reduce a snailfish through explosions and splits.
 
     >>> reduce([(5, 4), (5, 3), (4, 4), (3, 4), (3, 7), (5, 8), (5, 4), (4, 9), (2, 1), (2, 1)])
     [(4, 0), (4, 7), (3, 4), (4, 7), (4, 8), (4, 6), (4, 0), (2, 8), (2, 1)]
@@ -76,7 +76,7 @@ def reduce(snailfish):
 
 
 def explode(snailfish):
-    """Explode the leftmost deeply nested snailfish
+    """Explode the leftmost deeply nested snailfish.
 
     >>> explode([(0, 1)])
     ([(0, 1)], False)
@@ -141,7 +141,7 @@ def explode(snailfish):
 
 
 def split(snailfish):
-    """Split the leftmost too high snailfish
+    """Split the leftmost too high snailfish.
 
     >>> split([(1, 9)])
     ([(1, 9)], False)
@@ -175,7 +175,7 @@ def split(snailfish):
 
 
 def magnitude(snailfish):
-    """Find the magnitude of a snailfish
+    """Find the magnitude of a snailfish.
 
     >>> magnitude([(1, 9), (1, 1)])
     29
@@ -204,7 +204,7 @@ def magnitude(snailfish):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

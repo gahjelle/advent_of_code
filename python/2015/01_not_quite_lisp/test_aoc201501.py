@@ -1,4 +1,4 @@
-"""Tests for AoC 1, 2015: Not Quite Lisp"""
+"""Tests for AoC 1, 2015: Not Quite Lisp."""
 
 # Standard library imports
 import pathlib
@@ -35,25 +35,25 @@ def example4():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [1, 1, -1, -1]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201501.part1(example1) == 0
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201501.part1(example2) == 3
 
 
 def test_part1_example3(example3):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201501.part1(example3) == -3
 
 
 def test_part2_example4(example4):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201501.part2(example4) == 5

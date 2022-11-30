@@ -1,4 +1,4 @@
-"""AoC 24, 2021: Arithmetic Logic Unit"""
+"""AoC 24, 2021: Arithmetic Logic Unit."""
 
 # Standard library imports
 import pathlib
@@ -13,7 +13,7 @@ class Constraint:
     diff: int
 
     def deduce_max(self, digits):
-        """The largest digits satisying the constraint"""
+        """The largest digits satisying the constraint."""
         if self.diff > 0:
             digits[self.first] = 9 - self.diff
             digits[self.second] = 9
@@ -22,7 +22,7 @@ class Constraint:
             digits[self.second] = 9 + self.diff
 
     def deduce_min(self, digits):
-        """The smallest digits satisying the constraint"""
+        """The smallest digits satisying the constraint."""
         if self.diff > 0:
             digits[self.first] = 1
             digits[self.second] = 1 + self.diff
@@ -32,13 +32,13 @@ class Constraint:
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     program = [line.split() for line in puzzle_input.split("\n")]
     return find_constraints([minimize(subprogram) for subprogram in decompose(program)])
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     digits = [None] * (len(data) * 2)
     for constraint in data:
         constraint.deduce_max(digits)
@@ -47,7 +47,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     digits = [None] * (len(data) * 2)
     for constraint in data:
         constraint.deduce_min(digits)
@@ -56,7 +56,8 @@ def part2(data):
 
 
 def decompose(program):
-    """The program consists of 14 subprograms, each starting with an inp w instruction"""
+    """The program consists of 14 subprograms, each starting with an inp w
+    instruction."""
     subprograms = []
     for instruction in program:
         if instruction[0] == "inp":
@@ -67,7 +68,7 @@ def decompose(program):
 
 
 def minimize(program):
-    """Get the only changing arguments used in a subprogram
+    """Get the only changing arguments used in a subprogram.
 
     Each subprogram consists of the same 18 lines, with different arguments only
     in line 4, 5, and 15:
@@ -95,7 +96,7 @@ def minimize(program):
 
 
 def find_constraints(program):
-    """Convert the program into digit constraints
+    """Convert the program into digit constraints.
 
     Think of z as a stack for base 26 numbers. We can translate each subprogram
     as follows:
@@ -134,7 +135,7 @@ def find_constraints(program):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

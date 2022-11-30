@@ -1,4 +1,4 @@
-"""Tests for AoC 4, 2015: The Ideal Stocking Stuffer"""
+"""Tests for AoC 4, 2015: The Ideal Stocking Stuffer."""
 
 # Standard library imports
 import pathlib
@@ -23,27 +23,27 @@ def example2():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == "abcdef"
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201504.part1(example1) == 609_043
 
 
 def test_part1_example2(example2):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc201504.part1(example2) == 1_048_970
 
 
 @pytest.mark.skip(reason="slow")
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201504.part2(example1) == 6_742_839
 
 
 @pytest.mark.skip(reason="slow")
 def test_part2_example2(example2):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc201504.part2(example2) == 5_714_438

@@ -1,4 +1,4 @@
-"""AoC 6, 2016: Signals and Noise"""
+"""AoC 6, 2016: Signals and Noise."""
 
 # Standard library imports
 import collections

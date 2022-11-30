@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Test outputs of Advent of Code puzzle solutions"""
+"""Test outputs of Advent of Code puzzle solutions."""
 
 # Standard library imports
 import importlib
@@ -14,7 +14,7 @@ PUZZLE_PATHS = sorted(p.parent for p in PUZZLE_DIR.rglob("**/output.py.txt"))
 
 
 class TimingsLog:
-    """Logger that can write timings to file"""
+    """Logger that can write timings to file."""
 
     time_units = (
         ("m ⚫️", 60),
@@ -33,13 +33,13 @@ class TimingsLog:
     )
 
     def __init__(self, path):
-        """Initialize logger"""
+        """Initialize logger."""
         self.path = path
         self.path.write_text("# Advent of Code\n")
         self.current_year = 0
 
     def write_log(self, year, day, puzzle, link, parse, part1, part2):
-        """Write an entry in the log"""
+        """Write an entry in the log."""
         if year != self.current_year:
             self.current_year = year
             self.write_line(self.fmt_header.format(year=year))
@@ -57,13 +57,13 @@ class TimingsLog:
         )
 
     def write_line(self, line):
-        """Write one line to the log file"""
+        """Write one line to the log file."""
         with self.path.open(mode="a") as fid:
             fid.write(line)
 
     @classmethod
     def prettytime(cls, seconds):
-        """Pretty-print number of seconds"""
+        """Pretty-print number of seconds."""
         for unit, threshold in cls.time_units:
             if seconds > threshold:
                 return f"{seconds / threshold:.2f} {unit}"
@@ -76,7 +76,7 @@ TIMINGS_LOG = TimingsLog(PUZZLE_DIR / "timings.py.md")
     "puzzle_path", PUZZLE_PATHS, ids=[p.name for p in PUZZLE_PATHS]
 )
 def test_puzzle(puzzle_path):
-    """Test one puzzle against the expected solution"""
+    """Test one puzzle against the expected solution."""
 
     # Import puzzle
     *_, year, puzzle = puzzle_path.parts

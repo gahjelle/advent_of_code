@@ -1,4 +1,4 @@
-"""AoC 2, 2020: Password Philosophy"""
+"""AoC 2, 2020: Password Philosophy."""
 
 # Standard library imports
 import pathlib
@@ -7,12 +7,12 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_policy(line) for line in puzzle_input.split("\n")]
 
 
 def parse_policy(line):
-    """Parse one line into a password policy
+    """Parse one line into a password policy.
 
     Use a hand-coded state machine for parsing:
         https://dev.to/meseta/advent-of-code-day-02-a-59m0
@@ -57,17 +57,17 @@ def parse_policy(line):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(is_valid_count(**policy) for policy in data)
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(is_valid_position(**policy) for policy in data)
 
 
 def is_valid_count(first, second, char, password):
-    """Check if the password follows the count requirements
+    """Check if the password follows the count requirements.
 
     ## Examples:
 
@@ -81,7 +81,7 @@ def is_valid_count(first, second, char, password):
 
 
 def is_valid_position(first, second, char, password):
-    """Check if the password follows the position requirements
+    """Check if the password follows the position requirements.
 
     ## Examples:
 
@@ -95,7 +95,7 @@ def is_valid_position(first, second, char, password):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

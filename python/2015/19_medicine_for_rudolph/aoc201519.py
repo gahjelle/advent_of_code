@@ -1,4 +1,4 @@
-"""AoC 19, 2015: Medicine for Rudolph"""
+"""AoC 19, 2015: Medicine for Rudolph."""
 
 # Standard library imports
 import functools
@@ -7,7 +7,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     replacements, molecule = puzzle_input.split("\n\n")
     return (
         molecule,
@@ -16,12 +16,12 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(replace(*data))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     molecule, replacements = data
     reductions = [(after, before) for before, after in replacements]
     return len(reduce(molecule, reductions))
@@ -80,7 +80,7 @@ def reduce(current, replacements, target="e"):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

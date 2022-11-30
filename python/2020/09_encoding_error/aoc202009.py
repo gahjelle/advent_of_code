@@ -1,4 +1,4 @@
-"""AoC 9, 2020: Encoding Error"""
+"""AoC 9, 2020: Encoding Error."""
 
 # Standard library imports
 import pathlib
@@ -7,24 +7,24 @@ from functools import cache
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return tuple(int(number) for number in puzzle_input.split("\n"))
 
 
 @cache
 def part1(data, preamble=25):
-    """Solve part 1"""
+    """Solve part 1."""
     return locate_weakness(data, preamble)
 
 
 def part2(data, preamble=25):
-    """Solve part 2"""
+    """Solve part 2."""
     run = exploit_weakness(data, target=part1(data, preamble))
     return min(run) + max(run)
 
 
 def find_adders(numbers, target):
-    """Find two numbers that add up to target
+    """Find two numbers that add up to target.
 
     ## Examples
 
@@ -40,7 +40,7 @@ def find_adders(numbers, target):
 
 
 def locate_weakness(numbers, preamble):
-    """Find the first error in the encoding
+    """Find the first error in the encoding.
 
     ## Example
 
@@ -53,7 +53,7 @@ def locate_weakness(numbers, preamble):
 
 
 def exploit_weakness(numbers, target):
-    """Find a contigous run of numbers that adds up to target
+    """Find a contigous run of numbers that adds up to target.
 
     ## Example
 
@@ -70,7 +70,7 @@ def exploit_weakness(numbers, target):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

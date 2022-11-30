@@ -1,4 +1,4 @@
-"""Tests for AoC 1, 2021: Sonar Sweep"""
+"""Tests for AoC 1, 2021: Sonar Sweep."""
 
 # Standard library imports
 import pathlib
@@ -17,15 +17,15 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     assert example1 == [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202101.part1(example1) == 7
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202101.part2(example1) == 5

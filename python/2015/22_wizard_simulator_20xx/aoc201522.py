@@ -1,4 +1,4 @@
-"""AoC 22, 2015: Wizard Simulator 20XX"""
+"""AoC 22, 2015: Wizard Simulator 20XX."""
 
 # Standard library imports
 import functools
@@ -43,7 +43,7 @@ ATTACKS = {
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return Boss(
         **{
             key.replace(" ", "_").lower(): int(value)
@@ -53,12 +53,12 @@ def parse_data(puzzle_input):
 
 
 def part1(data, hit_points=50, mana=500):
-    """Solve part 1"""
+    """Solve part 1."""
     return fight(player=Player(hit_points=hit_points, mana=mana), boss=data)
 
 
 def part2(data, hit_points=50, mana=500):
-    """Solve part 2"""
+    """Solve part 2."""
     return fight(
         player=Player(hit_points=hit_points, mana=mana), boss=data, level_hard=True
     )
@@ -87,7 +87,8 @@ def fight(player, boss, level_hard=False):
 
 
 def do_attacks(player, boss, attack_name, level_hard):
-    """Perform one player and one boss attack, including hard level and other effects."""
+    """Perform one player and one boss attack, including hard level and other
+    effects."""
     attacks = ([hard_attack] if level_hard else []) + [
         apply_effects,
         functools.partial(player_attack, attack_name=attack_name),
@@ -168,7 +169,7 @@ def apply_effects(player, boss):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

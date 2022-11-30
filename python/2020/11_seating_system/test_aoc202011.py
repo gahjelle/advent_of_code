@@ -1,4 +1,4 @@
-"""Tests for AoC 11, 2020: Seating System"""
+"""Tests for AoC 11, 2020: Seating System."""
 
 # Standard library imports
 import pathlib
@@ -17,7 +17,7 @@ def example1():
 
 
 def test_parse_example1(example1):
-    """Test that input is parsed properly"""
+    """Test that input is parsed properly."""
     # fmt: off
     assert example1 == {
         (0, 0),         (0, 2), (0, 3),         (0, 5), (0, 6),         (0, 8), (0, 9),
@@ -34,10 +34,10 @@ def test_parse_example1(example1):
 
 
 def test_part1_example1(example1):
-    """Test part 1 on example input"""
+    """Test part 1 on example input."""
     assert aoc202011.part1(example1) == 37
 
 
 def test_part2_example1(example1):
-    """Test part 2 on example input"""
+    """Test part 2 on example input."""
     assert aoc202011.part2(example1) == 26

@@ -1,4 +1,4 @@
-"""AoC 2, 2020: Password Philosophy"""
+"""AoC 2, 2020: Password Philosophy."""
 
 # Standard library imports
 import pathlib
@@ -6,7 +6,7 @@ import sys
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [parse_policy(line) for line in puzzle_input.split("\n")]
 
 
@@ -24,17 +24,17 @@ def parse_policy(line):
 
 
 def part1(policies):
-    """Solve part 1"""
+    """Solve part 1."""
     return sum(is_valid_count(*policy) for policy in policies)
 
 
 def part2(policies):
-    """Solve part 2"""
+    """Solve part 2."""
     return sum(is_valid_position(*policy) for policy in policies)
 
 
 def is_valid_count(first, second, char, password):
-    """Check if the password follows the count requirements
+    """Check if the password follows the count requirements.
 
     ## Examples:
 
@@ -48,7 +48,7 @@ def is_valid_count(first, second, char, password):
 
 
 def is_valid_position(first, second, char, password):
-    """Check if the password follows the position requirements
+    """Check if the password follows the position requirements.
 
     ## Examples:
 
@@ -62,7 +62,7 @@ def is_valid_position(first, second, char, password):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

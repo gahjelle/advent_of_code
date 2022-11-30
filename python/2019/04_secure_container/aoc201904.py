@@ -1,4 +1,4 @@
-"""AoC 4, 2019: Secure Container"""
+"""AoC 4, 2019: Secure Container."""
 
 # Standard library imports
 import pathlib
@@ -8,29 +8,29 @@ RULES = {}
 
 
 def register_rule(func):
-    """Register function that validates a rule"""
+    """Register function that validates a rule."""
     RULES[func.__name__] = func
     return func
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     start, _, end = puzzle_input.partition("-")
     return [str(password) for password in range(int(start), int(end) + 1)]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return len(check(data, "non_decreasing", "adjacent_same"))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return len(check(data, "non_decreasing", "adjacent_only_two"))
 
 
 def check(passwords, *rules):
-    """Check passwords against rules
+    """Check passwords against rules.
 
     ## Example:
 
@@ -44,7 +44,7 @@ def check(passwords, *rules):
 
 @register_rule
 def non_decreasing(passwords):
-    """Check that password digits never decreases
+    """Check that password digits never decreases.
 
     ## Example:
 
@@ -60,7 +60,7 @@ def non_decreasing(passwords):
 
 @register_rule
 def adjacent_same(passwords):
-    """Check that two adjacent digits are the same
+    """Check that two adjacent digits are the same.
 
     ## Example:
 
@@ -76,7 +76,7 @@ def adjacent_same(passwords):
 
 @register_rule
 def adjacent_only_two(passwords):
-    """Check that exactly two adjacent digits are the same
+    """Check that exactly two adjacent digits are the same.
 
     ## Examples:
 
@@ -94,7 +94,7 @@ def adjacent_only_two(passwords):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

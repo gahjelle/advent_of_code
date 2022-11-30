@@ -1,4 +1,4 @@
-"""AoC 13, 2020: Shuttle Search"""
+"""AoC 13, 2020: Shuttle Search."""
 
 # Standard library imports
 import itertools
@@ -14,7 +14,7 @@ class Bus(NamedTuple):
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     time, bus_ids = puzzle_input.split("\n")
     return {
         "time": int(time),
@@ -25,17 +25,17 @@ def parse_data(puzzle_input):
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     return math.prod(find_next_departure(data["bus_ids"], data["time"]))
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     return find_first_timestamp(data["bus_ids"])[0]
 
 
 def find_next_departure(busses, current_time):
-    """Find the next departure of some bus
+    """Find the next departure of some bus.
 
     Return time to wait before departure and bus ID.
 
@@ -50,7 +50,7 @@ def find_next_departure(busses, current_time):
 
 
 def find_first_timestamp(busses):
-    """Find the first timestamp when all busses leave according to schedule
+    """Find the first timestamp when all busses leave according to schedule.
 
     ## Examples:
 
@@ -76,7 +76,7 @@ def find_first_timestamp(busses):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)

@@ -1,4 +1,4 @@
-"""AoC 8, 2017: I Heard You Like Registers"""
+"""AoC 8, 2017: I Heard You Like Registers."""
 
 # Standard library imports
 import collections
@@ -23,7 +23,7 @@ PARSER = parse.compile(
 
 
 class Instruction(NamedTuple):
-    """Single instruction"""
+    """Single instruction."""
 
     register: str
     instruction: str
@@ -34,7 +34,7 @@ class Instruction(NamedTuple):
 
 
 class Registers(collections.UserDict):
-    """State of registers"""
+    """State of registers."""
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -65,12 +65,12 @@ class Registers(collections.UserDict):
 
 
 def parse_data(puzzle_input):
-    """Parse input"""
+    """Parse input."""
     return [Instruction(**PARSER.parse(ln).named) for ln in puzzle_input.split("\n")]
 
 
 def part1(data):
-    """Solve part 1"""
+    """Solve part 1."""
     registers = Registers()
     registers.process(data)
 
@@ -78,7 +78,7 @@ def part1(data):
 
 
 def part2(data):
-    """Solve part 2"""
+    """Solve part 2."""
     registers = Registers()
     registers.process(data)
 
@@ -86,7 +86,7 @@ def part2(data):
 
 
 def solve(puzzle_input):
-    """Solve the puzzle for the given input"""
+    """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
     yield part1(data)
     yield part2(data)
