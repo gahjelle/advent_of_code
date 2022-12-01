@@ -88,6 +88,8 @@ platformdirs==2.5.4
     # via black
 pluggy==1.0.0
     # via pytest
+polars==0.15.1
+    # via -r requirements.txt
 prompt-toolkit==3.0.33
     # via ipython
 ptyprocess==0.7.0

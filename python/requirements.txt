@@ -28,6 +28,8 @@ parse==1.19.0
     # via -r requirements.in
 pebble==5.0.3
     # via advent-of-code-data
+polars==0.15.1
+    # via -r requirements.in
 python-dateutil==2.8.2
     # via
     #   advent-of-code-data
