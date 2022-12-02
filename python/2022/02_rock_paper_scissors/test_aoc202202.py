@@ -18,11 +18,7 @@ def example1():
 
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
-    assert example1 == [
-        ("rock", "paper", "draw"),
-        ("paper", "rock", "lose"),
-        ("scissors", "scissors", "win"),
-    ]
+    assert example1 == {"A Y": 1, "B X": 1, "C Z": 1}
 
 
 def test_part1_example1(example1):

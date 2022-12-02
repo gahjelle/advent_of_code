@@ -1,7 +1,6 @@
 """AoC 2, 2022: Rock Paper Scissors."""
 
 # Standard library imports
-import collections
 import pathlib
 import sys
 
@@ -31,17 +30,17 @@ GAME_2 = {
 
 def parse_data(puzzle_input):
     """Parse input."""
-    return collections.Counter(puzzle_input.split("\n"))
+    return puzzle_input.split("\n")
 
 
 def part1(rounds):
     """Solve part 1."""
-    return sum(count * GAME_1[round] for round, count in rounds.items())
+    return sum(GAME_1[round] for round in rounds)
 
 
 def part2(rounds):
     """Solve part 2."""
-    return sum(count * GAME_2[round] for round, count in rounds.items())
+    return sum(GAME_2[round] for round in rounds)
 
 
 def solve(puzzle_input):
