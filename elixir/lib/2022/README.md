@@ -7,7 +7,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 1    | Calorie Counting        | [aoc202201.ex](01_calorie_counting/aoc202201.ex)        | 178.15 µs ⚪️ |   8.61 µs ⚪️ |  30.61 µs ⚪️ | 217.38 µs ⚪️ |
 | 2    | Rock Paper Scissors     | [aoc202202.ex](02_rock_paper_scissors/aoc202202.ex)     | 534.29 µs ⚪️ |  41.12 µs ⚪️ |  83.10 µs ⚪️ | 658.51 µs ⚪️ |
 | 3    | Rucksack Reorganization | [aoc202203.ex](03_rucksack_reorganization/aoc202203.ex) |  36.81 µs ⚪️ | 535.42 µs ⚪️ | 650.80 µs ⚪️ |   1.22 ms 🔵 |
-| 4    |                         |                                                         |             |             |             |
+| 4    | Camp Cleanup            | [aoc202204.ex](04_camp_cleanup/aoc202204.ex)            | 913.94 µs ⚪️ |   1.28 ms 🔵 | 820.78 µs ⚪️ |   3.02 ms 🔵 |
 | 5    |                         |                                                         |             |             |             |
 | 6    |                         |                                                         |             |             |             |
 | 7    |                         |                                                         |             |             |             |
