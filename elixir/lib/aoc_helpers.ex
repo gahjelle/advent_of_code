@@ -13,7 +13,7 @@ defmodule AOC do
   Read text from the given path.
   """
   def read_text(path) do
-    with {:ok, file} <- File.read(path), do: file |> String.trim()
+    with {:ok, file} <- File.read(path), do: file |> String.trim_trailing()
   end
 
   @doc """

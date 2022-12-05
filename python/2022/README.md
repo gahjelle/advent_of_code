@@ -8,7 +8,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 2    | Rock Paper Scissors     | [aoc202202.py](02_rock_paper_scissors/aoc202202.py)     | 360.97 μs ⚪️ |   4.87 μs ⚪️ |   2.19 μs ⚪️ | 368.03 μs ⚪️ |
 | 3    | Rucksack Reorganization | [aoc202203.py](03_rucksack_reorganization/aoc202203.py) |  23.06 μs ⚪️ | 560.48 μs ⚪️ | 390.95 μs ⚪️ | 974.49 μs ⚪️ |
 | 4    | Camp Cleanup            | [aoc202204.py](04_camp_cleanup/aoc202204.py)            |   2.21 ms 🔵 |  93.99 μs ⚪️ |  76.13 μs ⚪️ |   2.38 ms 🔵 |
-| 5    |                         |                                                         |             |             |             |             |
+| 5    | Supply Stacks           | [aoc202205.py](05_supply_stacks/aoc202205.py)           |   4.86 ms 🔵 | 424.16 μs ⚪️ | 352.57 μs ⚪️ |   5.64 ms 🔵 |
 | 6    |                         |                                                         |             |             |             |             |
 | 7    |                         |                                                         |             |             |             |             |
 | 8    |                         |                                                         |             |             |             |             |

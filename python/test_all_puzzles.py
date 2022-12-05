@@ -84,7 +84,7 @@ def test_puzzle(puzzle_path):
     puzzle_mod = importlib.import_module(f"{year}.{puzzle}.aoc{year}{day}")
 
     # Parse data
-    puzzle_input = (puzzle_path / "input.txt").read_text().strip()
+    puzzle_input = (puzzle_path / "input.txt").read_text().rstrip()
     puzzle_parse = getattr(puzzle_mod, "parse_data")
     with Timer(logger=None) as timer_parse:
         puzzle_data = puzzle_parse(puzzle_input)
@@ -101,7 +101,7 @@ def test_puzzle(puzzle_path):
 
     # Compare to expected output
     actual = [str(solution_part1), str(solution_part2)]
-    expected = (puzzle_path / "output.py.txt").read_text().strip().split("\n")[-2:]
+    expected = (puzzle_path / "output.py.txt").read_text().rstrip().split("\n")[-2:]
     assert actual == expected
 
     # Log elapsed time
