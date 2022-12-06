@@ -37,7 +37,7 @@ def find_marker(sequence, length):
     last_seen = {}
     run_length = 0
     for n, char in enumerate(sequence, start=1):
-        if n - last_seen.get(char, -1) > length:
+        if n - last_seen.get(char, -length) > length:
             run_length += 1
             if run_length == length:
                 return n

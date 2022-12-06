@@ -3,6 +3,7 @@
 # Standard library imports
 import pathlib
 import sys
+from functools import reduce
 
 
 def parse_data(puzzle_input):
@@ -28,22 +29,20 @@ def find_marker(sequence, length):
     ## Examples:
 
     >>> find_marker("geirarne", 3)
-    3
+    (3, 'gei')
     >>> find_marker("abcdefghijklmnopqrstuvwxyz", 20)
-    20
+    (20, 'abcdefghijklmnopqrst')
     >>> find_marker("aaaaaaaaaabccccccc", 3)
-    12
+    (12, 'abc')
     """
-    last_seen = {}
-    run_length = 0
-    for n, char in enumerate(sequence, start=1):
-        if n - last_seen.get(char, -1) > length:
-            run_length += 1
-            if run_length == length:
-                return n
-        else:
-            run_length = min(run_length + 1, n - last_seen.get(char, 0))
-        last_seen[char] = n
+
+    def reducer(acc, elem):
+        num, marker = acc
+        if len(set(marker)) == length:  # Bad performance, will run to end of sequence
+            return acc
+        return num + 1, (marker + elem)[-length:]
+
+    return reduce(reducer, sequence, (0, ""))
 
 
 def solve(puzzle_input):

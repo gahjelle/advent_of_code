@@ -4,6 +4,8 @@
 import pathlib
 import sys
 
+sys.setrecursionlimit(5000)
+
 
 def parse_data(puzzle_input):
     """Parse input."""
@@ -20,7 +22,7 @@ def part2(sequence):
     return find_marker(sequence, 14)
 
 
-def find_marker(sequence, length):
+def find_marker(sequence, length, num=None):
     """Find the first marker of the given length.
 
     A marker of length N is a sequence of N characters that are all different.
@@ -34,16 +36,11 @@ def find_marker(sequence, length):
     >>> find_marker("aaaaaaaaaabccccccc", 3)
     12
     """
-    last_seen = {}
-    run_length = 0
-    for n, char in enumerate(sequence, start=1):
-        if n - last_seen.get(char, -1) > length:
-            run_length += 1
-            if run_length == length:
-                return n
-        else:
-            run_length = min(run_length + 1, n - last_seen.get(char, 0))
-        last_seen[char] = n
+    num = length if num is None else num
+    if len(set(sequence[:length])) == length:
+        return num
+    else:
+        return find_marker(sequence[1:], length, num + 1)
 
 
 def solve(puzzle_input):

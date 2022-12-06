@@ -34,16 +34,9 @@ def find_marker(sequence, length):
     >>> find_marker("aaaaaaaaaabccccccc", 3)
     12
     """
-    last_seen = {}
-    run_length = 0
-    for n, char in enumerate(sequence, start=1):
-        if n - last_seen.get(char, -1) > length:
-            run_length += 1
-            if run_length == length:
-                return n
-        else:
-            run_length = min(run_length + 1, n - last_seen.get(char, 0))
-        last_seen[char] = n
+    for n in range(length, len(sequence)):
+        if len(set(sequence[n - length : n])) == length:
+            return n
 
 
 def solve(puzzle_input):

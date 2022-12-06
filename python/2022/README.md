@@ -9,7 +9,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 3    | Rucksack Reorganization | [aoc202203.py](03_rucksack_reorganization/aoc202203.py) |  23.06 μs ⚪️ | 560.48 μs ⚪️ | 390.95 μs ⚪️ | 974.49 μs ⚪️ |
 | 4    | Camp Cleanup            | [aoc202204.py](04_camp_cleanup/aoc202204.py)            |   2.21 ms 🔵 |  93.99 μs ⚪️ |  76.13 μs ⚪️ |   2.38 ms 🔵 |
 | 5    | Supply Stacks           | [aoc202205.py](05_supply_stacks/aoc202205.py)           |   4.86 ms 🔵 | 424.16 μs ⚪️ | 352.57 μs ⚪️ |   5.64 ms 🔵 |
-| 6    | Tuning Trouble          | [aoc202206.py](06_tuning_trouble/aoc202206.py)          | 808.97 ns ⚪️ | 444.91 μs ⚪️ |   2.35 ms 🔵 |   2.79 ms 🔵 |
+| 6    | Tuning Trouble          | [aoc202206.py](06_tuning_trouble/aoc202206.py)          | 831.03 ns ⚪️ | 312.80 μs ⚪️ | 537.21 μs ⚪️ | 850.84 μs ⚪️ |
 | 7    |                         |                                                         |             |             |             |             |
 | 8    |                         |                                                         |             |             |             |             |
 | 9    |                         |                                                         |             |             |             |             |
