@@ -33,15 +33,11 @@ defmodule AOC2022.Day06 do
       iex> find_marker('aaaaaaaaaabccccccc', 3)
       12
   """
-  def find_marker(sequence, length), do: find_marker(sequence, length, 0, 0, %{})
-  def find_marker(_, length, length, pos, _), do: pos
-
-  def find_marker([char | tail], length, run, pos, seen) do
-    last_char = pos - Map.get(seen, char, -1)
-
-    if last_char > length,
-      do: find_marker(tail, length, run + 1, pos + 1, Map.put(seen, char, pos)),
-      else: find_marker(tail, length, min(run + 1, last_char), pos + 1, Map.put(seen, char, pos))
+  def find_marker_(sequence, length) do
+    sequence
+    |> Enum.chunk_every(length, 1, :discard)
+    |> Enum.find_index(fn marker -> marker |> MapSet.new() |> MapSet.size() == length end)
+    |> then(&(&1 + length))
   end
 
   def main(args) do
