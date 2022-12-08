@@ -7,7 +7,7 @@ import sys
 
 def parse_data(puzzle_input):
     """Parse input."""
-    tree = cwd = {}
+    tree = cwd = []
     parents = []
     for command in puzzle_input.split("\n"):
         match command.split():
@@ -16,13 +16,14 @@ def parse_data(puzzle_input):
                 parents = []
             case ["$", "cd", ".."]:
                 cwd = parents.pop()
-            case ["$", "cd", dir]:
+            case ["$", "cd", _]:
                 parents.append(cwd)
-                cwd = cwd.setdefault(dir, {})
+                cwd.append([])
+                cwd = cwd[-1]
             case ["$", "ls"] | ["dir", _]:
                 pass
-            case [size, file]:
-                cwd[file] = int(size)
+            case [size, _]:
+                cwd.append(int(size))
             case _:
                 raise ValueError(f"{command!r} not parsed")
     return tree
@@ -40,14 +41,19 @@ def part2(tree):
     return min(size for size in sizes if size >= target_size)
 
 
-def dir_sizes(tree, prefix=""):
-    """Recursively calculate the size of each directory."""
+def dir_sizes(tree):
+    """Recursively calculate the size of each directory.
+
+    ## Example:
+
+    >>> dir_sizes([1, [2, 4, [8], 16], 32, [64, [128]], 256])
+    [8, 30, 128, 192, 511]
+    """
     dirs = []
     total_size = 0
-    for name, content in tree.items():
-        if isinstance(content, dict):
-            path = f"{prefix}/{name}"
-            dirs.extend(dir_sizes(content, prefix=path))
+    for content in tree:
+        if isinstance(content, list):
+            dirs.extend(dir_sizes(content))
             total_size += dirs[-1]
         else:
             total_size += content
