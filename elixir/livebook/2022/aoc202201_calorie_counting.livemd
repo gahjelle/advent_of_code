@@ -1,0 +1,29 @@
+# Advent of Code 2022, day 1: Calorie Counting
+
+## Setup
+
+```elixir
+file_path = __DIR__ <> "/../../lib/2022/01_calorie_counting/input.txt"
+```
+
+## Part 1 and Part 2
+
+```elixir
+{part1, part2} =
+  File.read!(file_path)
+  |> String.split("\n\n", trim: true)
+  |> Enum.map(fn elf ->
+    elf |> String.split("\n", trim: true) |> Enum.map(&String.to_integer/1) |> Enum.sum()
+  end)
+  |> Enum.sort()
+  |> Enum.reverse()
+  |> then(fn calories -> {hd(calories), calories |> Enum.take(3) |> Enum.sum()} end)
+```
+
+## Confirm final result
+
+```elixir
+70_698 = part1
+206_643 = part2
+"🥳"
+```
