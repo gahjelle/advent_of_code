@@ -1,6 +1,7 @@
 advent-of-code-data
 advent-of-code-ocr
 colorama
+matplotlib
 numpy
 pandas
 parse

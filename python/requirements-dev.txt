@@ -4,11 +4,11 @@
 #
 #    pip-compile requirements-dev.in
 #
-advent-of-code-data==1.2.3
+advent-of-code-data==1.3.2
     # via -r requirements.txt
 advent-of-code-ocr==1.0.0
     # via -r requirements.txt
-asttokens==2.2.0
+asttokens==2.2.1
     # via stack-data
 attrs==22.1.0
     # via pytest
@@ -20,7 +20,7 @@ beautifulsoup4==4.11.1
     #   advent-of-code-data
 black==22.10.0
     # via -r requirements-dev.in
-certifi==2022.9.24
+certifi==2022.12.7
     # via
     #   -r requirements.txt
     #   requests
@@ -34,6 +34,14 @@ codetiming==1.4.0
     # via -r requirements-dev.in
 colorama==0.4.6
     # via -r requirements.txt
+contourpy==1.0.6
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+cycler==0.11.0
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 decorator==5.1.1
     # via ipython
 docformatter==1.5.0
@@ -42,6 +50,10 @@ executing==1.2.0
     # via stack-data
 flake8==6.0.0
     # via -r requirements-dev.in
+fonttools==4.38.0
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 html2text==2020.1.16
     # via -r requirements-dev.in
 idna==3.4
@@ -56,6 +68,12 @@ isort==5.10.1
     # via -r requirements-dev.in
 jedi==0.18.2
     # via ipython
+kiwisolver==1.4.4
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+matplotlib==3.6.2
+    # via -r requirements.txt
 matplotlib-inline==0.1.6
     # via ipython
 mccabe==0.7.0
@@ -65,9 +83,14 @@ mypy-extensions==0.4.3
 numpy==1.23.5
     # via
     #   -r requirements.txt
+    #   contourpy
+    #   matplotlib
     #   pandas
-packaging==21.3
-    # via pytest
+packaging==22.0
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+    #   pytest
 pandas==1.5.2
     # via -r requirements.txt
 parse==1.19.0
@@ -84,13 +107,17 @@ pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
-platformdirs==2.5.4
+pillow==9.3.0
+    # via
+    #   -r requirements.txt
+    #   matplotlib
+platformdirs==2.6.0
     # via black
 pluggy==1.0.0
     # via pytest
-polars==0.15.1
+polars==0.15.2
     # via -r requirements.txt
-prompt-toolkit==3.0.33
+prompt-toolkit==3.0.36
     # via ipython
 ptyprocess==0.7.0
     # via pexpect
@@ -103,13 +130,16 @@ pyflakes==3.0.1
 pygments==2.13.0
     # via ipython
 pyparsing==3.0.9
-    # via packaging
+    # via
+    #   -r requirements.txt
+    #   matplotlib
 pytest==7.2.0
     # via -r requirements-dev.in
 python-dateutil==2.8.2
     # via
     #   -r requirements.txt
     #   advent-of-code-data
+    #   matplotlib
     #   pandas
 pytz==2022.6
     # via
