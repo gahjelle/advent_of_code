@@ -12,7 +12,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 6    | Tuning Trouble          | [aoc202206.ex](06_tuning_trouble/aoc202206.ex)          |   5.48 µs ⚪️ |  90.15 µs ⚪️ | 157.34 µs ⚪️ | 252.98 µs ⚪️ |
 | 7    | No Space Left On Device | [aoc202207.ex](07_no_space_left_on_device/aoc202207.ex) |   1.57 ms 🔵 |   9.23 ms 🔵 |   9.74 ms 🔵 |  20.54 ms 🔵 |
 | 8    | Treetop Tree House      | [aoc202208.ex](08_treetop_tree_house/aoc202208.ex)      |   2.37 ms 🔵 |    4.41 s 🔴 |    6.17 s 🔴 |   10.58 s 🔴 |
-| 9    |                         |                                                         |             |             |             |
+| 9    | Rope Bridge             | [aoc202209.ex](09_rope_bridge/aoc202209.ex)             | 400.75 µs ⚪️ |   3.17 ms 🔵 |   8.64 ms 🔵 |  12.21 ms 🔵 |
 | 10   |                         |                                                         |             |             |             |
 | 11   |                         |                                                         |             |             |             |
 | 12   |                         |                                                         |             |             |             |
