@@ -12,6 +12,7 @@ defmodule AOC2022.Day08.Test do
     {:ok,
      [
        example1: @puzzle_dir |> Path.join("example1.txt") |> AOC.read_text() |> parse(),
+       example2: @puzzle_dir |> Path.join("example2.txt") |> AOC.read_text() |> parse(),
        input: @puzzle_dir |> Path.join("input.txt") |> AOC.read_text() |> parse()
      ]}
   end
@@ -53,8 +54,18 @@ defmodule AOC2022.Day08.Test do
   end
 
   @tag :example
+  test "part 1 example 2", %{example2: example2} do
+    assert part1(example2) == 425
+  end
+
+  @tag :example
   test "part 2 example 1", %{example1: example1} do
     assert part2(example1) == 8
+  end
+
+  @tag :example
+  test "part 2 example 2", %{example2: example2} do
+    assert part2(example2) == 625
   end
 
   @tag :solution
