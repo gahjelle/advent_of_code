@@ -12,7 +12,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 6    | Tuning Trouble          | [aoc202206.py](06_tuning_trouble/aoc202206.py)          | 831.03 ns ⚪️ | 312.80 μs ⚪️ | 537.21 μs ⚪️ | 850.84 μs ⚪️ |
 | 7    | No Space Left On Device | [aoc202207.py](07_no_space_left_on_device/aoc202207.py) | 267.39 μs ⚪️ |  59.57 μs ⚪️ |  51.87 μs ⚪️ | 378.83 μs ⚪️ |
 | 8    | Treetop Tree House      | [aoc202208.py](08_treetop_tree_house/aoc202208.py)      | 893.39 μs ⚪️ |  32.32 ms 🔵 |  38.60 ms 🔵 |  71.81 ms 🔵 |
-| 9    |                         |                                                         |             |             |             |             |
+| 9    | Rope Bridge             | [aoc202209.py](09_rope_bridge/aoc202209.py)             |   1.55 ms 🔵 |   9.51 ms 🔵 |  44.71 ms 🔵 |  55.77 ms 🔵 |
 | 10   |                         |                                                         |             |             |             |             |
 | 11   |                         |                                                         |             |             |             |             |
 | 12   |                         |                                                         |             |             |             |             |

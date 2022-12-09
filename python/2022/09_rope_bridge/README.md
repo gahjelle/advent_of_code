@@ -6,4 +6,4 @@ Puzzle text: https://adventofcode.com/2022/day/9
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2022/09_rope_bridge)
+- [💧 Elixir](../../../elixir/lib/2022/09_rope_bridge)
