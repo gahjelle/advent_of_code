@@ -13,7 +13,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 7    | No Space Left On Device | [aoc202207.ex](07_no_space_left_on_device/aoc202207.ex) |   1.57 ms 🔵 |   9.23 ms 🔵 |   9.74 ms 🔵 |  20.54 ms 🔵 |
 | 8    | Treetop Tree House      | [aoc202208.ex](08_treetop_tree_house/aoc202208.ex)      |   2.34 ms 🔵 |  20.16 ms 🔵 |  15.91 ms 🔵 |  38.42 ms 🔵 |
 | 9    | Rope Bridge             | [aoc202209.ex](09_rope_bridge/aoc202209.ex)             | 400.75 µs ⚪️ |   3.17 ms 🔵 |   8.64 ms 🔵 |  12.21 ms 🔵 |
-| 10   |                         |                                                         |             |             |             |
+| 10   | Cathode-ray Tube        | [aoc202210.ex](10_cathode-ray_tube/aoc202210.ex)        |  13.29 µs ⚪️ |   3.23 µs ⚪️ |  19.51 µs ⚪️ |  36.02 µs ⚪️ |
 | 11   |                         |                                                         |             |             |             |
 | 12   |                         |                                                         |             |             |             |
 | 13   |                         |                                                         |             |             |             |
