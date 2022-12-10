@@ -13,7 +13,7 @@ Solutions to [Advent of Code 2016](https://adventofcode.com/2016/) in [Python](h
 | 7    | Internet Protocol Version 7     | [aoc201607.py](07_internet_protocol_version_7/aoc201607.py)    |   3.53 ms 🔵 |  13.11 ms 🔵 |   6.18 ms 🔵 |  22.83 ms 🔵 |
 | 8    | Two-Factor Authentication       | [aoc201608.py](08_two-factor_authentication/aoc201608.py)      |   3.81 ms 🔵 |   1.06 ms 🔵 |  10.81 ms 🔵 |  15.68 ms 🔵 |
 | 9    | Explosives In Cyberspace        | [aoc201609.py](09_explosives_in_cyberspace/aoc201609.py)       |   1.33 μs ⚪️ | 187.73 μs ⚪️ |   2.77 ms 🔵 |   2.96 ms 🔵 |
-| 10   |                                 |                                                                |             |             |             |             |
+| 10   | Balance Bots                    | [aoc201610.py](10_balance_bots/aoc201610.py)                   |   4.63 ms 🔵 | 674.64 μs ⚪️ |   1.44 ms 🔵 |   6.74 ms 🔵 |
 | 11   |                                 |                                                                |             |             |             |             |
 | 12   |                                 |                                                                |             |             |             |             |
 | 13   |                                 |                                                                |             |             |             |             |
