@@ -14,7 +14,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 8    | Treetop Tree House      | [aoc202208.py](08_treetop_tree_house/aoc202208.py)      | 893.39 μs ⚪️ |  32.32 ms 🔵 |  38.60 ms 🔵 |  71.81 ms 🔵 |
 | 9    | Rope Bridge             | [aoc202209.py](09_rope_bridge/aoc202209.py)             |   1.55 ms 🔵 |   9.51 ms 🔵 |  44.71 ms 🔵 |  55.77 ms 🔵 |
 | 10   | Cathode-Ray Tube        | [aoc202210.py](10_cathode-ray_tube/aoc202210.py)        |  67.91 μs ⚪️ |  11.74 μs ⚪️ |  48.19 μs ⚪️ | 127.83 μs ⚪️ |
-| 11   |                         |                                                         |             |             |             |             |
+| 11   | Monkey In The Middle    | [aoc202211.py](11_monkey_in_the_middle/aoc202211.py)    |  93.77 μs ⚪️ | 563.98 μs ⚪️ | 234.99 ms 🔵 | 235.64 ms 🔵 |
 | 12   |                         |                                                         |             |             |             |             |
 | 13   |                         |                                                         |             |             |             |             |
 | 14   |                         |                                                         |             |             |             |             |
