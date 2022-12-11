@@ -9,6 +9,7 @@ defmodule AOC2022.Day11.Test do
   import AOC2022.Day11, only: [parse: 1, part1: 1, part2: 1]
   doctest(AOC2022.Day11, import: true)
   doctest(AOC2022.Day11.Monkey, import: true)
+  doctest(AOC2022.Day11.Monkeys, import: true)
 
   @puzzle_dir "lib/2022/11_monkey_in_the_middle/"
   setup_all do
@@ -21,13 +22,19 @@ defmodule AOC2022.Day11.Test do
 
   @tag :parse
   test "parse example", %{example1: example1} do
-    assert example1 ===
-             {%{
-                0 => Monkey.new(operation: {:mul, 19}, test: 23, to_true: 2, to_false: 3),
-                1 => Monkey.new(operation: {:add, 6}, test: 19, to_true: 2, to_false: 0),
-                2 => Monkey.new(operation: {:pow, 2}, test: 13, to_true: 1, to_false: 3),
-                3 => Monkey.new(operation: {:add, 3}, test: 17, to_true: 0, to_false: 1)
-              }, %{0 => [79, 98], 1 => [54, 65, 75, 74], 2 => [79, 60, 97], 3 => [74]}}
+    assert example1 === %{
+             0 => Monkey.new(items: [79, 98], op: {:mul, 19}, test: 23, to_true: 2, to_false: 3),
+             1 =>
+               Monkey.new(
+                 items: [54, 65, 75, 74],
+                 op: {:add, 6},
+                 test: 19,
+                 to_true: 2,
+                 to_false: 0
+               ),
+             2 => Monkey.new(items: [79, 60, 97], op: {:pow2}, test: 13, to_true: 1, to_false: 3),
+             3 => Monkey.new(items: [74], op: {:add, 3}, test: 17, to_true: 0, to_false: 1)
+           }
   end
 
   @tag :example

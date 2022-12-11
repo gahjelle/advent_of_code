@@ -2,39 +2,94 @@ defmodule AOC2022.Day11 do
   @moduledoc """
   Advent of Code 2022, day 11: Monkey in the Middle.
   """
-  alias AOC2022.Day11.Monkey
+  alias AOC2022.Day11.Monkeys
   require AOC
 
   @doc """
   Parse input.
   """
-  def parse(puzzle_input) do
-    monkeys =
-      puzzle_input
-      |> String.split("\n\n", trim: true)
-      |> Enum.with_index()
-      |> Enum.map(fn {info, idx} -> {idx, Monkey.from_string(info)} end)
-      |> Enum.into(%{})
-
-    items =
-      puzzle_input
-      |> String.split("\n\n", trim: true)
-      |> Enum.with_index()
-      |> Enum.map(fn {info, idx} -> {idx, Monkey.items_from_string(info)} end)
-      |> Enum.into(%{})
-
-    {monkeys, items}
-  end
+  def parse(puzzle_input), do: Monkeys.from_string(puzzle_input)
 
   @doc """
   Solve part 1.
   """
-  def part1(data), do: chase_monkeys(data, 20, 3)
+  def part1(monkeys), do: chase_monkeys(monkeys, 20, 3)
 
   @doc """
   Solve part 2.
   """
-  def part2(data), do: chase_monkeys(data, 10_000, 1)
+  def part2(monkeys), do: chase_monkeys(monkeys, 10_000, 1)
+
+  @doc """
+  Chase the monkeys for a number of rounds controlling the worry level.
+
+  Count the total number of times each monkey inspects items and find the two
+  most active monkeys. The level of monkey business is the product of the number
+  of inspections of the two most active monkeys.
+
+  ## Example:
+
+      iex> monkeys = %{
+      ...>   0 => Monkey.new(items: [4, 1, 8], op: {:add, 4}, test: 11, to_true: 1, to_false: 2),
+      ...>   1 => Monkey.new(items: [], op: {:mul, 3}, test: 7, to_true: 2, to_false: 0),
+      ...>   2 => Monkey.new(items: [0, 6], op: {:pow2}, test: 13, to_true: 0, to_false: 1)
+      ...> }
+      iex> chase_monkeys(monkeys, 3, 2)
+      8 * 10
+  """
+  def chase_monkeys(monkeys, rounds, control) do
+    monkeys
+    |> Monkeys.chase(rounds, control)
+    |> Enum.map(fn {_, monkey} -> monkey.count end)
+    |> Enum.sort(:desc)
+    |> Enum.take(2)
+    |> Enum.product()
+  end
+
+  def main(args) do
+    Enum.map(args, fn path -> AOC.solve(path, &parse/1, &part1/1, &part2/1) end)
+  end
+end
+
+defmodule AOC2022.Day11.Monkeys do
+  @moduledoc """
+  Several monkeys are represented as a Map with monkey_id => monkey items.
+  """
+  alias AOC2022.Day11.Monkey
+
+  @doc """
+  Construct Monkeys from string information.
+
+  ## Example:
+
+      iex> lines = ~s(
+      ...>Monkey 0:
+      ...>  Starting items: 56
+      ...>  Operation: new = old + 1
+      ...>  Test: divisible by 7
+      ...>    If true: throw to monkey 4
+      ...>    If false: throw to monkey 2
+      ...>
+      ...>Monkey 1:
+      ...>  Starting items: 68, 72
+      ...>  Operation: new = old * 8
+      ...>  Test: divisible by 19
+      ...>    If true: throw to monkey 3
+      ...>    If false: throw to monkey 0
+      ...>)
+      iex> from_string(lines)
+      %{
+        0 => Monkey.new(items: [56], op: {:add, 1}, test: 7, to_true: 4, to_false: 2),
+        1 => Monkey.new(items: [68, 72], op: {:mul, 8}, test: 19, to_true: 3, to_false: 0)
+      }
+  """
+  def from_string(lines) do
+    lines
+    |> String.split("\n\n", trim: true)
+    |> Enum.map(&Monkey.from_string/1)
+    |> Enum.with_index()
+    |> Enum.into(%{}, &{elem(&1, 1), elem(&1, 0)})
+  end
 
   @doc """
   Chase the monkeys for a given number of rounds and with control on your worry
@@ -46,45 +101,74 @@ defmodule AOC2022.Day11 do
   ## Example:
 
       iex> monkeys = %{
-      ...>   0 => Monkey.new(id: 0, operation: {:add, 4}, test: 11, to_true: 1, to_false: 2),
-      ...>   1 => Monkey.new(id: 1, operation: {:mul, 3}, test: 7, to_true: 2, to_false: 0),
-      ...>   2 => Monkey.new(id: 2, operation: {:pow, 2}, test: 13, to_true: 0, to_false: 1)
+      ...>   0 => Monkey.new(items: [4, 1, 8], op: {:add, 4}, test: 11, to_true: 1, to_false: 2),
+      ...>   1 => Monkey.new(items: [], op: {:mul, 3}, test: 7, to_true: 2, to_false: 0),
+      ...>   2 => Monkey.new(items: [0, 6], op: {:pow2}, test: 13, to_true: 0, to_false: 1)
       ...> }
-      iex> items = %{0 => [4, 1, 8], 1 => [], 2 => [0, 6]}
-      iex> chase_monkeys({monkeys, items}, 3, 2)
-      80
+      iex> chase(monkeys, 3, 2)
+      %{
+        0 => %AOC2022.Day11.Monkey{items: [3], op: {:add, 4}, test: 11, to_true: 1, to_false: 2, count: 8},
+        1 => %AOC2022.Day11.Monkey{items: [112, 32, 4, 112], op: {:mul, 3}, test: 7, to_true: 2, to_false: 0, count: 5},
+        2 => %AOC2022.Day11.Monkey{items: [], op: {:pow2}, test: 13, to_true: 0, to_false: 1, count: 10}
+      }
   """
-  def chase_monkeys({monkeys, items}, rounds, control) do
+  def chase(monkeys, rounds, control) do
+    num_monkeys = map_size(monkeys)
     mod = monkeys |> Map.values() |> Enum.map(& &1.test) |> Enum.product()
 
-    1..rounds
-    |> Enum.reduce({monkeys, items}, fn _, {monkeys, items} ->
-      Monkey.chase(monkeys, items, {control, mod})
-    end)
-    |> elem(0)
-    |> Map.values()
-    |> Enum.sort(fn monkey_1, monkey_2 -> monkey_1.count >= monkey_2.count end)
-    |> then(fn [monkey_1, monkey_2 | _] -> monkey_1.count * monkey_2.count end)
+    for _ <- 1..rounds,
+        monkey_id <- 0..(num_monkeys - 1),
+        reduce: monkeys do
+      monkeys -> inspect(monkeys, monkey_id, control, mod)
+    end
   end
 
-  def main(args) do
-    Enum.map(args, fn path -> AOC.solve(path, &parse/1, &part1/1, &part2/1) end)
+  @doc """
+  One monkey inspects their items and passes them to someone else.
+
+  ## Example:
+
+      iex> monkeys = %{
+      ...>   0 => Monkey.new(items: [4, 1, 8], op: {:add, 4}, test: 11, to_true: 1, to_false: 2),
+      ...>   1 => Monkey.new(items: [], op: {:mul, 3}, test: 7, to_true: 2, to_false: 0),
+      ...>   2 => Monkey.new(items: [0, 6], op: {:pow2}, test: 13, to_true: 0, to_false: 1)
+      ...> }
+      iex> inspect(monkeys, 2, 3, 11 * 7 * 13)
+      %{
+        0 => Monkey.new(items: [4, 1, 8, 0], op: {:add, 4}, test: 11, to_true: 1, to_false: 2, count: 0),
+        1 => Monkey.new(items: [12], op: {:mul, 3}, test: 7, to_true: 2, to_false: 0, count: 0),
+        2 => Monkey.new(items: [], op: {:pow2}, test: 13, to_true: 0, to_false: 1, count: 2)
+      }
+  """
+  def inspect(monkeys, monkey_id, control, mod) do
+    monkey = monkeys[monkey_id]
+
+    monkey.items
+    |> Enum.reduce(monkeys, fn item, monkeys ->
+      new_item = item |> Monkey.operate(monkey.op) |> div(control) |> rem(mod)
+      to_monkey = if rem(new_item, monkey.test) == 0, do: monkey.to_true, else: monkey.to_false
+
+      monkeys
+      |> Map.update!(monkey_id, fn monkey -> Map.update!(monkey, :count, &(&1 + 1)) end)
+      |> Map.update!(to_monkey, fn monkey -> Map.update!(monkey, :items, &(&1 ++ [new_item])) end)
+    end)
+    |> Map.update!(monkey_id, fn monkey -> Map.put(monkey, :items, []) end)
   end
 end
 
 defmodule AOC2022.Day11.Monkey do
   @moduledoc """
-  Structure for representing monkeys.
+  Structure for representing one monkey.
   """
-  defstruct operation: {:mul, 1}, test: 1, to_true: 0, to_false: 0, count: 0
+  defstruct items: [], op: {:mul, 1}, test: 1, to_true: 0, to_false: 0, count: 0
 
   @doc """
   Create a Monkey from keyword arguments.
 
   ## Example:
 
-      iex> new(operation: {:mul, 3}, test: 7, to_true: 2, to_false: 19)
-      %Monkey{operation: {:mul, 3}, test: 7, to_true: 2, to_false: 19, count: 0}
+      iex> new(op: {:mul, 3}, test: 7, to_true: 2, to_false: 19)
+      Monkey.new(items: [], op: {:mul, 3}, test: 7, to_true: 2, to_false: 19, count: 0)
   """
   def new(args), do: struct(__MODULE__, Enum.into(args, %{}))
 
@@ -102,97 +186,13 @@ defmodule AOC2022.Day11.Monkey do
       ...>    If false: throw to monkey 7
       ...>)
       iex> from_string(info)
-      %Monkey{operation: {:add, 2}, test: 3, to_true: 6, to_false: 7}
+      Monkey.new(items: [84, 93, 70], op: {:add, 2}, test: 3, to_true: 6, to_false: 7)
   """
   def from_string(info) do
     info
     |> String.split("\n", trim: true)
     |> Enum.flat_map(&parse_line/1)
     |> then(fn monkey -> new(monkey) end)
-  end
-
-  @doc """
-  List starting items from a text description.
-
-  ## Example:
-
-      iex> info = ~s(
-      ...>Monkey 3:
-      ...>  Starting items: 84, 93, 70
-      ...>  Operation: new = old + 2
-      ...>  Test: divisible by 3
-      ...>    If true: throw to monkey 6
-      ...>    If false: throw to monkey 7
-      ...>)
-      iex> items_from_string(info)
-      [84, 93, 70]
-  """
-  def items_from_string(info) do
-    info |> String.split("\n", trim: true) |> Enum.flat_map(&parse_item/1)
-  end
-
-  @doc """
-  Chase all monkeys.
-
-  ## Example:
-
-      iex> monkeys = %{
-      ...>   0 => Monkey.new(operation: {:add, 4}, test: 11, to_true: 1, to_false: 2),
-      ...>   1 => Monkey.new(operation: {:mul, 3}, test: 7, to_true: 2, to_false: 0),
-      ...>   2 => Monkey.new(operation: {:pow, 2}, test: 13, to_true: 0, to_false: 1)
-      ...> }
-      iex> items = %{0 => [4, 1], 1 => [8], 2 => [0, 6]}
-      iex> chase(monkeys, items, {2, 11 * 7 * 13})
-      {
-        %{
-          0 => Monkey.new(operation: {:add, 4}, test: 11, to_true: 1, to_false: 2, count: 2),
-          1 => Monkey.new(operation: {:mul, 3}, test: 7, to_true: 2, to_false: 0, count: 1),
-          2 => Monkey.new(operation: {:pow, 2}, test: 13, to_true: 0, to_false: 1, count: 4)
-        },
-        %{0 => [12, 0], 1 => [18, 8, 2], 2 => []}
-      }
-  """
-  def chase(monkeys, items, {control, mod}) do
-    monkeys
-    |> Map.keys()
-    |> Enum.reduce({monkeys, items}, fn monkey_id, {monkeys, items} ->
-      for item <- items[monkey_id], reduce: {monkeys, items} do
-        {monkeys, items} ->
-          monkeys = Map.update!(monkeys, monkey_id, &count/1)
-          items = items |> inspect(monkeys, monkey_id, item, control, mod)
-          {monkeys, items}
-      end
-    end)
-  end
-
-  @doc """
-  Count one comparison for one monkey.
-
-  ## Example:
-
-      iex> count(Monkey.new(count: 4)).count
-      5
-  """
-  def count(monkey), do: Map.update!(monkey, :count, &(&1 + 1))
-
-  @doc """
-  Have a monkey inspect one item.
-
-  ## Example:
-
-      iex> monkeys = %{1 => Monkey.new(operation: {:mul, 3}, test: 7, to_true: 2, to_false: 0)}
-      iex> items = %{0 => [4, 1], 1 => [8], 2 => [0, 6]}
-      iex> inspect(items, monkeys, 1, 8, 2, 1001)
-      %{0 => [4, 1, 12], 1 => [], 2 => [0, 6]}
-  """
-  def inspect(items, monkeys, monkey_id, item, control, mod) do
-    monkey = monkeys[monkey_id]
-    new_item = item |> operate(monkey.operation) |> div(control) |> rem(mod)
-    new_monkey = if rem(new_item, monkey.test) == 0, do: monkey.to_true, else: monkey.to_false
-
-    items
-    |> Map.update!(monkey_id, &Enum.reject(&1, fn i -> i == item end))
-    |> Map.update!(new_monkey, fn levels -> levels ++ [new_item] end)
   end
 
   @doc """
@@ -204,36 +204,42 @@ defmodule AOC2022.Day11.Monkey do
       7
       iex> operate(19, {:mul, 5})
       95
-      iex> operate(7, {:pow, 2})
+      iex> operate(7, {:pow2})
       49
   """
-  def operate(number, {:add, addend}), do: number + addend
-  def operate(number, {:mul, factor}), do: number * factor
-  def operate(number, {:pow, exponent}), do: number ** exponent
+  def operate(old, {:add, addend}), do: old + addend
+  def operate(old, {:mul, factor}), do: old * factor
+  def operate(old, {:pow2}), do: old * old
 
-  defp parse_line(<<"  Operation: new = old * old">>),
-    do: [operation: {:pow, 2}]
+  @doc """
+  Parse one line of monkey information.
 
-  defp parse_line(<<"  Operation: new = old + " <> number::binary>>),
-    do: [operation: {:add, number |> String.to_integer()}]
+  ## Examples:
 
-  defp parse_line(<<"  Operation: new = old * " <> number::binary>>),
-    do: [operation: {:mul, number |> String.to_integer()}]
+      iex> parse_line("  Operation: new = old + 71")
+      [op: {:add, 71}]
+      iex> parse_line("  Starting items: 1, 3, 71, 98443")
+      [items: [1, 3, 71, 98443]]
+  """
+  def parse_line(<<"  Starting items: " <> items::binary>>),
+    do: [items: items |> String.split(", ", trim: true) |> Enum.map(&String.to_integer/1)]
 
-  defp parse_line(<<"  Test: divisible by " <> number::binary>>),
+  def parse_line(<<"  Operation: new = old * old">>), do: [op: {:pow2}]
+
+  def parse_line(<<"  Operation: new = old + " <> number::binary>>),
+    do: [op: {:add, number |> String.to_integer()}]
+
+  def parse_line(<<"  Operation: new = old * " <> number::binary>>),
+    do: [op: {:mul, number |> String.to_integer()}]
+
+  def parse_line(<<"  Test: divisible by " <> number::binary>>),
     do: [test: String.to_integer(number)]
 
-  defp parse_line(<<"    If true: throw to monkey " <> number::binary>>),
+  def parse_line(<<"    If true: throw to monkey " <> number::binary>>),
     do: [to_true: String.to_integer(number)]
 
-  defp parse_line(<<"    If false: throw to monkey " <> number::binary>>),
+  def parse_line(<<"    If false: throw to monkey " <> number::binary>>),
     do: [to_false: String.to_integer(number)]
 
-  defp parse_line(_), do: []
-
-  defp parse_item(<<"  Starting items: " <> items::binary>>) do
-    items |> String.split(", ", trim: true) |> Enum.map(&String.to_integer/1)
-  end
-
-  defp parse_item(_), do: []
+  def parse_line(_), do: []
 end
