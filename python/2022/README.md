@@ -16,7 +16,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 10   | Cathode-Ray Tube        | [aoc202210.py](10_cathode-ray_tube/aoc202210.py)        |  67.91 μs ⚪️ |  11.74 μs ⚪️ |  48.19 μs ⚪️ | 127.83 μs ⚪️ |
 | 11   | Monkey In The Middle    | [aoc202211.py](11_monkey_in_the_middle/aoc202211.py)    |  93.77 μs ⚪️ | 563.98 μs ⚪️ | 234.99 ms 🔵 | 235.64 ms 🔵 |
 | 12   | Hill Climbing Algorithm | [aoc202212.py](12_hill_climbing_algorithm/aoc202212.py) |   1.26 ms 🔵 |  39.86 ms 🔵 |  20.84 ms 🔵 |  61.96 ms 🔵 |
-| 13   |                         |                                                         |             |             |             |             |
+| 13   | Distress Signal         | [aoc202213.py](13_distress_signal/aoc202213.py)         |   1.30 ms 🔵 | 178.65 μs ⚪️ |   2.77 ms 🔵 |   4.25 ms 🔵 |
 | 14   |                         |                                                         |             |             |             |             |
 | 15   |                         |                                                         |             |             |             |             |
 | 16   |                         |                                                         |             |             |             |             |

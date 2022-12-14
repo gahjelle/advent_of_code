@@ -33,6 +33,7 @@ defmodule AOC.MixProject do
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:heap, "~> 2.0"},
+      {:jason, "~> 1.4"},
       {:nimble_parsec, "~> 1.1"},
       {:number, "~> 1.0", only: [:dev, :test]},
       {:statistics, "~> 0.6.2"}
