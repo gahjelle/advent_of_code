@@ -17,7 +17,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 11   | Monkey In The Middle    | [aoc202211.ex](11_monkey_in_the_middle/aoc202211.ex)    |  15.50 µs ⚪️ | 398.39 µs ⚪️ | 176.36 ms 🔵 | 176.78 ms 🔵 |
 | 12   | Hill Climbing Algorithm | [aoc202212.ex](12_hill_climbing_algorithm/aoc202212.ex) |   1.88 ms 🔵 |  11.29 ms 🔵 | 973.29 ms 🔵 | 986.46 ms 🔵 |
 | 13   | Distress Signal         | [aoc202213.ex](13_distress_signal/aoc202213.ex)         | 706.33 µs ⚪️ |   6.56 µs ⚪️ |  85.94 µs ⚪️ | 798.83 µs ⚪️ |
-| 14   |                         |                                                         |             |             |             |
+| 14   | Regolith Reservoir      | [aoc202214.ex](14_regolith_reservoir/aoc202214.ex)      |   2.60 ms 🔵 |   7.04 ms 🔵 | 265.83 ms 🔵 | 275.48 ms 🔵 |
 | 15   |                         |                                                         |             |             |             |
 | 16   |                         |                                                         |             |             |             |
 | 17   |                         |                                                         |             |             |             |
