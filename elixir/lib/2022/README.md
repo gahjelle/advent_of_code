@@ -15,7 +15,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 9    | Rope Bridge             | [aoc202209.ex](09_rope_bridge/aoc202209.ex)             | 400.75 µs ⚪️ |   3.17 ms 🔵 |   8.64 ms 🔵 |  12.21 ms 🔵 |
 | 10   | Cathode-ray Tube        | [aoc202210.ex](10_cathode-ray_tube/aoc202210.ex)        |  13.29 µs ⚪️ |   3.23 µs ⚪️ |  19.51 µs ⚪️ |  36.02 µs ⚪️ |
 | 11   | Monkey In The Middle    | [aoc202211.ex](11_monkey_in_the_middle/aoc202211.ex)    |  15.50 µs ⚪️ | 398.39 µs ⚪️ | 176.36 ms 🔵 | 176.78 ms 🔵 |
-| 12   |                         |                                                         |             |             |             |
+| 12   | Hill Climbing Algorithm | [aoc202212.ex](12_hill_climbing_algorithm/aoc202212.ex) |   1.88 ms 🔵 |  11.29 ms 🔵 | 973.29 ms 🔵 | 986.46 ms 🔵 |
 | 13   |                         |                                                         |             |             |             |
 | 14   |                         |                                                         |             |             |             |
 | 15   |                         |                                                         |             |             |             |
