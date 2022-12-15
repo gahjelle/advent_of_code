@@ -18,7 +18,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 12   | Hill Climbing Algorithm | [aoc202212.ex](12_hill_climbing_algorithm/aoc202212.ex) |   1.96 ms 🔵 |  12.01 ms 🔵 |  12.47 ms 🔵 |  26.44 ms 🔵 |
 | 13   | Distress Signal         | [aoc202213.ex](13_distress_signal/aoc202213.ex)         | 706.33 µs ⚪️ |   6.56 µs ⚪️ |  85.94 µs ⚪️ | 798.83 µs ⚪️ |
 | 14   | Regolith Reservoir      | [aoc202214.ex](14_regolith_reservoir/aoc202214.ex)      |   2.60 ms 🔵 |   7.04 ms 🔵 | 265.83 ms 🔵 | 275.48 ms 🔵 |
-| 15   |                         |                                                         |             |             |             |
+| 15   | Beacon Exclusion Zone   | [aoc202215.ex](15_beacon_exclusion_zone/aoc202215.ex)   |  49.74 µs ⚪️ |   2.92 µs ⚪️ |    4.08 s 🔴 |    4.08 s 🔴 |
 | 16   |                         |                                                         |             |             |             |
 | 17   |                         |                                                         |             |             |             |
 | 18   |                         |                                                         |             |             |             |
