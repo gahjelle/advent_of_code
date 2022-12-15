@@ -6,4 +6,5 @@ numpy
 pandas
 parse
 polars
+rich
 tabulate

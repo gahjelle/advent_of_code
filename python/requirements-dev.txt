@@ -34,6 +34,10 @@ codetiming==1.4.0
     # via -r requirements-dev.in
 colorama==0.4.6
     # via -r requirements.txt
+commonmark==0.9.1
+    # via
+    #   -r requirements.txt
+    #   rich
 contourpy==1.0.6
     # via
     #   -r requirements.txt
@@ -128,7 +132,10 @@ pycodestyle==2.10.0
 pyflakes==3.0.1
     # via flake8
 pygments==2.13.0
-    # via ipython
+    # via
+    #   -r requirements.txt
+    #   ipython
+    #   rich
 pyparsing==3.0.9
     # via
     #   -r requirements.txt
@@ -153,6 +160,8 @@ requests==2.28.1
     # via
     #   -r requirements.txt
     #   advent-of-code-data
+rich==12.6.0
+    # via -r requirements.txt
 six==1.16.0
     # via
     #   -r requirements.txt
