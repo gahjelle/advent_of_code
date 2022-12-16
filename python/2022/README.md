@@ -19,7 +19,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 13   | Distress Signal         | [aoc202213.py](13_distress_signal/aoc202213.py)         |   1.30 ms 🔵 | 178.65 μs ⚪️ |   2.77 ms 🔵 |   4.25 ms 🔵 |
 | 14   | Regolith Reservoir      | [aoc202214.py](14_regolith_reservoir/aoc202214.py)      |   3.14 ms 🔵 |  17.41 ms 🔵 |    2.45 s 🔴 |    2.48 s 🔴 |
 | 15   | Beacon Exclusion Zone   | [aoc202215.py](15_beacon_exclusion_zone/aoc202215.py)   | 885.10 μs ⚪️ |  21.76 μs ⚪️ |  12.24 ms 🔵 |  13.15 ms 🔵 |
-| 16   |                         |                                                         |             |             |             |             |
+| 16   | Proboscidea Volcanium   | [aoc202216.py](16_proboscidea_volcanium/aoc202216.py)   |   2.36 ms 🔵 | 347.31 ms 🔵 |    7.51 s 🔴 |    7.86 s 🔴 |
 | 17   |                         |                                                         |             |             |             |             |
 | 18   |                         |                                                         |             |             |             |             |
 | 19   |                         |                                                         |             |             |             |             |
