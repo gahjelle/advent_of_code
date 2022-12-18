@@ -21,7 +21,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 15   | Beacon Exclusion Zone   | [aoc202215.ex](15_beacon_exclusion_zone/aoc202215.ex)   |  49.74 µs ⚪️ |   2.92 µs ⚪️ |    4.08 s 🔴 |    4.08 s 🔴 |
 | 16   | Proboscidea Volcanium   | [aoc202216.ex](16_proboscidea_volcanium/aoc202216.ex)   | 121.11 µs ⚪️ |   15.19 s 🔴 |           🔴 |           🔴 |
 | 17   |                         |                                                         |             |             |             |
-| 18   |                         |                                                         |             |             |             |
+| 18   | Boiling Boulders        | [aoc202218.ex](18_boiling_boulders/aoc202218.ex)        |   1.26 ms 🔵 |   1.20 ms 🔵 |    2.43 s 🔴 |    2.43 s 🔴 |
 | 19   |                         |                                                         |             |             |             |
 | 20   |                         |                                                         |             |             |             |
 | 21   |                         |                                                         |             |             |             |
