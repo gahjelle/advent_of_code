@@ -24,8 +24,8 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 18   | Boiling Boulders         | [aoc202218.py](18_boiling_boulders/aoc202218.py)         |   2.14 ms 🔵 |   2.11 ms 🔵 |  12.84 ms 🔵 |  17.09 ms 🔵 |
 | 19   | Not Enough Minerals      | [aoc202219.py](19_not_enough_minerals/aoc202219.py)      |   1.49 ms 🔵 | 681.08 ms 🔵 |    1.49 s 🔴 |    2.17 s 🔴 |
 | 20   | Grove Positioning System | [aoc202220.py](20_grove_positioning_system/aoc202220.py) | 997.13 μs ⚪️ | 336.61 ms 🔵 |    4.85 s 🔴 |    5.18 s 🔴 |
-| 21   |                          |                                                          |             |             |             |             |
-| 22   |                          |                                                          |             |             |             |             |
+| 21   | Monkey Math              |                                                          |             |             |             |             |
+| 22   | Monkey Map               | [aoc202222.py](22_monkey_map/aoc202222.py)               |   3.07 ms 🔵 | 262.76 ms 🔵 | 166.64 ms 🔵 | 432.46 ms 🔵 |
 | 23   |                          |                                                          |             |             |             |             |
 | 24   |                          |                                                          |             |             |             |             |
 | 25   |                          |                                                          |             |             |             |             |
