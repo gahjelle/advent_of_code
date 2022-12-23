@@ -25,7 +25,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 19   | Not Enough Minerals      |                                                         |             |             |             |             |
 | 20   | Grove Positioning System |                                                         |             |             |             |             |
 | 21   | Monkey Math              | [aoc202221.ex](21_monkey_math/aoc202221.ex)             |  12.16 ms 🔵 | 834.41 µs ⚪️ |   8.48 ms 🔵 |  21.48 ms 🔵 |
-| 22   |                          |                                                         |             |             |             |             |
-| 23   |                          |                                                         |             |             |             |             |
+| 22   | Monkey Map               |                                                         |             |             |             |             |
+| 23   | Unstable Diffusion       | [aoc202223.ex](23_unstable_diffusion/aoc202223.ex)      | 720.23 µs ⚪️ |  61.73 ms 🔵 |    5.11 s 🔴 |    5.17 s 🔴 |
 | 24   |                          |                                                         |             |             |             |             |
 | 25   |                          |                                                         |             |             |             |             |
