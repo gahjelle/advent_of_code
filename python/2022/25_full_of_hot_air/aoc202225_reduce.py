@@ -1,7 +1,8 @@
 """AoC 25, 2022: Full of Hot Air."""
 
 # Standard library imports
-import collections
+import functools
+import itertools
 import pathlib
 import sys
 
@@ -16,23 +17,30 @@ def parse_data(puzzle_input):
 
 def part1(fuel):
     """Solve part 1."""
-    digits = collections.defaultdict(int)
+    return functools.reduce(add, fuel)
 
-    # Add each digit separately
-    for snafu in fuel:
-        for idx, digit in enumerate(snafu[::-1]):
-            digits[idx] += FROM_SNAFU[digit]
 
-    # Carry digits forward
-    for idx in digits:
-        while digits[idx] < -2:
-            digits[idx] += 5
-            digits[idx + 1] -= 1
-        while digits[idx] > 2:
-            digits[idx] -= 5
-            digits[idx + 1] += 1
+def add(first, second):
+    """Add two SNAFU numbers together.
 
-    return "".join(TO_SNAFU[digit] for _, digit in sorted(digits.items()))[::-1]
+    ## Example:
+
+    >>> add("22", "1==")
+    '100'
+    >>> add("2222", "1")
+    '1===='
+    """
+    snafu = []
+    carry = 0
+    for one, two in itertools.zip_longest(first[::-1], second[::-1], fillvalue="0"):
+        sum = carry + FROM_SNAFU[one] + FROM_SNAFU[two]
+        carry, digit = (
+            (1, sum - 5) if sum > 2 else (-1, sum + 5) if sum < -2 else (0, sum)
+        )
+        snafu.append(TO_SNAFU[digit])
+    if carry:
+        snafu.append(TO_SNAFU[carry])
+    return "".join(snafu[::-1])
 
 
 def part2(data):

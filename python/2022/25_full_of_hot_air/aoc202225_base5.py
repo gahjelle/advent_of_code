@@ -1,7 +1,6 @@
 """AoC 25, 2022: Full of Hot Air."""
 
 # Standard library imports
-import collections
 import pathlib
 import sys
 
@@ -16,27 +15,45 @@ def parse_data(puzzle_input):
 
 def part1(fuel):
     """Solve part 1."""
-    digits = collections.defaultdict(int)
-
-    # Add each digit separately
-    for snafu in fuel:
-        for idx, digit in enumerate(snafu[::-1]):
-            digits[idx] += FROM_SNAFU[digit]
-
-    # Carry digits forward
-    for idx in digits:
-        while digits[idx] < -2:
-            digits[idx] += 5
-            digits[idx + 1] -= 1
-        while digits[idx] > 2:
-            digits[idx] -= 5
-            digits[idx + 1] += 1
-
-    return "".join(TO_SNAFU[digit] for _, digit in sorted(digits.items()))[::-1]
+    return to_snafu(sum(from_snafu(number) for number in fuel))
 
 
 def part2(data):
     """There is no part 2."""
+
+
+def from_snafu(snafu):
+    """Convert a number from SNAFU to decimal.
+
+    ## Examples:
+
+    >>> from_snafu("22")
+    12
+    >>> from_snafu("2022")
+    262
+    >>> from_snafu("1=11-2")
+    2022
+    """
+    return sum(
+        5**power * FROM_SNAFU[digit] for power, digit in enumerate(snafu[::-1])
+    )
+
+
+def to_snafu(decimal):
+    """Convert a number from decimal to SNAFU.
+
+    ## Examples:
+
+    >>> to_snafu(13)
+    '1=='
+    >>> to_snafu(1234)
+    '20-2-'
+    """
+    snafu = []
+    while decimal > 0:
+        decimal, digit = divmod(decimal + 2, 5)
+        snafu.append(TO_SNAFU[digit - 2])
+    return "".join(snafu[::-1])
 
 
 def solve(puzzle_input):

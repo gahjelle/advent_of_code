@@ -28,4 +28,4 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 22   | Monkey Map               | [aoc202222.py](22_monkey_map/aoc202222.py)               |   3.07 ms 🔵 | 262.76 ms 🔵 | 166.64 ms 🔵 | 432.46 ms 🔵 |
 | 23   | Unstable Diffusion       |                                                          |             |             |             |             |
 | 24   | Blizzard Basin           |                                                          |             |             |             |             |
-| 25   | Full Of Hot Air          | [aoc202225.py](25_full_of_hot_air/aoc202225.py)          |   8.33 μs ⚪️ | 205.06 μs ⚪️ |             | 213.39 μs ⚪️ |
+| 25   | Full Of Hot Air          | [aoc202225.py](25_full_of_hot_air/aoc202225.py)          |   7.24 μs ⚪️ | 138.33 μs ⚪️ |             | 145.57 μs ⚪️ |
