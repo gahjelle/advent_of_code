@@ -26,6 +26,6 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Python](h
 | 20   | Grove Positioning System | [aoc202220.py](20_grove_positioning_system/aoc202220.py) | 997.13 μs ⚪️ | 336.61 ms 🔵 |    4.85 s 🔴 |    5.18 s 🔴 |
 | 21   | Monkey Math              |                                                          |             |             |             |             |
 | 22   | Monkey Map               | [aoc202222.py](22_monkey_map/aoc202222.py)               |   3.07 ms 🔵 | 262.76 ms 🔵 | 166.64 ms 🔵 | 432.46 ms 🔵 |
-| 23   |                          |                                                          |             |             |             |             |
-| 24   |                          |                                                          |             |             |             |             |
-| 25   |                          |                                                          |             |             |             |             |
+| 23   | Unstable Diffusion       |                                                          |             |             |             |             |
+| 24   | Blizzard Basin           |                                                          |             |             |             |             |
+| 25   | Full Of Hot Air          | [aoc202225.py](25_full_of_hot_air/aoc202225.py)          |   8.33 μs ⚪️ | 205.06 μs ⚪️ |             | 213.39 μs ⚪️ |

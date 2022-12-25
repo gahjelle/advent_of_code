@@ -28,4 +28,4 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Python](h
 | 22   | Wizard Simulator 20XX                  | [aoc201522.py](22_wizard_simulator_20xx/aoc201522.py)                  |  10.53 μs ⚪️ | 802.30 ms 🔵 |    2.21 s 🔴 |    3.01 s 🔴 |
 | 23   | Opening The Turing Lock                | [aoc201523.py](23_opening_the_turing_lock/aoc201523.py)                |  24.98 μs ⚪️ | 479.37 μs ⚪️ | 616.68 μs ⚪️ |   1.12 ms 🔵 |
 | 24   | It Hangs In The Balance                | [aoc201524.py](24_it_hangs_in_the_balance/aoc201524.py)                |   9.41 μs ⚪️ | 173.40 ms 🔵 |   7.47 ms 🔵 | 180.89 ms 🔵 |
-| 25   | Let It Snow                            | [aoc201525.py](25_let_it_snow/aoc201525.py)                            | 344.53 μs ⚪️ |   5.82 μs ⚪️ | 248.00 ns ⚪️ | 350.59 μs ⚪️ |
+| 25   | Let It Snow                            | [aoc201525.py](25_let_it_snow/aoc201525.py)                            | 344.53 μs ⚪️ |   5.82 μs ⚪️ |             | 350.35 μs ⚪️ |

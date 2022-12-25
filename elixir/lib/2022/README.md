@@ -28,4 +28,4 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Elixir](h
 | 22   | Monkey Map               |                                                         |             |             |             |             |
 | 23   | Unstable Diffusion       | [aoc202223.ex](23_unstable_diffusion/aoc202223.ex)      | 720.23 µs ⚪️ |  61.73 ms 🔵 |    5.11 s 🔴 |    5.17 s 🔴 |
 | 24   | Blizzard Basin           | [aoc202224.ex](24_blizzard_basin/aoc202224.ex)          | 464.69 ms 🔵 | 568.44 ms 🔵 |    1.78 s 🔴 |    2.81 s 🔴 |
-| 25   |                          |                                                         |             |             |             |             |
+| 25   | Full Of Hot Air          | [aoc202225.ex](25_full_of_hot_air/aoc202225.ex)         |   2.21 µs ⚪️ |  56.69 µs ⚪️ |             |  58.90 µs ⚪️ |
