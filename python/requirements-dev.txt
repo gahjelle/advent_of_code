@@ -10,7 +10,7 @@ advent-of-code-ocr==1.0.0
     # via -r requirements.txt
 asttokens==2.2.1
     # via stack-data
-attrs==22.1.0
+attrs==22.2.0
     # via pytest
 backcall==0.2.0
     # via ipython
@@ -18,7 +18,7 @@ beautifulsoup4==4.11.1
     # via
     #   -r requirements.txt
     #   advent-of-code-data
-black==22.10.0
+black==22.12.0
     # via -r requirements-dev.in
 certifi==2022.12.7
     # via
@@ -27,6 +27,7 @@ certifi==2022.12.7
 charset-normalizer==2.1.1
     # via
     #   -r requirements.txt
+    #   docformatter
     #   requests
 click==8.1.3
     # via black
@@ -48,7 +49,7 @@ cycler==0.11.0
     #   matplotlib
 decorator==5.1.1
     # via ipython
-docformatter==1.5.0
+docformatter==1.5.1
     # via -r requirements-dev.in
 executing==1.2.0
     # via stack-data
@@ -68,7 +69,7 @@ iniconfig==1.1.1
     # via pytest
 ipython==8.7.0
     # via -r requirements-dev.in
-isort==5.10.1
+isort==5.11.4
     # via -r requirements-dev.in
 jedi==0.18.2
     # via ipython
@@ -84,7 +85,7 @@ mccabe==0.7.0
     # via flake8
 mypy-extensions==0.4.3
     # via black
-numpy==1.23.5
+numpy==1.24.1
     # via
     #   -r requirements.txt
     #   contourpy
@@ -101,7 +102,7 @@ parse==1.19.0
     # via -r requirements.txt
 parso==0.8.3
     # via jedi
-pathspec==0.10.2
+pathspec==0.10.3
     # via black
 pebble==5.0.3
     # via
@@ -115,11 +116,11 @@ pillow==9.3.0
     # via
     #   -r requirements.txt
     #   matplotlib
-platformdirs==2.6.0
+platformdirs==2.6.2
     # via black
 pluggy==1.0.0
     # via pytest
-polars==0.15.2
+polars==0.15.8
     # via -r requirements.txt
 prompt-toolkit==3.0.36
     # via ipython
@@ -148,7 +149,7 @@ python-dateutil==2.8.2
     #   advent-of-code-data
     #   matplotlib
     #   pandas
-pytz==2022.6
+pytz==2022.7
     # via
     #   -r requirements.txt
     #   pandas
@@ -180,7 +181,7 @@ termcolor==2.1.1
     #   advent-of-code-data
 tomli==2.0.1
     # via docformatter
-traitlets==5.6.0
+traitlets==5.8.0
     # via
     #   ipython
     #   matplotlib-inline
