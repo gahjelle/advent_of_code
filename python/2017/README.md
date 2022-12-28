@@ -21,7 +21,7 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 15   | Dueling Generators                     | [aoc201715.py](15_dueling_generators/aoc201715.py)                     |   5.01 μs ⚪️ |    1.41 s 🔴 | 730.33 ms 🔵 |    2.14 s 🔴 |
 | 16   | Permutation Promenade                  | [aoc201716.py](16_permutation_promenade/aoc201716.py)                  |   9.47 ms 🔵 |   2.83 ms 🔵 |  64.00 ms 🔵 |  76.30 ms 🔵 |
 | 17   | Spinlock                               | [aoc201717.py](17_spinlock/aoc201717.py)                               |   1.47 μs ⚪️ | 469.19 μs ⚪️ | 732.02 μs ⚪️ |   1.20 ms 🔵 |
-| 18   |                                        |                                                                        |             |             |             |             |
+| 18   | Duet                                   | [aoc201718.py](18_duet/aoc201718.py)                                   |  87.54 μs ⚪️ | 774.09 μs ⚪️ |  67.81 ms 🔵 |  68.67 ms 🔵 |
 | 19   |                                        |                                                                        |             |             |             |             |
 | 20   |                                        |                                                                        |             |             |             |             |
 | 21   |                                        |                                                                        |             |             |             |             |
