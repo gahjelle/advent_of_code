@@ -31,24 +31,7 @@ def part2(seeds, num_rounds=5_000_000, min_num=40_000_000):
 
 @functools.cache
 def generate(seeds, min_num=40_000_000):
-    """Precompute values from the generators.
-
-    To create its next value, a generator will take the previous value it
-    produced, multiply it by a factor (generator A uses 16807; generator B uses
-    48271), and then keep the remainder of dividing that resulting product by
-    2147483647. That final remainder is the value it produces next.
-
-    Borrowed from
-    https://www.reddit.com/r/adventofcode/comments/nfwj9p/2017_day_15_at_most_15_seconds_on_tenyearold/
-
-    ## Example:
-
-    >>> generate((65, 8921), min_num=4)
-    array([[43879, 54071],
-           [63289, 34184],
-           [58186, 58186],
-           [ 5831, 52231]])
-    """
+    """Precompute values from the generators"""
     compare_bits = 0xFFFF
     divisor = 0x7FFFFFFF
     factor_a, factor_b = 16_807, 48_271
@@ -60,6 +43,32 @@ def generate(seeds, min_num=40_000_000):
         values = np.vstack([values, values * factors % divisor])
 
     return values & compare_bits
+
+
+def generator(seed, factor, divisor=2_147_483_647):
+    """Generate consecutive numbers.
+
+    To create its next value, a generator will take the previous value it
+    produced, multiply it by a factor, and then keep the remainder of dividing
+    that resulting product by 2147483647 (2³¹ - 1).
+    """
+    while True:
+        yield (seed := (seed * factor) % divisor)
+
+
+def restricted_generator(seed, factor, multiple=1, divisor=2_147_483_647):
+    """Generate consecutive numbers.
+
+    The generators still generate values in the same way, but now they only hand
+    a value to the judge when it meets a criteria. Each generator looks for
+    values that are multiples of some number.
+    """
+    mask = multiple * 2 - 1  # Because the multiples are of the form 2^n
+    while True:
+        seed = (seed * factor) % divisor
+        masked = seed & mask
+        if masked == 0 or masked == multiple:
+            yield seed
 
 
 def solve(puzzle_input):

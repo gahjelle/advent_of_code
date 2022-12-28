@@ -18,14 +18,26 @@ def example1():
 
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
-    assert example1 == [65, 8921]
+    assert example1 == (65, 8921)
 
 
+def test_part1_small_example1(example1):
+    """Test part 1 on example input."""
+    assert aoc201715.part1(example1, num_rounds=40_000) == 3
+
+
+def test_part2_small_example1(example1):
+    """Test part 2 on example input."""
+    assert aoc201715.part2(example1, num_rounds=5_000, min_num=40_000) == 1
+
+
+@pytest.mark.skip(reason="slow")
 def test_part1_example1(example1):
     """Test part 1 on example input."""
     assert aoc201715.part1(example1) == 588
 
 
+@pytest.mark.skip(reason="slow")
 def test_part2_example1(example1):
     """Test part 2 on example input."""
     assert aoc201715.part2(example1) == 309

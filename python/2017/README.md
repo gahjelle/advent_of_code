@@ -18,7 +18,7 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 12   | Digital Plumber                        | [aoc201712.py](12_digital_plumber/aoc201712.py)                        |   3.33 ms 🔵 | 167.86 μs ⚪️ |   1.71 ms 🔵 |   5.20 ms 🔵 |
 | 13   | Packet Scanners                        | [aoc201713.py](13_packet_scanners/aoc201713.py)                        |  55.28 μs ⚪️ |  30.41 μs ⚪️ |    4.22 s 🔴 |    4.22 s 🔴 |
 | 14   | Disk Defragmentation                   | [aoc201714.py](14_disk_defragmentation/aoc201714.py)                   |   1.05 μs ⚪️ | 187.05 ms 🔵 |  35.67 ms 🔵 | 222.73 ms 🔵 |
-| 15   | Dueling Generators                     | [aoc201715.py](15_dueling_generators/aoc201715.py)                     |   5.28 μs ⚪️ |   11.16 s 🔴 |    6.96 s 🔴 |   18.12 s 🔴 |
+| 15   | Dueling Generators                     | [aoc201715.py](15_dueling_generators/aoc201715.py)                     |   5.01 μs ⚪️ |    1.41 s 🔴 | 730.33 ms 🔵 |    2.14 s 🔴 |
 | 16   |                                        |                                                                        |             |             |             |             |
 | 17   |                                        |                                                                        |             |             |             |             |
 | 18   |                                        |                                                                        |             |             |             |             |
