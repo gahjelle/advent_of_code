@@ -20,7 +20,7 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 14   | Disk Defragmentation                   | [aoc201714.py](14_disk_defragmentation/aoc201714.py)                   |   1.05 μs ⚪️ | 187.05 ms 🔵 |  35.67 ms 🔵 | 222.73 ms 🔵 |
 | 15   | Dueling Generators                     | [aoc201715.py](15_dueling_generators/aoc201715.py)                     |   5.01 μs ⚪️ |    1.41 s 🔴 | 730.33 ms 🔵 |    2.14 s 🔴 |
 | 16   | Permutation Promenade                  | [aoc201716.py](16_permutation_promenade/aoc201716.py)                  |   9.47 ms 🔵 |   2.83 ms 🔵 |  64.00 ms 🔵 |  76.30 ms 🔵 |
-| 17   |                                        |                                                                        |             |             |             |             |
+| 17   | Spinlock                               | [aoc201717.py](17_spinlock/aoc201717.py)                               |   1.47 μs ⚪️ | 469.19 μs ⚪️ | 732.02 μs ⚪️ |   1.20 ms 🔵 |
 | 18   |                                        |                                                                        |             |             |             |             |
 | 19   |                                        |                                                                        |             |             |             |             |
 | 20   |                                        |                                                                        |             |             |             |             |
