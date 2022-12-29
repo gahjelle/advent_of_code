@@ -23,7 +23,7 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 17   | Spinlock                               | [aoc201717.py](17_spinlock/aoc201717.py)                               |   1.47 μs ⚪️ | 469.19 μs ⚪️ | 732.02 μs ⚪️ |   1.20 ms 🔵 |
 | 18   | Duet                                   | [aoc201718.py](18_duet/aoc201718.py)                                   |  87.54 μs ⚪️ | 774.09 μs ⚪️ |  67.81 ms 🔵 |  68.67 ms 🔵 |
 | 19   | A Series Of Tubes                      | [aoc201719.py](19_a_series_of_tubes/aoc201719.py)                      |   2.66 ms 🔵 |   3.83 ms 🔵 |   1.73 μs ⚪️ |   6.50 ms 🔵 |
-| 20   |                                        |                                                                        |             |             |             |             |
+| 20   | Particle Swarm                         | [aoc201720.py](20_particle_swarm/aoc201720.py)                         |  27.19 ms 🔵 |   1.55 ms 🔵 | 125.60 ms 🔵 | 154.34 ms 🔵 |
 | 21   |                                        |                                                                        |             |             |             |             |
 | 22   |                                        |                                                                        |             |             |             |             |
 | 23   |                                        |                                                                        |             |             |             |             |
