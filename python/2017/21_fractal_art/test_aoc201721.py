@@ -25,13 +25,13 @@ def example2():
 
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
+    (pat_1, rep_1), (pat_2, rep_2) = example1
+
+    assert np.allclose(pat_1, np.array([[0, 0], [0, 1]]))
+    assert np.allclose(rep_1, np.array([[1, 1, 0], [1, 0, 0], [0, 0, 0]]))
+    assert np.allclose(pat_2, np.array([[0, 1, 0], [0, 0, 1], [1, 1, 1]]))
     assert np.allclose(
-        example1[(2, 1, 1, 2, 2, 4, 4, 8, 8)],
-        np.array([[1, 1, 0], [1, 0, 0], [0, 0, 0]]),
-    )
-    assert np.allclose(
-        example1[(3, 107, 143, 167, 233, 302, 428, 458, 482)],
-        np.array([[1, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 1]]),
+        rep_2, np.array([[1, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0], [1, 0, 0, 1]])
     )
 
 

@@ -35,14 +35,83 @@ FINGERPRINTS = {
 
 def parse_data(puzzle_input):
     """Parse input."""
-    return {
-        fingerprint([ch == "#" for ch in pattern]): np.array(
-            [ch == "#" for ch in replace]
-        ).reshape(-1, math.isqrt(len(replace)))
-        for pattern, replace in [
-            line.replace("/", "").split(" => ") for line in puzzle_input.split("\n")
-        ]
-    }
+    return [
+        (parse_pattern(pattern), parse_pattern(replace))
+        for pattern, replace in [ln.split(" => ") for ln in puzzle_input.split("\n")]
+    ]
+
+
+def parse_pattern(pattern):
+    """Parse one pattern into a NumPy array.
+
+    ## Examples:
+
+    >>> parse_pattern("#./.#")
+    array([[1, 0],
+           [0, 1]])
+    >>> parse_pattern("#..#/..../..../#..#")
+    array([[1, 0, 0, 1],
+           [0, 0, 0, 0],
+           [0, 0, 0, 0],
+           [1, 0, 0, 1]])
+    """
+    chars = pattern.replace("/", "")
+    dim = math.isqrt(len(chars))
+    return np.array([1 if ch == "#" else 0 for ch in chars]).reshape(dim, dim)
+
+
+def part1(rule_list, num_iterations=5):
+    """Solve part 1."""
+    board = np.array([[0, 1, 0], [0, 0, 1], [1, 1, 1]])
+    rules = {fingerprint(pattern): replace for pattern, replace in rule_list}
+    return evolve_board(rules, board, num_iterations).sum()
+
+
+def part2(rule_list, num_iterations=18):
+    """Solve part 2.
+
+    A 3x3 pattern evolves from 3x3 -> 4x4 -> 6x6 -> 9x9 in three steps. The 9x9
+    board consists of nine 3x3 boards. Pre-calculate all 3x3 three-step
+    patterns. Then, eighteen iterations are quickly calculated as six iterations
+    of three-step patterns.
+    """
+    nine_x_nine = [
+        (slice(0, 3), slice(0, 3)),
+        (slice(0, 3), slice(3, 6)),
+        (slice(0, 3), slice(6, 9)),
+        (slice(3, 6), slice(0, 3)),
+        (slice(3, 6), slice(3, 6)),
+        (slice(3, 6), slice(6, 9)),
+        (slice(6, 9), slice(0, 3)),
+        (slice(6, 9), slice(3, 6)),
+        (slice(6, 9), slice(6, 9)),
+    ]
+    rules = {fingerprint(pattern): replace for pattern, replace in rule_list}
+    lights = {fingerprint(pattern): pattern.sum() for pattern, _ in rule_list}
+
+    # Precalculate all three-step patterns
+    steps = {}
+    for board, _ in rule_list:
+        if len(board) != 3:
+            continue
+        new_board = evolve_board(rules, board, num_iterations=3)
+        steps[fingerprint(board)] = collections.Counter(
+            fingerprint(new_board[pos]) for pos in nine_x_nine
+        )
+
+    # Iterate in three-steps
+    boards = collections.Counter(
+        [fingerprint(np.array([[0, 1, 0], [0, 0, 1], [1, 1, 1]]))]
+    )
+    for _ in range(num_iterations // 3):
+        new_boards = collections.Counter()
+        for fp, count in boards.items():
+            new_boards.update(
+                {new_fp: count * new_count for new_fp, new_count in steps[fp].items()}
+            )
+        boards = new_boards
+
+    return sum(lights[fp] * count for fp, count in boards.items())
 
 
 def fingerprint(pattern):
@@ -65,47 +134,35 @@ def fingerprint(pattern):
 
     ## Examples:
 
-    >>> fingerprint([1, 0, 0, 0])
+    >>> fingerprint(np.array([[1, 0], [0, 0]]))
     (2, 1, 1, 2, 2, 4, 4, 8, 8)
-    >>> fingerprint([1, 1, 0, 0])
+    >>> fingerprint(np.array([[1, 1], [0, 0]]))
     (2, 3, 3, 5, 5, 10, 10, 12, 12)
-    >>> fingerprint([1, 0, 0, 1])
+    >>> fingerprint(np.array([[1, 0], [0, 1]]))
     (2, 6, 6, 6, 6, 9, 9, 9, 9)
 
-    >>> fingerprint([0, 1, 0, 0, 0, 0, 0, 0, 0])
+    >>> fingerprint(np.array([[0, 1, 0], [0, 0, 0], [0, 0, 0]]))
     (3, 2, 2, 8, 8, 32, 32, 128, 128)
-    >>> fingerprint([0, 1, 0, 0, 0, 1, 1, 1, 1])
+    >>> fingerprint(np.array([[0, 1, 0], [0, 0, 1], [1, 1, 1]]))
     (3, 107, 143, 167, 233, 302, 428, 458, 482)
-    >>> fingerprint([0, 1, 0, 1, 0, 0, 1, 1, 1])
+    >>> fingerprint(np.array([[0, 1, 0], [1, 0, 0], [1, 1, 1]]))
     (3, 107, 143, 167, 233, 302, 428, 458, 482)
-    >>> fingerprint([1, 0, 0, 1, 0, 1, 1, 1, 0])
+    >>> fingerprint(np.array([[1, 0, 0], [1, 0, 1], [1, 1, 0]]))
     (3, 107, 143, 167, 233, 302, 428, 458, 482)
-    >>> fingerprint([1, 1, 1, 1, 1, 0, 0, 0, 0])
+    >>> fingerprint(np.array([[1, 1, 1], [1, 1, 0], [0, 0, 0]]))
     (3, 31, 55, 91, 217, 310, 436, 472, 496)
     """
-    dim = 2 if len(pattern) == 4 else 3
     return (
-        dim,
+        len(pattern),
         *sorted(
-            sum(factor * pixel for factor, pixel in zip(mask, pattern))
-            for mask in FINGERPRINTS[dim]
+            sum(factor * pixel for factor, pixel in zip(mask, pattern.flatten()))
+            for mask in FINGERPRINTS[len(pattern)]
         ),
     )
 
 
-def part1(rules, num_iterations=5):
-    """Solve part 1."""
-    return evolve_board(rules, num_iterations)
-
-
-def part2(rules, num_iterations=18):
-    """Solve part 2."""
-    return evolve_board(rules, num_iterations)
-
-
-def evolve_board(rules, num_iterations):
+def evolve_board(rules, board, num_iterations):
     """Evolve the board the given number of iterations."""
-    board = np.array([0, 1, 0, 0, 0, 1, 1, 1, 1]).reshape(3, 3)
     for _ in range(num_iterations):
         dim = len(board)
         grid = 2 if dim % 2 == 0 else 3
@@ -120,7 +177,7 @@ def evolve_board(rules, num_iterations):
                                 board[
                                     row * grid : (row + 1) * grid,
                                     col * grid : (col + 1) * grid,
-                                ].flatten()
+                                ]
                             )
                         ]
                         for col in range(shape)
@@ -129,7 +186,7 @@ def evolve_board(rules, num_iterations):
                 for row in range(shape)
             ]
         )
-    return board.sum()
+    return board
 
 
 def solve(puzzle_input):
