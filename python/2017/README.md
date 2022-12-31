@@ -28,4 +28,4 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 22   | Sporifica Virus                        | [aoc201722.py](22_sporifica_virus/aoc201722.py)                        |  43.13 μs ⚪️ |   4.11 ms 🔵 |    3.84 s 🔴 |    3.84 s 🔴 |
 | 23   | Coprocessor Conflagration              | [aoc201723.py](23_coprocessor_conflagration/aoc201723.py)              |  73.43 μs ⚪️ |  26.59 ms 🔵 | 392.52 μs ⚪️ |  27.06 ms 🔵 |
 | 24   | Electromagnetic Moat                   | [aoc201724.py](24_electromagnetic_moat/aoc201724.py)                   | 107.96 μs ⚪️ | 305.73 ms 🔵 | 313.87 ms 🔵 | 619.71 ms 🔵 |
-| 25   |                                        |                                                                        |             |             |             |             |
+| 25   | The Halting Problem                    | [aoc201725.py](25_the_halting_problem/aoc201725.py)                    |  27.49 μs ⚪️ |    1.42 s 🔴 |             |    1.42 s 🔴 |

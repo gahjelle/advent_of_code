@@ -1,6 +1,6 @@
 # Advent of Code in Python
 
-Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www.python.org/) (264⭐):
+Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www.python.org/) (266⭐):
 
 |   Day | [2015](2015)                                           | [2016](2016)                                           | [2017](2017)                                           | [2018](2018)                                | [2019](2019)                                       | [2020](2020)                            | [2021](2021)                            | [2022](2022)                             |
 |------:|:-------------------------------------------------------|:-------------------------------------------------------|:-------------------------------------------------------|:--------------------------------------------|:---------------------------------------------------|:----------------------------------------|:----------------------------------------|:-----------------------------------------|
@@ -28,7 +28,7 @@ Solutions to [Advent of Code](https://adventofcode.com/) in [Python](https://www
 |    22 | [⭐⭐](2015/22_wizard_simulator_20xx)                  |                                                        | [⭐⭐](2017/22_sporifica_virus)                        |                                             |                                                    |                                         | [⭐⭐](2021/22_reactor_reboot)          | [⭐⭐](2022/22_monkey_map)               |
 |    23 | [⭐⭐](2015/23_opening_the_turing_lock)                |                                                        | [⭐⭐](2017/23_coprocessor_conflagration)              |                                             |                                                    |                                         | [⭐⭐](2021/23_amphipod)                |                                          |
 |    24 | [⭐⭐](2015/24_it_hangs_in_the_balance)                |                                                        | [⭐⭐](2017/24_electromagnetic_moat)                   |                                             |                                                    |                                         | [⭐⭐](2021/24_arithmetic_logic_unit)   |                                          |
-|    25 | [⭐⭐](2015/25_let_it_snow)                            |                                                        |                                                        |                                             |                                                    |                                         | [⭐⭐](2021/25_sea_cucumber)            | [⭐⭐](2022/25_full_of_hot_air)          |
+|    25 | [⭐⭐](2015/25_let_it_snow)                            |                                                        | [⭐⭐](2017/25_the_halting_problem)                    |                                             |                                                    |                                         | [⭐⭐](2021/25_sea_cucumber)            | [⭐⭐](2022/25_full_of_hot_air)          |
 
 ## Running the Solutions
 
