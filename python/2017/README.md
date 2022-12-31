@@ -25,7 +25,7 @@ Solutions to [Advent of Code 2017](https://adventofcode.com/2017/) in [Python](h
 | 19   | A Series Of Tubes                      | [aoc201719.py](19_a_series_of_tubes/aoc201719.py)                      |   2.66 ms 🔵 |   3.83 ms 🔵 |   1.73 μs ⚪️ |   6.50 ms 🔵 |
 | 20   | Particle Swarm                         | [aoc201720.py](20_particle_swarm/aoc201720.py)                         |  27.19 ms 🔵 |   1.55 ms 🔵 | 125.60 ms 🔵 | 154.34 ms 🔵 |
 | 21   | Fractal Art                            | [aoc201721.py](21_fractal_art/aoc201721.py)                            | 430.04 μs ⚪️ |   2.79 ms 🔵 |  44.04 ms 🔵 |  47.26 ms 🔵 |
-| 22   |                                        |                                                                        |             |             |             |             |
+| 22   | Sporifica Virus                        | [aoc201722.py](22_sporifica_virus/aoc201722.py)                        |  43.13 μs ⚪️ |   4.11 ms 🔵 |    3.84 s 🔴 |    3.84 s 🔴 |
 | 23   |                                        |                                                                        |             |             |             |             |
 | 24   |                                        |                                                                        |             |             |             |             |
 | 25   |                                        |                                                                        |             |             |             |             |
