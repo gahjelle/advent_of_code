@@ -1,0 +1,4 @@
+set a 3
+set b 17
+mul b a
+mul b 10
