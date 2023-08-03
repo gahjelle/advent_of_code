@@ -6,7 +6,7 @@ defmodule AOC2015.Day07.Test do
   require AOC
   import AOC2015.Day07, only: [parse: 1, part1: 1, part2: 1]
   doctest(AOC2015.Day07, import: true)
-  use Bitwise
+  import Bitwise
 
   @puzzle_dir "lib/2015/07_some_assembly_required/"
   setup_all do
