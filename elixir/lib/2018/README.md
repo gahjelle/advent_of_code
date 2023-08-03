@@ -12,7 +12,7 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Elixir](h
 | 6    | Chronal Coordinates         | [aoc201806.ex](06_chronal_coordinates/aoc201806.ex)         |  24.01 µs ⚪️ | 267.64 ms 🔵 |  98.40 ms 🔵 | 366.06 ms 🔵 |
 | 7    | The Sum Of Its Parts        | [aoc201807.ex](07_the_sum_of_its_parts/aoc201807.ex)        |  12.49 µs ⚪️ |  34.94 µs ⚪️ | 409.07 µs ⚪️ | 456.50 µs ⚪️ |
 | 8    | Memory Maneuver             | [aoc201808.ex](08_memory_maneuver/aoc201808.ex)             | 802.53 µs ⚪️ | 841.55 µs ⚪️ | 447.16 µs ⚪️ |   2.09 ms 🔵 |
-| 9    |                             |                                                             |             |             |             |             |
+| 9    | Marble Mania                | [aoc201809.ex](09_marble_mania/aoc201809.ex)                | 759.00 ns ⚪️ |   7.72 ms 🔵 |    1.39 s 🔴 |    1.39 s 🔴 |
 | 10   |                             |                                                             |             |             |             |             |
 | 11   |                             |                                                             |             |             |             |             |
 | 12   |                             |                                                             |             |             |             |             |

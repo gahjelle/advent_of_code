@@ -42,7 +42,6 @@ defmodule AOC2018.Day08 do
   end
 
   def get_metadata([], metadata), do: {[], metadata}
-
   def get_metadata([0, 0 | numbers], metadata), do: {numbers, metadata}
 
   def get_metadata([0, num_meta, metahead | numbers], metadata) do
