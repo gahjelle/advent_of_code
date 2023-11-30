@@ -1,0 +1,43 @@
+# Advent of Code 2020, day 5: Binary Boarding
+
+## Setup
+
+```elixir
+file_path = __DIR__ <> "/../../lib/2020/05_binary_boarding/input.txt"
+```
+
+## Parse data
+
+```elixir
+data =
+  File.read!(file_path)
+  |> String.replace("F", "0")
+  |> String.replace("B", "1")
+  |> String.replace("L", "0")
+  |> String.replace("R", "1")
+  |> String.split("\n", trim: true)
+  |> Enum.map(&String.to_integer(&1, 2))
+```
+
+## Part 1
+
+```elixir
+part1 = Enum.max(data)
+```
+
+## Part 2
+
+```elixir
+all_seats = Enum.min(data)..Enum.max(data) |> MapSet.new()
+tickets = data |> MapSet.new()
+
+part2 = MapSet.difference(all_seats, tickets) |> MapSet.to_list() |> hd
+```
+
+## Confirm final result
+
+```elixir
+928 = part1
+610 = part2
+"🥳"
+```
