@@ -12,29 +12,27 @@ aocd-example-parser==2023.2
     # via
     #   -r requirements.txt
     #   advent-of-code-data
-asttokens==2.2.1
+asttokens==2.4.1
     # via stack-data
-backcall==0.2.0
-    # via ipython
 beautifulsoup4==4.12.2
     # via
     #   -r requirements.txt
     #   advent-of-code-data
-black==23.7.0
+black==23.11.0
     # via -r requirements-dev.in
-charset-normalizer==3.2.0
+charset-normalizer==3.3.2
     # via docformatter
-click==8.1.6
+click==8.1.7
     # via black
 codetiming==1.4.0
     # via -r requirements-dev.in
 colorama==0.4.6
     # via -r requirements.txt
-contourpy==1.1.0
+contourpy==1.2.0
     # via
     #   -r requirements.txt
     #   matplotlib
-cycler==0.11.0
+cycler==0.12.1
     # via
     #   -r requirements.txt
     #   matplotlib
@@ -42,11 +40,11 @@ decorator==5.1.1
     # via ipython
 docformatter==1.7.5
     # via -r requirements-dev.in
-executing==1.2.0
+executing==2.0.1
     # via stack-data
 flake8==6.1.0
     # via -r requirements-dev.in
-fonttools==4.42.0
+fonttools==4.45.1
     # via
     #   -r requirements.txt
     #   matplotlib
@@ -54,13 +52,13 @@ html2text==2020.1.16
     # via -r requirements-dev.in
 iniconfig==2.0.0
     # via pytest
-ipython==8.14.0
+ipython==8.18.1
     # via -r requirements-dev.in
 isort==5.12.0
     # via -r requirements-dev.in
-jedi==0.19.0
+jedi==0.19.1
     # via ipython
-kiwisolver==1.4.4
+kiwisolver==1.4.5
     # via
     #   -r requirements.txt
     #   matplotlib
@@ -68,7 +66,7 @@ markdown-it-py==3.0.0
     # via
     #   -r requirements.txt
     #   rich
-matplotlib==3.7.2
+matplotlib==3.8.2
     # via -r requirements.txt
 matplotlib-inline==0.1.6
     # via ipython
@@ -80,89 +78,88 @@ mdurl==0.1.2
     #   markdown-it-py
 mypy-extensions==1.0.0
     # via black
-numpy==1.25.2
+numpy==1.26.2
     # via
     #   -r requirements.txt
     #   contourpy
     #   matplotlib
     #   pandas
-packaging==23.1
+packaging==23.2
     # via
     #   -r requirements.txt
     #   black
     #   matplotlib
     #   pytest
-pandas==2.0.3
+pandas==2.1.3
     # via -r requirements.txt
-parse==1.19.1
+parse==1.20.0
     # via -r requirements.txt
 parso==0.8.3
     # via jedi
 pathspec==0.11.2
     # via black
-pebble==5.0.3
+pebble==5.0.4
     # via
     #   -r requirements.txt
     #   advent-of-code-data
-pexpect==4.8.0
+pexpect==4.9.0
     # via ipython
-pickleshare==0.7.5
-    # via ipython
-pillow==10.0.0
+pillow==10.1.0
     # via
     #   -r requirements.txt
     #   matplotlib
-platformdirs==3.10.0
+platformdirs==4.0.0
     # via black
-pluggy==1.2.0
+pluggy==1.3.0
     # via pytest
-polars==0.18.11
+polars==0.19.18
     # via -r requirements.txt
-prompt-toolkit==3.0.39
+prompt-toolkit==3.0.41
     # via ipython
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
-pycodestyle==2.11.0
+pycodestyle==2.11.1
     # via flake8
 pyflakes==3.1.0
     # via flake8
-pygments==2.15.1
+pygments==2.17.2
     # via
     #   -r requirements.txt
     #   ipython
     #   rich
-pyparsing==3.0.9
+pyparsing==3.1.1
     # via
     #   -r requirements.txt
     #   matplotlib
-pytest==7.4.0
+pytest==7.4.3
     # via -r requirements-dev.in
 python-dateutil==2.8.2
     # via
     #   -r requirements.txt
     #   matplotlib
     #   pandas
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   -r requirements.txt
     #   pandas
-rich==13.5.2
+rich==13.7.0
     # via -r requirements.txt
 six==1.16.0
     # via
     #   -r requirements.txt
+    #   asttokens
     #   python-dateutil
-soupsieve==2.4.1
+soupsieve==2.5
     # via
     #   -r requirements.txt
     #   beautifulsoup4
-stack-data==0.6.2
+stack-data==0.6.3
     # via ipython
 tabulate==0.9.0
     # via -r requirements.txt
-traitlets==5.9.0
+traitlets==5.14.0
     # via
     #   ipython
     #   matplotlib-inline
@@ -172,9 +169,9 @@ tzdata==2023.3
     #   pandas
 untokenize==0.1.1
     # via docformatter
-urllib3==2.0.4
+urllib3==2.1.0
     # via
     #   -r requirements.txt
     #   advent-of-code-data
-wcwidth==0.2.6
+wcwidth==0.2.12
     # via prompt-toolkit
