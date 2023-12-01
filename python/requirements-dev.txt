@@ -5,23 +5,23 @@
 #    pip-compile requirements-dev.in
 #
 advent-of-code-data==2.0.1
-    # via -r requirements.txt
+    # via -r requirements-dev.in
 advent-of-code-ocr==1.0.0
     # via -r requirements.txt
 aocd-example-parser==2023.2
-    # via
-    #   -r requirements.txt
-    #   advent-of-code-data
+    # via advent-of-code-data
 asttokens==2.4.1
     # via stack-data
 beautifulsoup4==4.12.2
-    # via
-    #   -r requirements.txt
-    #   advent-of-code-data
+    # via advent-of-code-data
 black==23.11.0
     # via -r requirements-dev.in
+certifi==2023.11.17
+    # via requests
 charset-normalizer==3.3.2
-    # via docformatter
+    # via
+    #   docformatter
+    #   requests
 click==8.1.7
     # via black
 codetiming==1.4.0
@@ -50,6 +50,8 @@ fonttools==4.45.1
     #   matplotlib
 html2text==2020.1.16
     # via -r requirements-dev.in
+idna==3.6
+    # via requests
 iniconfig==2.0.0
     # via pytest
 ipython==8.18.1
@@ -99,9 +101,7 @@ parso==0.8.3
 pathspec==0.11.2
     # via black
 pebble==5.0.4
-    # via
-    #   -r requirements.txt
-    #   advent-of-code-data
+    # via advent-of-code-data
 pexpect==4.9.0
     # via ipython
 pillow==10.1.0
@@ -144,6 +144,8 @@ pytz==2023.3.post1
     # via
     #   -r requirements.txt
     #   pandas
+requests==2.31.0
+    # via -r requirements-dev.in
 rich==13.7.0
     # via -r requirements.txt
 six==1.16.0
@@ -152,9 +154,7 @@ six==1.16.0
     #   asttokens
     #   python-dateutil
 soupsieve==2.5
-    # via
-    #   -r requirements.txt
-    #   beautifulsoup4
+    # via beautifulsoup4
 stack-data==0.6.3
     # via ipython
 tabulate==0.9.0
@@ -171,7 +171,7 @@ untokenize==0.1.1
     # via docformatter
 urllib3==2.1.0
     # via
-    #   -r requirements.txt
     #   advent-of-code-data
+    #   requests
 wcwidth==0.2.12
     # via prompt-toolkit

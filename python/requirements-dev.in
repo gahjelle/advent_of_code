@@ -1,5 +1,6 @@
 -r requirements.txt
 
+advent-of-code-data
 black
 codetiming
 docformatter
@@ -8,3 +9,4 @@ html2text
 ipython
 isort
 pytest
+requests
