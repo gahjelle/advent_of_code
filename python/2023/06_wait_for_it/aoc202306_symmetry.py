@@ -37,31 +37,20 @@ def find_num_records(time, distance):
     a distance of t * (T - t). The formula d(t) = t * (T - t) = Tt - t² is zero
     at 0 and T and symmetric between.
 
-    Use a binary search to find the smallest t such that d(t) > distance. During
-    the search, low will always be less than t while high will always be greater
-    than or equal than t. At the end of the search, high represents the smallest
-    t such that d(t) > distance.
-
-    We want the number of records. If first is the smallest t such that d(t) >
-    distance and last is the greatest t such that d(t) > distance, then the
-    number of records is (last - first + 1). Because of symmetry last = time / 2
-    + time / 2 - first = time - first. The number of records can therefore be
-    calculated as (last - first + 1) = time - 2*first + 1.
+    We can also note that d(t) <= f(t) = Tt. This means that the smallest t such
+    that d(t) > distance has to be bigger than the smallest t such that f(t) >
+    distance. The latter happens at t = distance / T.
 
     ## Example:
 
     >>> find_num_records(8, 12)
     3
     """
-    low, high = 0, time // 2
-    while low + 1 < high:
-        mid = (high + low) // 2
-        if mid * (time - mid) > distance:
-            high = mid
-        else:
-            low = mid
+    for t in range(distance // time, time):
+        if t * (time - t) > distance:
+            break
 
-    return time - 2 * high + 1
+    return (time + 1) - 2 * t
 
 
 def solve(puzzle_input):
