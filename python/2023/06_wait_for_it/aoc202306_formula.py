@@ -43,19 +43,20 @@ def find_num_records(time, distance):
 
         (T - sqrt(T² - 4D)) / 2
 
-    We're really looking for t where d(t) > D, so we use ceiling rounding and
-    add a small ε to avoid any t such that d(t) = D.
+    We're really looking for t where d(t) > D, but to avoid handling edge cases
+    where the solution is an integer we calculate the largest t such that d(t)
+    <= D and vice versa.
 
-    Thanks to Ruud van der Ham for the idea.
+    Thanks to Ruud van der Ham for the general idea.
 
     ## Example:
 
     >>> find_num_records(8, 12)
     3
     """
-    first = math.ceil((time - math.sqrt(time**2 - 4 * distance)) / 2 + 1e-14)
-    last = math.floor((time + math.sqrt(time**2 - 4 * distance)) / 2 - 1e-14)
-    return last - first + 1
+    below = math.floor((time - math.sqrt(time**2 - 4 * distance)) / 2)
+    above = math.ceil((time + math.sqrt(time**2 - 4 * distance)) / 2)
+    return above - below - 1
 
 
 def solve(puzzle_input):
