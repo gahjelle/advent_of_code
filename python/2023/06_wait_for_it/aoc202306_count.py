@@ -33,29 +33,12 @@ def part2(data):
 def find_num_records(time, distance):
     """Find the number of records.
 
-    The boat runs a speed of t for (T - t) seconds where T = time, resulting in
-    a distance of t * (T - t). The formula d(t) = t * (T - t) = Tt - t² is zero
-    at 0 and T and symmetric between.
-
-    We can use the abc-formula to solve d(t) = D = distance, which means that we
-    want to solve -t² + Tt - D which gives a = -1, b = T, and c = -D. This gives
-    the smallest solution:
-
-        (T - sqrt(T² - 4D)) / 2
-
-    We're really looking for t where d(t) > D, so we use ceiling rounding and
-    add a small ε to avoid any t such that d(t) = D.
-
-    Thanks to Ruud van der Ham for the idea.
-
     ## Example:
 
     >>> find_num_records(8, 12)
     3
     """
-    first = math.ceil((time - math.sqrt(time**2 - 4 * distance)) / 2 + 1e-14)
-    last = math.floor((time + math.sqrt(time**2 - 4 * distance)) / 2 - 1e-14)
-    return last - first + 1
+    return sum(t * (time - t) > distance for t in range(time + 1))
 
 
 def solve(puzzle_input):

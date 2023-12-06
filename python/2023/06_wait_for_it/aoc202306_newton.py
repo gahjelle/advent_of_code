@@ -37,25 +37,44 @@ def find_num_records(time, distance):
     a distance of t * (T - t). The formula d(t) = t * (T - t) = Tt - t² is zero
     at 0 and T and symmetric between.
 
-    We can use the abc-formula to solve d(t) = D = distance, which means that we
-    want to solve -t² + Tt - D which gives a = -1, b = T, and c = -D. This gives
-    the smallest solution:
-
-        (T - sqrt(T² - 4D)) / 2
-
-    We're really looking for t where d(t) > D, so we use ceiling rounding and
-    add a small ε to avoid any t such that d(t) = D.
-
-    Thanks to Ruud van der Ham for the idea.
+    Use Newton's method to find a solution of d(t) = D = distance.
 
     ## Example:
 
     >>> find_num_records(8, 12)
     3
     """
-    first = math.ceil((time - math.sqrt(time**2 - 4 * distance)) / 2 + 1e-14)
-    last = math.floor((time + math.sqrt(time**2 - 4 * distance)) / 2 - 1e-14)
+
+    def f(t):
+        return t * (time - t) - distance
+
+    def df(t):
+        return time - 2 * t
+
+    first = math.ceil(newtons_method(distance / time, f, df) + 1e-14)
+    last = math.floor(newtons_method(time - distance / time, f, df) - 1e-14)
     return last - first + 1
+
+
+def newtons_method(guess, f, fprime, tol=1e-8):
+    """Apply Newton's method to solve an equation.
+
+    To solve f(x) = 0, we start with an initial guess of x0. Then new
+    approximations are calculated as:
+
+        x1 = x0 - f(x0) / f'(x0)
+
+    Iterate on this until two consecutive solutions are within the given
+    tolerance of each other.
+
+    ## Example:
+
+    >>> newtons_method(3, lambda x: x**2 - 4, lambda x: 2*x)
+    2.0
+    """
+    while abs((x := guess - f(guess) / fprime(guess)) - guess) > tol:
+        guess = x
+    return x
 
 
 def solve(puzzle_input):
