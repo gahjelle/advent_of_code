@@ -10,7 +10,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Elixir](h
 | 4    | Scratchcards   | [aoc202304.ex](04_scratchcards/aoc202304.ex)   |  2.90 ms 🔵 |   4.59 µs ⚪️ | 131.95 µs ⚪️ |  3.04 ms 🔵 |
 | 5    |                |                                                |            |             |             |            |
 | 6    | Wait For It    | [aoc202306.ex](06_wait_for_it/aoc202306.ex)    | 13.10 µs ⚪️ | 595.00 ns ⚪️ |  20.71 ms 🔵 | 20.72 ms 🔵 |
-| 7    |                |                                                |            |             |             |            |
+| 7    | Camel Cards    | [aoc202307.ex](07_camel_cards/aoc202307.ex)    |  4.15 ms 🔵 | 863.91 µs ⚪️ |   1.25 ms 🔵 |  6.26 ms 🔵 |
 | 8    |                |                                                |            |             |             |            |
 | 9    |                |                                                |            |             |             |            |
 | 10   |                |                                                |            |             |             |            |
