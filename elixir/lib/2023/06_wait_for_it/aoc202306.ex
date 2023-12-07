@@ -47,10 +47,8 @@ defmodule AOC2023.Day06 do
   @doc """
   Find the number of ways to beat the given record.
 
-  Use that distance is given by d(t) = t * (T - t) where T = time. We can use
-  that d(t) <= f(t) = t*T to optimize our search, because the smallest t such
-  that d(t) > distance has to be bigger than the corresponding t for f(t) >
-  distance which is t = distance / T.
+  Use that distance is given by d(t) = t * (T - t) where T = time. We use binary
+  search to find the smallest integer t such that d(t) > distance.
 
   The number of records is found by the symmetry of d(t).
 
@@ -59,10 +57,19 @@ defmodule AOC2023.Day06 do
       iex> find_num_records({8, 12})
       3
   """
-  def find_num_records({time, distance}) do
-    Integer.floor_div(distance, time)..time
-    |> Enum.find(fn t -> t * (time - t) > distance end)
-    |> then(fn t -> time + 1 - 2 * t end)
+  def find_num_records({time, distance}),
+    do: find_num_records({time, distance}, 0, Integer.floor_div(time, 2))
+
+  def find_num_records({time, _distance}, low, t) when low == t - 1 do
+    time + 1 - 2 * t
+  end
+
+  def find_num_records({time, distance}, low, high) do
+    mid = Integer.floor_div(low + high, 2)
+
+    if mid * (time - mid) > distance,
+      do: find_num_records({time, distance}, low, mid),
+      else: find_num_records({time, distance}, mid, high)
   end
 
   def main(args) do
