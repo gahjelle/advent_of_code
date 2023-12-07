@@ -1,7 +1,6 @@
 """AoC 15, 2022: Beacon Exclusion Zone."""
 
 # Standard library imports
-import collections
 import itertools
 import pathlib
 import re

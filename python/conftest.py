@@ -17,8 +17,6 @@ def pytest_configure(config):
 
 def pytest_collection_modifyitems(config, items):
     """Add marks based the year of the puzzle."""
-    cfgs = {}
-
     for item in items:
         try:
             year = item.callspec.getparam("puzzle_path").parent.name

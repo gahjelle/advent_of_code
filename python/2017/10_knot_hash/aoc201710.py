@@ -1,7 +1,6 @@
 """AoC 10, 2017: Knot Hash."""
 
 # Standard library imports
-import functools
 import pathlib
 import sys
 

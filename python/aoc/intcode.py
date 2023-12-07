@@ -131,7 +131,7 @@ class IntcodeComputer:
         return Store(store, first + second)
 
     @register_command(2, "x", 3)
-    def op_add(self, params):
+    def op_mul(self, params):
         """Multiply two numbers."""
         (first, _), (second, _), (_, store) = params
         return Store(store, first * second)

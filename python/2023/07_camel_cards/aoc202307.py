@@ -4,7 +4,6 @@
 import collections
 import pathlib
 import sys
-from dataclasses import dataclass, field
 
 
 def parse_data(puzzle_input):
