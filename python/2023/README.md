@@ -11,7 +11,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 4    | Scratchcards                    | [aoc202304.py](04_scratchcards/aoc202304.py)                    |   3.15 ms 🔵 |  33.67 μs ⚪️ | 105.25 μs ⚪️ |  3.29 ms 🔵 |
 | 5    | If You Give A Seed A Fertilizer | [aoc202305.py](05_if_you_give_a_seed_a_fertilizer/aoc202305.py) | 259.77 μs ⚪️ | 240.99 μs ⚪️ |   1.08 ms 🔵 |  1.58 ms 🔵 |
 | 6    | Wait For It                     | [aoc202306.py](06_wait_for_it/aoc202306.py)                     |  19.97 μs ⚪️ |  10.78 μs ⚪️ |   6.00 μs ⚪️ | 36.75 μs ⚪️ |
-| 7    |                                 |                                                                 |             |             |             |            |
+| 7    | Camel Cards                     | [aoc202307.py](07_camel_cards/aoc202307.py)                     | 715.67 μs ⚪️ |   5.59 ms 🔵 |   7.73 ms 🔵 | 14.03 ms 🔵 |
 | 8    |                                 |                                                                 |             |             |             |            |
 | 9    |                                 |                                                                 |             |             |             |            |
 | 10   |                                 |                                                                 |             |             |             |            |
