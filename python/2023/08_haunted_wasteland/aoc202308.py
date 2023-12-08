@@ -1,6 +1,7 @@
 """AoC 8, 2023: Haunted Wasteland."""
 
 # Standard library imports
+import itertools
 import math
 import pathlib
 import sys
@@ -50,7 +51,7 @@ def walk_path(nodes, path):
     6
     """
     current = "AAA"
-    for num_steps, turn in enumerate(path * 10_000):
+    for num_steps, turn in enumerate(itertools.cycle(path)):
         if current == "ZZZ":
             return num_steps
         current = nodes[current][turn]
@@ -76,7 +77,7 @@ def walk_ghost_path(nodes, path):
     """
     current = [node for node in nodes if node.endswith("A")]
     steps = [0 for _ in current]
-    for num_steps, turn in enumerate(path * 10_000):
+    for num_steps, turn in enumerate(itertools.cycle(path)):
         for idx, node in enumerate(current):
             if node.endswith("Z") and not steps[idx]:
                 steps[idx] = num_steps
