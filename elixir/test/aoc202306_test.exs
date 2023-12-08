@@ -28,20 +28,20 @@ defmodule AOC2023.Day06.Test do
 
   @tag :example
   test "part 2 example 1", %{example1: example1} do
-    assert part2(example1) == 71503
+    assert part2(example1) == 71_503
   end
 
   @tag :solution
   @tag :year2023
   @tag :day6
   test "part 1 solved", %{input: input} do
-    assert part1(input) == nil
+    assert part1(input) == 2_612_736
   end
 
   @tag :solution
   @tag :year2023
   @tag :day6
   test "part 2 solved", %{input: input} do
-    assert part2(input) == nil
+    assert part2(input) == 29_891_250
   end
 end
