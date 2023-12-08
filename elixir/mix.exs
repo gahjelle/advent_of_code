@@ -34,6 +34,7 @@ defmodule AOC.MixProject do
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
       {:heap, "~> 2.0"},
       {:jason, "~> 1.4"},
+{:math, "~> 0.7.0"},
       {:nimble_parsec, "~> 1.1"},
       {:number, "~> 1.0", only: [:dev, :test]},
       {:statistics, "~> 0.6.2"}
