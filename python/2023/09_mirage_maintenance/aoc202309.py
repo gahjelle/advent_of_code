@@ -12,20 +12,20 @@ def parse_data(puzzle_input):
 
 def part1(data):
     """Solve part 1."""
-    return sum(extrapolate_forward(numbers) for numbers in data)
+    return sum(extrapolate(numbers) for numbers in data)
 
 
 def part2(data):
     """Solve part 2."""
-    return sum(extrapolate_backward(numbers) for numbers in data)
+    return sum(extrapolate(numbers[::-1]) for numbers in data)
 
 
-def extrapolate_forward(numbers):
+def extrapolate(numbers):
     """Extrapolate a number series to find the next number in the series.
 
     ## Example:
 
-    >>> extrapolate_forward([1, 3, 6, 10, 15, 21])
+    >>> extrapolate([1, 3, 6, 10, 15, 21])
     28
     """
     last_diff = [numbers[-1]]
@@ -34,22 +34,6 @@ def extrapolate_forward(numbers):
         last_diff.append(numbers[-1])
 
     return sum(last_diff)
-
-
-def extrapolate_backward(numbers):
-    """Extrapolate a number series to find the previous number in the series.
-
-    ## Example:
-
-    >>> extrapolate_backward([2, 4, 7, 11, 16, 22])
-    1
-    """
-    first_diff = [numbers[0]]
-    while any(diff != 0 for diff in numbers):
-        numbers = [second - first for first, second in zip(numbers, numbers[1:])]
-        first_diff.append(numbers[0])
-
-    return sum((-1 if idx % 2 else 1) * diff for idx, diff in enumerate(first_diff))
 
 
 def solve(puzzle_input):
