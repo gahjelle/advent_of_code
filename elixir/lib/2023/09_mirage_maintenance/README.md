@@ -6,4 +6,4 @@ Puzzle text: https://adventofcode.com/2023/day/9
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2023/09_mirage_maintenance)
+- [🐍 Python](../../../../python/2023/09_mirage_maintenance)
