@@ -14,7 +14,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 7    | Camel Cards                     | [aoc202307.py](07_camel_cards/aoc202307.py)                     | 715.67 μs ⚪️ |   5.59 ms 🔵 |   7.73 ms 🔵 | 14.03 ms 🔵 |
 | 8    | Haunted Wasteland               | [aoc202308.py](08_haunted_wasteland/aoc202308.py)               | 496.66 μs ⚪️ |  10.89 ms 🔵 |  37.03 ms 🔵 | 48.42 ms 🔵 |
 | 9    | Mirage Maintenance              | [aoc202309.py](09_mirage_maintenance/aoc202309.py)              |   1.14 ms 🔵 |   4.67 ms 🔵 |   4.85 ms 🔵 | 10.65 ms 🔵 |
-| 10   |                                 |                                                                 |             |             |             |            |
+| 10   | Pipe Maze                       | [aoc202310.py](10_pipe_maze/aoc202310.py)                       |  18.71 ms 🔵 |   4.80 ms 🔵 |  10.12 ms 🔵 | 33.63 ms 🔵 |
 | 11   |                                 |                                                                 |             |             |             |            |
 | 12   |                                 |                                                                 |             |             |             |            |
 | 13   |                                 |                                                                 |             |             |             |            |
