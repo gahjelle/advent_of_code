@@ -17,7 +17,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 10   | Pipe Maze                       | [aoc202310.py](10_pipe_maze/aoc202310.py)                       |  18.71 ms 🔵 |   4.80 ms 🔵 |  10.12 ms 🔵 |  33.63 ms 🔵 |
 | 11   | Cosmic Expansion                | [aoc202311.py](11_cosmic_expansion/aoc202311.py)                | 519.33 μs ⚪️ |  14.17 ms 🔵 |  20.23 ms 🔵 |  34.91 ms 🔵 |
 | 12   | Hot Springs                     | [aoc202312.py](12_hot_springs/aoc202312.py)                     |   1.60 ms 🔵 |  12.00 ms 🔵 | 294.04 ms 🔵 | 307.64 ms 🔵 |
-| 13   |                                 |                                                                 |             |             |             |             |
+| 13   | Point Of Incidence              | [aoc202313.py](13_point_of_incidence/aoc202313.py)              |   2.40 ms 🔵 |  35.88 ms 🔵 |  32.67 ms 🔵 |  70.95 ms 🔵 |
 | 14   |                                 |                                                                 |             |             |             |             |
 | 15   |                                 |                                                                 |             |             |             |             |
 | 16   |                                 |                                                                 |             |             |             |             |
