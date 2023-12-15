@@ -18,8 +18,8 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 11   | Cosmic Expansion                | [aoc202311.py](11_cosmic_expansion/aoc202311.py)                | 519.33 μs ⚪️ |  14.17 ms 🔵 |  20.23 ms 🔵 |  34.91 ms 🔵 |
 | 12   | Hot Springs                     | [aoc202312.py](12_hot_springs/aoc202312.py)                     |   1.60 ms 🔵 |  12.00 ms 🔵 | 294.04 ms 🔵 | 307.64 ms 🔵 |
 | 13   | Point Of Incidence              | [aoc202313.py](13_point_of_incidence/aoc202313.py)              |   2.40 ms 🔵 |  35.88 ms 🔵 |  32.67 ms 🔵 |  70.95 ms 🔵 |
-| 14   |                                 |                                                                 |             |             |             |             |
-| 15   |                                 |                                                                 |             |             |             |             |
+| 14   | Parabolic Reflector Dish        | [aoc202314.py](14_parabolic_reflector_dish/aoc202314.py)        | 967.69 μs ⚪️ |   2.49 ms 🔵 |    1.45 s 🔴 |    1.46 s 🔴 |
+| 15   | Lens Library                    | [aoc202315.py](15_lens_library/aoc202315.py)                    | 134.78 μs ⚪️ |   1.75 ms 🔵 |   3.94 ms 🔵 |   5.82 ms 🔵 |
 | 16   |                                 |                                                                 |             |             |             |             |
 | 17   |                                 |                                                                 |             |             |             |             |
 | 18   |                                 |                                                                 |             |             |             |             |
