@@ -22,7 +22,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 15   | Lens Library                    | [aoc202315.py](15_lens_library/aoc202315.py)                    | 134.78 μs ⚪️ |   1.75 ms 🔵 |   3.94 ms 🔵 |   5.82 ms 🔵 |
 | 16   |                                 |                                                                 |             |             |             |             |
 | 17   |                                 |                                                                 |             |             |             |             |
-| 18   |                                 |                                                                 |             |             |             |             |
+| 18   | Lavaduct Lagoon                 | [aoc202318.py](18_lavaduct_lagoon/aoc202318.py)                 | 357.78 μs ⚪️ | 207.39 μs ⚪️ | 383.86 μs ⚪️ | 949.03 μs ⚪️ |
 | 19   |                                 |                                                                 |             |             |             |             |
 | 20   |                                 |                                                                 |             |             |             |             |
 | 21   |                                 |                                                                 |             |             |             |             |
