@@ -21,7 +21,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 14   | Parabolic Reflector Dish        | [aoc202314.py](14_parabolic_reflector_dish/aoc202314.py)        | 967.69 μs ⚪️ |   2.49 ms 🔵 |    1.45 s 🔴 |    1.46 s 🔴 |
 | 15   | Lens Library                    | [aoc202315.py](15_lens_library/aoc202315.py)                    | 134.78 μs ⚪️ |   1.75 ms 🔵 |   3.94 ms 🔵 |   5.82 ms 🔵 |
 | 16   | The Floor Will Be Lava          | [aoc202316.py](16_the_floor_will_be_lava/aoc202316.py)          | 386.47 μs ⚪️ |   9.87 ms 🔵 |    2.28 s 🔴 |    2.29 s 🔴 |
-| 17   |                                 |                                                                 |             |             |             |             |
+| 17   | Clumsy Crucible                 | [aoc202317.py](17_clumsy_crucible/aoc202317.py)                 |   5.35 ms 🔵 |    1.19 s 🔴 |    3.54 s 🔴 |    4.73 s 🔴 |
 | 18   | Lavaduct Lagoon                 | [aoc202318.py](18_lavaduct_lagoon/aoc202318.py)                 | 357.78 μs ⚪️ | 207.39 μs ⚪️ | 383.86 μs ⚪️ | 949.03 μs ⚪️ |
 | 19   | Aplenty                         | [aoc202319.py](19_aplenty/aoc202319.py)                         |  15.57 ms 🔵 | 434.44 μs ⚪️ |   1.49 ms 🔵 |  17.50 ms 🔵 |
 | 20   |                                 |                                                                 |             |             |             |             |
