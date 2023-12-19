@@ -16,10 +16,48 @@ def example1():
     return aoc202314.parse_data(puzzle_input)
 
 
-@pytest.mark.skip(reason="Not implemented")
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
-    assert example1 == ...
+    rolling, obstacles = example1
+    assert rolling == {
+        (6, 2),
+        (1, 2),
+        (5, 5),
+        (3, 4),
+        (7, 7),
+        (0, 0),
+        (3, 1),
+        (4, 1),
+        (6, 9),
+        (6, 6),
+        (9, 2),
+        (3, 0),
+        (3, 9),
+        (5, 0),
+        (1, 0),
+        (9, 1),
+        (1, 3),
+        (4, 7),
+    }
+    assert obstacles == {
+        (9, 0),
+        (6, 5),
+        (8, 7),
+        (1, 4),
+        (5, 7),
+        (8, 0),
+        (8, 5),
+        (9, 5),
+        (3, 3),
+        (2, 6),
+        (0, 5),
+        (4, 8),
+        (8, 6),
+        (5, 9),
+        (2, 5),
+        (1, 9),
+        (5, 2),
+    }
 
 
 def test_part1_example1(example1):
