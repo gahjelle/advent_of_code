@@ -23,7 +23,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 16   |                                 |                                                                 |             |             |             |             |
 | 17   |                                 |                                                                 |             |             |             |             |
 | 18   | Lavaduct Lagoon                 | [aoc202318.py](18_lavaduct_lagoon/aoc202318.py)                 | 357.78 μs ⚪️ | 207.39 μs ⚪️ | 383.86 μs ⚪️ | 949.03 μs ⚪️ |
-| 19   |                                 |                                                                 |             |             |             |             |
+| 19   | Aplenty                         | [aoc202319.py](19_aplenty/aoc202319.py)                         |  15.57 ms 🔵 | 434.44 μs ⚪️ |   1.49 ms 🔵 |  17.50 ms 🔵 |
 | 20   |                                 |                                                                 |             |             |             |             |
 | 21   |                                 |                                                                 |             |             |             |             |
 | 22   |                                 |                                                                 |             |             |             |             |
