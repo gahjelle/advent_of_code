@@ -27,6 +27,6 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 20   |                                 |                                                                 |             |             |             |             |
 | 21   | Step Counter                    | [aoc202321.py](21_step_counter/aoc202321.py)                    |   2.63 ms 🔵 |  15.80 ms 🔵 | 296.47 ms 🔵 | 314.90 ms 🔵 |
 | 22   |                                 |                                                                 |             |             |             |             |
-| 23   |                                 |                                                                 |             |             |             |             |
+| 23   | A Long Walk                     | [aoc202323.py](23_a_long_walk/aoc202323.py)                     |   2.63 ms 🔵 |  29.52 ms 🔵 |   22.48 s 🔴 |   22.51 s 🔴 |
 | 24   |                                 |                                                                 |             |             |             |             |
 | 25   |                                 |                                                                 |             |             |             |             |
