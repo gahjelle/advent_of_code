@@ -24,7 +24,7 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 17   | Clumsy Crucible                 | [aoc202317.py](17_clumsy_crucible/aoc202317.py)                 |   5.35 ms 🔵 |    1.19 s 🔴 |    3.54 s 🔴 |    4.73 s 🔴 |
 | 18   | Lavaduct Lagoon                 | [aoc202318.py](18_lavaduct_lagoon/aoc202318.py)                 | 357.78 μs ⚪️ | 207.39 μs ⚪️ | 383.86 μs ⚪️ | 949.03 μs ⚪️ |
 | 19   | Aplenty                         | [aoc202319.py](19_aplenty/aoc202319.py)                         |  15.57 ms 🔵 | 434.44 μs ⚪️ |   1.49 ms 🔵 |  17.50 ms 🔵 |
-| 20   |                                 |                                                                 |             |             |             |             |
+| 20   | Pulse Propagation               | [aoc202320.py](20_pulse_propagation/aoc202320.py)               |  79.19 μs ⚪️ |  25.05 ms 🔵 |  97.37 ms 🔵 | 122.49 ms 🔵 |
 | 21   | Step Counter                    | [aoc202321.py](21_step_counter/aoc202321.py)                    |   2.63 ms 🔵 |  15.80 ms 🔵 | 296.47 ms 🔵 | 314.90 ms 🔵 |
 | 22   | Sand Slabs                      | [aoc202322.py](22_sand_slabs/aoc202322.py)                      |    5.04 s 🔴 |   2.15 ms 🔵 |  40.36 ms 🔵 |    5.08 s 🔴 |
 | 23   | A Long Walk                     | [aoc202323.py](23_a_long_walk/aoc202323.py)                     |   2.63 ms 🔵 |  29.52 ms 🔵 |   22.48 s 🔴 |   22.51 s 🔴 |
