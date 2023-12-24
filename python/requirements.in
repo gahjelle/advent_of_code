@@ -6,4 +6,5 @@ pandas
 parse
 polars
 rich
+sympy
 tabulate
