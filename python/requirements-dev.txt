@@ -80,6 +80,8 @@ mpmath==1.3.0
     #   sympy
 mypy-extensions==1.0.0
     # via black
+networkx==3.2.1
+    # via -r requirements.txt
 numpy==1.26.2
     # via
     #   -r requirements.txt
