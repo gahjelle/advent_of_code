@@ -54,11 +54,12 @@ class IntcodeComputer:
     program: list[int]
     input: list[int] = field(default_factory=list)
     pointer: int = 0
+    relative_base: int = 0
     debug: bool = False
 
     def __post_init__(self):
-        """Copy program to avoid any mutation."""
-        self.program = self.program.copy()
+        """Convert program to dictionary to simplify memory handling."""
+        self.program = dict(enumerate(self.program))
         self._input = iter(self.input)
 
     def run(self):
@@ -112,13 +113,22 @@ class IntcodeComputer:
         opcode = OPCODES[code]
 
         params = []
-        for param in self.program[pointer + 1 : pointer + 1 + opcode.num_params]:
+        for param in [
+            self.program[pointer + 1 + idx] for idx in range(opcode.num_params)
+        ]:
             param_modes, param_mode = divmod(param_modes, 10)
             match param_mode:
                 case 0:
-                    params.append((self.program[param], param))
+                    params.append((self.program.get(param, 0), param))
                 case 1:
                     params.append((param, param))
+                case 2:
+                    params.append(
+                        (
+                            self.program.get(self.relative_base + param, 0),
+                            self.relative_base + param,
+                        )
+                    )
                 case _:
                     raise ValueError(f"unknown parameter mode: {param_mode}")
 
@@ -173,6 +183,12 @@ class IntcodeComputer:
         """Store 1 if first number is equal to second, 0 otherwise."""
         (first, _), (second, _), (_, store) = params
         return Store(store, int(first == second))
+
+    @register_command(9, "adj_rel", 1)
+    def op_adjust_relative_base(self, params):
+        """Adjust the relative base by the only parameter."""
+        ((value, _),) = params
+        self.relative_base += value
 
     @register_command(99, "exit", 0)
     def op_exit(self, _params):
