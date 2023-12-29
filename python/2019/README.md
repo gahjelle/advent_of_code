@@ -11,7 +11,7 @@ Solutions to [Advent of Code 2019](https://adventofcode.com/2019/) in [Python](h
 | 5    | Sunny With A Chance Of Asteroids   | [aoc201905.py](05_sunny_with_a_chance_of_asteroids/aoc201905.py)   | 101.07 μs ⚪️ | 120.98 μs ⚪️ | 196.08 μs ⚪️ | 418.14 μs ⚪️ |
 | 6    | Universal Orbit Map                | [aoc201906.py](06_universal_orbit_map/aoc201906.py)                |  22.54 ms 🔵 |  56.40 μs ⚪️ |  31.52 μs ⚪️ |  22.63 ms 🔵 |
 | 7    | Amplification Circuit              | [aoc201907.py](07_amplification_circuit/aoc201907.py)              |  91.74 μs ⚪️ |  11.04 ms 🔵 |  39.34 ms 🔵 |  50.47 ms 🔵 |
-| 8    |                                    |                                                                    |             |             |             |             |
+| 8    | Space Image Format                 | [aoc201908.py](08_space_image_format/aoc201908.py)                 |   4.29 ms 🔵 |   1.23 ms 🔵 |   2.98 ms 🔵 |   8.50 ms 🔵 |
 | 9    |                                    |                                                                    |             |             |             |             |
 | 10   |                                    |                                                                    |             |             |             |             |
 | 11   |                                    |                                                                    |             |             |             |             |
