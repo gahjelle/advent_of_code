@@ -29,4 +29,4 @@ Solutions to [Advent of Code 2023](https://adventofcode.com/2023/) in [Python](h
 | 22   | Sand Slabs                      | [aoc202322.py](22_sand_slabs/aoc202322.py)                      |    5.04 s 🔴 |   2.15 ms 🔵 |  40.36 ms 🔵 |    5.08 s 🔴 |
 | 23   | A Long Walk                     | [aoc202323.py](23_a_long_walk/aoc202323.py)                     |   2.63 ms 🔵 |  29.52 ms 🔵 |   22.48 s 🔴 |   22.51 s 🔴 |
 | 24   | Never Tell Me The Odds          | [aoc202324.py](24_never_tell_me_the_odds/aoc202324.py)          |   1.45 ms 🔵 | 130.49 ms 🔵 | 320.31 ms 🔵 | 452.25 ms 🔵 |
-| 25   | Snowverload                     | [aoc202325.py](25_snowverload/aoc202325.py)                     |  14.42 ms 🔵 |    4.74 s 🔴 | 978.94 ns ⚪️ |    4.75 s 🔴 |
+| 25   | Snowverload                     | [aoc202325.py](25_snowverload/aoc202325.py)                     |  14.42 ms 🔵 |    4.74 s 🔴 |             |    4.75 s 🔴 |

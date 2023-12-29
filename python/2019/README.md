@@ -9,7 +9,7 @@ Solutions to [Advent of Code 2019](https://adventofcode.com/2019/) in [Python](h
 | 3    | Crossed Wires                      | [aoc201903.py](03_crossed_wires/aoc201903.py)                      |  37.59 ms 🔵 |  27.57 ms 🔵 |  55.60 ms 🔵 | 120.76 ms 🔵 |
 | 4    | Secure Container                   | [aoc201904.py](04_secure_container/aoc201904.py)                   |  33.07 ms 🔵 | 270.06 ms 🔵 | 279.37 ms 🔵 | 582.50 ms 🔵 |
 | 5    | Sunny With A Chance Of Asteroids   | [aoc201905.py](05_sunny_with_a_chance_of_asteroids/aoc201905.py)   | 101.07 μs ⚪️ | 120.98 μs ⚪️ | 196.08 μs ⚪️ | 418.14 μs ⚪️ |
-| 6    |                                    |                                                                    |             |             |             |             |
+| 6    | Universal Orbit Map                | [aoc201906.py](06_universal_orbit_map/aoc201906.py)                |  22.54 ms 🔵 |  56.40 μs ⚪️ |  31.52 μs ⚪️ |  22.63 ms 🔵 |
 | 7    |                                    |                                                                    |             |             |             |             |
 | 8    |                                    |                                                                    |             |             |             |             |
 | 9    |                                    |                                                                    |             |             |             |             |
