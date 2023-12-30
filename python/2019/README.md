@@ -15,7 +15,7 @@ Solutions to [Advent of Code 2019](https://adventofcode.com/2019/) in [Python](h
 | 9    | Sensor Boost                       | [aoc201909.py](09_sensor_boost/aoc201909.py)                       | 189.11 μs ⚪️ | 579.41 μs ⚪️ | 872.25 ms 🔵 | 873.02 ms 🔵 |
 | 10   | Monitoring Station                 | [aoc201910.py](10_monitoring_station/aoc201910.py)                 | 137.76 ms 🔵 | 237.40 μs ⚪️ | 751.47 μs ⚪️ | 138.75 ms 🔵 |
 | 11   | Space Police                       | [aoc201911.py](11_space_police/aoc201911.py)                       | 120.14 μs ⚪️ | 207.43 ms 🔵 |  20.27 ms 🔵 | 227.83 ms 🔵 |
-| 12   |                                    |                                                                    |             |             |             |             |
+| 12   | The N-Body Problem                 | [aoc201912.py](12_the_n-body_problem/aoc201912.py)                 | 752.82 μs ⚪️ |   5.81 ms 🔵 |    4.18 s 🔴 |    4.18 s 🔴 |
 | 13   |                                    |                                                                    |             |             |             |             |
 | 14   |                                    |                                                                    |             |             |             |             |
 | 15   |                                    |                                                                    |             |             |             |             |
