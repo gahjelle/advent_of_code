@@ -107,6 +107,20 @@ class IntcodeComputer:
             case _:
                 return output
 
+    def iter_n(self, n=1):
+        """Iterate over a program, collecting n outputs per step."""
+        outputs = []
+        while True:
+            try:
+                output = next(self)
+            except StopIteration:
+                break
+
+            outputs.append(output)
+            if len(outputs) == n:
+                yield outputs
+                outputs.clear()
+
     def get_operation(self, pointer):
         """Get opcode and parameters."""
         param_modes, code = divmod(self.program[pointer], 100)
