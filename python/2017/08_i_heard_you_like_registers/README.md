@@ -2,4 +2,4 @@
 
 **Advent of Code: Day 8, 2017**
 
-Puzzle text: https://adventofcode.com/2017/day/8
+Puzzle text: <https://adventofcode.com/2017/day/8>

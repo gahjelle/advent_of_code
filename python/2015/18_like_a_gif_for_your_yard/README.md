@@ -2,4 +2,4 @@
 
 **Advent of Code: Day 18, 2015**
 
-Puzzle text: https://adventofcode.com/2015/day/18
+Puzzle text: <https://adventofcode.com/2015/day/18>

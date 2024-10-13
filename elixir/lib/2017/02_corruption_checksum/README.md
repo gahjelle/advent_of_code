@@ -2,8 +2,8 @@
 
 **Advent of Code: Day 2, 2017**
 
-Puzzle text: https://adventofcode.com/2017/day/2
+Puzzle text: <https://adventofcode.com/2017/day/2>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2017/02_corruption_checksum)
+- [🐍 Python](../../../../python/2017/02_corruption_checksum/README.md)

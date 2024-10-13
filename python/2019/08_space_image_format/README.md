@@ -2,4 +2,4 @@
 
 **Advent of Code: Day 8, 2019**
 
-Puzzle text: https://adventofcode.com/2019/day/8
+Puzzle text: <https://adventofcode.com/2019/day/8>

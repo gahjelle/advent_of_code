@@ -2,9 +2,9 @@
 
 **Advent of Code: Day 2, 2020**
 
-Puzzle text: https://adventofcode.com/2020/day/2
+Puzzle text: <https://adventofcode.com/2020/day/2>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2020/02_password_philosophy)
-- [🐍 Python](../../../python/2020/02_password_philosophy)
+- [🐍 Python](../../../python/2020/02_password_philosophy/README.md)
+- [💧 Elixir](../../../elixir/lib/2020/02_password_philosophy/README.md)

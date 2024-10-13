@@ -2,4 +2,4 @@
 
 **Advent of Code: Day 16, 2023**
 
-Puzzle text: https://adventofcode.com/2023/day/16
+Puzzle text: <https://adventofcode.com/2023/day/16>

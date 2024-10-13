@@ -2,8 +2,8 @@
 
 **Advent of Code: Day 6, 2015**
 
-Puzzle text: https://adventofcode.com/2015/day/6
+Puzzle text: <https://adventofcode.com/2015/day/6>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2015/06_probably_a_fire_hazard)
+- [💧 Elixir](../../../elixir/lib/2015/06_probably_a_fire_hazard/README.md)

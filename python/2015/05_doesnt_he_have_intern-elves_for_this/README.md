@@ -2,8 +2,8 @@
 
 **Advent of Code: Day 5, 2015**
 
-Puzzle text: https://adventofcode.com/2015/day/5
+Puzzle text: <https://adventofcode.com/2015/day/5>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2015/05_doesnt_he_have_intern-elves_for_this)
+- [💧 Elixir](../../../elixir/lib/2015/05_doesnt_he_have_intern-elves_for_this/README.md)
