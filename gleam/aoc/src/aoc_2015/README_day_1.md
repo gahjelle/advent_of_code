@@ -6,5 +6,5 @@ Puzzle text: <https://adventofcode.com/2015/day/1>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2015/01_not_quite_lisp/README.md)
-- [💧 Elixir](../../../../elixir/lib/2015/01_not_quite_lisp/README.md)
+- [🐍 Python](../../../../python/2015/01_not_quite_lisp)
+- [💧 Elixir](../../../../elixir/lib/2015/01_not_quite_lisp)

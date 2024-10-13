@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/16>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2022/16_proboscidea_volcanium/README.md)
+- [💧 Elixir](../../../elixir/lib/2022/16_proboscidea_volcanium)

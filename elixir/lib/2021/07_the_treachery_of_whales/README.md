@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/7>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2021/07_the_treachery_of_whales/README.md)
+- [🐍 Python](../../../../python/2021/07_the_treachery_of_whales)

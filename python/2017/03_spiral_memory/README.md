@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2017/day/3>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2017/03_spiral_memory/README.md)
+- [💧 Elixir](../../../elixir/lib/2017/03_spiral_memory)

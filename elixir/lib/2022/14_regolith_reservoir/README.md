@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/14>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2022/14_regolith_reservoir/README.md)
+- [🐍 Python](../../../../python/2022/14_regolith_reservoir)

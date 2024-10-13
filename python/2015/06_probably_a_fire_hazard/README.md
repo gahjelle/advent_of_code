@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2015/day/6>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2015/06_probably_a_fire_hazard/README.md)
+- [💧 Elixir](../../../elixir/lib/2015/06_probably_a_fire_hazard)

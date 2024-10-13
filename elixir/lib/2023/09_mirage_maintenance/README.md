@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2023/day/9>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2023/09_mirage_maintenance/README.md)
+- [🐍 Python](../../../../python/2023/09_mirage_maintenance)

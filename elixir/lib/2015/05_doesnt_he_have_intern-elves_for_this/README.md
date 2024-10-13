@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2015/day/5>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2015/05_doesnt_he_have_intern-elves_for_this/README.md)
+- [🐍 Python](../../../../python/2015/05_doesnt_he_have_intern-elves_for_this)

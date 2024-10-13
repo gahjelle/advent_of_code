@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/11>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2021/11_dumbo_octopus/README.md)
+- [🐍 Python](../../../../python/2021/11_dumbo_octopus)

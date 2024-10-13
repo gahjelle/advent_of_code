@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/10>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2021/10_syntax_scoring/README.md)
+- [🐍 Python](../../../../python/2021/10_syntax_scoring)

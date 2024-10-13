@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2015/day/7>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2015/07_some_assembly_required/README.md)
+- [🐍 Python](../../../../python/2015/07_some_assembly_required)

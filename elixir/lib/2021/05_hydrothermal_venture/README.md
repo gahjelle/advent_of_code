@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/5>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2021/05_hydrothermal_venture/README.md)
+- [🐍 Python](../../../../python/2021/05_hydrothermal_venture)

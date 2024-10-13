@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/3>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2021/03_binary_diagnostic/README.md)
+- [🐍 Python](../../../../python/2021/03_binary_diagnostic)

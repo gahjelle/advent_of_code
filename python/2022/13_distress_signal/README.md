@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/13>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2022/13_distress_signal/README.md)
+- [💧 Elixir](../../../elixir/lib/2022/13_distress_signal)

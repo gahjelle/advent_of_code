@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2023/day/2>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2023/02_cube_conundrum/README.md)
+- [💧 Elixir](../../../elixir/lib/2023/02_cube_conundrum)

@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/4>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2022/04_camp_cleanup/README.md)
+- [💧 Elixir](../../../elixir/lib/2022/04_camp_cleanup)

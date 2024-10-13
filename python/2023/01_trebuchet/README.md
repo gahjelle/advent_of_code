@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2023/day/1>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2023/01_trebuchet/README.md)
+- [💧 Elixir](../../../elixir/lib/2023/01_trebuchet)

@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/8>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2022/08_treetop_tree_house/README.md)
+- [🐍 Python](../../../../python/2022/08_treetop_tree_house)

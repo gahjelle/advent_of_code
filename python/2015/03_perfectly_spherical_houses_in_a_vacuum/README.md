@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2015/day/3>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2015/03_perfectly_spherical_houses_in_a_vacuum/README.md)
+- [💧 Elixir](../../../elixir/lib/2015/03_perfectly_spherical_houses_in_a_vacuum)

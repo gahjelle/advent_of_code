@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/2>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2022/02_rock_paper_scissors/README.md)
+- [🐍 Python](../../../../python/2022/02_rock_paper_scissors)

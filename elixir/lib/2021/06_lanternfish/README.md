@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/6>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2021/06_lanternfish/README.md)
+- [🐍 Python](../../../../python/2021/06_lanternfish)

@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/1>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2021/01_sonar_sweep/README.md)
+- [🐍 Python](../../../../python/2021/01_sonar_sweep)

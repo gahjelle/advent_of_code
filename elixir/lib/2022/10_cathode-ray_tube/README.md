@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/10>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2022/10_cathode-ray_tube/README.md)
+- [🐍 Python](../../../../python/2022/10_cathode-ray_tube)

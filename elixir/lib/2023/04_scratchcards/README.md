@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2023/day/4>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2023/04_scratchcards/README.md)
+- [🐍 Python](../../../../python/2023/04_scratchcards)

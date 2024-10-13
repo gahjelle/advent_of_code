@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2023/day/1>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2023/01_trebuchet/README.md)
+- [🐍 Python](../../../../python/2023/01_trebuchet)

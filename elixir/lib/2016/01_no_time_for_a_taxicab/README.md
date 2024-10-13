@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2016/day/1>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2016/01_no_time_for_a_taxicab/README.md)
+- [🐍 Python](../../../../python/2016/01_no_time_for_a_taxicab)

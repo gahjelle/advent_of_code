@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/11>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2022/11_monkey_in_the_middle/README.md)
+- [🐍 Python](../../../../python/2022/11_monkey_in_the_middle)

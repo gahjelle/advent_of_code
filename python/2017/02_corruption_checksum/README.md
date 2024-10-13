@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2017/day/2>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2017/02_corruption_checksum/README.md)
+- [💧 Elixir](../../../elixir/lib/2017/02_corruption_checksum)

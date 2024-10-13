@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/7>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2022/07_no_space_left_on_device/README.md)
+- [💧 Elixir](../../../elixir/lib/2022/07_no_space_left_on_device)

@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2022/day/5>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2022/05_supply_stacks/README.md)
+- [🐍 Python](../../../../python/2022/05_supply_stacks)

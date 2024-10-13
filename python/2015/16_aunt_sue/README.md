@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2015/day/16>
 
 Solutions in other languages:
 
-- [🍡 Julia](../../../julia/2015/16_aunt_sue/README.md)
+- [🍡 Julia](../../../julia/2015/16_aunt_sue)

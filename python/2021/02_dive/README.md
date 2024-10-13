@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2021/day/2>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2021/02_dive/README.md)
+- [💧 Elixir](../../../elixir/lib/2021/02_dive)
