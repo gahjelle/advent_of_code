@@ -21,8 +21,8 @@ pub fn parse(input: String) -> Data {
   input
   |> string.trim_right
   |> string.split(on: "\n")
-  |> list.map(fn(game) {
-    game
+  |> list.map(fn(round) {
+    round
     |> string.split(on: " ")
     |> fn(symbols) {
       case symbols {
@@ -31,7 +31,7 @@ pub fn parse(input: String) -> Data {
           parse_hand(second),
           parse_outcome(second),
         )
-        _ -> panic as { "Not a game: " <> game }
+        _ -> panic as { "Not a round: " <> round }
       }
     }
   })
@@ -61,7 +61,7 @@ pub fn pt_1(input: Data) -> Int {
     let #(opponent_hand, hand, _) = round
     [
       hand |> score_hand(),
-      #(opponent_hand, hand) |> determine_outcome() |> score_outcome(),
+      determine_outcome(hand, opponent_hand) |> score_outcome(),
     ]
     |> int.sum()
   })
@@ -81,31 +81,19 @@ pub fn pt_2(input: Data) -> Int {
   |> int.sum()
 }
 
-fn determine_outcome(game: #(Hand, Hand)) -> Outcome {
-  case game {
-    #(Rock, Rock) -> Draw
-    #(Rock, Paper) -> Win
-    #(Rock, Scissors) -> Loss
-    #(Paper, Rock) -> Loss
-    #(Paper, Paper) -> Draw
-    #(Paper, Scissors) -> Win
-    #(Scissors, Rock) -> Win
-    #(Scissors, Paper) -> Loss
-    #(Scissors, Scissors) -> Draw
+fn determine_outcome(hand: Hand, opponent_hand: Hand) -> Outcome {
+  case hand, opponent_hand {
+    Rock, Paper | Paper, Scissors | Scissors, Rock -> Loss
+    Rock, Rock | Paper, Paper | Scissors, Scissors -> Draw
+    Rock, Scissors | Paper, Rock | Scissors, Paper -> Win
   }
 }
 
 fn determine_hand(opponent_hand: Hand, outcome: Outcome) -> Hand {
   case opponent_hand, outcome {
-    Rock, Loss -> Scissors
-    Rock, Draw -> Rock
-    Rock, Win -> Paper
-    Paper, Loss -> Rock
-    Paper, Draw -> Paper
-    Paper, Win -> Scissors
-    Scissors, Loss -> Paper
-    Scissors, Draw -> Scissors
-    Scissors, Win -> Rock
+    Rock, Draw | Paper, Loss | Scissors, Win -> Rock
+    Rock, Win | Paper, Draw | Scissors, Loss -> Paper
+    Rock, Loss | Paper, Win | Scissors, Draw -> Scissors
   }
 }
 
