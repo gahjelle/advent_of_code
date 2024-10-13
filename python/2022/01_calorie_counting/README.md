@@ -7,3 +7,4 @@ Puzzle text: <https://adventofcode.com/2022/day/1>
 Solutions in other languages:
 
 - [💧 Elixir](../../../elixir/lib/2022/01_calorie_counting/README.md)
+- [🌠 Gleam](../../../gleam/aoc/src/aoc_2022/README_day_1.md)
