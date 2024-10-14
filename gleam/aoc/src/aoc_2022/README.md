@@ -6,7 +6,7 @@ Solutions to [Advent of Code 2022](https://adventofcode.com/2022/) in [Gleam](ht
 | :--- | :----------------------- | :------------------------- |
 | 1    | Calorie Counting         | [day_1.gleam](day_1.gleam) |
 | 2    | Rock Paper Scissors      | [day_2.gleam](day_2.gleam) |
-| 3    | Rucksack Reorganization  |                            |
+| 3    | Rucksack Reorganization  | [day_3.gleam](day_3.gleam) |
 | 4    | Camp Cleanup             |                            |
 | 5    | Supply Stacks            |                            |
 | 6    | Tuning Trouble           | [day_6.gleam](day_6.gleam) |
