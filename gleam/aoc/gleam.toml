@@ -16,8 +16,8 @@ version = "1.0.0"
 gleam_stdlib = ">= 0.34.0 and < 2.0.0"
 gladvent     = ">= 1.0.1 and < 2.0.0"
 birl         = ">= 1.7.1 and < 2.0.0"
-birdie = ">= 1.2.3 and < 2.0.0"
-pprint = ">= 1.0.3 and < 2.0.0"
+birdie       = ">= 1.2.3 and < 2.0.0"
+pprint       = ">= 1.0.3 and < 2.0.0"
 
 [dev-dependencies]
 argv         = ">= 1.0.2 and < 2.0.0"
@@ -45,6 +45,10 @@ pt_2 = 9541
 [gladvent.2022.3]
 pt_1 = 7737
 pt_2 = 2697
+
+[gladvent.2022.4]
+pt_1 = 444
+pt_2 = 801
 
 [gladvent.2022.6]
 pt_1 = 1987

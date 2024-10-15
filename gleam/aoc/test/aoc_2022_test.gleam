@@ -2,6 +2,7 @@ import aoc
 import aoc_2022/day_1
 import aoc_2022/day_2
 import aoc_2022/day_3
+import aoc_2022/day_4
 import aoc_2022/day_6
 import birdie
 import gleeunit
@@ -24,6 +25,11 @@ pub fn day_02_snapshot_test() {
 pub fn day_03_snapshot_test() {
   aoc.solve(2022, 3, day_3.parse, day_3.pt_1, day_3.pt_2)
   |> birdie.snap("Puzzle 2022-03")
+}
+
+pub fn day_04_snapshot_test() {
+  aoc.solve(2022, 4, day_4.parse, day_4.pt_1, day_4.pt_2)
+  |> birdie.snap("Puzzle 2022-04")
 }
 
 pub fn day_06_find_marker_test() {

@@ -1,5 +1,6 @@
 import gladvent
 import gladvent/internal/input
+import gleam/int
 import gleam/result
 import gleam/string
 import pprint
@@ -7,6 +8,10 @@ import simplifile
 
 pub fn main() {
   gladvent.main()
+}
+
+pub fn to_int(text: String) -> Int {
+  text |> int.parse() |> result.unwrap(or: 0)
 }
 
 fn get_input(year: Int, day: Int) -> String {

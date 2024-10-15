@@ -217,7 +217,7 @@ def update_language_readme(language):
         link_dir=BASEDIR / language,
         link_years=True,
     )
-    print(f"Updating READMEs for {len(puzzles)} {language} solutions")
+    print(f"Updating READMEs for {language} solutions: {2 * len(puzzles)}⭐")
 
     text = (
         f"# Advent of Code in {language.title()}\n\n"
