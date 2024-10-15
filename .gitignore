@@ -12,7 +12,6 @@ timings.*.md
 stats.md
 
 README.template
-update_readmes.py
 join_aoc_files.py
 download_input.py
 
@@ -21,6 +20,8 @@ __pycache__
 *.egg-info/
 
 others/
+experiments/
+leaderboard/
 
 .envrc
 .vscode
