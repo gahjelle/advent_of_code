@@ -1,0 +1,8 @@
+---
+version: 1.2.3
+title: Puzzle 2019-01
+file: ./test/aoc_2019_test.gleam
+test_name: day_01_snapshot_test
+---
+3550236
+5322455

@@ -69,13 +69,15 @@ that each solution gives the correct answer.
 
 Follow these steps after solving a puzzle:
 
-1. Store the solution to an output file:
+1. Store the expected results in the `gleam.toml` project file.
+
+2. Add a snapshot test with title `"Puzzle 2015-01"` (with appropriate numbers),
+run it, and accept it:
 
     ```console
-    $ gleam run run 1 --year=2015.txt > output/2015/1.gleam.txt
+    $ gleam test
+    $ gleam run -m birdie
     ```
-
-2. Store the expected results in the `gleam.toml` project file.
 
 3. Update READMEs across all projects:
 

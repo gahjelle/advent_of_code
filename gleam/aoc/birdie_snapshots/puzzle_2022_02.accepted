@@ -1,0 +1,8 @@
+---
+version: 1.2.3
+title: Puzzle 2022-02
+file: ./test/aoc_2022_test.gleam
+test_name: day_02_snapshot_test
+---
+10595
+9541
