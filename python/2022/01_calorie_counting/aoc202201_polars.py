@@ -10,7 +10,10 @@ import polars as pl
 
 def parse_data(puzzle_input):
     """Parse input."""
-    return pl.DataFrame(enumerate_elfs(puzzle_input), columns=("elf", "calorie_count"))
+    return pl.DataFrame(
+        enumerate_elfs(puzzle_input),
+        schema=[("elf", pl.Int32), ("calorie_count", pl.Int32)],
+    )
 
 
 def enumerate_elfs(puzzle_input):
@@ -32,7 +35,7 @@ def enumerate_elfs(puzzle_input):
 def part1(calories):
     """Solve part 1."""
     return (
-        calories.groupby("elf")
+        calories.group_by("elf")
         .agg(pl.col("calorie_count").sum())
         .select("calorie_count")
         .max()
@@ -42,9 +45,9 @@ def part1(calories):
 def part2(calories):
     """Solve part 2."""
     return (
-        calories.groupby("elf")
+        calories.group_by("elf")
         .agg(pl.col("calorie_count").sum())
-        .sort(by="calorie_count", reverse=True)
+        .sort(by="calorie_count", descending=True)
         .head(3)
         .select("calorie_count")
         .sum()

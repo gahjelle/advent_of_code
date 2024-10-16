@@ -12,7 +12,7 @@ def parse_data(puzzle_input):
     """Parse input."""
     return (
         pl.read_csv(puzzle_input, has_header=False, new_columns=["first", "second"])
-        .with_row_count("id")
+        .with_row_index("id")
         .with_columns(
             [
                 pl.col("first").str.split("-").alias("low_high_1"),
@@ -21,10 +21,10 @@ def parse_data(puzzle_input):
         )
         .select(
             [
-                pl.col("low_high_1").arr.get(0).cast(int).alias("low_1"),
-                pl.col("low_high_1").arr.get(1).cast(int).alias("high_1"),
-                pl.col("low_high_2").arr.get(0).cast(int).alias("low_2"),
-                pl.col("low_high_2").arr.get(1).cast(int).alias("high_2"),
+                pl.col("low_high_1").list.get(0).cast(int).alias("low_1"),
+                pl.col("low_high_1").list.get(1).cast(int).alias("high_1"),
+                pl.col("low_high_2").list.get(0).cast(int).alias("low_2"),
+                pl.col("low_high_2").list.get(1).cast(int).alias("high_2"),
             ]
         )
     )
