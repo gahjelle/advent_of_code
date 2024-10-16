@@ -1,0 +1,8 @@
+---
+version: 1.2.3
+title: Puzzle 2021-01
+file: ./test/aoc_2021_test.gleam
+test_name: day_01_snapshot_test
+---
+1475
+1516
