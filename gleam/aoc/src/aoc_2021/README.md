@@ -5,7 +5,7 @@ Solutions to [Advent of Code 2021](https://adventofcode.com/2021/) in [Gleam](ht
 | Day  | Puzzle                  | Gleam                      |
 | :--- | :---------------------- | :------------------------- |
 | 1    | Sonar Sweep             | [day_1.gleam](day_1.gleam) |
-| 2    | Dive                    |                            |
+| 2    | Dive                    | [day_2.gleam](day_2.gleam) |
 | 3    | Binary Diagnostic       |                            |
 | 4    | Giant Squid             |                            |
 | 5    | Hydrothermal Venture    |                            |

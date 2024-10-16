@@ -1,11 +1,11 @@
 # Advent of Code in Gleam
 
-Solutions to [Advent of Code](https://adventofcode.com/) in [Gleam](https://gleam.run/) (16⭐):
+Solutions to [Advent of Code](https://adventofcode.com/) in [Gleam](https://gleam.run/) (18⭐):
 
 |   Day | [2015](aoc/src/aoc_2015)                 | [2019](aoc/src/aoc_2019)                 | [2021](aoc/src/aoc_2021)                 | [2022](aoc/src/aoc_2022)                 |
 |------:|:-----------------------------------------|:-----------------------------------------|:-----------------------------------------|:-----------------------------------------|
 |     1 | [⭐⭐](aoc/src/aoc_2015/README_day_1.md) | [⭐⭐](aoc/src/aoc_2019/README_day_1.md) | [⭐⭐](aoc/src/aoc_2021/README_day_1.md) | [⭐⭐](aoc/src/aoc_2022/README_day_1.md) |
-|     2 |                                          |                                          |                                          | [⭐⭐](aoc/src/aoc_2022/README_day_2.md) |
+|     2 |                                          |                                          | [⭐⭐](aoc/src/aoc_2021/README_day_2.md) | [⭐⭐](aoc/src/aoc_2022/README_day_2.md) |
 |     3 |                                          |                                          |                                          | [⭐⭐](aoc/src/aoc_2022/README_day_3.md) |
 |     4 |                                          |                                          |                                          | [⭐⭐](aoc/src/aoc_2022/README_day_4.md) |
 |     5 |                                          |                                          |                                          |                                          |
