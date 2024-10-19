@@ -1,0 +1,8 @@
+---
+version: 1.2.3
+title: Puzzle 2015-02
+file: ./test/aoc_2015_test.gleam
+test_name: day_02_snapshot_test
+---
+1598415
+3812909

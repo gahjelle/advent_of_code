@@ -5,7 +5,7 @@ Solutions to [Advent of Code 2015](https://adventofcode.com/2015/) in [Gleam](ht
 | Day  | Puzzle                                 | Gleam                      |
 | :--- | :------------------------------------- | :------------------------- |
 | 1    | Not Quite Lisp                         | [day_1.gleam](day_1.gleam) |
-| 2    | I Was Told There Would Be No Math      |                            |
+| 2    | I Was Told There Would Be No Math      | [day_2.gleam](day_2.gleam) |
 | 3    | Perfectly Spherical Houses In A Vacuum |                            |
 | 4    | The Ideal Stocking Stuffer             |                            |
 | 5    | Doesn't He Have Intern-Elves For This? |                            |

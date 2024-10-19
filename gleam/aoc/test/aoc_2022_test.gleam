@@ -12,6 +12,18 @@ pub fn main() {
   gleeunit.main()
 }
 
+pub fn day_06_find_marker_test() {
+  day_6.find_marker(["g", "e", "i", "r", "a", "r", "n", "e"], 5)
+  |> should.equal(5)
+
+  day_6.find_marker(
+    ["a", "a", "a", "a", "a", "a", "a", "b", "c", "c", "c", "c"],
+    3,
+  )
+  |> should.equal(9)
+}
+
+// SNAPSHOT TESTS
 pub fn day_01_snapshot_test() {
   aoc.solve(2022, 1, day_1.parse, day_1.pt_1, day_1.pt_2)
   |> birdie.snap("Puzzle 2022-01")
@@ -30,17 +42,6 @@ pub fn day_03_snapshot_test() {
 pub fn day_04_snapshot_test() {
   aoc.solve(2022, 4, day_4.parse, day_4.pt_1, day_4.pt_2)
   |> birdie.snap("Puzzle 2022-04")
-}
-
-pub fn day_06_find_marker_test() {
-  day_6.find_marker(["g", "e", "i", "r", "a", "r", "n", "e"], 5)
-  |> should.equal(5)
-
-  day_6.find_marker(
-    ["a", "a", "a", "a", "a", "a", "a", "b", "c", "c", "c", "c"],
-    3,
-  )
-  |> should.equal(9)
 }
 
 pub fn day_06_snapshot_test() {
