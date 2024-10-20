@@ -7,3 +7,4 @@ Puzzle text: <https://adventofcode.com/2018/day/2>
 Solutions in other languages:
 
 - [💧 Elixir](../../../elixir/lib/2018/02_inventory_management_system)
+- [🌠 Gleam](../../../gleam/aoc/src/aoc_2018/README_day_2.md)
