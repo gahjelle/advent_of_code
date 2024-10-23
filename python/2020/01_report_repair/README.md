@@ -8,3 +8,4 @@ Solutions in other languages:
 
 - [🍡 Julia](../../../julia/2020/01_report_repair)
 - [💧 Elixir](../../../elixir/lib/2020/01_report_repair)
+- [🌠 Gleam](../../../gleam/aoc/src/aoc_2020/README_day_1.md)
