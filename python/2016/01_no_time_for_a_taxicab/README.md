@@ -7,3 +7,4 @@ Puzzle text: <https://adventofcode.com/2016/day/1>
 Solutions in other languages:
 
 - [💧 Elixir](../../../elixir/lib/2016/01_no_time_for_a_taxicab)
+- [🌠 Gleam](../../../gleam/aoc/src/aoc_2016/README_day_1.md)
