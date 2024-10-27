@@ -1,0 +1,8 @@
+---
+version: 1.2.3
+title: Puzzle 2018-03
+file: ./test/aoc_2018_test.gleam
+test_name: day_03_snapshot_test
+---
+111485
+113

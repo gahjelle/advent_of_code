@@ -5,8 +5,8 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Gleam](ht
 | Day  | Puzzle                      | Gleam                      |
 | :--- | :-------------------------- | :------------------------- |
 | 1    | Chronal Calibration         | [day_1.gleam](day_1.gleam) |
-| 2    | Inventory Management System |                            |
-| 3    | No Matter How You Slice It  |                            |
+| 2    | Inventory Management System | [day_2.gleam](day_2.gleam) |
+| 3    | No Matter How You Slice It  | [day_3.gleam](day_3.gleam) |
 | 4    | Repose Record               |                            |
 | 5    | Alchemical Reduction        |                            |
 | 6    | Chronal Coordinates         |                            |
