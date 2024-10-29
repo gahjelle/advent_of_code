@@ -1,0 +1,8 @@
+---
+version: 1.2.3
+title: Puzzle 2023-01
+file: ./test/aoc_2023_test.gleam
+test_name: day_01_snapshot_test
+---
+55017
+53539
