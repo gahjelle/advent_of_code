@@ -9,6 +9,8 @@ import pandas as pd
 import parse
 from aocd.models import Puzzle
 
+YEAR_PATTERN = parse.compile("{year:4d}")
+
 
 def _solutions(glob, pattern, path):
     """Identify solution files for different languages"""
@@ -75,6 +77,16 @@ SOLUTIONS = {
 
 def _as_markdown_table(puzzles):
     """Format puzzle list as Markdown table"""
+    years = sorted({puzzle["Year"] for puzzle in puzzles}, reverse=True)
+    num_years = len(years)
+    if num_years > 8:
+        return "\n\n".join(
+            _as_markdown_table(
+                [puzzle for puzzle in puzzles if puzzle["Year"] in years[idx : idx + 8]]
+            )
+            for idx in range(0, num_years, 8)
+        )
+
     return (
         pd.DataFrame(puzzles)
         .pivot_table(index="Day", columns="Year", values="link", aggfunc="sum")
@@ -152,6 +164,7 @@ def _assemble_puzzle_list_(paths, emoji=None, link_dir=BASEDIR, link_years=False
             continue
         puzzles.append(
             {
+                "_year": year,
                 "Year": (
                     f"[{year}]({puzzle_dir.parent.relative_to(link_dir)})"
                     if link_years
