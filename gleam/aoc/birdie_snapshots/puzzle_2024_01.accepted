@@ -1,0 +1,8 @@
+---
+version: 1.2.3
+title: Puzzle 2024-01
+file: ./test/aoc_2024_test.gleam
+test_name: day_01_snapshot_test
+---
+2430334
+28786472

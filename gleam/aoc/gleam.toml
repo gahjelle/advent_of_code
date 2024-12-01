@@ -54,6 +54,10 @@ pt_2 = "pebjqsalrdnckzfihvtxysomg"
 pt_1 = 111_485
 pt_2 = 113
 
+[gladvent.2018.4]
+pt_1 = 39_584
+pt_2 = 55_053
+
 [gladvent.2019.1]
 pt_1 = 3_550_236
 pt_2 = 5_322_455
@@ -93,3 +97,7 @@ pt_2 = 3_059
 [gladvent.2023.1]
 pt_1 = 55_017
 pt_2 = 53_539
+
+[gladvent.2024.1]
+pt_1 = 2_430_334
+pt_2 = 28_786_472
