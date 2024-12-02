@@ -6,7 +6,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | Day  | Puzzle             | Python                                             |       Parse |      Part 1 |      Part 2 |     Total |
 | :--- | :----------------- | :------------------------------------------------- | ----------: | ----------: | ----------: | --------: |
 | 1    | Historian Hysteria | [aoc202401.py](01_historian_hysteria/aoc202401.py) | 624.81 μs ⚪️ | 209.05 μs ⚪️ | 169.36 μs ⚪️ | 1.00 ms 🔵 |
-| 2    |                    |                                                    |             |             |             |           |
+| 2    | Red-Nosed Reports  | [aoc202402.py](02_red-nosed_reports/aoc202402.py)  | 972.03 μs ⚪️ |   1.83 ms 🔵 |   6.28 ms 🔵 | 9.08 ms 🔵 |
 | 3    |                    |                                                    |             |             |             |           |
 | 4    |                    |                                                    |             |             |             |           |
 | 5    |                    |                                                    |             |             |             |           |
