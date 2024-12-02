@@ -67,26 +67,11 @@ defmodule AOC2024.Day02 do
       iex> is_safe_if_dampened([9, 7, 6, 2, 1])
       false
   """
-  def is_safe_if_dampened(report) do
-    report |> skip_levels() |> Enum.any?(&is_safe/1)
-  end
+  def is_safe_if_dampened(report), do: is_safe_if_dampened(report, [])
+  def is_safe_if_dampened([], done), do: is_safe(done)
 
-  @doc """
-  Create all subreports that are skipping one level.
-
-  ## Examples:
-
-      iex> skip_levels([1, 2, 3, 4, 5])
-      [[1, 2, 3, 4], [1, 2, 3, 5], [1, 2, 4, 5], [1, 3, 4, 5], [2, 3, 4, 5]]
-
-  Note that we're appending at the end of lists, so this won't be efficient for
-  long lists. What's a better way?
-  """
-  def skip_levels([head | tail]), do: skip_levels([], head, tail, [])
-  def skip_levels(done, _, [], all), do: [done | all]
-
-  def skip_levels(done, current, [next | rest], all) do
-    skip_levels(done ++ [current], next, rest, [done ++ [next | rest] | all])
+  def is_safe_if_dampened([current | rest], done) do
+    is_safe(Enum.reverse(done, rest)) or is_safe_if_dampened(rest, [current | done])
   end
 
   def main(args) do

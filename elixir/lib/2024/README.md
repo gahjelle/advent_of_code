@@ -5,7 +5,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Elixir](h
 | Day  | Puzzle             | Elixir                                             |       Parse |      Part 1 |      Part 2 |     Total |
 | :--- | :----------------- | :------------------------------------------------- | ----------: | ----------: | ----------: | --------: |
 | 1    | Historian Hysteria | [aoc202401.ex](01_historian_hysteria/aoc202401.ex) |   4.34 ms 🔵 | 101.21 µs ⚪️ | 205.68 µs ⚪️ | 4.65 ms 🔵 |
-| 2    | Red-nosed Reports  | [aoc202402.ex](02_red-nosed_reports/aoc202402.ex)  | 528.31 µs ⚪️ | 371.58 µs ⚪️ |   1.13 ms 🔵 | 2.03 ms 🔵 |
+| 2    | Red-nosed Reports  | [aoc202402.ex](02_red-nosed_reports/aoc202402.ex)  | 528.77 µs ⚪️ | 374.88 µs ⚪️ |   1.12 ms 🔵 | 2.02 ms 🔵 |
 | 3    |                    |                                                    |             |             |             |           |
 | 4    |                    |                                                    |             |             |             |           |
 | 5    |                    |                                                    |             |             |             |           |
