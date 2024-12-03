@@ -19,9 +19,8 @@ def example1():
 def test_parse_example1(example1):
     """Test that input is parsed properly."""
     assert example1 == [
-        "xmul(2,4)&mul[3,7]!^",
-        "don't()_mul(5,5)+mul(32,64](mul(11,8)un",
-        "do()?mul(8,5))",
+        "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)un",
+        "?mul(8,5))",
     ]
 
 

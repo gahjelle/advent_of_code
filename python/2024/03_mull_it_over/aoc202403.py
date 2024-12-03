@@ -11,18 +11,8 @@ MUL = parse.compile("mul({first:3d},{second:3d})")
 
 
 def parse_data(puzzle_input):
-    """Parse input. Break lines on pairs of do() and don't()"""
-    text = "".join(puzzle_input.split("\n"))
-    idx, parts = 0, []
-    while True:
-        match_idx = text[idx:].find("do()" if len(parts) % 2 else "don't()")
-        if match_idx > -1:
-            parts.append(text[idx : idx + match_idx])
-            idx += match_idx
-        else:
-            parts.append(text[idx:])
-            break
-    return parts
+    """Parse input. Break lines on occurences of do()"""
+    return puzzle_input.replace("\n", "").split("do()")
 
 
 def part1(data):
@@ -32,7 +22,7 @@ def part1(data):
 
 def part2(data):
     """Solve part 2."""
-    return sum(multiplies("".join(data[::2])))
+    return sum(multiplies("".join(line.split("don't")[0] for line in data)))
 
 
 def multiplies(text):
