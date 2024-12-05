@@ -9,7 +9,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 2    | Red-Nosed Reports  | [aoc202402.py](02_red-nosed_reports/aoc202402.py)  | 972.03 μs ⚪️ |   1.83 ms 🔵 |   6.28 ms 🔵 |   9.08 ms 🔵 |
 | 3    | Mull It Over       | [aoc202403.py](03_mull_it_over/aoc202403.py)       |  32.40 μs ⚪️ |   6.23 ms 🔵 |   3.56 ms 🔵 |   9.82 ms 🔵 |
 | 4    | Ceres Search       | [aoc202404.py](04_ceres_search/aoc202404.py)       |   4.69 ms 🔵 |  67.37 ms 🔵 |  94.44 ms 🔵 | 166.50 ms 🔵 |
-| 5    |                    |                                                    |             |             |             |             |
+| 5    | Print Queue        | [aoc202405.py](05_print_queue/aoc202405.py)        |   2.40 ms 🔵 |   1.45 ms 🔵 |   7.44 ms 🔵 |  11.30 ms 🔵 |
 | 6    |                    |                                                    |             |             |             |             |
 | 7    |                    |                                                    |             |             |             |             |
 | 8    |                    |                                                    |             |             |             |             |
