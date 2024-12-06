@@ -4,13 +4,11 @@
 import pathlib
 import sys
 
-TURN_RIGHT = {(-1, 0): (0, 1), (0, 1): (1, 0), (1, 0): (0, -1), (0, -1): (-1, 0)}
-
 
 def parse_data(puzzle_input):
     """Parse input."""
     return {
-        (row, col): char
+        col - row * 1j: char
         for row, line in enumerate(puzzle_input.split("\n"))
         for col, char in enumerate(line)
     }
@@ -23,13 +21,19 @@ def part1(grid):
 
 
 def part2(grid):
-    """Solve part 2.
+    """Solve part 2."""
+    start = next(pos for pos, char in grid.items() if char == "^")
+    return len(add_obstacles(grid, start))
+
+
+def add_obstacles(grid, start):
+    """Add obstacles that create loops.
 
     Put an obstacle at each point in the path from part 1. Start the walk right
     in front of the obstacle.
-    """
-    start = next(pos for pos, char in grid.items() if char == "^")
 
+    TODO: Use multiprocessing to speed up
+    """
     # Find all the locations that can be reached, and how they are entered
     original_path = walk(grid, start)
     first_entries = {
@@ -40,16 +44,14 @@ def part2(grid):
         if pos != start
     }
 
-    # Add obstacles at all feasible positions
-    obstacles = {
+    return {
         obstacle
         for obstacle, (pos, dir) in first_entries.items()
         if not walk(grid | {obstacle: "#"}, pos, dir)
     }
-    return len(obstacles)
 
 
-def walk(grid, pos, dir=(-1, 0)):
+def walk(grid, pos, dir=1j):
     """Walk the grid until you walk off the map or get caught in a loop"""
     path = []
     seen = set()
@@ -58,8 +60,8 @@ def walk(grid, pos, dir=(-1, 0)):
             return []
         path.append((pos, dir))
         seen.add((pos, dir))
-        while grid.get(new_pos := (pos[0] + dir[0], pos[1] + dir[1])) == "#":
-            dir = TURN_RIGHT[dir]
+        while grid.get(new_pos := pos + dir) == "#":
+            dir *= -1j
         pos = new_pos
     return path
 
