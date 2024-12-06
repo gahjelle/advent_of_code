@@ -1,16 +1,10 @@
 """AoC 6, 2024: Guard Gallivant."""
 
 # Standard library imports
-import collections
-import itertools
 import pathlib
 import sys
 
-TURN = {(-1, 0): (0, 1), (0, 1): (1, 0), (1, 0): (0, -1), (0, -1): (-1, 0)}
-
-
-class StuckInLoop(Exception):
-    """Indicate that guard is stuck in a loop"""
+TURN_RIGHT = {(-1, 0): (0, 1), (0, 1): (1, 0), (1, 0): (0, -1), (0, -1): (-1, 0)}
 
 
 def parse_data(puzzle_input):
@@ -24,35 +18,49 @@ def parse_data(puzzle_input):
 
 def part1(grid):
     """Solve part 1."""
-    print(grid)
     start = next(pos for pos, char in grid.items() if char == "^")
-    return len(walk(grid, start))
+    return len({pos for pos, _ in walk(grid, start)})
 
 
 def part2(grid):
-    """Solve part 2."""
+    """Solve part 2.
+
+    Put an obstacle at each point in the path from part 1. Start the walk right
+    in front of the obstacle.
+    """
     start = next(pos for pos, char in grid.items() if char == "^")
 
-    num_obstacles = 0
-    for pos in walk(grid, start):
-        if pos == start:
-            continue
-        if not walk(grid | {pos: "#"}, start):
-            num_obstacles += 1
-    return num_obstacles
+    # Find all the locations that can be reached, and how they are entered
+    original_path = walk(grid, start)
+    first_entries = {
+        pos: (prev_pos, prev_dir)
+        for (prev_pos, prev_dir), (pos, _) in zip(
+            original_path[-2::-1], original_path[-1::-1]
+        )
+        if pos != start
+    }
+
+    # Add obstacles at all feasible positions
+    obstacles = {
+        obstacle
+        for obstacle, (pos, dir) in first_entries.items()
+        if not walk(grid | {obstacle: "#"}, pos, dir)
+    }
+    return len(obstacles)
 
 
 def walk(grid, pos, dir=(-1, 0)):
-    path = set()
+    """Walk the grid until you walk off the map or get caught in a loop"""
+    path = []
     seen = set()
     while pos in grid:
-        path.add(pos)
-        while grid.get(new_pos := (pos[0] + dir[0], pos[1] + dir[1])) == "#":
-            dir = TURN[dir]
-        pos = new_pos
-        if (pos, dir) in seen:
-            return set()
+        if (pos, dir) in seen:  # Stuck in a loop
+            return []
+        path.append((pos, dir))
         seen.add((pos, dir))
+        while grid.get(new_pos := (pos[0] + dir[0], pos[1] + dir[1])) == "#":
+            dir = TURN_RIGHT[dir]
+        pos = new_pos
     return path
 
 

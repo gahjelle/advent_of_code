@@ -10,7 +10,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 3    | Mull It Over       | [aoc202403.py](03_mull_it_over/aoc202403.py)       |  32.40 μs ⚪️ |   6.23 ms 🔵 |   3.56 ms 🔵 |   9.82 ms 🔵 |
 | 4    | Ceres Search       | [aoc202404.py](04_ceres_search/aoc202404.py)       |   4.69 ms 🔵 |  67.37 ms 🔵 |  94.44 ms 🔵 | 166.50 ms 🔵 |
 | 5    | Print Queue        | [aoc202405.py](05_print_queue/aoc202405.py)        |   2.40 ms 🔵 |   1.45 ms 🔵 |   7.44 ms 🔵 |  11.30 ms 🔵 |
-| 6    | Guard Gallivant    | [aoc202406.py](06_guard_gallivant/aoc202406.py)    |   2.01 ms 🔵 |  11.69 ms 🔵 |    9.07 s 🔴 |    9.08 s 🔴 |
+| 6    | Guard Gallivant    | [aoc202406.py](06_guard_gallivant/aoc202406.py)    |   2.15 ms 🔵 |   4.71 ms 🔵 |    3.43 s 🔴 |    3.44 s 🔴 |
 | 7    |                    |                                                    |             |             |             |             |
 | 8    |                    |                                                    |             |             |             |             |
 | 9    |                    |                                                    |             |             |             |             |
