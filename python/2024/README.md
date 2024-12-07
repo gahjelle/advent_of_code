@@ -11,7 +11,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 4    | Ceres Search       | [aoc202404.py](04_ceres_search/aoc202404.py)       |   4.69 ms 🔵 |  67.37 ms 🔵 |  94.44 ms 🔵 | 166.50 ms 🔵 |
 | 5    | Print Queue        | [aoc202405.py](05_print_queue/aoc202405.py)        |   2.40 ms 🔵 |   1.45 ms 🔵 |   7.44 ms 🔵 |  11.30 ms 🔵 |
 | 6    | Guard Gallivant    | [aoc202406.py](06_guard_gallivant/aoc202406.py)    |   2.60 ms 🔵 |   4.01 ms 🔵 |    2.95 s 🔴 |    2.96 s 🔴 |
-| 7    |                    |                                                    |             |             |             |             |
+| 7    | Bridge Repair      | [aoc202407.py](07_bridge_repair/aoc202407.py)      |   1.58 ms 🔵 | 163.05 ms 🔵 |    4.92 s 🔴 |    5.08 s 🔴 |
 | 8    |                    |                                                    |             |             |             |             |
 | 9    |                    |                                                    |             |             |             |             |
 | 10   |                    |                                                    |             |             |             |             |
