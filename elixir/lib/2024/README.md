@@ -9,7 +9,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Elixir](h
 | 3    | Mull It Over       | [aoc202403.ex](03_mull_it_over/aoc202403.ex)       |  20.91 µs ⚪️ | 585.50 µs ⚪️ | 296.79 µs ⚪️ | 903.19 µs ⚪️ |
 | 4    |                    |                                                    |             |             |             |             |
 | 5    |                    |                                                    |             |             |             |             |
-| 6    |                    |                                                    |             |             |             |             |
+| 6    | Guard Gallivant    | [aoc202406.ex](06_guard_gallivant/aoc202406.ex)    |   5.29 ms 🔵 |   3.65 ms 🔵 |    6.53 s 🔴 |    6.54 s 🔴 |
 | 7    |                    |                                                    |             |             |             |             |
 | 8    |                    |                                                    |             |             |             |             |
 | 9    |                    |                                                    |             |             |             |             |
