@@ -14,7 +14,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 7    | Bridge Repair         | [aoc202407.py](07_bridge_repair/aoc202407.py)         |   1.15 ms 🔵 |   7.32 ms 🔵 |  18.19 ms 🔵 |  26.66 ms 🔵 |
 | 8    | Resonant Collinearity | [aoc202408.py](08_resonant_collinearity/aoc202408.py) | 384.22 μs ⚪️ | 200.27 μs ⚪️ | 957.17 μs ⚪️ |   1.54 ms 🔵 |
 | 9    | Disk Fragmenter       | [aoc202409.py](09_disk_fragmenter/aoc202409.py)       |   2.40 ms 🔵 |   6.53 ms 🔵 |    1.18 s 🔴 |    1.19 s 🔴 |
-| 10   |                       |                                                       |             |             |             |             |
+| 10   | Hoof It               | [aoc202410.py](10_hoof_it/aoc202410.py)               | 633.32 μs ⚪️ |   6.95 ms 🔵 |   7.06 ms 🔵 |  14.65 ms 🔵 |
 | 11   |                       |                                                       |             |             |             |             |
 | 12   |                       |                                                       |             |             |             |             |
 | 13   |                       |                                                       |             |             |             |             |
