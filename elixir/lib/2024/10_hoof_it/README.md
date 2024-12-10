@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2024/day/10>
 
 Solutions in other languages:
 
-- [💧 Elixir](../../../elixir/lib/2024/10_hoof_it)
+- [🐍 Python](../../../../python/2024/10_hoof_it)

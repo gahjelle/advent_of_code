@@ -13,7 +13,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Elixir](h
 | 7    |                    |                                                    |             |             |             |             |
 | 8    |                    |                                                    |             |             |             |             |
 | 9    |                    |                                                    |             |             |             |             |
-| 10   |                    |                                                    |             |             |             |             |
+| 10   | Hoof It            | [aoc202410.ex](10_hoof_it/aoc202410.ex)            | 852.74 µs ⚪️ |   2.73 ms 🔵 |   2.03 ms 🔵 |   5.62 ms 🔵 |
 | 11   |                    |                                                    |             |             |             |             |
 | 12   |                    |                                                    |             |             |             |             |
 | 13   |                    |                                                    |             |             |             |             |
