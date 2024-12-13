@@ -16,7 +16,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 9    | Disk Fragmenter       | [aoc202409.py](09_disk_fragmenter/aoc202409.py)       |   2.40 ms 🔵 |   6.53 ms 🔵 |    1.18 s 🔴 |    1.19 s 🔴 |
 | 10   | Hoof It               | [aoc202410.py](10_hoof_it/aoc202410.py)               | 633.32 μs ⚪️ |   6.95 ms 🔵 |   7.06 ms 🔵 |  14.65 ms 🔵 |
 | 11   | Plutonian Pebbles     | [aoc202411.py](11_plutonian_pebbles/aoc202411.py)     |   9.40 μs ⚪️ |   2.51 ms 🔵 |  52.75 ms 🔵 |  55.27 ms 🔵 |
-| 12   |                       |                                                       |             |             |             |             |
+| 12   | Garden Groups         | [aoc202412.py](12_garden_groups/aoc202412.py)         |   2.71 ms 🔵 |  65.53 ms 🔵 |  73.25 ms 🔵 | 141.50 ms 🔵 |
 | 13   |                       |                                                       |             |             |             |             |
 | 14   |                       |                                                       |             |             |             |             |
 | 15   |                       |                                                       |             |             |             |             |
