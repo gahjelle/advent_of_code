@@ -4,7 +4,6 @@
 import math
 import pathlib
 import sys
-import time
 from collections import Counter
 
 # Third party imports
@@ -57,9 +56,9 @@ def part2(robots, width=101, height=103):
     if "--show" in sys.argv:
         for num_seconds in range(max(width, height) + 1, christmas_tree + 1):
             robots = move(robots, 1, width, height)
-            show(robots, width, height)
-            print(num_seconds)
-
+            # show(robots, width, height)
+            # 	print(num_seconds)
+    show(robots, width, height)
     return christmas_tree
 
 
