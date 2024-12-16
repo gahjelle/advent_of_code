@@ -20,7 +20,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 13   | Claw Contraption      | [aoc202413.py](13_claw_contraption/aoc202413.py)      |   9.19 ms 🔵 | 349.33 μs ⚪️ | 745.94 μs ⚪️ |  10.28 ms 🔵 |
 | 14   | Restroom Redoubt      | [aoc202414.py](14_restroom_redoubt/aoc202414.py)      |   6.27 ms 🔵 |  23.79 ms 🔵 |  17.27 ms 🔵 |  47.33 ms 🔵 |
 | 15   | Warehouse Woes        | [aoc202415.py](15_warehouse_woes/aoc202415.py)        |   1.58 ms 🔵 |  40.60 ms 🔵 | 114.11 ms 🔵 | 156.29 ms 🔵 |
-| 16   |                       |                                                       |             |             |             |             |
+| 16   | Reindeer Maze         | [aoc202416.py](16_reindeer_maze/aoc202416.py)         |   1.76 ms 🔵 |  11.15 ms 🔵 | 364.92 ms 🔵 | 377.83 ms 🔵 |
 | 17   |                       |                                                       |             |             |             |             |
 | 18   |                       |                                                       |             |             |             |             |
 | 19   |                       |                                                       |             |             |             |             |
