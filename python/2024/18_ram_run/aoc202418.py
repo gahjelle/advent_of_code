@@ -5,6 +5,11 @@ import collections
 import pathlib
 import sys
 
+# Third party imports
+import colorama
+
+colorama.init()
+
 
 def parse_data(puzzle_input):
     """Parse input."""
@@ -36,6 +41,8 @@ def part2(data, size=71, wait=1024):
             path = find_path(grid, start, target)
             if not path:
                 return ",".join(str(coord) for coord in pos)
+        if "--show" in sys.argv:
+            show(grid, path)
 
 
 def find_path(grid, start, target):
@@ -58,6 +65,23 @@ def find_path(grid, start, target):
     return []
 
 
+def show(grid, path):
+    """Display the grid and path in the terminal"""
+    max_x, max_y = max(grid)
+    print(colorama.Cursor.POS(0, 0))
+    for y in range(max_y + 1):
+        for x in range(max_x + 1):
+            print(
+                f"{colorama.Fore.RED}o"
+                if (x, y) in path
+                else f"{colorama.Fore.WHITE}X"
+                if (x, y) == (46, 23)
+                else f"{colorama.Fore.BLUE}{grid[x, y]}",
+                end="",
+            )
+        print()
+
+
 def solve(puzzle_input):
     """Solve the puzzle for the given input."""
     data = parse_data(puzzle_input)
@@ -67,6 +91,8 @@ def solve(puzzle_input):
 
 if __name__ == "__main__":
     for path in sys.argv[1:]:
+        if path.startswith("-"):
+            continue
         print(f"\n{path}:")
         solutions = solve(puzzle_input=pathlib.Path(path).read_text().rstrip())
         print("\n".join(str(solution) for solution in solutions))
