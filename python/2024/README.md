@@ -22,6 +22,6 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 15   | Warehouse Woes         | [aoc202415.py](15_warehouse_woes/aoc202415.py)         |   1.58 ms 🔵 |  40.60 ms 🔵 | 114.11 ms 🔵 | 156.29 ms 🔵 |
 | 16   | Reindeer Maze          | [aoc202416.py](16_reindeer_maze/aoc202416.py)          |   1.76 ms 🔵 |  11.15 ms 🔵 | 364.92 ms 🔵 | 377.83 ms 🔵 |
 | 17   | Chronospatial Computer | [aoc202417.py](17_chronospatial_computer/aoc202417.py) |  10.07 μs ⚪️ |  56.39 μs ⚪️ |  36.35 ms 🔵 |  36.41 ms 🔵 |
-| 18   |                        |                                                        |             |             |             |             |
+| 18   | Ram Run                | [aoc202418.py](18_ram_run/aoc202418.py)                |   2.95 ms 🔵 |   8.14 ms 🔵 | 203.23 ms 🔵 | 214.32 ms 🔵 |
 | 19   |                        |                                                        |             |             |             |             |
 | 20   |                        |                                                        |             |             |             |             |
