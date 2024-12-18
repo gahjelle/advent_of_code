@@ -1,16 +1,18 @@
 """AoC 14, 2024: Restroom Redoubt."""
 
 # Standard library imports
+import collections
+import itertools
 import math
 import pathlib
 import sys
-from collections import Counter
+import zlib
 
 # Third party imports
-import colorama
+import matplotlib.pyplot as plt
 import parse
+from rich.progress import track
 
-colorama.init()
 ROBOT_PATTERN = parse.compile("p={px:d},{py:d} v={vx:d},{vy:d}")
 
 
@@ -29,35 +31,16 @@ def part1(robots, width=101, height=103):
 
 
 def part2(robots, width=101, height=103):
-    """Solve part 2.
-
-    Use that the horizontal and vertical positions will be periodical with
-    periods width and height.
-    """
-    # Find when most robots come together vertically and horizontally
-    max_x = sec_x = max_y = sec_y = 0
-    for num_seconds in range(max(width, height)):
-        num_x = Counter(x for (x, _), _ in robots).most_common(1)[0][1]
-        if num_x > max_x:
-            max_x, sec_x = num_x, num_seconds
-        num_y = Counter(y for (_, y), _ in robots).most_common(1)[0][1]
-        if num_y > max_y:
-            max_y, sec_y = num_y, num_seconds
+    """Solve part 2."""
+    compressed = {}
+    for num_seconds in track(range(width * height), description="Compressing ..."):
+        compressed[num_seconds] = len(
+            zlib.compress(grid_as_str(robots, width, height).encode("utf-8"))
+        )
         robots = move(robots, 1, width, height)
-
-    # Find when the vertical and horizontal blips overlap
-    christmas_tree = next(
-        sec
-        for sec in range(sec_x, width * height, width)
-        if (sec - sec_y) % height == 0
-    )
-
-    # Animate the robots
     if "--show" in sys.argv:
-        for num_seconds in range(max(width, height) + 1, christmas_tree + 1):
-            robots = move(robots, 1, width, height)
-            show(robots, width, height)
-            print(num_seconds)
+        plot(*list(zip(*compressed.items())))
+    _, christmas_tree = min((entropy, sec) for sec, entropy in compressed.items())
     return christmas_tree
 
 
@@ -87,13 +70,18 @@ def count_quadrants(robots, width, height):
     ]
 
 
-def show(robots, width, height):
-    grid = Counter(pos for pos, _ in robots)
-    print(colorama.Cursor.POS(x=1, y=1))
-    for row in range(height):
-        for col in range(width):
-            print(grid.get((col, row), " "), end="")
-        print()
+def grid_as_str(robots, width, height):
+    positions = collections.Counter(pos for pos, _ in robots)
+    return "".join(
+        str(positions.get((col, row), " "))
+        for row, col in itertools.product(range(height), range(width))
+    )
+
+
+def plot(x, y):
+    """Plot the compression data"""
+    plt.scatter(x, y)
+    plt.show()
 
 
 def solve(puzzle_input):
