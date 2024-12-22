@@ -26,7 +26,7 @@ Solutions to [Advent of Code 2024](https://adventofcode.com/2024/) in [Python](h
 | 19   | Linen Layout           | [aoc202419.py](19_linen_layout/aoc202419.py)           |  79.99 μs ⚪️ |  37.86 ms 🔵 | 260.65 ms 🔵 | 298.59 ms 🔵 |
 | 20   | Race Condition         | [aoc202420.py](20_race_condition/aoc202420.py)         | 183.45 ms 🔵 |   6.05 ms 🔵 |    2.69 s 🔴 |    2.88 s 🔴 |
 | 21   | Keypad Conundrum       | [aoc202421.py](21_keypad_conundrum/aoc202421.py)       |   2.63 ms 🔵 | 462.87 μs ⚪️ |   3.56 ms 🔵 |   6.66 ms 🔵 |
-| 22   |                        |                                                        |             |             |             |             |
+| 22   | Monkey Market          | [aoc202422.py](22_monkey_market/aoc202422.py)          | 297.52 μs ⚪️ |    1.48 s 🔴 |    3.73 s 🔴 |    5.21 s 🔴 |
 | 23   |                        |                                                        |             |             |             |             |
 | 24   |                        |                                                        |             |             |             |             |
 | 25   |                        |                                                        |             |             |             |             |
