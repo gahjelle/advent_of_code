@@ -30,7 +30,7 @@ def part1(graph):
 
 def part2(graph):
     """Solve part 2."""
-    biggest = max(find_all_cliques(graph), key=len)
+    biggest = max(find_cliques(graph), key=len)
     return ",".join(sorted(biggest))
 
 
@@ -44,25 +44,30 @@ def find_threecliques(graph):
     return cliques
 
 
-def find_all_cliques(graph):
-    """Find all fully interconnected cliques in the graph"""
-    cliques = set()
-    for node, neighbors in graph.items():
-        for neighbor in neighbors:
-            clique = [node, neighbor]
-            seen = {node, neighbor}
-            for new_node in neighbors:
-                if new_node in seen:
-                    continue
-                seen.add(new_node)
+def find_cliques(graph):
+    """Find all cliques using Bron-Kerbosch"""
+    return bron_kerbosch(graph, set(), set(graph), set(), [])
 
-                for check in clique:
-                    if check not in graph[new_node]:
-                        break
-                else:
-                    clique.append(new_node)
-            if len(clique) > 2:
-                cliques.add(tuple(sorted(clique)))
+
+def bron_kerbosch(graph, clique, to_do, done, cliques):
+    r"""Use Bron-Kerbosch to find cliques.
+
+    algorithm BronKerbosch1(R, P, X) is
+    if P and X are both empty then
+        report R as a maximal clique
+    for each vertex v in P do
+        BronKerbosch1(R ⋃ {v}, P ⋂ N(v), X ⋂ N(v))
+        P := P \ {v}
+        X := X ⋃ {v}
+    """
+    if not to_do and not done:
+        cliques.append(clique)
+    for node in to_do.copy():
+        bron_kerbosch(
+            graph, clique | {node}, to_do & graph[node], done & graph[node], cliques
+        )
+        to_do -= {node}
+        done |= {node}
     return cliques
 
 
