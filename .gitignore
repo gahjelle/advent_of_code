@@ -3,6 +3,7 @@ puzzles/
 input.txt
 output.txt
 output.*.txt
+output.*.txt.slow
 _aoc[012][0-9]_*.*
 .aoc.md
 
