@@ -10,7 +10,7 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Python](h
 | 4    | Repose Record               | [aoc201804.py](04_repose_record/aoc201804.py)               |  30.00 ms 🔵 |  24.19 μs ⚪️ |  32.10 μs ⚪️ |  30.06 ms 🔵 |
 | 5    | Alchemical Reduction        | [aoc201805.py](05_alchemical_reduction/aoc201805.py)        |  54.45 ms 🔵 |   1.94 μs ⚪️ |  43.47 ms 🔵 |  97.93 ms 🔵 |
 | 6    | Chronal Coordinates         | [aoc201806.py](06_chronal_coordinates/aoc201806.py)         |  33.24 μs ⚪️ | 153.91 ms 🔵 | 384.21 ms 🔵 | 538.15 ms 🔵 |
-| 7    |                             |                                                             |             |             |             |             |
+| 7    | The Sum Of Its Parts        | [aoc201807.py](07_the_sum_of_its_parts/aoc201807.py)        | 518.22 μs ⚪️ | 147.49 μs ⚪️ | 251.46 μs ⚪️ | 917.17 μs ⚪️ |
 | 8    |                             |                                                             |             |             |             |             |
 | 9    |                             |                                                             |             |             |             |             |
 | 10   |                             |                                                             |             |             |             |             |

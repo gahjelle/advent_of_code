@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2018/day/7>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2018/07_the_sum_of_its_parts)
+- [💧 Elixir](../../../elixir/lib/2018/07_the_sum_of_its_parts)
