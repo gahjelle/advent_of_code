@@ -16,7 +16,7 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Python](h
 | 10   | The Stars Align             | [aoc201810.py](10_the_stars_align/aoc201810.py)             |   4.57 ms 🔵 |   3.26 ms 🔵 |   3.02 ms 🔵 |  10.86 ms 🔵 |
 | 11   |                             |                                                             |             |             |             |             |
 | 12   |                             |                                                             |             |             |             |             |
-| 13   |                             |                                                             |             |             |             |             |
+| 13   | Mine Cart Madness           | [aoc201813.py](13_mine_cart_madness/aoc201813.py)           |   5.92 ms 🔵 |   9.93 ms 🔵 |  57.02 ms 🔵 |  72.87 ms 🔵 |
 | 14   |                             |                                                             |             |             |             |             |
 | 15   |                             |                                                             |             |             |             |             |
 | 16   |                             |                                                             |             |             |             |             |
