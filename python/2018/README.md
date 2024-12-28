@@ -13,7 +13,7 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Python](h
 | 7    | The Sum Of Its Parts        | [aoc201807.py](07_the_sum_of_its_parts/aoc201807.py)        | 518.22 μs ⚪️ | 147.49 μs ⚪️ | 251.46 μs ⚪️ | 917.17 μs ⚪️ |
 | 8    |                             |                                                             |             |             |             |             |
 | 9    |                             |                                                             |             |             |             |             |
-| 10   |                             |                                                             |             |             |             |             |
+| 10   | The Stars Align             | [aoc201810.py](10_the_stars_align/aoc201810.py)             |   4.57 ms 🔵 |   3.26 ms 🔵 |   3.02 ms 🔵 |  10.86 ms 🔵 |
 | 11   |                             |                                                             |             |             |             |             |
 | 12   |                             |                                                             |             |             |             |             |
 | 13   |                             |                                                             |             |             |             |             |
