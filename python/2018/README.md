@@ -18,7 +18,7 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Python](h
 | 12   |                             |                                                             |             |             |             |             |
 | 13   | Mine Cart Madness           | [aoc201813.py](13_mine_cart_madness/aoc201813.py)           |   5.92 ms 🔵 |   9.93 ms 🔵 |  57.02 ms 🔵 |  72.87 ms 🔵 |
 | 14   | Chocolate Charts            | [aoc201814.py](14_chocolate_charts/aoc201814.py)            |   1.04 μs ⚪️ | 358.75 ms 🔵 |   15.79 s 🔴 |   16.15 s 🔴 |
-| 15   |                             |                                                             |             |             |             |             |
+| 15   | Beverage Bandits            | [aoc201815.py](15_beverage_bandits/aoc201815.py)            |  84.70 μs ⚪️ | 214.73 ms 🔵 | 606.09 ms 🔵 | 820.90 ms 🔵 |
 | 16   |                             |                                                             |             |             |             |             |
 | 17   |                             |                                                             |             |             |             |             |
 | 18   |                             |                                                             |             |             |             |             |
