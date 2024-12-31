@@ -1,0 +1,93 @@
+
+
+
+
+
+                               p - P
+                               |   |
+                               |   X           W
+                               |               |
+                           k   w - e - m   S - s
+                           |   |               |
+                           c   @ - l --------- f
+                           |       |
+                           . ----- o - C
+                                       |
+                                       H - i
+                                       |
+                                       g
+
+
+@ - start (Hull Breach)
+w - wreath (Passages)
+p - photons (Navigation) X
+l - loom (Stables)
+f - fixed point (Science Lab)
+s - spool of cat6 (Storage)
+S - shell (Sick Bay)
+W - weather machine (Gift Wrapping Center)
+o - ornament (Warp Drive Maintenance)
+. - (Hallway)
+c - candy cane (Observatory)
+k - (Kitchen)
+C - (Crew Quarters)
+H - (Holodeck)
+g - giant electromagnet (Arcade) X
+i - infinite loop (Engineering) X
+e - escape pod (Corridor) X
+m - molten lava (Hot Chocolate Fountain) X
+P - (Security Checkpoint)
+
+
+# Attempt 1:
+
+- north
+- take wreath
+- north
+- take photons ==> Eaten by a Grue
+
+
+# Attempt 2:
+
+- east
+- take loom
+- ...
+- take giant electromagnet ==> The giant electromagnet is stuck to you.  You can't move!!
+
+
+# Attempt 3
+
+- east
+- south
+- east
+- south
+- east
+- take infinite loop ==> You take the infinite loop. You take the infinite loop. ...
+
+
+# Attempt 4
+
+- north
+- east
+- east
+- take molten lava ==> The molten lava is way too hot! You melt!
+
+
+# Attempt 5
+
+- north
+- east
+- take escape pod ==> You're launched into space! Bye!
+
+
+# Attempts
+
+ornament        xxxxxxxxxxx             xxxxxxxx  xx
+loom            xxxxxxxxxx x           x xxxxxx x xx
+spool of cat6   xxxxxxxxx xxx         x  xxxxx xx  XX
+wreath          xxxxxxxx xxxxx       x   xxxx xxxx---
+fixed point     xxxxxx  xxxxxxx     x    xxx xxxx xxx
+shell           xxx    xxxxxxxxx   x      x XXXXXXXXX
+candy cane      xx  xxxxxxxxxxxxx x        xxxxxx x X
+weather machine x    xxxxxxxxxxxxx-------------------
+                LLLHHLLLLLLLLLLLLLHHHHHHHHLHLLLLLLHHS
