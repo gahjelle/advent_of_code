@@ -21,7 +21,7 @@ Solutions to [Advent of Code 2019](https://adventofcode.com/2019/) in [Python](h
 | 15   |                                    |                                                                    |             |             |             |             |
 | 16   |                                    |                                                                    |             |             |             |             |
 | 17   |                                    |                                                                    |             |             |             |             |
-| 18   |                                    |                                                                    |             |             |             |             |
+| 18   | Many-Worlds Interpretation         | [aoc201918.py](18_many-worlds_interpretation/aoc201918.py)         | 833.89 μs ⚪️ | 532.82 ms 🔵 |    2.20 s 🔴 |    2.73 s 🔴 |
 | 19   |                                    |                                                                    |             |             |             |             |
 | 20   |                                    |                                                                    |             |             |             |             |
 | 21   |                                    |                                                                    |             |             |             |             |
