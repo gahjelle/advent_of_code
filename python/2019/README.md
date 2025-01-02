@@ -27,5 +27,5 @@ Solutions to [Advent of Code 2019](https://adventofcode.com/2019/) in [Python](h
 | 21   |                                    |                                                                    |             |             |             |             |
 | 22   |                                    |                                                                    |             |             |             |             |
 | 23   |                                    |                                                                    |             |             |             |             |
-| 24   |                                    |                                                                    |             |             |             |             |
+| 24   | Planet Of Discord                  | [aoc201924.py](24_planet_of_discord/aoc201924.py)                  |  10.74 μs ⚪️ |   2.62 ms 🔵 | 636.08 ms 🔵 | 638.72 ms 🔵 |
 | 25   |                                    |                                                                    |             |             |             |             |
