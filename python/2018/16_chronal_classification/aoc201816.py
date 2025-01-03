@@ -5,24 +5,8 @@ import collections
 import pathlib
 import sys
 
-ALL_OPCODES = [
-    "addr",
-    "addi",
-    "mulr",
-    "muli",
-    "banr",
-    "bani",
-    "borr",
-    "bori",
-    "setr",
-    "seti",
-    "gtir",
-    "gtri",
-    "gtrr",
-    "eqir",
-    "eqri",
-    "eqrr",
-]
+# Advent of Code imports
+from aoc import wristdevice
 
 
 def parse_data(puzzle_input):
@@ -63,31 +47,26 @@ def part2(data):
     """Solve part 2."""
     tests, program = data
     opcodes = find_opcodes(tests)
-    registers = run_program(program, opcodes)
+    registers = wristdevice.run_program(
+        [(opcodes[opcode], *regs) for opcode, *regs in program]
+    )
     return registers[0]
 
 
 def find_valid(before, code, after):
     """Count how many opcodes give the expected result"""
-    is_valid = set()
-    for start in range(len(ALL_OPCODES)):
-        opcodes = dict(
-            zip(
-                range(len(ALL_OPCODES)),
-                ALL_OPCODES[start:] + ALL_OPCODES[:start],
-            )
-        )
-        if evaluate(*code, opcodes, before) == after:
-            is_valid.add(opcodes[code[0]])
-    return is_valid
+    return {
+        opcode
+        for opcode in wristdevice.ALL_OPCODES
+        if wristdevice.evaluate(before, opcode, *code[1:]) == after
+    }
 
 
 def find_opcodes(tests):
     """Use tests to find valid opcodes"""
-    valid = {idx: [set(ALL_OPCODES)] for idx in range(len(ALL_OPCODES))}
+    valid = collections.defaultdict(list)
     for before, code, after in tests:
         valid[code[0]].append(find_valid(before, code, after))
-
     alternatives = {
         opcode: set.intersection(*instructions)
         for opcode, instructions in valid.items()
@@ -95,66 +74,13 @@ def find_opcodes(tests):
 
     opcodes = {}
     while any(alternatives.values()):
-        new_alternatives = alternatives.copy()
         for opcode, instructions in alternatives.items():
             if len(instructions) == 1 and opcode not in opcodes:
                 opcodes[opcode] = list(instructions)[0]
-                new_alternatives = {
-                    op: alts - instructions for op, alts in new_alternatives.items()
+                alternatives = {
+                    op: alts - instructions for op, alts in alternatives.items()
                 }
-        if alternatives == new_alternatives:
-            break
-        alternatives = new_alternatives
     return opcodes
-
-
-def run_program(program, opcodes):
-    """Run the given program."""
-    registers = {0: 0, 1: 0, 2: 0, 3: 0}
-    for line in program:
-        registers = evaluate(*line, opcodes, registers)
-
-    return registers
-
-
-def evaluate(instruction, in_a, in_b, out, opcodes, registers):
-    """Evaluate one instruction"""
-    match (opcodes.get(instruction, ""), in_a, in_b, out):
-        case ("addr", reg_a, reg_b, out_c):
-            return registers | {out_c: registers[reg_a] + registers[reg_b]}
-        case ("addi", reg_a, val_b, out_c):
-            return registers | {out_c: registers[reg_a] + val_b}
-        case ("mulr", reg_a, reg_b, out_c):
-            return registers | {out_c: registers[reg_a] * registers[reg_b]}
-        case ("muli", reg_a, val_b, out_c):
-            return registers | {out_c: registers[reg_a] * val_b}
-        case ("banr", reg_a, reg_b, out_c):
-            return registers | {out_c: registers[reg_a] & registers[reg_b]}
-        case ("bani", reg_a, val_b, out_c):
-            return registers | {out_c: registers[reg_a] & val_b}
-        case ("borr", reg_a, reg_b, out_c):
-            return registers | {out_c: registers[reg_a] | registers[reg_b]}
-        case ("bori", reg_a, val_b, out_c):
-            return registers | {out_c: registers[reg_a] | val_b}
-        case ("setr", reg_a, _, out_c):
-            return registers | {out_c: registers[reg_a]}
-        case ("seti", val_a, _, out_c):
-            return registers | {out_c: val_a}
-        case ("gtir", val_a, reg_b, out_c):
-            return registers | {out_c: val_a > registers[reg_b]}
-        case ("gtri", reg_a, val_b, out_c):
-            return registers | {out_c: registers[reg_a] > val_b}
-        case ("gtrr", reg_a, reg_b, out_c):
-            return registers | {out_c: registers[reg_a] > registers[reg_b]}
-        case ("eqir", val_a, reg_b, out_c):
-            return registers | {out_c: val_a == registers[reg_b]}
-        case ("eqri", reg_a, val_b, out_c):
-            return registers | {out_c: registers[reg_a] == val_b}
-        case ("eqrr", reg_a, reg_b, out_c):
-            return registers | {out_c: registers[reg_a] == registers[reg_b]}
-        case _:
-            print(f"unknown instruction: {opcodes[instruction]} ({instruction})")
-            return registers
 
 
 def solve(puzzle_input):
