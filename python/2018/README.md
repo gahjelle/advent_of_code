@@ -14,7 +14,7 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Python](h
 | 8    | Memory Maneuver             | [aoc201808.py](08_memory_maneuver/aoc201808.py)             |   2.60 ms 🔵 | 886.60 μs ⚪️ | 869.70 μs ⚪️ |   4.35 ms 🔵 |
 | 9    |                             |                                                             |             |             |             |             |
 | 10   | The Stars Align             | [aoc201810.py](10_the_stars_align/aoc201810.py)             |   4.57 ms 🔵 |   3.26 ms 🔵 |   3.02 ms 🔵 |  10.86 ms 🔵 |
-| 11   |                             |                                                             |             |             |             |             |
+| 11   | Chronal Charge              | [aoc201811.py](11_chronal_charge/aoc201811.py)              |   1.59 μs ⚪️ | 110.17 ms 🔵 | 999.43 ms 🔵 |    1.11 s 🔴 |
 | 12   |                             |                                                             |             |             |             |             |
 | 13   | Mine Cart Madness           | [aoc201813.py](13_mine_cart_madness/aoc201813.py)           |   5.92 ms 🔵 |   9.93 ms 🔵 |  57.02 ms 🔵 |  72.87 ms 🔵 |
 | 14   | Chocolate Charts            | [aoc201814.py](14_chocolate_charts/aoc201814.py)            |   1.04 μs ⚪️ | 358.75 ms 🔵 |   15.79 s 🔴 |   16.15 s 🔴 |
