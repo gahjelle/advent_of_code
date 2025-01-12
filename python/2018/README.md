@@ -12,7 +12,7 @@ Solutions to [Advent of Code 2018](https://adventofcode.com/2018/) in [Python](h
 | 6    | Chronal Coordinates         | [aoc201806.py](06_chronal_coordinates/aoc201806.py)         |  33.24 μs ⚪️ | 153.91 ms 🔵 | 384.21 ms 🔵 | 538.15 ms 🔵 |
 | 7    | The Sum Of Its Parts        | [aoc201807.py](07_the_sum_of_its_parts/aoc201807.py)        | 518.22 μs ⚪️ | 147.49 μs ⚪️ | 251.46 μs ⚪️ | 917.17 μs ⚪️ |
 | 8    | Memory Maneuver             | [aoc201808.py](08_memory_maneuver/aoc201808.py)             |   2.60 ms 🔵 | 886.60 μs ⚪️ | 869.70 μs ⚪️ |   4.35 ms 🔵 |
-| 9    |                             |                                                             |             |             |             |             |
+| 9    | Marble Mania                | [aoc201809.py](09_marble_mania/aoc201809.py)                | 653.40 μs ⚪️ |  17.17 ms 🔵 |    1.76 s 🔴 |    1.78 s 🔴 |
 | 10   | The Stars Align             | [aoc201810.py](10_the_stars_align/aoc201810.py)             |   4.57 ms 🔵 |   3.26 ms 🔵 |   3.02 ms 🔵 |  10.86 ms 🔵 |
 | 11   | Chronal Charge              | [aoc201811.py](11_chronal_charge/aoc201811.py)              |   1.59 μs ⚪️ | 110.17 ms 🔵 | 999.43 ms 🔵 |    1.11 s 🔴 |
 | 12   |                             |                                                             |             |             |             |             |

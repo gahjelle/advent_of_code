@@ -6,4 +6,4 @@ Puzzle text: <https://adventofcode.com/2018/day/9>
 
 Solutions in other languages:
 
-- [🐍 Python](../../../../python/2018/09_marble_mania)
+- [💧 Elixir](../../../elixir/lib/2018/09_marble_mania)
