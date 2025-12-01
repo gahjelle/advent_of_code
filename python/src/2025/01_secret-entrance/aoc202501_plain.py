@@ -24,11 +24,8 @@ def part2(data: list[int]) -> int:
     dial = 50
     count = 0
     for turn in data:
-        prev_dial = dial
-        dial = (dial + turn) % 100
-        count += (
-            abs(dial - prev_dial - turn) // 100  # Number of "point at zeros"
-            - (prev_dial == 0 and turn < 0)  # Be careful when moving left to and from 0
-            + (dial == 0 and turn < 0)
-        )
+        click = 1 if turn > 0 else -1
+        for _ in range(abs(turn)):
+            dial += click
+            count += (dial % 100) == 0
     return count
