@@ -1,4 +1,4 @@
-"""AoC 1, 2025: Secret Entrance."""
+"""AoC day 1, 2025: Secret Entrance."""
 
 
 def parse_data(puzzle_input: str) -> list[int]:

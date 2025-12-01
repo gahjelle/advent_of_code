@@ -14,7 +14,7 @@ solve_functions = ["part1", "part2"]
 
 [template]
 file_name = "aoc{event:04d}{puzzle:02d}.py"
-docstring = "AoC {puzzle}, {event}: {name}."
+docstring = "AoC day {puzzle}, {event}: {name}."
 
 [template.readme]
 challenge = "{root_dir}/README.template"
