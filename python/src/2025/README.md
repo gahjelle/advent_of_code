@@ -1,0 +1,7 @@
+# Everybody Codes - 2025 in Python
+
+Solutions to [everybody.codes 2025](http://everybody.codes/) in Python:
+
+| Day | Puzzle | Parse | Part1 | Part2 |
+| --- | --- | --- | --- | --- |
+| 1 | Secret Entrance | 🔵 1.07 ms | ⚪️ 227.99 μs | 🔵 50.24 ms |
