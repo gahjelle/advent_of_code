@@ -1,0 +1,23 @@
+[part1-example1]
+input_path = "example1.txt"
+value = 12
+duration = 3.5245000617578626e-05
+parse_duration = 2.1180021576583385e-06
+
+[part1-example2]
+input_path = "example2.txt"
+value = 0
+duration = 3.080799069721252e-05
+parse_duration = 2.8990034479647875e-06
+
+[part2-example1]
+input_path = "example1.txt"
+value = "abcde"
+duration = 2.182000025641173e-05
+parse_duration = 2.1180021576583385e-06
+
+[part2-example2]
+input_path = "example2.txt"
+value = "fgij"
+duration = 1.4500998076982796e-05
+parse_duration = 2.8990034479647875e-06

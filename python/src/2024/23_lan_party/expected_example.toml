@@ -1,0 +1,23 @@
+[part1-example1]
+input_path = "example1.txt"
+value = 1
+duration = 1.3273005606606603e-05
+parse_duration = 8.03000875748694e-06
+
+[part1-example2]
+input_path = "example2.txt"
+value = 7
+duration = 6.370399205479771e-05
+parse_duration = 2.7008005417883396e-05
+
+[part2-example1]
+input_path = "example1.txt"
+value = "rr,ss,tt"
+duration = 3.102199116256088e-05
+parse_duration = 8.03000875748694e-06
+
+[part2-example2]
+input_path = "example2.txt"
+value = "co,de,ka,ta"
+duration = 0.0001781089958967641
+parse_duration = 2.7008005417883396e-05

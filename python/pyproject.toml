@@ -1,29 +1,51 @@
 [build-system]
-requires      = ["setuptools", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.9.7,<0.10.0"]
+build-backend = "uv_build"
 
 [project]
-name         = "aoc"
-version      = "0.0.1"
-dependencies = []
+name = "aoc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "Geir Arne Hjelle", email = "geirarne@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = [
+    "advent-of-code-ocr>=1.1.0",
+    "colorama>=0.4.6",
+    "matplotlib>=3.10.7",
+    "networkx>=3.5",
+    "numpy>=2.3.4",
+    "pandas>=2.3.3",
+    "parse>=1.20.2",
+    "polars>=1.35.1",
+    "rich>=14.2.0",
+    "sympy>=1.14.0",
+    "tabulate>=0.9.0",
+]
 
-[tool.setuptools]
-packages = ["aoc"]
+[project.scripts]
+aoc = "aoc.__main__:main"
 
 [tool.pytest.ini_options]
-addopts             = "--doctest-modules --doctest-continue-on-failure"
+addopts = "--doctest-modules --doctest-continue-on-failure"
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 
-[tool.black]
-target_version = ["py311"]
-
-[tool.isort]
-profile                   = "black"
-known_first_party         = ["aoc"]
-import_heading_firstparty = "Advent of Code imports"
-import_heading_stdlib     = "Standard library imports"
-import_heading_thirdparty = "Third party imports"
-
 [tool.docformatter]
-recursive         = true
+recursive = true
 wrap-descriptions = 0
+
+[tool.uv.sources]
+gahllenges = { path = "../../gahllenges", editable = true }
+
+[dependency-groups]
+dev = [
+    "codetiming>=1.4.0",
+    "docformatter>=1.7.7",
+    "gahllenges",
+    "html2text>=2025.4.15",
+    "ipython>=9.6.0",
+    "peek-python>=25.0.24",
+    "pytest>=8.4.2",
+    "requests>=2.32.5",
+    "ruff>=0.14.3",
+]

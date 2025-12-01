@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aoc"
+version = "0.0.1"
+dependencies = []
+
+[project.scripts]
+aoc = "aoc.__main__:main"
+
+[tool.setuptools]
+packages = ["aoc"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-continue-on-failure"
+doctest_optionflags = "NORMALIZE_WHITESPACE"
+
+[tool.black]
+target_version = ["py311"]
+
+[tool.isort]
+profile = "black"
+known_first_party = ["aoc"]
+import_heading_firstparty = "Advent of Code imports"
+import_heading_stdlib = "Standard library imports"
+import_heading_thirdparty = "Third party imports"
+
+[tool.docformatter]
+recursive = true
+wrap-descriptions = 0

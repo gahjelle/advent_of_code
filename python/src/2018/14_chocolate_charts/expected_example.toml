@@ -1,0 +1,95 @@
+[part1-example1]
+input_path = "example1.txt"
+value = "5158916779"
+duration = 2.3114000214263797e-05
+parse_duration = 1.528009306639433e-06
+
+[part1-example2]
+input_path = "example2.txt"
+value = "0124515891"
+duration = 2.7379996026866138e-05
+parse_duration = 1.5430123312398791e-06
+
+[part1-example3]
+input_path = "example3.txt"
+value = "9251071085"
+duration = 2.3836008040234447e-05
+parse_duration = 1.0219955584034324e-06
+
+[part1-example4]
+input_path = "example4.txt"
+value = "5941429882"
+duration = 0.0011739469919120893
+parse_duration = 1.2090022210031748e-06
+
+[part1-example5]
+input_path = "example5.txt"
+value = "3910137144"
+duration = 0.03196658700471744
+parse_duration = 1.648004399612546e-06
+
+[part1-example6]
+input_path = "example6.txt"
+value = "1121413115"
+duration = 0.0009512230026302859
+parse_duration = 1.9180006347596645e-06
+
+[part1-example7]
+input_path = "example7.txt"
+value = "7541291229"
+duration = 0.05426509300014004
+parse_duration = 2.30599835049361e-06
+
+[part1-example8]
+input_path = "example8.txt"
+value = "5131221087"
+duration = 0.035593644992331974
+parse_duration = 1.6269914340227842e-06
+
+[part2-example1]
+input_path = "example1.txt"
+value = 13
+duration = 2.264199429191649e-05
+parse_duration = 1.528009306639433e-06
+
+[part2-example2]
+input_path = "example2.txt"
+value = 9
+duration = 1.863099168986082e-05
+parse_duration = 1.5430123312398791e-06
+
+[part2-example3]
+input_path = "example3.txt"
+value = 48
+duration = 5.940999835729599e-05
+parse_duration = 1.0219955584034324e-06
+
+[part2-example4]
+input_path = "example4.txt"
+value = 86_764
+duration = 0.07377713300229516
+parse_duration = 1.2090022210031748e-06
+
+[part2-example5]
+input_path = "example5.txt"
+value = 9
+duration = 2.1236002794466913e-05
+parse_duration = 1.648004399612546e-06
+
+[part2-example6]
+input_path = "example6.txt"
+value = 5
+duration = 2.080699778161943e-05
+parse_duration = 1.9180006347596645e-06
+
+[part2-example7]
+input_path = "example7.txt"
+value = 18
+duration = 4.41209995187819e-05
+parse_duration = 2.30599835049361e-06
+
+[part2-example8]
+input_path = "example8.txt"
+value = 2_018
+duration = 0.001759658000082709
+parse_duration = 1.6269914340227842e-06

@@ -1,0 +1,11 @@
+[part1-example1]
+input_path = "example1.txt"
+value = "CMZ"
+duration = 1.5448007616214454e-05
+parse_duration = 0.0005936389934504405
+
+[part2-example1]
+input_path = "example1.txt"
+value = "MCD"
+duration = 2.205900091212243e-05
+parse_duration = 0.0005936389934504405

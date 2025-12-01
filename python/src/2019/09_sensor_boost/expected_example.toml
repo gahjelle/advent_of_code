@@ -1,0 +1,35 @@
+[part1-example1]
+input_path = "example1.txt"
+value = 109
+duration = 1.6789999790489674e-05
+parse_duration = 6.618996849283576e-06
+
+[part1-example2]
+input_path = "example2.txt"
+value = 1_219_070_632_396_864
+duration = 2.4841996491886675e-05
+parse_duration = 7.098991773091257e-06
+
+[part1-example3]
+input_path = "example3.txt"
+value = 1_125_899_906_842_624
+duration = 1.738300488796085e-05
+parse_duration = 5.620997399091721e-06
+
+[part2-example1]
+input_path = "example1.txt"
+value = 109
+duration = 2.7283997042104602e-05
+parse_duration = 6.618996849283576e-06
+
+[part2-example2]
+input_path = "example2.txt"
+value = 1_219_070_632_396_864
+duration = 2.0122999558225274e-05
+parse_duration = 7.098991773091257e-06
+
+[part2-example3]
+input_path = "example3.txt"
+value = 1_125_899_906_842_624
+duration = 1.4295001165010035e-05
+parse_duration = 5.620997399091721e-06

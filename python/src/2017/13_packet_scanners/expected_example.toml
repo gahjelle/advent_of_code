@@ -1,0 +1,11 @@
+[part1-example1]
+input_path = "example1.txt"
+value = 24
+duration = 7.419992471113801e-06
+parse_duration = 8.140996214933693e-06
+
+[part2-example1]
+input_path = "example1.txt"
+value = 10
+duration = 1.3892000424675643e-05
+parse_duration = 8.140996214933693e-06

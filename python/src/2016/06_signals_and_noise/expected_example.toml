@@ -1,0 +1,23 @@
+[part1-example1]
+input_path = "example1.txt"
+value = "cat"
+duration = 2.31900776270777e-06
+parse_duration = 6.766100705135614e-05
+
+[part1-example2]
+input_path = "example2.txt"
+value = "easter"
+duration = 4.278990672901273e-06
+parse_duration = 6.074100383557379e-05
+
+[part2-example1]
+input_path = "example1.txt"
+value = "dog"
+duration = 4.526998964138329e-06
+parse_duration = 6.766100705135614e-05
+
+[part2-example2]
+input_path = "example2.txt"
+value = "advent"
+duration = 7.452996214851737e-06
+parse_duration = 6.074100383557379e-05

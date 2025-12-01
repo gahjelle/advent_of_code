@@ -1,0 +1,11 @@
+[part1-example1]
+input_path = "example1.txt"
+value = "CABDFE"
+duration = 2.013800258282572e-05
+parse_duration = 0.0001595759968040511
+
+[part2-example1]
+input_path = "example1.txt"
+value = 253
+duration = 7.449199620168656e-05
+parse_duration = 0.0001595759968040511

@@ -1,0 +1,23 @@
+[part1-example1]
+input_path = "example1.txt"
+value = "abcdffaa"
+duration = 0.020838319993345067
+parse_duration = 1.0420044418424368e-06
+
+[part1-example2]
+input_path = "example2.txt"
+value = "henxxyzz"
+duration = 0.276826859000721
+parse_duration = 1.3999961083754897e-06
+
+[part2-example1]
+input_path = "example1.txt"
+value = "abcdffbb"
+duration = 5.769000563304871e-05
+parse_duration = 1.0420044418424368e-06
+
+[part2-example2]
+input_path = "example2.txt"
+value = "hepaabcc"
+duration = 0.7136357369890902
+parse_duration = 1.3999961083754897e-06

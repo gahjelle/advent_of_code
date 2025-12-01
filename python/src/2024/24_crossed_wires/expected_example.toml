@@ -1,0 +1,23 @@
+[part1-example1]
+input_path = "example1.txt"
+value = 4
+duration = 1.479999627918005e-05
+parse_duration = 1.0663003195077181e-05
+
+[part1-example2]
+input_path = "example2.txt"
+value = 2_024
+duration = 7.758999709039927e-05
+parse_duration = 3.6735000321641564e-05
+
+[part2-example1]
+input_path = "example1.txt"
+value = "cgr,hpc,hwk,qmd,tnt,z06,z31,z37"
+duration = 8.410002919845283e-06
+parse_duration = 1.0663003195077181e-05
+
+[part2-example2]
+input_path = "example2.txt"
+value = "cgr,hpc,hwk,qmd,tnt,z06,z31,z37"
+duration = 8.563991286791861e-06
+parse_duration = 3.6735000321641564e-05

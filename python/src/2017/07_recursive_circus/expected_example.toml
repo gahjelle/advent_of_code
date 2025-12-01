@@ -1,0 +1,11 @@
+[part1-example1]
+input_path = "example1.txt"
+value = "tknk"
+duration = 6.83699909131974e-06
+parse_duration = 0.0006095879944041371
+
+[part2-example1]
+input_path = "example1.txt"
+value = 60
+duration = 0.0001279499992961064
+parse_duration = 0.0006095879944041371

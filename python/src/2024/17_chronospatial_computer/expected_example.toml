@@ -1,0 +1,23 @@
+[part1-example1]
+input_path = "example1.txt"
+value = "4,6,3,5,6,3,5,2,1,0"
+duration = 3.159200423397124e-05
+parse_duration = 1.0079005733132362e-05
+
+[part1-example2]
+input_path = "example2.txt"
+value = "5,7,3,0"
+duration = 2.7276997570879757e-05
+parse_duration = 1.0161995305679739e-05
+
+[part2-example1]
+input_path = "example1.txt"
+value = ""
+duration = 0.0001677510008448735
+parse_duration = 1.0079005733132362e-05
+
+[part2-example2]
+input_path = "example2.txt"
+value = 117_440
+duration = 0.001665509000304155
+parse_duration = 1.0161995305679739e-05
