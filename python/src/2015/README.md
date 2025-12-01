@@ -1,6 +1,6 @@
-# Everybody Codes - 2015 in Python
+# Advent of Code - 2015 in Python
 
-Solutions to [everybody.codes 2015](http://everybody.codes/) in Python:
+Solutions to [Advent of Code 2015](http://adventofcode.com/) in Python:
 
 | Day | Puzzle | Parse | Part1 | Part2 |
 | --- | --- | --- | --- | --- |

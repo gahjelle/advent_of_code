@@ -1,6 +1,6 @@
-# Everybody Codes - 2023 in Python
+# Advent of Code - 2023 in Python
 
-Solutions to [everybody.codes 2023](http://everybody.codes/) in Python:
+Solutions to [Advent of Code 2023](http://adventofcode.com/) in Python:
 
 | Day | Puzzle | Parse | Part1 | Part2 |
 | --- | --- | --- | --- | --- |
