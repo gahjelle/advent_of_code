@@ -3,6 +3,8 @@
 type Coordinate = tuple[int, int]
 type Grid = set[Coordinate]
 
+ADJACENT = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
+
 
 def parse_data(puzzle_input: str) -> Grid:
     """Parse puzzle input."""
@@ -47,17 +49,5 @@ def count_neighbours(grid: Grid, pos: Coordinate) -> int:
     >>> count_neighbours(grid, (2, 0))
     1
     """
-    r, c = pos
-    return sum(
-        nbh in grid
-        for nbh in [
-            (r - 1, c - 1),
-            (r - 1, c),
-            (r - 1, c + 1),
-            (r, c - 1),
-            (r, c + 1),
-            (r + 1, c - 1),
-            (r + 1, c),
-            (r + 1, c + 1),
-        ]
-    )
+    row, col = pos
+    return sum((row + dr, col + dc) in grid for dr, dc in ADJACENT)

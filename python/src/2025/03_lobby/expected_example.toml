@@ -1,17 +1,17 @@
 [part1-example1]
-interpreter = "cpython-313"
+interpreter = "cpython-314"
 code = "aoc202503.py"
 input_path = "example1.txt"
 value = 357
 solved = true
-duration = 1.0321004083380103e-05
-parse_duration = 3.029999788850546e-06
+duration = 1.1752999853342772e-05
+parse_duration = 1.9579892978072166e-06
 
 [part2-example1]
-interpreter = "cpython-313"
+interpreter = "cpython-314"
 code = "aoc202503.py"
 input_path = "example1.txt"
 value = 3_121_910_778_619
 solved = true
-duration = 4.386098589748144e-05
-parse_duration = 3.029999788850546e-06
+duration = 2.619597944431007e-05
+parse_duration = 1.9579892978072166e-06

@@ -4,7 +4,7 @@ Solutions to [Advent of Code 2025](http://adventofcode.com/) in Python:
 
 | Day | Puzzle | Parse | Part1 | Part2 |
 | --- | --- | --- | --- | --- |
-| 1 | Secret Entrance | ⚪️ 894.81 μs | ⚪️ 321.79 μs | ⚪️ 876.96 μs |
-| 2 | Gift Shop | 🔵 443.53 ms | 🔵 253.72 ms | 🔴 1.56 s |
-| 3 | Lobby | ⚪️ 24.63 μs | ⚪️ 762.55 μs | 🔵 2.18 ms |
-| 4 | Printing Department | 🔵 1.75 ms | 🔵 16.07 ms | 🔵 381.99 ms |
+| 1 | Secret Entrance | ⚪️ 648.04 μs | ⚪️ 204.61 μs | ⚪️ 813.40 μs |
+| 2 | Gift Shop | 🔵 370.85 ms | 🔵 167.35 ms | 🔵 915.90 ms |
+| 3 | Lobby | ⚪️ 24.20 μs | ⚪️ 488.48 μs | 🔵 1.36 ms |
+| 4 | Printing Department | 🔵 8.81 ms | 🔵 11.72 ms | 🔵 239.31 ms |

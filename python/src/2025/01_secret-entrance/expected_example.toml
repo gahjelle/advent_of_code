@@ -1,35 +1,35 @@
 [part1-example1]
-interpreter = "cpython-313"
+interpreter = "cpython-314"
 code = "aoc202501.py"
 input_path = "example1.txt"
 value = 3
 solved = true
-duration = 3.85800376534462e-06
-parse_duration = 6.947011570446193e-06
+duration = 2.5769986677914858e-06
+parse_duration = 4.330009687691927e-06
 
 [part1-example2]
-interpreter = "cpython-313"
+interpreter = "cpython-314"
 code = "aoc202501.py"
 input_path = "example2.txt"
 value = 2
 solved = true
-duration = 3.6609999369829893e-06
-parse_duration = 8.624003385193646e-06
+duration = 2.134009264409542e-06
+parse_duration = 4.083005478605628e-06
 
 [part2-example1]
-interpreter = "cpython-313"
+interpreter = "cpython-314"
 code = "aoc202501.py"
 input_path = "example1.txt"
 value = 6
 solved = true
-duration = 8.447997970506549e-06
-parse_duration = 6.947011570446193e-06
+duration = 8.154980605468154e-06
+parse_duration = 4.330009687691927e-06
 
 [part2-example2]
-interpreter = "cpython-313"
+interpreter = "cpython-314"
 code = "aoc202501.py"
 input_path = "example2.txt"
 value = 11
 solved = true
-duration = 5.587004125118256e-06
-parse_duration = 8.624003385193646e-06
+duration = 4.444009391590953e-06
+parse_duration = 4.083005478605628e-06
