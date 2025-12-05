@@ -24,11 +24,8 @@ def part1(grid: Grid) -> int:
 def part2(grid: Grid) -> int:
     """Solve part 2."""
     paper = grid
-    while True:
-        if remove := {pos for pos in paper if count_neighbours(paper, pos) < 4}:
-            paper = paper - remove
-        else:
-            break
+    while remove := {pos for pos in paper if count_neighbours(paper, pos) < 4}:
+        paper = paper - remove
     return len(grid - paper)
 
 
