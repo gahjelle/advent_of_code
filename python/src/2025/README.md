@@ -11,3 +11,4 @@ Solutions to [Advent of Code 2025](http://adventofcode.com/) in Python:
 | 5 | Cafeteria | ⚪️ 188.72 μs | 🔵 4.07 ms | ⚪️ 92.43 μs |
 | 6 | Trash Compactor | ⚪️ 24.15 μs | ⚪️ 710.35 μs | 🔵 1.10 ms |
 | 7 | Laboratories | 🔵 7.65 ms | ⚪️ 448.28 μs | 🔵 1.73 ms |
+| 8 | Playground | 🔵 627.26 ms | 🔵 6.68 ms | 🔵 248.25 ms |
