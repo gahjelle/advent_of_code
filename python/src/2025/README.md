@@ -14,4 +14,4 @@ Solutions to [Advent of Code 2025](http://adventofcode.com/) in Python:
 | 8 | Playground | 🔵 627.26 ms | 🔵 6.68 ms | 🔵 248.25 ms |
 | 9 | Movie Theater | ⚪️ 406.16 μs | 🔵 10.66 ms | ⚫️ 4.11 m |
 | 10 | Factory | ⚪️ 972.82 μs | 🔵 11.17 ms | 🔵 141.11 ms |
-| 11 | Reactor | ⚪️ 461.44 μs | 🔵 3.39 ms | 🔵 85.85 ms |
+| 11 | Reactor | ⚪️ 393.39 μs | ⚪️ 73.38 μs | 🔵 1.66 ms |
