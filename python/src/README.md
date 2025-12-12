@@ -1,6 +1,6 @@
 # Advent of Code - Python
 
-Solutions to [Advent of Code](http://adventofcode.com/) in Python (435 ⭐):
+Solutions to [Advent of Code](http://adventofcode.com/) in Python (437 ⭐):
 
 | Day | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -15,7 +15,7 @@ Solutions to [Advent of Code](http://adventofcode.com/) in Python (435 ⭐):
 | 9 | [⭐⭐](2015/09_all_in_a_single_night) | [⭐⭐](2016/09_explosives_in_cyberspace) | [⭐⭐](2017/09_stream_processing) | [⭐⭐](2018/09_marble_mania) | [⭐⭐](2019/09_sensor_boost) | [⭐⭐](2020/09_encoding_error) | [⭐⭐](2021/09_smoke_basin) | [⭐⭐](2022/09_rope_bridge) | [⭐⭐](2023/09_mirage_maintenance) | [⭐⭐](2024/09_disk_fragmenter) | [⭐⭐](2025/09_movie-theater) |
 | 10 | [⭐⭐](2015/10_elves_look_elves_say) | [⭐⭐](2016/10_balance_bots) | [⭐⭐](2017/10_knot_hash) | [⭐⭐](2018/10_the_stars_align) | [⭐⭐](2019/10_monitoring_station) | [⭐⭐](2020/10_adapter_array) | [⭐⭐](2021/10_syntax_scoring) | [⭐⭐](2022/10_cathode-ray_tube) | [⭐⭐](2023/10_pipe_maze) | [⭐⭐](2024/10_hoof_it) | [⭐⭐](2025/10_factory) |
 | 11 | [⭐⭐](2015/11_corporate_policy) | [⭐⭐](2016/11_radioisotope_thermoelectric_generators) | [⭐⭐](2017/11_hex_ed) | [⭐⭐](2018/11_chronal_charge) | [⭐⭐](2019/11_space_police) | [⭐⭐](2020/11_seating_system) | [⭐⭐](2021/11_dumbo_octopus) | [⭐⭐](2022/11_monkey_in_the_middle) | [⭐⭐](2023/11_cosmic_expansion) | [⭐⭐](2024/11_plutonian_pebbles) | [⭐⭐](2025/11_reactor) |
-| 12 | [⭐⭐](2015/12_jsabacusframework_io) |  | [⭐⭐](2017/12_digital_plumber) | [⭐⭐](2018/13_mine_cart_madness) | [⭐⭐](2019/12_the_n-body_problem) | [⭐⭐](2020/12_rain_risk) | [⭐⭐](2021/12_passage_pathing) | [⭐⭐](2022/12_hill_climbing_algorithm) | [⭐⭐](2023/12_hot_springs) | [⭐⭐](2024/12_garden_groups) |  |
+| 12 | [⭐⭐](2015/12_jsabacusframework_io) |  | [⭐⭐](2017/12_digital_plumber) | [⭐⭐](2018/13_mine_cart_madness) | [⭐⭐](2019/12_the_n-body_problem) | [⭐⭐](2020/12_rain_risk) | [⭐⭐](2021/12_passage_pathing) | [⭐⭐](2022/12_hill_climbing_algorithm) | [⭐⭐](2023/12_hot_springs) | [⭐⭐](2024/12_garden_groups) | [⭐⭐](2025/12_christmas-tree-farm) |
 | 13 | [⭐⭐](2015/13_knights_of_the_dinner_table) |  | [⭐⭐](2017/13_packet_scanners) | [⭐⭐](2018/14_chocolate_charts) | [⭐⭐](2019/13_care_package) | [⭐⭐](2020/13_shuttle_search) | [⭐⭐](2021/13_transparent_origami) | [⭐⭐](2022/13_distress_signal) | [⭐⭐](2023/13_point_of_incidence) | [⭐⭐](2024/13_claw_contraption) |  |
 | 14 | [⭐⭐](2015/14_reindeer_olympics) |  | [⭐⭐](2017/14_disk_defragmentation) | [⭐⭐](2018/15_beverage_bandits) | [⭐⭐](2019/18_many-worlds_interpretation) | [⭐⭐](2020/14_docking_data) | [⭐⭐](2021/14_extended_polymerization) | [⭐⭐](2022/14_regolith_reservoir) | [⭐⭐](2023/14_parabolic_reflector_dish) | [⭐⭐](2024/14_restroom_redoubt) |  |
 | 15 | [⭐⭐](2015/15_science_for_hungry_people) |  | [⭐⭐](2017/15_dueling_generators) | [⭐⭐](2018/16_chronal_classification) | [⭐⭐](2019/24_planet_of_discord) | [⭐⭐](2020/15_rambunctious_recitation) | [⭐⭐](2021/15_chiton) | [⭐⭐](2022/15_beacon_exclusion_zone) | [⭐⭐](2023/15_lens_library) | [⭐⭐](2024/15_warehouse_woes) |  |

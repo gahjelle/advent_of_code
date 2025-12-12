@@ -1,0 +1,17 @@
+[part1-example1]
+interpreter = "cpython-314"
+code = "aoc202512.py"
+input_path = "example1.txt"
+value = 2
+solved = true
+duration = 9.214039891958237e-06
+parse_duration = 2.0866049453616142e-05
+
+[part2-example1]
+interpreter = "cpython-314"
+code = "aoc202512.py"
+input_path = "example1.txt"
+value = ""
+solved = true
+duration = 1.10996188595891e-06
+parse_duration = 2.0866049453616142e-05
